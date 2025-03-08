@@ -1,0 +1,49 @@
+﻿@model List<_12_Weboto.Models.Car>
+
+@if (Model == null)
+{
+    <p class="text-center text-danger">⚠️ Lỗi: Model bị NULL.</p>
+}
+else if (!Model.Any())
+{
+    <p class="text-center text-danger">🚗 Hiện không có xe nào để hiển thị.</p>
+}
+else
+{
+    <div id="carCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @for (int i = 0; i < Model.Count; i++)
+            {
+                var car = Model[i];
+                <div class="carousel-item @(i == 0 ? "active" : "")">
+                    <div class="text-center">
+                        @if (car.Images != null && car.Images.Any())
+                        {
+                            <img src="@car.Images.First().ImageUrl" class="d-block w-50 mx-auto rounded shadow" alt="@car.TenXe">
+                        }
+                        else
+                        {
+                            <img src="/images/default-car.jpg" class="d-block w-50 mx-auto rounded shadow" alt="Không có hình ảnh">
+                        }
+                    </div>
+                    <div class="text-center mt-3">
+                        <h3>@car.TenXe</h3>
+
+                        <p>@car.MoTa</p>
+                        <a asp-controller="Car" asp-action="Details" asp-route-id="@car.Id" class="btn btn-primary">Xem chi tiết</a>
+
+                       
+                    </div>
+                </div>
+            }
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+}

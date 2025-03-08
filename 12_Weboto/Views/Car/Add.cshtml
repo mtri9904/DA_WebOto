@@ -1,0 +1,102 @@
+﻿@model _12_Weboto.Models.Car
+
+@{
+    ViewData["Title"] = "Thêm xe mới";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary">Thêm xe mới</h2>
+    <form asp-action="Add" method="post" class="p-4 bg-light rounded shadow" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Tên xe:</label>
+                <input type="text" asp-for="TenXe" class="form-control" required>
+
+                <label class="form-label">Năm sản xuất:</label>
+                <input type="number" asp-for="NamSanXuat" class="form-control" required>
+
+                <label class="form-label">Nhiên liệu:</label>
+                <input type="text" asp-for="NhienLieu" class="form-control" required>
+
+                <label class="form-label">Số KM:</label>
+                <input type="number" asp-for="SoKM" class="form-control" required>
+
+                <label class="form-label">Số chỗ ngồi:</label>
+                <input type="number" asp-for="SoChoNgoi" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <h4 class="text-primary">Tổng quan</h4>
+                <label class="form-label">Hãng xe:</label>
+                <input type="text" asp-for="HangXe" class="form-control" required>
+
+                <label class="form-label">Phiên bản:</label>
+                <input type="text" asp-for="PhienBan" class="form-control" required>
+
+                <label class="form-label">Kiểu dáng:</label>
+                <input type="text" asp-for="KieuDang" class="form-control" required>
+
+                <label class="form-label">Xuất xứ:</label>
+                <input type="text" asp-for="XuatXu" class="form-control" required>
+
+                <label class="form-label">Dòng xe:</label>
+                <input type="text" asp-for="DongXe" class="form-control" required>
+            </div>
+        </div>
+
+        <h4 class="text-primary mt-4">Thông số kỹ thuật</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label">Động cơ:</label>
+                <input type="text" asp-for="DongCo" class="form-control" required>
+
+                <label class="form-label">Hộp số:</label>
+                <input type="text" asp-for="HopSo" class="form-control" required>
+
+                <label class="form-label">Chiều dài (mm):</label>
+                <input type="number" asp-for="ChieuDai" class="form-control" required>
+
+                <label class="form-label">Chiều rộng (mm):</label>
+                <input type="number" asp-for="ChieuRong" class="form-control" required>
+
+                <label class="form-label">Chiều cao (mm):</label>
+                <input type="number" asp-for="ChieuCao" class="form-control" required>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Trọng lượng không tải (kg):</label>
+                <input type="number" asp-for="TrongLuongKhongTai" class="form-control" required>
+
+                <h4 class="text-primary mt-4">Mâm & Vành xe</h4>
+                <label class="form-label">Lốp trước:</label>
+                <input type="text" asp-for="LopTruoc" class="form-control" required>
+
+                <label class="form-label">Lốp sau:</label>
+                <input type="text" asp-for="LopSau" class="form-control" required>
+
+                <label class="form-label">Mức tiêu thụ nhiên liệu ngoài đô thị (L/100Km):</label>
+                <input type="number" step="0.1" asp-for="MucTieuThuNgoaiDoThi" class="form-control" required>
+
+                <label class="form-label">Mức tiêu thụ nhiên liệu trong đô thị (L/100Km):</label>
+                <input type="number" step="0.1" asp-for="MucTieuThuTrongDoThi" class="form-control" required>
+            </div>
+        </div>
+        <div>
+            <label>Chọn ảnh</label>
+            <input type="file" name="Images" multiple class="form-control" required />
+        </div>
+
+
+        <h4 class="text-primary mt-4">Mô tả</h4>
+        <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
+
+        <button type="submit" class="btn btn-primary mt-4 w-100">Thêm xe</button>
+    </form>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
+</div>
+
+<style>
+    .form-label {
+        font-weight: bold;
+    }
+</style>
