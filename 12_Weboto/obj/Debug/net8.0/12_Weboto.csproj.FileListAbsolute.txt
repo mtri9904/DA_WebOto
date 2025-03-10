@@ -170,3 +170,4 @@ C:\Users\Minh Tri\source\12_Weboto\12_Weboto\bin\Debug\net8.0\runtimes\browser\l
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net8.0\12_Weboto.csproj.AssemblyReference.cache
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net8.0\12_Weboto.csproj.Up2Date
+C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net8.0\12_Weboto.sourcelink.json

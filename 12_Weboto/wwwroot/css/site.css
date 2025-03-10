@@ -55,4 +55,25 @@ body {
 .carousel-control-next {
     width: 5%;
 }
+.form-label {
+    font-weight: bold;
+}
+
+#imagePreview img {
+    max-width: 150px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.remove-image {
+    cursor: pointer;
+    color: red;
+    font-size: 18px;
+    position: relative;
+    top: -5px;
+    right: 5px;
+}
 

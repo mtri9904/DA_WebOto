@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("12_Weboto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d69a27f1fd5faf9ba935b7020fe31e69c689e23c")]
 [assembly: System.Reflection.AssemblyProductAttribute("12_Weboto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("12_Weboto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -47,6 +47,7 @@ namespace _12_Weboto.Models
 
         // Danh sách ảnh liên kết với xe
         public List<CarImage> Images { get; set; } = new List<CarImage>();
+
     }
 
         public class CarImage
