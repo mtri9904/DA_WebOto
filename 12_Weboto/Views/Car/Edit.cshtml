@@ -19,6 +19,10 @@
                     <input asp-for="TenXe" class="form-control" required />
                 </div>
                 <div class="form-group">
+                    <label asp-for="GiaTien"><i class="fas fa-car"></i> Giá tiền</label>
+                    <input asp-for="GiaTien" class="form-control" required />
+                </div>
+                <div class="form-group">
                     <label asp-for="HangXe"><i class="fas fa-industry"></i> Hãng xe</label>
                     <input asp-for="HangXe" class="form-control" required />
                 </div>
@@ -166,56 +170,54 @@
     <h4 class="mt-4">📷 Thêm ảnh mới</h4>
     <input type="file" name="NewImages" multiple class="form-control" />
 
-
     <div class="row mt-3" id="previewContainer"></div>
-
 
     <br />
     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
     <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
-</form>
+    </form>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const fileInput = document.querySelector("input[name='NewImages']");
         const previewContainer = document.getElementById("previewContainer");
-        let selectedImages = [];
 
-        fileInput.addEventListener("change", function (event) {
-            const files = Array.from(event.target.files);
+        fileInput.addEventListener("change", function () {
+            previewContainer.innerHTML = "";
+            const files = fileInput.files;
+            if (!files.length) return;
 
-            files.forEach(file => {
-                const fileReader = new FileReader();
-                fileReader.readAsDataURL(file);
+            for (const file of files) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imgContainer = document.createElement("div");
+                    imgContainer.classList.add("col-md-3", "text-center", "mb-3", "image-preview");
 
-                fileReader.onload = function (e) {
-                    const imageUrl = e.target.result;
-                    const imageId = selectedImages.length;
-                    selectedImages.push({ id: imageId, file });
+                    const imgElement = document.createElement("img");
+                    imgElement.src = e.target.result;
+                    imgElement.classList.add("img-thumbnail", "rounded");
+                    imgElement.style.width = "100%";
 
-                    const imageWrapper = document.createElement("div");
-                    imageWrapper.classList.add("col-md-3", "text-center", "mb-3");
-                    imageWrapper.dataset.imageId = imageId;
-                    imageWrapper.innerHTML = `
-                        <img src="${imageUrl}" class="img-thumbnail rounded" style="width: 100%;" />
-                        <br />
-                        <button type="button" class="btn btn-danger btn-sm mt-2 remove-image" data-id="${imageId}">Xóa</button>
-                    `;
+                    // Tạo checkbox xóa ảnh
+                    const deleteCheckbox = document.createElement("input");
+                    deleteCheckbox.type = "checkbox";
+                    deleteCheckbox.classList.add("delete-new-image");
+                    deleteCheckbox.style.marginTop = "5px";
 
-                    previewContainer.appendChild(imageWrapper);
+                    const label = document.createElement("label");
+                    label.appendChild(deleteCheckbox);
+                    label.append(" Xóa ảnh");
+
+                    // Thêm hình ảnh và checkbox vào container
+                    imgContainer.appendChild(imgElement);
+                    imgContainer.appendChild(document.createElement("br"));
+                    imgContainer.appendChild(label);
+                    previewContainer.appendChild(imgContainer);
                 };
-            });
-
-            fileInput.value = ""; // Reset input file
-        });
-
-        previewContainer.addEventListener("click", function (event) {
-            if (event.target.classList.contains("remove-image")) {
-                const imageId = parseInt(event.target.getAttribute("data-id"));
-                selectedImages = selectedImages.filter(img => img.id !== imageId);
-                document.querySelector(`div[data-image-id='${imageId}']`).remove();
+                reader.readAsDataURL(file);
             }
         });
     });
+
 </script>
 
 

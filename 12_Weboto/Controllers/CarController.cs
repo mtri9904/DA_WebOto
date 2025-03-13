@@ -85,106 +85,119 @@ namespace _12_Weboto.Controllers
             var cars = _context.Cars.Include(c => c.Images).ToList();
             return View(cars);
         }
-        // Hiển thị form chỉnh sửa xe
-        public IActionResult Edit(int id)
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
         {
-            var car = _context.Cars.Include(c => c.Images).FirstOrDefault(c => c.Id == id);
+            var car = await _context.Cars
+                .Include(c => c.Images)
+                .FirstOrDefaultAsync(c => c.Id == id);
+
             if (car == null)
             {
                 return NotFound();
             }
+
             return View(car);
         }
 
 
-        // Xử lý cập nhật thông tin xe
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Car car, List<IFormFile> NewImages, List<int> DeletedImageIds)
+        public async Task<IActionResult> Edit(Car car, List<IFormFile> NewImages, List<int>? DeletedImageIds)
         {
-            if (id != car.Id)
+            if (ModelState.IsValid)
             {
-                return BadRequest();
-            }
+                var existingCar = await _context.Cars
+                    .Include(c => c.Images)
+                    .FirstOrDefaultAsync(c => c.Id == car.Id);
 
-            var existingCar = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
-            if (existingCar == null)
-            {
-                return NotFound();
-            }
-
-            // Cập nhật thông tin xe
-            existingCar.TenXe = car.TenXe;
-            existingCar.GiaTien = car.GiaTien;
-            existingCar.NamSanXuat = car.NamSanXuat;
-            existingCar.NhienLieu = car.NhienLieu;
-            existingCar.SoKM = car.SoKM;
-            existingCar.SoChoNgoi = car.SoChoNgoi;
-            existingCar.HangXe = car.HangXe;
-            existingCar.PhienBan = car.PhienBan;
-            existingCar.KieuDang = car.KieuDang;
-            existingCar.XuatXu = car.XuatXu;
-            existingCar.DongXe = car.DongXe;
-            existingCar.DongCo = car.DongCo;
-            existingCar.HopSo = car.HopSo;
-            existingCar.ChieuDai = car.ChieuDai;
-            existingCar.ChieuRong = car.ChieuRong;
-            existingCar.ChieuCao = car.ChieuCao;
-            existingCar.CoSoBanhXe = car.CoSoBanhXe;
-            existingCar.TrongLuongKhongTai = car.TrongLuongKhongTai;
-            existingCar.LopTruoc = car.LopTruoc;
-            existingCar.LopSau = car.LopSau;
-            existingCar.MucTieuThuNgoaiDoThi = car.MucTieuThuNgoaiDoThi;
-            existingCar.MucTieuThuTrongDoThi = car.MucTieuThuTrongDoThi;
-            existingCar.MoTa = car.MoTa;
-
-            // Xóa ảnh được chọn
-            if (DeletedImageIds != null && DeletedImageIds.Count > 0)
-            {
-                var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
-                foreach (var image in imagesToDelete)
+                if (existingCar == null)
                 {
-                    string filePath = Path.Combine(_webHostEnvironment.WebRootPath, image.ImageUrl.TrimStart('/'));
-                    if (System.IO.File.Exists(filePath))
+                    return NotFound();
+                }
+
+                // Cập nhật thông tin xe
+                existingCar.TenXe = car.TenXe;
+                existingCar.GiaTien = car.GiaTien;
+                existingCar.NamSanXuat = car.NamSanXuat;
+                existingCar.NhienLieu = car.NhienLieu;
+                existingCar.SoKM = car.SoKM;
+                existingCar.SoChoNgoi = car.SoChoNgoi;
+                existingCar.HangXe = car.HangXe;
+                existingCar.PhienBan = car.PhienBan;
+                existingCar.KieuDang = car.KieuDang;
+                existingCar.XuatXu = car.XuatXu;
+                existingCar.DongXe = car.DongXe;
+                existingCar.DongCo = car.DongCo;
+                existingCar.HopSo = car.HopSo;
+                existingCar.ChieuDai = car.ChieuDai;
+                existingCar.ChieuRong = car.ChieuRong;
+                existingCar.ChieuCao = car.ChieuCao;
+                existingCar.CoSoBanhXe = car.CoSoBanhXe;
+                existingCar.TrongLuongKhongTai = car.TrongLuongKhongTai;
+                existingCar.LopTruoc = car.LopTruoc;
+                existingCar.LopSau = car.LopSau;
+                existingCar.MucTieuThuNgoaiDoThi = car.MucTieuThuNgoaiDoThi;
+                existingCar.MucTieuThuTrongDoThi = car.MucTieuThuTrongDoThi;
+                existingCar.MoTa = car.MoTa;
+
+                // **1. XÓA ẢNH CŨ**
+                if (DeletedImageIds != null && DeletedImageIds.Count > 0)
+                {
+                    var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
+                    foreach (var img in imagesToDelete)
                     {
-                        System.IO.File.Delete(filePath);
+                        string filePath = Path.Combine(_webHostEnvironment.WebRootPath, img.ImageUrl.TrimStart('/'));
+                        if (System.IO.File.Exists(filePath))
+                        {
+                            System.IO.File.Delete(filePath);
+                        }
+                        _context.CarImages.Remove(img);
                     }
-                    _context.CarImages.Remove(image);
-                }
-            }
-
-            // Thêm ảnh mới
-            if (NewImages != null && NewImages.Count > 0)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
                 }
 
-                foreach (var image in NewImages)
+                // **2. THÊM ẢNH MỚI**
+                if (NewImages != null && NewImages.Count > 0)
                 {
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
-                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+                    var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    if (!Directory.Exists(uploadPath))
                     {
-                        await image.CopyToAsync(stream);
+                        Directory.CreateDirectory(uploadPath);
                     }
 
-                    var carImage = new CarImage
+                    foreach (var file in NewImages)
                     {
-                        CarId = car.Id,
-                        ImageUrl = "/uploads/" + uniqueFileName
-                    };
+                        if (file.Length > 0)
+                        {
+                            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                            var filePath = Path.Combine(uploadPath, fileName);
 
-                    _context.CarImages.Add(carImage);
+                            using (var stream = new FileStream(filePath, FileMode.Create))
+                            {
+                                await file.CopyToAsync(stream);
+                            }
+
+                            // Lưu đường dẫn ảnh vào database
+                            var newImage = new CarImage
+                            {
+                                CarId = car.Id,
+                                ImageUrl = "/uploads/" + fileName
+                            };
+
+                            _context.CarImages.Add(newImage);
+                        }
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+
+                // **QUAY LẠI TRANG INDEX SAU KHI LƯU**
+                return RedirectToAction("Index");
             }
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index");
+            return View(car);
         }
+
         // Phương thức hiển thị trang xác nhận xóa
         public async Task<IActionResult> Delete(int id)
         {
