@@ -1,0 +1,48 @@
+﻿@model List<_12_Weboto.Models.Car>
+
+@if (Model == null || !Model.Any())
+{
+    <p class="text-center text-danger">🚗 Không có xe nào để hiển thị.</p>
+}
+else
+{
+    <div class="container mt-4">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            @foreach (var car in Model)
+            {
+                <div class="col">
+                    <div class="card shadow-sm h-100" onclick="window.location.href='@Url.Action("Details", "Car", new { id = car.Id })'" style="cursor: pointer;">
+                        @* Hình Ảnh *@
+                        <div class="card-img-top">
+                            <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "~/uploads/default-car.jpg")"
+                                 class="d-block w-100"
+                                 alt="@car.TenXe">
+                        </div>
+
+                        <div class="card-body d-flex flex-column">
+                            @* Tên Xe *@
+                            <h5 class="card-title text-center fw-bold text-uppercase">@car.TenXe</h5>
+
+                            @* Thông Tin Chi Tiết *@
+                            <div class="row text-muted">
+                                <div class="col-6">
+                                    <p class="mb-1"><i class="fas fa-calendar-alt"></i> @car.NamSanXuat</p>
+                                    <p class="mb-1"><i class="fas fa-gas-pump"></i> @car.NhienLieu</p>
+                                </div>
+                                <div class="col-6 text-end">
+                                    <p class="mb-1"><i class="fas fa-road"></i> @car.SoKM Km</p>
+                                    <p class="mb-1"><i class="fas fa-cogs"></i> @car.HopSo</p>
+                                </div>
+                            </div>
+
+                            @* Giá Tiền *@
+                            <div class="mt-auto text-end">
+                                <h4 class="fw-bold text-danger">@String.Format("{0:N0} VND", car.GiaTien)</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

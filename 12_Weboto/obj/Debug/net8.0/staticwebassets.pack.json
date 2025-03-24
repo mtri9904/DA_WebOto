@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\020ce1e5-8d1b-40fc-bf56-6a3b621076d5_1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\020ce1e5-8d1b-40fc-bf56-6a3b621076d5_1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\06751b4d-42eb-4e06-a9b6-d442d868cac1_3.png",
       "PackagePath": "staticwebassets\\uploads\\06751b4d-42eb-4e06-a9b6-d442d868cac1_3.png"
     },
@@ -277,12 +281,20 @@
       "PackagePath": "staticwebassets\\uploads\\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg"
     },
     {
-      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\5316fc34-a3fc-468c-a948-986620fa882b.png",
-      "PackagePath": "staticwebassets\\uploads\\5316fc34-a3fc-468c-a948-986620fa882b.png"
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\549251b4-9969-4870-a4b4-33364c9edefe_3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\549251b4-9969-4870-a4b4-33364c9edefe_3.jpg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\59ab637f-646f-4363-80cd-f0013c3951dd_3.png",
       "PackagePath": "staticwebassets\\uploads\\59ab637f-646f-4363-80cd-f0013c3951dd_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png",
+      "PackagePath": "staticwebassets\\uploads\\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\643b418e-fb95-4bc5-94f1-b19db1c75f95.jpg",
+      "PackagePath": "staticwebassets\\uploads\\643b418e-fb95-4bc5-94f1-b19db1c75f95.jpg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\64c83966-7e67-4b64-b178-b36911bf0224_xe 1.jpeg",
@@ -297,10 +309,6 @@
       "PackagePath": "staticwebassets\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png"
     },
     {
-      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\b45aef61-3d79-45ce-a2ac-fa85509d96db.png",
-      "PackagePath": "staticwebassets\\uploads\\b45aef61-3d79-45ce-a2ac-fa85509d96db.png"
-    },
-    {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c4947086-d68c-4385-9340-54ec53b76d9a_1.png",
       "PackagePath": "staticwebassets\\uploads\\c4947086-d68c-4385-9340-54ec53b76d9a_1.png"
     },
@@ -311,6 +319,14 @@
     {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c604a5aa-a5d4-45c3-958b-2dace610c460_3.png",
       "PackagePath": "staticwebassets\\uploads\\c604a5aa-a5d4-45c3-958b-2dace610c460_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\cd3956f2-fa80-488b-8ec1-9867ec28bbb8_2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\cd3956f2-fa80-488b-8ec1-9867ec28bbb8_2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\d33c82d3-bd8e-4704-99ee-1bd9c62ce9ac.jpg",
+      "PackagePath": "staticwebassets\\uploads\\d33c82d3-bd8e-4704-99ee-1bd9c62ce9ac.jpg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\d3ba5622-1509-41f0-a06b-c982a83cfe75_3.png",

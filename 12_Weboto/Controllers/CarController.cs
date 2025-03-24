@@ -6,7 +6,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
-using _12_Weboto.Data;
 using Microsoft.EntityFrameworkCore;
 namespace _12_Weboto.Controllers
 {
@@ -84,6 +83,11 @@ namespace _12_Weboto.Controllers
         {
             var cars = _context.Cars.Include(c => c.Images).ToList();
             return View(cars);
+        }
+        public IActionResult CarList()
+        {          
+                var cars = _context.Cars.Include(c => c.Images).ToList();
+                return View(cars);
         }
         [HttpGet]
         public async Task<IActionResult> Edit(int id)

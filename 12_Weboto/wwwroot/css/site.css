@@ -76,4 +76,90 @@ body {
     top: -5px;
     right: 5px;
 }
+.carousel-image {
+    width: 100vw; /* Chiếm toàn bộ chiều rộng */
+    height: 100vh; /* Chiếm toàn bộ chiều cao */
+    position: relative;
+}
 
+    .carousel-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Hiển thị ảnh theo kích thước khung */
+    }
+
+.overlay-text {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1; /* Đẩy footer xuống dưới */
+}
+
+footer {
+    background-color: #f8f9fa; /* Màu nền nhẹ */
+    text-align: center;
+    padding: 10px 0;
+}
+.car-container {
+    width: 100vw; /* Chiếm toàn bộ chiều ngang trình duyệt */
+    height: 80vh; /* Chiều cao tự động điều chỉnh */
+    position: relative;
+    overflow: hidden; /* Đảm bảo hình không bị cắt xén */
+}
+
+.car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo hình ảnh hiển thị đầy đủ */
+}
+
+.car-info {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.custom-prev, .custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.custom-prev {
+    left: 20px;
+}
+
+.custom-next {
+    right: 20px;
+}
+
+    .custom-prev span, .custom-next span {
+        filter: invert(1);
+        width: 100%;
+        height: 100%;
+    }

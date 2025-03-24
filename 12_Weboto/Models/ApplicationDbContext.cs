@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using _12_Weboto.Models;
 
-namespace _12_Weboto.Data
+namespace _12_Weboto.Models
 {
     public class ApplicationDbContext : DbContext
     {

@@ -2,7 +2,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using _12_Weboto.Models;
 using Microsoft.EntityFrameworkCore;
-using _12_Weboto.Data;
 
 namespace _12_Weboto.Controllers;
 

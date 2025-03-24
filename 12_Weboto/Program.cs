@@ -1,4 +1,4 @@
-using _12_Weboto.Data;
+using _12_Weboto.Models;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using _12_Weboto.Data;
+using _12_Weboto.Models;
 
 #nullable disable
 
 namespace _12_Weboto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250308034629_Initial")]
+    [Migration("20250322063911_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -51,6 +51,9 @@ namespace _12_Weboto.Migrations
                     b.Property<string>("DongXe")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("GiaTien")
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("HangXe")
                         .IsRequired()
