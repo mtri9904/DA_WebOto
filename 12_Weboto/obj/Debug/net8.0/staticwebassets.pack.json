@@ -305,6 +305,10 @@
       "PackagePath": "staticwebassets\\uploads\\65d87231-b9dc-402a-9087-912e02cbaee2_3.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\91981286-e2f8-4531-b2ef-f6d96c099041_xe2.png",
+      "PackagePath": "staticwebassets\\uploads\\91981286-e2f8-4531-b2ef-f6d96c099041_xe2.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png",
       "PackagePath": "staticwebassets\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png"
     },
@@ -343,6 +347,10 @@
     {
       "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png",
       "PackagePath": "staticwebassets\\uploads\\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\fb89a2f4-1938-4ddd-a3f7-acc96501daa1_xe 1.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\fb89a2f4-1938-4ddd-a3f7-acc96501daa1_xe 1.jpeg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.12_Weboto.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

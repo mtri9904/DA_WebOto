@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\shared\\_carlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\shared\\_carlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -39,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -57,10 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\views\\car\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,24 +70,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\appsettings.json",
-              "RelativeDocumentMoniker": "12_Weboto\\appsettings.json",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\appsettings.json",
-              "RelativeToolTip": "12_Weboto\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-22T07:01:21.911Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\ErrorViewModel.cs",
@@ -99,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Models\\Car.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\Car.cs",
@@ -111,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\ApplicationDbContext.cs",
@@ -123,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "_CarList.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Shared\\_CarList.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_CarList.cshtml",
@@ -136,7 +123,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "12_Weboto\\wwwroot\\css\\site.css",
@@ -148,7 +135,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
+              "Title": "Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Add.cshtml",
+              "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Add.cshtml",
+              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Add.cshtml",
+              "RelativeToolTip": "12_Weboto\\Views\\Car\\Add.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-08T02:55:32.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Edit.cshtml",
+              "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Edit.cshtml",
+              "RelativeToolTip": "12_Weboto\\Views\\Car\\Edit.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T12:06:17.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\appsettings.json",
+              "RelativeDocumentMoniker": "12_Weboto\\appsettings.json",
+              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\appsettings.json",
+              "RelativeToolTip": "12_Weboto\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-22T07:01:21.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "_ValidationScriptsPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
@@ -160,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "CarList.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\CarList.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\CarList.cshtml",
@@ -172,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Details.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Details.cshtml",
@@ -184,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_Layout.cshtml",
@@ -196,19 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Edit.cshtml",
-              "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Edit.cshtml",
-              "RelativeToolTip": "12_Weboto\\Views\\Car\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-13T12:06:17.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Index.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Index.cshtml",
@@ -221,18 +234,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 14,
-              "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Add.cshtml",
-              "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Add.cshtml",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Add.cshtml",
-              "RelativeToolTip": "12_Weboto\\Views\\Car\\Add.cshtml",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAQwLQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-08T02:55:32.873Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Views\\Car\\Delete.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Delete.cshtml",
@@ -244,7 +245,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Controllers\\CarController.cs",
