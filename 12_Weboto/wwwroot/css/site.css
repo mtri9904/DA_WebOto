@@ -163,3 +163,28 @@ footer {
         width: 100%;
         height: 100%;
     }
+
+/* Css Add xe */
+h4.text-primary {
+    font-weight: bold;
+    border-left: 4px solid #007bff;
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 10px 0;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+input.form-control {
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+

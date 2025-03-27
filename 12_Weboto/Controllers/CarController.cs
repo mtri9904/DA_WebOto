@@ -84,11 +84,13 @@ namespace _12_Weboto.Controllers
             var cars = _context.Cars.Include(c => c.Images).ToList();
             return View(cars);
         }
+
         public IActionResult CarList()
-        {          
-                var cars = _context.Cars.Include(c => c.Images).ToList();
-                return View(cars);
+        {
+            var cars = _context.Cars.Include(c => c.Images).ToList();
+            return View(cars);
         }
+
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -103,7 +105,6 @@ namespace _12_Weboto.Controllers
 
             return View(car);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Edit(Car car, List<IFormFile> NewImages, List<int>? DeletedImageIds)

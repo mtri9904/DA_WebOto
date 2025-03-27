@@ -1,0 +1,44 @@
+﻿
+@model IEnumerable<_12_Weboto.Models.Car>
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2 class="text-center text-primary">Danh sách xe</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Tên xe</th>
+                <th>Hãng xe</th>
+                <th>Kiểu dáng</th>
+                <th>Năm sản xuất</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model)
+            {
+                <tr>
+                    <td>@car.TenXe</td>
+                    <td>@car.HangXe</td>
+                    <td>@car.KieuDang</td>
+                    <td>@car.NamSanXuat</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@car.Id" class="btn btn-info btn-sm">Chi tiết</a>
+                        <a asp-action="Edit" asp-route-id="@car.Id" class="btn btn-warning btn-sm">Sửa</a>
+                        <a asp-action="Delete" asp-route-id="@car.Id" class="btn btn-danger btn-sm">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p class="text-center text-danger">Không có xe nào trong danh sách.</p>
+}
+
+<a asp-action="Add" class="btn btn-success">Thêm xe mới</a>
+

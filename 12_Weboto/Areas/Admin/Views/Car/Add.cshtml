@@ -1,0 +1,187 @@
+﻿@model _12_Weboto.Models.Car
+
+@{
+    ViewData["Title"] = "Thêm xe mới";
+}
+
+<div class="container mt-4">
+    <h2 class="text-center text-primary">Thêm xe mới</h2>
+    <form asp-action="Add" method="post" class="p-4 bg-light rounded shadow" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="text-primary text-start">Tổng quan</h4>
+                <hr>
+                <label class="form-label"><i class="fas fa-car"></i> Tên xe:</label>
+                <input type="text" asp-for="TenXe" class="form-control" required>
+
+                <label class="form-label"><i class="fas fa-calendar-alt"></i> Giá tiền: </label>
+                <input type="text" asp-for="GiaTien" class="form-control" required min="0">
+
+                <label class="form-label"><i class="fas fa-calendar-alt"></i> Năm sản xuất:</label>
+                <input type="number" asp-for="NamSanXuat" class="form-control" required min="1990" max="2025">
+
+                <label class="form-label"><i class="fas fa-gas-pump"></i> Nhiên liệu:</label>
+                <input type="text" asp-for="NhienLieu" class="form-control" required>
+
+                <label class="form-label"><i class="fas fa-tachometer-alt"></i> Số KM:</label>
+                <input type="number" asp-for="SoKM" class="form-control" required min="0">
+
+                <label class="form-label"><i class="fas fa-users"></i> Số chỗ ngồi:</label>
+                <input type="number" asp-for="SoChoNgoi" class="form-control" required min="1">
+            </div>
+
+                <div class="col-md-6">
+                    <h4 class="text-primary text-start">Kĩ thuật</h4>
+                    <hr>
+                    <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
+                    <input type="text" asp-for="HangXe" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-list"></i> Phiên bản:</label>
+                    <input type="text" asp-for="PhienBan" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-car-side"></i> Kiểu dáng:</label>
+                    <input type="text" asp-for="KieuDang" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-globe"></i> Xuất xứ:</label>
+                    <input type="text" asp-for="XuatXu" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-stream"></i> Dòng xe:</label>
+                    <input type="text" asp-for="DongXe" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-cogs"></i> Động cơ:</label>
+                    <input type="text" asp-for="DongCo" class="form-control" required>
+
+                    <label class="form-label"><i class="fas fa-cogs"></i> Hộp số:</label>
+                    <input type="text" asp-for="HopSo" class="form-control" required>
+                </div>
+
+            </div>
+
+        <h4 class="text-primary mt-4">Kích thước & Trọng lượng</h4>
+        <div class="row">
+            <div class="col-md-4">
+                <label class="form-label"><i class="fas fa-ruler-horizontal"></i> Chiều dài (mm):</label>
+                <input type="number" asp-for="ChieuDai" class="form-control" required min="1000">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label"><i class="fas fa-ruler"></i> Chiều rộng (mm):</label>
+                <input type="number" asp-for="ChieuRong" class="form-control" required min="500">
+            </div>
+            <div class="col-md-4">
+                <label class="form-label"><i class="fas fa-ruler-vertical"></i> Chiều cao (mm):</label>
+                <input type="number" asp-for="ChieuCao" class="form-control" required min="500">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-weight-hanging"></i> Cơ sở bánh xe (mm):</label>
+                <input type="number" asp-for="CoSoBanhXe" class="form-control" required min="1000">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-weight"></i> Trọng lượng không tải (kg):</label>
+                <input type="number" asp-for="TrongLuongKhongTai" class="form-control" required min="500">
+            </div>
+        </div>
+
+        <h4 class="text-primary mt-4">Mâm & Vành xe</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-car-side"></i> Lốp trước:</label>
+                <input type="text" asp-for="LopTruoc" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-car-side"></i> Lốp sau:</label>
+                <input type="text" asp-for="LopSau" class="form-control" required>
+            </div>
+        </div>
+
+        <h4 class="text-primary mt-4">Mức tiêu thụ nhiên liệu</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-road"></i> Ngoài đô thị (lít/100km):</label>
+                <input type="number" asp-for="MucTieuThuNgoaiDoThi" class="form-control" required step="0.1" min="1">
+            </div>
+            <div class="col-md-6">
+                <label class="form-label"><i class="fas fa-city"></i> Trong đô thị (lít/100km):</label>
+                <input type="number" asp-for="MucTieuThuTrongDoThi" class="form-control" required step="0.1" min="1">
+            </div>
+        </div>
+        <div>
+            <label>Chọn ảnh</label>
+            <input type="file" id="imageInput" name="Images" multiple class="form-control" required />
+        </div>
+
+        <!-- Hiển thị ảnh đã chọn -->
+        <div id="imagePreview" class="mt-3 d-flex flex-wrap"></div>
+
+
+        <h4 class="text-primary mt-4">Mô tả</h4>
+        <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
+
+        <button type="submit" class="btn btn-primary mt-4 w-100">Thêm xe</button>
+    </form>
+    <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
+</div>
+<script>
+    let selectedFiles = []; // Mảng chứa danh sách các file đã chọn
+
+    document.getElementById('imageInput').addEventListener('change', function(event) {
+        let imagePreview = document.getElementById('imagePreview');
+        let files = Array.from(event.target.files);
+
+        // Thêm ảnh mới vào danh sách
+        files.forEach((file) => {
+            if (!selectedFiles.some(f => f.name === file.name)) {
+                selectedFiles.push(file);
+            }
+        });
+
+        updatePreview(); // Cập nhật giao diện hiển thị ảnh
+    });
+
+    function updatePreview() {
+        let imagePreview = document.getElementById('imagePreview');
+        imagePreview.innerHTML = ''; // Xóa giao diện cũ
+
+        selectedFiles.forEach((file, index) => {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let div = document.createElement('div');
+                div.className = 'position-relative m-2';
+
+                let img = document.createElement('img');
+                img.src = e.target.result;
+                img.className = 'img-thumbnail';
+                img.style.width = '150px';
+                img.style.height = '100px';
+
+                let removeBtn = document.createElement('button');
+                removeBtn.innerHTML = '&times;';
+                removeBtn.className = 'btn btn-danger btn-sm position-absolute top-0 end-0';
+                removeBtn.style.borderRadius = '50%';
+                removeBtn.style.padding = '2px 6px';
+
+                removeBtn.addEventListener('click', function() {
+                    selectedFiles.splice(index, 1); // Xóa file khỏi danh sách
+                    updatePreview(); // Cập nhật lại giao diện
+                });
+
+                div.appendChild(img);
+                div.appendChild(removeBtn);
+                imagePreview.appendChild(div);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        updateFileInput(); // Cập nhật input file
+    }
+
+    function updateFileInput() {
+        let dt = new DataTransfer();
+        selectedFiles.forEach(file => dt.items.add(file));
+        document.getElementById('imageInput').files = dt.files;
+    }
+</script>
+
+
+

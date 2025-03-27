@@ -1,0 +1,23 @@
+﻿@model _12_Weboto.Models.Car
+
+@{
+    ViewData["Title"] = "Xóa xe";
+}
+
+<h2 class="text-center text-danger">Xác nhận xóa xe</h2>
+
+<div class="card border-danger">
+    <div class="card-body">
+        <h4 class="card-title text-danger">Bạn có chắc chắn muốn xóa xe này không?</h4>
+        <p><strong>Tên xe:</strong> @Model.TenXe</p>
+        <p><strong>Hãng xe:</strong> @Model.HangXe</p>
+        <p><strong>Kiểu dáng:</strong> @Model.KieuDang</p>
+        <p><strong>Năm sản xuất:</strong> @Model.NamSanXuat</p>
+
+        <form asp-action="Delete" method="post">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-danger">Xóa</button>
+            <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+        </form>
+    </div>
+</div>

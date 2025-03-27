@@ -1,0 +1,224 @@
+﻿@model _12_Weboto.Models.Car
+
+@{
+    ViewData["Title"] = "Chỉnh sửa xe";
+}
+
+<h2 class="mb-4">🚗 Chỉnh sửa xe</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+    <!-- Tổng quan -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">Tổng quan</div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="TenXe"><i class="fas fa-car"></i> Tên xe</label>
+                    <input asp-for="TenXe" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="GiaTien"><i class="fas fa-car"></i> Giá tiền</label>
+                    <input asp-for="GiaTien" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="HangXe"><i class="fas fa-industry"></i> Hãng xe</label>
+                    <input asp-for="HangXe" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="PhienBan"><i class="fas fa-cogs"></i> Phiên bản</label>
+                    <input asp-for="PhienBan" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="KieuDang"><i class="fas fa-car-side"></i> Kiểu dáng</label>
+                    <input asp-for="KieuDang" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="XuatXu"><i class="fas fa-globe"></i> Xuất xứ</label>
+                    <input asp-for="XuatXu" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="DongXe"><i class="fas fa-car-alt"></i> Dòng xe</label>
+                    <input asp-for="DongXe" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NamSanXuat"><i class="fas fa-calendar-alt"></i> Năm sản xuất</label>
+                    <input asp-for="NamSanXuat" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="NhienLieu"><i class="fas fa-gas-pump"></i> Loại nhiên liệu</label>
+                    <input asp-for="NhienLieu" class="form-control" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Động cơ & Hiệu suất -->
+    <div class="card mb-4">
+        <div class="card-header bg-secondary text-white">Động cơ & Hiệu suất</div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="DongCo"><i class="fas fa-car-battery"></i> Động cơ</label>
+                    <input asp-for="DongCo" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="HopSo"><i class="fas fa-cogs"></i> Hộp số</label>
+                    <input asp-for="HopSo" class="form-control" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kích thước & Trọng lượng -->
+    <div class="card mb-4">
+        <div class="card-header bg-success text-white">Kích thước & Trọng lượng</div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ChieuDai"><i class="fas fa-ruler-horizontal"></i> Chiều dài (mm)</label>
+                    <input asp-for="ChieuDai" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="ChieuRong"><i class="fas fa-ruler-combined"></i> Chiều rộng (mm)</label>
+                    <input asp-for="ChieuRong" type="number" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="ChieuCao"><i class="fas fa-arrows-alt-v"></i> Chiều cao (mm)</label>
+                    <input asp-for="ChieuCao" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="CoSoBanhXe"><i class="fas fa-tape"></i> Cơ sở bánh xe (mm)</label>
+                    <input asp-for="CoSoBanhXe" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrongLuongKhongTai"><i class="fas fa-weight-hanging"></i> Trọng lượng không tải (kg)</label>
+                    <input asp-for="TrongLuongKhongTai" type="number" class="form-control" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mâm & Lốp xe -->
+    <div class="card mb-4">
+        <div class="card-header bg-warning text-white">Mâm & Lốp xe</div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LopTruoc"><i class="fas fa-tire"></i> Lốp trước</label>
+                    <input asp-for="LopTruoc" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="LopSau"><i class="fas fa-tire"></i> Lốp sau</label>
+                    <input asp-for="LopSau" class="form-control" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mức tiêu thụ nhiên liệu -->
+    <div class="card mb-4">
+        <div class="card-header bg-danger text-white">Mức tiêu thụ nhiên liệu</div>
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="MucTieuThuNgoaiDoThi"><i class="fas fa-tachometer-alt"></i> Ngoài đô thị (L/100km)</label>
+                    <input asp-for="MucTieuThuNgoaiDoThi" type="number" step="0.1" class="form-control" required />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label asp-for="MucTieuThuTrongDoThi"><i class="fas fa-tachometer-alt"></i> Trong đô thị (L/100km)</label>
+                    <input asp-for="MucTieuThuTrongDoThi" type="number" step="0.1" class="form-control" required />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MoTa"><i class="fas fa-info-circle"></i> Mô tả</label>
+        <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
+        <span asp-validation-for="MoTa" class="text-danger"></span>
+    </div>
+
+    <h4 class="mt-4">📷 Ảnh xe</h4>
+    <div class="row">
+        @if (Model.Images != null && Model.Images.Any())
+        {
+            @foreach (var image in Model.Images)
+            {
+                <div class="col-md-3 text-center mb-3">
+                    <img src="@image.ImageUrl" alt="Car Image" class="img-thumbnail rounded" style="width: 100%;" />
+                    <br />
+                    <input type="checkbox" name="DeletedImageIds" value="@image.Id" /> Xóa ảnh
+                </div>
+            }
+        }
+        else
+        {
+            <p>Không có ảnh nào.</p>
+        }
+    </div>
+
+    <h4 class="mt-4">📷 Thêm ảnh mới</h4>
+    <input type="file" name="NewImages" multiple class="form-control" />
+
+    <div class="row mt-3" id="previewContainer"></div>
+
+    <br />
+    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
+    </form>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const fileInput = document.querySelector("input[name='NewImages']");
+        const previewContainer = document.getElementById("previewContainer");
+
+        fileInput.addEventListener("change", function () {
+            previewContainer.innerHTML = "";
+            const files = fileInput.files;
+            if (!files.length) return;
+
+            for (const file of files) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imgContainer = document.createElement("div");
+                    imgContainer.classList.add("col-md-3", "text-center", "mb-3", "image-preview");
+
+                    const imgElement = document.createElement("img");
+                    imgElement.src = e.target.result;
+                    imgElement.classList.add("img-thumbnail", "rounded");
+                    imgElement.style.width = "100%";
+
+                    // Tạo checkbox xóa ảnh
+                    const deleteCheckbox = document.createElement("input");
+                    deleteCheckbox.type = "checkbox";
+                    deleteCheckbox.classList.add("delete-new-image");
+                    deleteCheckbox.style.marginTop = "5px";
+
+                    const label = document.createElement("label");
+                    label.appendChild(deleteCheckbox);
+                    label.append(" Xóa ảnh");
+
+                    // Thêm hình ảnh và checkbox vào container
+                    imgContainer.appendChild(imgElement);
+                    imgContainer.appendChild(document.createElement("br"));
+                    imgContainer.appendChild(label);
+                    previewContainer.appendChild(imgContainer);
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+    });
+
+</script>
+
+
+
