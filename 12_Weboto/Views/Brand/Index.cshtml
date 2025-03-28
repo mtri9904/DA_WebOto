@@ -1,0 +1,27 @@
+﻿@model List<_12_Weboto.Models.Brand>
+
+<h2>Danh sách hãng xe</h2>
+<a asp-action="Add" class="btn btn-primary">Thêm hãng xe</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Tên hãng</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var brand in Model)
+        {
+            <tr>
+                <td>@brand.Id</td>
+                <td>@brand.TenHang</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@brand.Id" class="btn btn-info">Chi tiết</a>
+                    <a asp-action="Edit" asp-route-id="@brand.Id" class="btn btn-warning">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@brand.Id" class="btn btn-danger" onclick="return confirm('Bạn có chắc chắn muốn xóa?');">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

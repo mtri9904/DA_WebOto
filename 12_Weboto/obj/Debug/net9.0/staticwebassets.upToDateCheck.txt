@@ -117,6 +117,7 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\005116c7-431a-4b3a-9552-e81a65246ef9_xe2.png
 wwwroot\uploads\06751b4d-42eb-4e06-a9b6-d442d868cac1_3.png
 wwwroot\uploads\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg
 wwwroot\uploads\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif
@@ -125,13 +126,17 @@ wwwroot\uploads\290f9889-e946-422e-8293-39a9e3829da3_3.png
 wwwroot\uploads\3393b289-0732-4e9d-b068-aefac796d7ef_xe2.png
 wwwroot\uploads\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg
 wwwroot\uploads\3e8cf354-8e37-4f85-8351-4194164b87d9.png
+wwwroot\uploads\426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png
 wwwroot\uploads\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg
 wwwroot\uploads\4eace5d4-836e-43ba-9ade-d4b25909a70e_tddv6.jpeg
 wwwroot\uploads\59ab637f-646f-4363-80cd-f0013c3951dd_3.png
+wwwroot\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg
 wwwroot\uploads\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png
 wwwroot\uploads\643b418e-fb95-4bc5-94f1-b19db1c75f95.jpg
 wwwroot\uploads\64c83966-7e67-4b64-b178-b36911bf0224_xe 1.jpeg
 wwwroot\uploads\65d87231-b9dc-402a-9087-912e02cbaee2_3.png
+wwwroot\uploads\83270c11-8967-4a02-a557-ef24b72e8844_xe4.jpeg
+wwwroot\uploads\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg
 wwwroot\uploads\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png
 wwwroot\uploads\c4947086-d68c-4385-9340-54ec53b76d9a_1.png
 wwwroot\uploads\c5051f22-77f2-44c8-be61-0834f6ddf095_2.png

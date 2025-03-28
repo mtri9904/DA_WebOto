@@ -22,12 +22,12 @@
             {
                 <tr>
                     <td>@car.TenXe</td>
-                    <td>@car.HangXe</td>
+                    <td>@car.Brand?.TenHang</td>
                     <td>@car.KieuDang</td>
                     <td>@car.NamSanXuat</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@car.Id" class="btn btn-info btn-sm">Chi tiết</a>
-                        <a asp-action="Edit" asp-route-id="@car.Id" class="btn btn-warning btn-sm">Sửa</a>
+                        <a asp-route-id="@car.Id" class="btn btn-warning btn-sm">Sửa</a>
                         <a asp-action="Delete" asp-route-id="@car.Id" class="btn btn-danger btn-sm">Xóa</a>
                     </td>
                 </tr>

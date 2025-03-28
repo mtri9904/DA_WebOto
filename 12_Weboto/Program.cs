@@ -24,13 +24,13 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapAreaControllerRoute(
-        name: "AdminArea",
-        areaName: "Admin",
-        pattern: "Admin/{controller=Car}/{action=Index}/{id?}"
+    endpoints.MapControllerRoute(
+        name: "areas",
+        pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}"
     );
 
     endpoints.MapControllerRoute(
@@ -38,6 +38,5 @@ app.UseEndpoints(endpoints =>
         pattern: "{controller=Home}/{action=Index}/{id?}"
     );
 });
-app.UseAuthorization();
 
 app.Run();

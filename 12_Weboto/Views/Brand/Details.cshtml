@@ -1,0 +1,13 @@
+﻿@model _12_Weboto.Models.Brand
+
+<h2>Chi tiết hãng xe</h2>
+<p><strong>ID:</strong> @Model.Id</p>
+<p><strong>Tên hãng:</strong> @Model.TenHang</p>
+<h3>Danh sách xe thuộc hãng này</h3>
+<ul>
+    @foreach (var car in Model.Cars)
+    {
+        <li>@car.TenXe - @car.GiaTien VNĐ</li>
+    }
+</ul>
+<a asp-action="Index" class="btn btn-secondary">Quay lại</a>

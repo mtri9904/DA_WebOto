@@ -7,6 +7,7 @@
 <h2 class="mb-4">🚗 Chỉnh sửa xe</h2>
 
 <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
     <input type="hidden" asp-for="Id" />
 
     <!-- Tổng quan -->
@@ -22,13 +23,18 @@
                     <label asp-for="GiaTien"><i class="fas fa-car"></i> Giá tiền</label>
                     <input asp-for="GiaTien" class="form-control" required />
                 </div>
-                <div class="form-group">
-                    <label asp-for="HangXe"><i class="fas fa-industry"></i> Hãng xe</label>
-                    <input asp-for="HangXe" class="form-control" required />
-                </div>
+                <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
+                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.HangXeList" required>
+                    <option value="">-- Chọn hãng xe --</option>
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
                 <div class="form-group">
                     <label asp-for="PhienBan"><i class="fas fa-cogs"></i> Phiên bản</label>
                     <input asp-for="PhienBan" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="SoChoNgoi"><i class="fas fa-cogs"></i> Số chỗ ngồi</label>
+                    <input asp-for="SoChoNgoi" class="form-control" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="KieuDang"><i class="fas fa-car-side"></i> Kiểu dáng</label>
@@ -47,6 +53,10 @@
                 <div class="form-group">
                     <label asp-for="NamSanXuat"><i class="fas fa-calendar-alt"></i> Năm sản xuất</label>
                     <input asp-for="NamSanXuat" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="SoKM"><i class="fas fa-calendar-alt"></i> Số KM</label>
+                    <input asp-for="SoKM" type="number" class="form-control" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="NhienLieu"><i class="fas fa-gas-pump"></i> Loại nhiên liệu</label>
@@ -175,50 +185,39 @@
     <br />
     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
     <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
-    </form>
+</form>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const fileInput = document.querySelector("input[name='NewImages']");
         const previewContainer = document.getElementById("previewContainer");
 
-        fileInput.addEventListener("change", function () {
-            previewContainer.innerHTML = "";
-            const files = fileInput.files;
-            if (!files.length) return;
+        fileInput.addEventListener("change", function (event) {
+            previewContainer.innerHTML = ""; // Xóa ảnh cũ trước khi thêm mới
+            const files = event.target.files;
 
-            for (const file of files) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imgContainer = document.createElement("div");
-                    imgContainer.classList.add("col-md-3", "text-center", "mb-3", "image-preview");
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
 
-                    const imgElement = document.createElement("img");
-                    imgElement.src = e.target.result;
-                    imgElement.classList.add("img-thumbnail", "rounded");
-                    imgElement.style.width = "100%";
+                    if (file && file.type.startsWith("image/")) {
+                        const reader = new FileReader();
 
-                    // Tạo checkbox xóa ảnh
-                    const deleteCheckbox = document.createElement("input");
-                    deleteCheckbox.type = "checkbox";
-                    deleteCheckbox.classList.add("delete-new-image");
-                    deleteCheckbox.style.marginTop = "5px";
+                        reader.onload = function (e) {
+                            const img = document.createElement("img");
+                            img.src = e.target.result;
+                            img.classList.add("img-thumbnail", "rounded", "m-2");
+                            img.style.width = "150px";
+                            previewContainer.appendChild(img);
+                        };
 
-                    const label = document.createElement("label");
-                    label.appendChild(deleteCheckbox);
-                    label.append(" Xóa ảnh");
-
-                    // Thêm hình ảnh và checkbox vào container
-                    imgContainer.appendChild(imgElement);
-                    imgContainer.appendChild(document.createElement("br"));
-                    imgContainer.appendChild(label);
-                    previewContainer.appendChild(imgContainer);
-                };
-                reader.readAsDataURL(file);
+                        reader.readAsDataURL(file);
+                    }
+                }
             }
         });
     });
-
 </script>
+
 
 
 

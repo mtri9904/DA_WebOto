@@ -33,8 +33,12 @@
                 <div class="col-md-6">
                     <h4 class="text-primary text-start">Kĩ thuật</h4>
                     <hr>
-                    <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
-                    <input type="text" asp-for="HangXe" class="form-control" required>
+                <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
+                <select asp-for="BrandId" class="form-control" asp-items="@ViewBag.HangXeList" required>
+                    <option value="">-- Chọn hãng xe --</option>
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+
 
                     <label class="form-label"><i class="fas fa-list"></i> Phiên bản:</label>
                     <input type="text" asp-for="PhienBan" class="form-control" required>
@@ -117,8 +121,10 @@
 
         <h4 class="text-primary mt-4">Mô tả</h4>
         <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
+        <div asp-validation-summary="All" class="text-danger"></div>
 
         <button type="submit" class="btn btn-primary mt-4 w-100">Thêm xe</button>
+
     </form>
     <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
 </div>

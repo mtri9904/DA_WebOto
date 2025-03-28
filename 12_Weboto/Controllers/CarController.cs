@@ -22,6 +22,7 @@ namespace _12_Weboto.Controllers
 
         public IActionResult Add()
         {
+            ViewBag.Brands = _context.Brands.ToList();
             return View();
         }
 
@@ -31,7 +32,7 @@ namespace _12_Weboto.Controllers
             if (ModelState.IsValid)
             {
                 _context.Cars.Add(car);
-                await _context.SaveChangesAsync(); // Lưu để có CarId
+                await _context.SaveChangesAsync();
 
                 if (Images != null && Images.Count > 0)
                 {
@@ -65,13 +66,13 @@ namespace _12_Weboto.Controllers
 
                 return RedirectToAction("Index");
             }
-
+            ViewBag.Brands = _context.Brands.ToList();
             return View(car);
         }
 
         public async Task<IActionResult> Details(int id)
         {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
+            var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
             if (car == null)
             {
                 return NotFound();
@@ -81,28 +82,25 @@ namespace _12_Weboto.Controllers
 
         public IActionResult Index()
         {
-            var cars = _context.Cars.Include(c => c.Images).ToList();
+            var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
             return View(cars);
         }
 
         public IActionResult CarList()
         {
-            var cars = _context.Cars.Include(c => c.Images).ToList();
+            var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
             return View(cars);
         }
 
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var car = await _context.Cars
-                .Include(c => c.Images)
-                .FirstOrDefaultAsync(c => c.Id == id);
-
+            var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
             if (car == null)
             {
                 return NotFound();
             }
-
+            ViewBag.Brands = _context.Brands.ToList();
             return View(car);
         }
 
@@ -111,23 +109,20 @@ namespace _12_Weboto.Controllers
         {
             if (ModelState.IsValid)
             {
-                var existingCar = await _context.Cars
-                    .Include(c => c.Images)
-                    .FirstOrDefaultAsync(c => c.Id == car.Id);
+                var existingCar = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == car.Id);
 
                 if (existingCar == null)
                 {
                     return NotFound();
                 }
 
-                // Cập nhật thông tin xe
                 existingCar.TenXe = car.TenXe;
                 existingCar.GiaTien = car.GiaTien;
                 existingCar.NamSanXuat = car.NamSanXuat;
                 existingCar.NhienLieu = car.NhienLieu;
                 existingCar.SoKM = car.SoKM;
                 existingCar.SoChoNgoi = car.SoChoNgoi;
-                existingCar.HangXe = car.HangXe;
+                existingCar.BrandId = car.BrandId;
                 existingCar.PhienBan = car.PhienBan;
                 existingCar.KieuDang = car.KieuDang;
                 existingCar.XuatXu = car.XuatXu;
@@ -145,7 +140,6 @@ namespace _12_Weboto.Controllers
                 existingCar.MucTieuThuTrongDoThi = car.MucTieuThuTrongDoThi;
                 existingCar.MoTa = car.MoTa;
 
-                // **1. XÓA ẢNH CŨ**
                 if (DeletedImageIds != null && DeletedImageIds.Count > 0)
                 {
                     var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
@@ -160,11 +154,9 @@ namespace _12_Weboto.Controllers
                     }
                 }
 
-                // **2. THÊM ẢNH MỚI**
                 if (NewImages != null && NewImages.Count > 0)
                 {
                     var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-
                     if (!Directory.Exists(uploadPath))
                     {
                         Directory.CreateDirectory(uploadPath);
@@ -182,7 +174,6 @@ namespace _12_Weboto.Controllers
                                 await file.CopyToAsync(stream);
                             }
 
-                            // Lưu đường dẫn ảnh vào database
                             var newImage = new CarImage
                             {
                                 CarId = car.Id,
@@ -195,52 +186,10 @@ namespace _12_Weboto.Controllers
                 }
 
                 await _context.SaveChangesAsync();
-
-                // **QUAY LẠI TRANG INDEX SAU KHI LƯU**
                 return RedirectToAction("Index");
             }
-
+            ViewBag.Brands = _context.Brands.ToList();
             return View(car);
-        }
-
-        // Phương thức hiển thị trang xác nhận xóa
-        public async Task<IActionResult> Delete(int id)
-        {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
-            return View(car);
-        }
-
-        // Phương thức xử lý xóa xe
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
-
-            // Xóa ảnh liên quan
-            foreach (var image in car.Images)
-            {
-                string filePath = Path.Combine(_webHostEnvironment.WebRootPath, image.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(filePath))
-                {
-                    System.IO.File.Delete(filePath);
-                }
-                _context.CarImages.Remove(image);
-            }
-
-            // Xóa xe khỏi database
-            _context.Cars.Remove(car);
-            await _context.SaveChangesAsync();
-
-            return RedirectToAction("Index");
         }
     }
 }

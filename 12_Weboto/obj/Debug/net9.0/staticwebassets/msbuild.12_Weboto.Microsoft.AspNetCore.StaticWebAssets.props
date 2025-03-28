@@ -1098,6 +1098,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\005116c7-431a-4b3a-9552-e81a65246ef9_xe2.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>12_Weboto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/12_Weboto</BasePath>
+      <RelativePath>uploads/005116c7-431a-4b3a-9552-e81a65246ef9_xe2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pi75ud7q50</Fingerprint>
+      <Integrity>Ude/FHTnfNEdgktG5TiAxC9q2kyj2RqS8rfX7w2X5rg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\005116c7-431a-4b3a-9552-e81a65246ef9_xe2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\06751b4d-42eb-4e06-a9b6-d442d868cac1_3.png'))">
       <SourceType>Package</SourceType>
       <SourceId>12_Weboto</SourceId>
@@ -1242,6 +1260,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\3e8cf354-8e37-4f85-8351-4194164b87d9.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>12_Weboto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/12_Weboto</BasePath>
+      <RelativePath>uploads/426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rtktiymlj7</Fingerprint>
+      <Integrity>UTdeJddoCvbRDJVunmHo92dO7CfBqlr7TA+p97h5oiI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>12_Weboto</SourceId>
@@ -1295,6 +1331,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\59ab637f-646f-4363-80cd-f0013c3951dd_3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>12_Weboto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/12_Weboto</BasePath>
+      <RelativePath>uploads/5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>zvht6k0aeg</Fingerprint>
+      <Integrity>MepvhswcvdnDA9xqAHCeTdzzMI9L2JGMp8cCEQM+f7o=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png'))">
       <SourceType>Package</SourceType>
@@ -1367,6 +1421,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\65d87231-b9dc-402a-9087-912e02cbaee2_3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\83270c11-8967-4a02-a557-ef24b72e8844_xe4.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>12_Weboto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/12_Weboto</BasePath>
+      <RelativePath>uploads/83270c11-8967-4a02-a557-ef24b72e8844_xe4.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5e1ah2i274</Fingerprint>
+      <Integrity>jb7C7bTK+ook4oCtC4x4RQ/SSgI6JpQacv8ckL54Yrc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\83270c11-8967-4a02-a557-ef24b72e8844_xe4.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>12_Weboto</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/12_Weboto</BasePath>
+      <RelativePath>uploads/90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yjsvrpqfj7</Fingerprint>
+      <Integrity>TgGhMtG7fPEPE8g7dM+lf7E/FBE/hLL3hYoRp2UE2QQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\uploads\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png'))">
       <SourceType>Package</SourceType>

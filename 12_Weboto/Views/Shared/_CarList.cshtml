@@ -29,6 +29,7 @@ else
                     <div class="text-center mt-3">
                         <h3>@car.TenXe</h3>
                         <p>@car.GiaTien VND</p>
+                        <p>@car.Brand?.TenHang</p>
                         <p>@car.MoTa</p>
                         <a asp-controller="Car" asp-action="Details" asp-route-id="@car.Id" class="btn btn-primary">Xem chi tiết</a>
 

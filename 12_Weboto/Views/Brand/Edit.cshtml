@@ -1,0 +1,12 @@
+﻿@model _12_Weboto.Models.Brand
+
+<h2>Chỉnh sửa hãng xe</h2>
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="TenHang">Tên hãng</label>
+        <input asp-for="TenHang" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

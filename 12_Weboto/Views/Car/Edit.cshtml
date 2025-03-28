@@ -22,13 +22,18 @@
                     <label asp-for="GiaTien"><i class="fas fa-car"></i> Giá tiền</label>
                     <input asp-for="GiaTien" class="form-control" required />
                 </div>
-                <div class="form-group">
-                    <label asp-for="HangXe"><i class="fas fa-industry"></i> Hãng xe</label>
-                    <input asp-for="HangXe" class="form-control" required />
-                </div>
+                <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
+                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.HangXeList" required>
+                    <option value="">-- Chọn hãng xe --</option>
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
                 <div class="form-group">
                     <label asp-for="PhienBan"><i class="fas fa-cogs"></i> Phiên bản</label>
                     <input asp-for="PhienBan" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="SoChoNgoi"><i class="fas fa-cogs"></i> Số chỗ ngồi</label>
+                    <input asp-for="SoChoNgoi" class="form-control" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="KieuDang"><i class="fas fa-car-side"></i> Kiểu dáng</label>
@@ -47,6 +52,10 @@
                 <div class="form-group">
                     <label asp-for="NamSanXuat"><i class="fas fa-calendar-alt"></i> Năm sản xuất</label>
                     <input asp-for="NamSanXuat" type="number" class="form-control" required />
+                </div>
+                <div class="form-group">
+                    <label asp-for="SoKM"><i class="fas fa-calendar-alt"></i> Số KM</label>
+                    <input asp-for="SoKM" type="number" class="form-control" required />
                 </div>
                 <div class="form-group">
                     <label asp-for="NhienLieu"><i class="fas fa-gas-pump"></i> Loại nhiên liệu</label>

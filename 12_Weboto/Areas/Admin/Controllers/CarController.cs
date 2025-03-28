@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using _12_Weboto.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace _12_Weboto.Areas.Admin.Controllers
 {
@@ -18,11 +19,14 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         public IActionResult Add()
         {
+            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
             return View();
         }
+
         [HttpPost]
         public async Task<IActionResult> Add(Car car, List<IFormFile> Images)
         {
+            Console.WriteLine($"TenXe: {car.TenXe}, GiaTien: {car.GiaTien}, BrandId: {car.BrandId}");
             if (!ModelState.IsValid)
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors);
@@ -64,15 +68,19 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 }
 
                 await _context.SaveChangesAsync();
-            }
+                if (_context.Entry(car).State == EntityState.Detached)
+                {
+                    Console.WriteLine("Lỗi: Xe không được lưu vào database.");
+                }
 
+            }
+            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
             return RedirectToAction("Index");
         }
 
-
         public async Task<IActionResult> Details(int id)
         {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
+            var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
             if (car == null)
             {
                 return NotFound();
@@ -82,52 +90,47 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-            var cars = _context.Cars.Include(c => c.Images).ToList();
+            var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
             return View(cars);
         }
+
         public IActionResult CarList()
         {
-            var cars = _context.Cars.Include(c => c.Images).ToList();
+            var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
             return View(cars);
         }
+
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            var car = await _context.Cars
-                .Include(c => c.Images)
-                .FirstOrDefaultAsync(c => c.Id == id);
-
+            var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
             if (car == null)
             {
                 return NotFound();
             }
-
+            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
             return View(car);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Edit(Car car, List<IFormFile> NewImages, List<int>? DeletedImageIds)
         {
             if (ModelState.IsValid)
             {
-                var existingCar = await _context.Cars
-                    .Include(c => c.Images)
-                    .FirstOrDefaultAsync(c => c.Id == car.Id);
+                var existingCar = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == car.Id);
 
                 if (existingCar == null)
                 {
                     return NotFound();
                 }
 
-                // Cập nhật thông tin xe
                 existingCar.TenXe = car.TenXe;
                 existingCar.GiaTien = car.GiaTien;
                 existingCar.NamSanXuat = car.NamSanXuat;
                 existingCar.NhienLieu = car.NhienLieu;
                 existingCar.SoKM = car.SoKM;
                 existingCar.SoChoNgoi = car.SoChoNgoi;
-                existingCar.HangXe = car.HangXe;
+                existingCar.BrandId = car.BrandId;
                 existingCar.PhienBan = car.PhienBan;
                 existingCar.KieuDang = car.KieuDang;
                 existingCar.XuatXu = car.XuatXu;
@@ -199,44 +202,34 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 // **QUAY LẠI TRANG INDEX SAU KHI LƯU**
                 return RedirectToAction("Index");
             }
-
+            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
             return View(car);
-        }
 
-        // Phương thức hiển thị trang xác nhận xóa
+        }
+        [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
+            var car = await _context.Cars.Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
+
             if (car == null)
             {
                 return NotFound();
             }
+
             return View(car);
         }
 
-        // Phương thức xử lý xóa xe
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+
+        [HttpPost]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var car = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == id);
+            var car = await _context.Cars.FindAsync(id);
+
             if (car == null)
             {
                 return NotFound();
             }
 
-            // Xóa ảnh liên quan
-            foreach (var image in car.Images)
-            {
-                string filePath = Path.Combine(_webHostEnvironment.WebRootPath, image.ImageUrl.TrimStart('/'));
-                if (System.IO.File.Exists(filePath))
-                {
-                    System.IO.File.Delete(filePath);
-                }
-                _context.CarImages.Remove(image);
-            }
-
-            // Xóa xe khỏi database
             _context.Cars.Remove(car);
             await _context.SaveChangesAsync();
 

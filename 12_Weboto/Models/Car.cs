@@ -5,7 +5,7 @@ namespace _12_Weboto.Models
 {
     public class Car
     {
-        [Key]
+
         public int Id { get; set; }
 
         // Thông tin cơ bản
@@ -19,7 +19,8 @@ namespace _12_Weboto.Models
         public int SoChoNgoi { get; set; }
 
         // Tổng quan
-        public string HangXe { get; set; }
+        public int BrandId { get; set; }  // Liên kết đến hãng xe
+        public Brand? Brand { get; set; }  // Navigation property
         public string PhienBan { get; set; }
         public string KieuDang { get; set; }
         public string XuatXu { get; set; }
@@ -46,17 +47,15 @@ namespace _12_Weboto.Models
         public string MoTa { get; set; }
 
         // Danh sách ảnh liên kết với xe
-        public List<CarImage> Images { get; set; } = new List<CarImage>();
+        public List<CarImage> Images { get; set; }
 
     }
 
         public class CarImage
         {
-            [Key]
             public int Id { get; set; }
             public string ImageUrl { get; set; }
 
-            [ForeignKey("Car")]
             public int CarId { get; set; }
             public Car Car { get; set; }
         }

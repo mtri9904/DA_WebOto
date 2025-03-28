@@ -31,7 +31,11 @@
             <div class="col-md-6">
                 <h4 class="text-primary">Tổng quan</h4>
                 <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
-                <input type="text" asp-for="HangXe" class="form-control" required>
+                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.HangXeList" required>
+                    <option value="">-- Chọn hãng xe --</option>
+                </select>
+                <span asp-validation-for="BrandId" class="text-danger"></span>
+
 
                 <label class="form-label"><i class="fas fa-list"></i> Phiên bản:</label>
                 <input type="text" asp-for="PhienBan" class="form-control" required>
