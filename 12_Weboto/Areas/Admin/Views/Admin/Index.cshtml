@@ -1,5 +1,131 @@
 ﻿@{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-<h2>Trang Quản Trị</h2>
-<p>Chào mừng đến trang quản trị!</p>
+
+<div class="admin-dashboard">
+    <header class="dashboard-header">
+        <h2>Trang Quản Trị</h2>
+        <p class="welcome-text">Chào mừng đến với bảng điều khiển quản trị!</p>
+    </header>
+
+    <section class="dashboard-content">
+        <h5 class="section-title">TỔNG QUAN WEBSITE</h5>
+        <div class="stats-grid">
+            <div class="stat-card" style="--card-color: #3498db">
+                <div class="stat-content">
+                    <span class="stat-label">Tổng số xe</span>
+                    <span class="stat-value">@ViewBag.TotalCars <small>Chiếc</small></span>
+                </div>
+                <i class="fas fa-car stat-icon"></i>
+            </div>
+
+            <div class="stat-card" style="--card-color: #2ecc71">
+                <div class="stat-content">
+                    <span class="stat-label">Hãng xe</span>
+                    <span class="stat-value">@ViewBag.TotalBrands <small>Hãng</small></span>
+                </div>
+                <i class="fas fa-car-side stat-icon"></i>
+            </div>
+
+            <div class="stat-card" style="--card-color: #e74c3c">
+                <div class="stat-content">
+                    <span class="stat-label">Người dùng</span>
+                    <span class="stat-value">@ViewBag.TotalUsers <small>Thành viên</small></span>
+                </div>
+                <i class="fas fa-users stat-icon"></i>
+            </div>
+
+            <div class="stat-card" style="--card-color: #1abc9c">
+                <div class="stat-content">
+                    <span class="stat-label">Báo cáo</span>
+                    <span class="stat-value">5 <small>Báo cáo</small></span>
+                </div>
+                <i class="fas fa-chart-bar stat-icon"></i>
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .admin-dashboard {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .dashboard-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .dashboard-header h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+    .welcome-text {
+        color: #7f8c8d;
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        color: #34495e;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .stat-card {
+        background: white;
+        border-radius: 12px;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease;
+        border-left: 5px solid var(--card-color);
+    }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+
+    .stat-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stat-label {
+        color: #7f8c8d;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .stat-value {
+        color: #2c3e50;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+        .stat-value small {
+            font-size: 0.8rem;
+            color: #95a5a6;
+            font-weight: normal;
+        }
+
+    .stat-icon {
+        font-size: 2rem;
+        color: var(--card-color);
+        opacity: 0.8;
+    }
+</style>

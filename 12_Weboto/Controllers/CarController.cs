@@ -117,42 +117,52 @@ namespace _12_Weboto.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Car car, List<IFormFile> NewImages, List<int>? DeletedImageIds)
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(
+            int id, string TenXe, decimal GiaTien, int NamSanXuat, string NhienLieu, int SoKM, int SoChoNgoi,
+            int BrandId, string PhienBan, string KieuDang, string XuatXu, string DongXe,
+            string DongCo, string HopSo,
+            int ChieuDai, int ChieuRong, int ChieuCao, int CoSoBanhXe, int TrongLuongKhongTai,
+            string LopTruoc, string LopSau, float MucTieuThuNgoaiDoThi, float MucTieuThuTrongDoThi,
+            string MoTa, List<IFormFile> NewImages, List<int>? DeletedImageIds)
         {
-            if (ModelState.IsValid)
+            if (id <= 0 || string.IsNullOrEmpty(TenXe))
             {
-                var existingCar = await _context.Cars.Include(c => c.Images).FirstOrDefaultAsync(c => c.Id == car.Id);
+                return BadRequest("Dữ liệu không hợp lệ.");
+            }
 
-                if (existingCar == null)
-                {
-                    return NotFound();
-                }
+            var car = await _context.Cars.FindAsync(id);
+            if (car == null)
+            {
+                return NotFound();
+            }
 
-                existingCar.TenXe = car.TenXe;
-                existingCar.GiaTien = car.GiaTien;
-                existingCar.NamSanXuat = car.NamSanXuat;
-                existingCar.NhienLieu = car.NhienLieu;
-                existingCar.SoKM = car.SoKM;
-                existingCar.SoChoNgoi = car.SoChoNgoi;
-                existingCar.BrandId = car.BrandId;
-                existingCar.PhienBan = car.PhienBan;
-                existingCar.KieuDang = car.KieuDang;
-                existingCar.XuatXu = car.XuatXu;
-                existingCar.DongXe = car.DongXe;
-                existingCar.DongCo = car.DongCo;
-                existingCar.HopSo = car.HopSo;
-                existingCar.ChieuDai = car.ChieuDai;
-                existingCar.ChieuRong = car.ChieuRong;
-                existingCar.ChieuCao = car.ChieuCao;
-                existingCar.CoSoBanhXe = car.CoSoBanhXe;
-                existingCar.TrongLuongKhongTai = car.TrongLuongKhongTai;
-                existingCar.LopTruoc = car.LopTruoc;
-                existingCar.LopSau = car.LopSau;
-                existingCar.MucTieuThuNgoaiDoThi = car.MucTieuThuNgoaiDoThi;
-                existingCar.MucTieuThuTrongDoThi = car.MucTieuThuTrongDoThi;
-                existingCar.MoTa = car.MoTa;
+            try
+            {
+                car.TenXe = TenXe;
+                car.GiaTien = GiaTien;
+                car.NamSanXuat = NamSanXuat;
+                car.NhienLieu = NhienLieu;
+                car.SoKM = SoKM;
+                car.SoChoNgoi = SoChoNgoi;
+                car.BrandId = BrandId;
+                car.PhienBan = PhienBan;
+                car.KieuDang = KieuDang;
+                car.XuatXu = XuatXu;
+                car.DongXe = DongXe;
+                car.DongCo = DongCo;
+                car.HopSo = HopSo;
+                car.ChieuDai = ChieuDai;
+                car.ChieuRong = ChieuRong;
+                car.ChieuCao = ChieuCao;
+                car.CoSoBanhXe = CoSoBanhXe;
+                car.TrongLuongKhongTai = TrongLuongKhongTai;
+                car.LopTruoc = LopTruoc;
+                car.LopSau = LopSau;
+                car.MucTieuThuNgoaiDoThi = MucTieuThuNgoaiDoThi;
+                car.MucTieuThuTrongDoThi = MucTieuThuTrongDoThi;
+                car.MoTa = MoTa;
 
-                // **1. XÓA ẢNH CŨ**
                 if (DeletedImageIds != null && DeletedImageIds.Count > 0)
                 {
                     var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
@@ -200,16 +210,17 @@ namespace _12_Weboto.Controllers
                         }
                     }
                 }
-
+                _context.Update(car);
                 await _context.SaveChangesAsync();
-
-                // **QUAY LẠI TRANG INDEX SAU KHI LƯU**
                 return RedirectToAction("Index");
             }
-            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
-            return View(car);
-
+            catch (DbUpdateException ex)
+            {
+                ModelState.AddModelError("", "Lỗi khi cập nhật dữ liệu: " + ex.Message);
+                return View(car);
+            }
         }
+
 
         [HttpGet]
         public async Task<IActionResult> Delete(int id)

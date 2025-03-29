@@ -4,10 +4,8 @@
     ViewData["Title"] = "Chỉnh sửa xe";
 }
 
-<h2 class="mb-4">🚗 Chỉnh sửa xe</h2>
-
 <form asp-action="Edit" method="post" enctype="multipart/form-data">
-    <input type="hidden" asp-for="Id" />
+    <input type="hidden" name="id" value="@Model.Id" />
 
     <!-- Tổng quan -->
     <div class="card mb-4">
@@ -15,51 +13,51 @@
         <div class="card-body row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="TenXe"><i class="fas fa-car"></i> Tên xe</label>
-                    <input asp-for="TenXe" class="form-control" required />
+                    <label for="TenXe" class="form-label">Tên xe:</label>
+                    <input type="text" class="form-control" name="TenXe" id="TenXe" value="@Model.TenXe" required />
                 </div>
+
                 <div class="form-group">
-                    <label asp-for="GiaTien"><i class="fas fa-car"></i> Giá tiền</label>
-                    <input asp-for="GiaTien" class="form-control" required />
+                    <label for="GiaTien" class="form-label">Giá tiền:</label>
+                    <input type="number" class="form-control" name="GiaTien" id="GiaTien" value="@Model.GiaTien" required />
                 </div>
-                <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
                 <select asp-for="BrandId" class="form-control" asp-items="ViewBag.HangXeList" required>
                     <option value="">-- Chọn hãng xe --</option>
                 </select>
-                <span asp-validation-for="BrandId" class="text-danger"></span>
+
                 <div class="form-group">
-                    <label asp-for="PhienBan"><i class="fas fa-cogs"></i> Phiên bản</label>
-                    <input asp-for="PhienBan" class="form-control" required />
+                    <label for="PhienBan" class="form-label">Phiên bản:</label>
+                    <input type="text" class="form-control" name="PhienBan" id="PhienBan" value="@Model.PhienBan" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="SoChoNgoi"><i class="fas fa-cogs"></i> Số chỗ ngồi</label>
-                    <input asp-for="SoChoNgoi" class="form-control" required />
+                    <label for="SoChoNgoi" class="form-label">Số chỗ ngồi:</label>
+                    <input type="number" class="form-control" name="SoChoNgoi" id="SoChoNgoi" value="@Model.SoChoNgoi" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="KieuDang"><i class="fas fa-car-side"></i> Kiểu dáng</label>
-                    <input asp-for="KieuDang" class="form-control" required />
+                    <label for="KieuDang" class="form-label">Kiểu dáng:</label>
+                    <input type="text" class="form-control" name="KieuDang" id="KieuDang" value="@Model.KieuDang" required />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="XuatXu"><i class="fas fa-globe"></i> Xuất xứ</label>
-                    <input asp-for="XuatXu" class="form-control" required />
+                    <label for="XuatXu" class="form-label">Xuất xứ:</label>
+                    <input type="text" class="form-control" name="XuatXu" id="XuatXu" value="@Model.XuatXu" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="DongXe"><i class="fas fa-car-alt"></i> Dòng xe</label>
-                    <input asp-for="DongXe" class="form-control" required />
+                    <label for="DongXe" class="form-label">Dòng xe:</label>
+                    <input type="text" class="form-control" name="DongXe" id="DongXe" value="@Model.DongXe" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="NamSanXuat"><i class="fas fa-calendar-alt"></i> Năm sản xuất</label>
-                    <input asp-for="NamSanXuat" type="number" class="form-control" required />
+                    <label for="NamSanXuat" class="form-label">Năm sản xuất:</label>
+                    <input type="number" class="form-control" name="NamSanXuat" id="NamSanXuat" value="@Model.NamSanXuat" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="SoKM"><i class="fas fa-calendar-alt"></i> Số KM</label>
-                    <input asp-for="SoKM" type="number" class="form-control" required />
+                    <label for="SoKM" class="form-label">Số KM đã đi:</label>
+                    <input type="number" class="form-control" name="SoKM" id="SoKM" value="@Model.SoKM" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="NhienLieu"><i class="fas fa-gas-pump"></i> Loại nhiên liệu</label>
-                    <input asp-for="NhienLieu" class="form-control" required />
+                    <label for="NhienLieu" class="form-label">Nhiên liệu:</label>
+                    <input type="text" class="form-control" name="NhienLieu" id="NhienLieu" value="@Model.NhienLieu" required />
                 </div>
             </div>
         </div>
@@ -71,12 +69,12 @@
         <div class="card-body row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="DongCo"><i class="fas fa-car-battery"></i> Động cơ</label>
-                    <input asp-for="DongCo" class="form-control" required />
+                    <label for="DongCo" class="form-label">Động cơ:</label>
+                    <input type="text" class="form-control" name="DongCo" id="DongCo" value="@Model.DongCo" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="HopSo"><i class="fas fa-cogs"></i> Hộp số</label>
-                    <input asp-for="HopSo" class="form-control" required />
+                    <label for="HopSo" class="form-label">Hộp số:</label>
+                    <input type="text" class="form-control" name="HopSo" id="HopSo" value="@Model.HopSo" required />
                 </div>
             </div>
         </div>
@@ -88,26 +86,26 @@
         <div class="card-body row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="ChieuDai"><i class="fas fa-ruler-horizontal"></i> Chiều dài (mm)</label>
-                    <input asp-for="ChieuDai" type="number" class="form-control" required />
+                    <label for="ChieuDai" class="form-label">Chiều dài (mm):</label>
+                    <input type="number" class="form-control" name="ChieuDai" id="ChieuDai" value="@Model.ChieuDai" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="ChieuRong"><i class="fas fa-ruler-combined"></i> Chiều rộng (mm)</label>
-                    <input asp-for="ChieuRong" type="number" class="form-control" required />
+                    <label for="ChieuRong" class="form-label">Chiều rộng (mm):</label>
+                    <input type="number" class="form-control" name="ChieuRong" id="ChieuRong" value="@Model.ChieuRong" required />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="ChieuCao"><i class="fas fa-arrows-alt-v"></i> Chiều cao (mm)</label>
-                    <input asp-for="ChieuCao" type="number" class="form-control" required />
+                    <label for="ChieuCao" class="form-label">Chiều cao (mm):</label>
+                    <input type="number" class="form-control" name="ChieuCao" id="ChieuCao" value="@Model.ChieuCao" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="CoSoBanhXe"><i class="fas fa-tape"></i> Cơ sở bánh xe (mm)</label>
-                    <input asp-for="CoSoBanhXe" type="number" class="form-control" required />
+                    <label for="CoSoBanhXe" class="form-label">Cơ sở bánh xe:</label>
+                    <input type="number" class="form-control" name="CoSoBanhXe" id="CoSoBanhXe" value="@Model.CoSoBanhXe" required />
                 </div>
                 <div class="form-group">
-                    <label asp-for="TrongLuongKhongTai"><i class="fas fa-weight-hanging"></i> Trọng lượng không tải (kg)</label>
-                    <input asp-for="TrongLuongKhongTai" type="number" class="form-control" required />
+                    <label for="TrongLuongKhongTai" class="form-label">Trọng lượng không tải:</label>
+                    <input type="number" class="form-control" name="TrongLuongKhongTai" id="TrongLuongKhongTai" value="@Model.TrongLuongKhongTai" required />
                 </div>
             </div>
         </div>
@@ -119,14 +117,14 @@
         <div class="card-body row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="LopTruoc"><i class="fas fa-tire"></i> Lốp trước</label>
-                    <input asp-for="LopTruoc" class="form-control" required />
+                    <label for="LopTruoc" class="form-label">Lốp trước:</label>
+                    <input type="text" class="form-control" name="LopTruoc" id="LopTruoc" value="@Model.LopTruoc" required />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="LopSau"><i class="fas fa-tire"></i> Lốp sau</label>
-                    <input asp-for="LopSau" class="form-control" required />
+                    <label for="LopSau" class="form-label">Lốp sau:</label>
+                    <input type="text" class="form-control" name="LopSau" id="LopSau" value="@Model.LopSau" required />
                 </div>
             </div>
         </div>
@@ -138,23 +136,22 @@
         <div class="card-body row">
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="MucTieuThuNgoaiDoThi"><i class="fas fa-tachometer-alt"></i> Ngoài đô thị (L/100km)</label>
-                    <input asp-for="MucTieuThuNgoaiDoThi" type="number" step="0.1" class="form-control" required />
+                    <label for="MucTieuThuNgoaiDoThi" class="form-label">Mức tiêu thụ ngoài đô thị (L/100km):</label>
+                    <input type="number" step="0.1" class="form-control" name="MucTieuThuNgoaiDoThi" id="MucTieuThuNgoaiDoThi" value="@Model.MucTieuThuNgoaiDoThi" required />
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <label asp-for="MucTieuThuTrongDoThi"><i class="fas fa-tachometer-alt"></i> Trong đô thị (L/100km)</label>
-                    <input asp-for="MucTieuThuTrongDoThi" type="number" step="0.1" class="form-control" required />
+                    <label for="MucTieuThuTrongDoThi" class="form-label">Mức tiêu thụ trong đô thị (L/100km):</label>
+                    <input type="number" step="0.1" class="form-control" name="MucTieuThuTrongDoThi" id="MucTieuThuTrongDoThi" value="@Model.MucTieuThuTrongDoThi" required />
                 </div>
             </div>
         </div>
     </div>
 
     <div class="form-group">
-        <label asp-for="MoTa"><i class="fas fa-info-circle"></i> Mô tả</label>
-        <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
-        <span asp-validation-for="MoTa" class="text-danger"></span>
+        <label for="MoTa" class="form-label">Mô tả:</label>
+        <textarea class="form-control" name="MoTa" id="MoTa" required>@Model.MoTa</textarea>
     </div>
 
     <h4 class="mt-4">📷 Ảnh xe</h4>
@@ -184,49 +181,37 @@
     <br />
     <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
     <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
-    </form>
+</form>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const fileInput = document.querySelector("input[name='NewImages']");
         const previewContainer = document.getElementById("previewContainer");
 
-        fileInput.addEventListener("change", function () {
-            previewContainer.innerHTML = "";
-            const files = fileInput.files;
-            if (!files.length) return;
+        fileInput.addEventListener("change", function (event) {
+            previewContainer.innerHTML = ""; // Xóa ảnh cũ trước khi thêm mới
+            const files = event.target.files;
 
-            for (const file of files) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imgContainer = document.createElement("div");
-                    imgContainer.classList.add("col-md-3", "text-center", "mb-3", "image-preview");
+            if (files.length > 0) {
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
 
-                    const imgElement = document.createElement("img");
-                    imgElement.src = e.target.result;
-                    imgElement.classList.add("img-thumbnail", "rounded");
-                    imgElement.style.width = "100%";
+                    if (file && file.type.startsWith("image/")) {
+                        const reader = new FileReader();
 
-                    // Tạo checkbox xóa ảnh
-                    const deleteCheckbox = document.createElement("input");
-                    deleteCheckbox.type = "checkbox";
-                    deleteCheckbox.classList.add("delete-new-image");
-                    deleteCheckbox.style.marginTop = "5px";
+                        reader.onload = function (e) {
+                            const img = document.createElement("img");
+                            img.src = e.target.result;
+                            img.classList.add("img-thumbnail", "rounded", "m-2");
+                            img.style.width = "150px";
+                            previewContainer.appendChild(img);
+                        };
 
-                    const label = document.createElement("label");
-                    label.appendChild(deleteCheckbox);
-                    label.append(" Xóa ảnh");
-
-                    // Thêm hình ảnh và checkbox vào container
-                    imgContainer.appendChild(imgElement);
-                    imgContainer.appendChild(document.createElement("br"));
-                    imgContainer.appendChild(label);
-                    previewContainer.appendChild(imgContainer);
-                };
-                reader.readAsDataURL(file);
+                        reader.readAsDataURL(file);
+                    }
+                }
             }
         });
     });
-
 </script>
 
 

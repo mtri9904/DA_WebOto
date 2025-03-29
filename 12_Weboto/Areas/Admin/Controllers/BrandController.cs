@@ -69,19 +69,32 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         // Xử lý chỉnh sửa thương hiệu
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, Brand brand)
+        public async Task<IActionResult> Edit(int id, string TenHang)
         {
-            if (id != brand.Id)
-                return NotFound();
-
-            if (ModelState.IsValid)
+            if (id <= 0 || string.IsNullOrEmpty(TenHang))
             {
+                return BadRequest("Dữ liệu không hợp lệ.");
+            }
+
+            var brand = await _context.Brands.FindAsync(id);
+            if (brand == null)
+            {
+                return NotFound();
+            }
+
+            try
+            {
+                brand.TenHang = TenHang;
                 _context.Update(brand);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(brand);
+            catch (DbUpdateException)
+            {
+                return StatusCode(500, "Lỗi khi cập nhật dữ liệu.");
+            }
         }
+
 
         // Xóa thương hiệu
         public async Task<IActionResult> Delete(int id)

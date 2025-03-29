@@ -8,9 +8,22 @@ namespace _12_Weboto.Areas.Admin.Controllers
     [Authorize(Roles = SD.Role_Admin)]
     public class AdminController : Controller
     {
+        private readonly ApplicationDbContext _context;
+        public AdminController(ApplicationDbContext context)
+        {
+            _context = context ?? throw new ArgumentNullException(nameof(context));
+        }
         public IActionResult Index()
         {
-            return View(); // Tự động tìm đến Areas/Admin/Views/Admin/Index.cshtml
+            var totalCars = _context.Cars.Count();
+            var totalBrands = _context.Brands.Count();
+            var totalUsers = _context.Users.Count();
+
+            ViewBag.TotalCars = totalCars;
+            ViewBag.TotalBrands = totalBrands;
+            ViewBag.TotalUsers = totalUsers;
+
+            return View();
         }
     }
 }

@@ -3,72 +3,235 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Trang Quản Trị</title>
+    <title>@ViewData["Title"] - Quản lý bán Ô tô</title>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            background-color: #d0e7f9; /* Xanh nhạt */
+            background-color: #f0f4f8;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
         }
 
+        /* Top navigation bar */
+        .top-nav {
+            background-color: #17a2b8;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+            .top-nav h4 {
+                margin: 0;
+                font-size: 1.2rem;
+            }
+
+            .top-nav .user-info {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+                .top-nav .user-info img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+
+        /* Sidebar */
         .sidebar {
             width: 250px;
-            background-color: #000; /* Màu đen */
+            background-color: #212529;
             min-height: 100vh;
             color: white;
             padding: 15px;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            transition: width 0.3s ease;
         }
 
             .sidebar a {
                 color: white;
                 text-decoration: none;
-                display: block;
-                padding: 10px;
+                display: flex;
+                align-items: center;
+                padding: 12px;
                 margin: 5px 0;
                 border-radius: 5px;
+                transition: background-color 0.2s;
             }
 
                 .sidebar a:hover {
                     background-color: #444;
                 }
 
-        .content {
-            flex-grow: 1;
+                .sidebar a.active {
+                    background-color: #17a2b8;
+                    font-weight: bold;
+                }
+
+                .sidebar a i {
+                    margin-right: 10px;
+                    width: 20px;
+                    text-align: center;
+                }
+
+        /* Main content */
+        .main-content {
+            margin-left: 250px;
             padding: 20px;
+            padding-top: 80px;
+            min-height: 100vh;
+            transition: margin-left 0.3s ease;
         }
+
+        /* Dashboard cards */
+        .dashboard-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-3px);
+            }
+
+            .card i {
+                font-size: 2rem;
+                opacity: 0.9;
+            }
+
+            .card.blue {
+                background-color: #17a2b8;
+            }
+
+            .card.green {
+                background-color: #28a745;
+            }
+
+            .card.red {
+                background-color: #dc3545;
+            }
+
+            .card.teal {
+                background-color: #20c997;
+            }
     </style>
 </head>
 <body>
-    <div class="d-flex">
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <h4 class="text-light">Quản lý Car</h4>
-            <a asp-area="Admin" asp-controller="Car" asp-action="Index">
-                <i class="fas fa-home"></i> Bảng điều khiển
-            </a>
-            <a asp-area="Admin" asp-controller="Car" asp-action="Add">
-                <i class="fas fa-car"></i> Sản phẩm
-            </a>
-            <a asp-area="Admin" asp-controller="Brand" asp-action="Index">
-                <i class="fas fa-car"></i> Hãng xe
-            </a>
-            <a asp-area="Admin" asp-controller="User" asp-action="Index">
-                <i class="fas fa-user"></i> Người dùng
-            </a>
-            <a asp-area="" asp-controller="Report" asp-action="Index">
-                <i class="fas fa-chart-bar"></i> Báo cáo
-            </a>
-        </nav>
-        <partial name="_LoginPartial" />
-
-        <!-- Nội dung chính -->
-        <div class="content w-100">
-            @RenderBody()
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <h4>Quản lý bán Ô tô</h4>
+        <div class="user-info">
+            <span class="greeting">Hello, admin@gmail.com</span>
+            <a href="#" class="logout-link">Logout</a>
+            <img src="https://via.placeholder.com/30" alt="User Avatar" />
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .top-nav {
+            background-color: #17a2b8;
+            color: white;
+            padding: 8px 20px; /* Giảm padding để thanh top-nav mỏng hơn */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            height: 50px; /* Đặt chiều cao cố định để đồng bộ */
+        }
+
+            .top-nav h4 {
+                margin: 0;
+                font-size: 1rem; /* Giữ kích thước chữ nhỏ */
+                font-weight: 500;
+                line-height: 1; /* Đảm bảo không có khoảng cách thừa */
+            }
+
+            .top-nav .user-info {
+                display: flex;
+                align-items: center;
+                gap: 8px; /* Giảm khoảng cách giữa các phần tử */
+            }
+
+                .top-nav .user-info img {
+                    width: 28px; /* Giảm kích thước avatar một chút */
+                    height: 28px;
+                    border-radius: 50%;
+                    order: 3; /* Đặt avatar ở cuối */
+                }
+
+                .top-nav .user-info .greeting {
+                    font-size: 0.85rem; /* Giảm kích thước chữ của greeting */
+                    color: #e0f7fa; /* Màu nhạt hơn để tạo độ tương phản */
+                }
+
+                .top-nav .user-info .logout-link {
+                    font-size: 0.85rem; /* Giảm kích thước chữ của logout */
+                    color: #e0f7fa;
+                    text-decoration: none;
+                    transition: color 0.2s ease;
+                }
+
+                    .top-nav .user-info .logout-link:hover {
+                        color: #ffffff;
+                        text-decoration: underline;
+                    }
+    </style>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h4>
+            <a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="text-light text-decoration-none">
+                Quản lý Car
+            </a>
+        </h4>
+        <a asp-area="Admin" asp-controller="Car" asp-action="Index">
+            <i class="fas fa-home"></i> Bảng điều khiển
+        </a>
+        <a asp-area="Admin" asp-controller="Car" asp-action="Add">
+            <i class="fas fa-car"></i> Sản phẩm
+        </a>
+        <a asp-area="Admin" asp-controller="Brand" asp-action="Index">
+            <i class="fas fa-car"></i> Hãng xe
+        </a>
+        <a asp-area="Admin" asp-controller="User" asp-action="Index">
+            <i class="fas fa-user"></i> Người dùng
+        </a>
+        <a asp-area="" asp-controller="Report" asp-action="Index">
+            <i class="fas fa-chart-bar"></i> Báo cáo
+        </a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        @RenderBody()
+    </main>
 </body>
 </html>
