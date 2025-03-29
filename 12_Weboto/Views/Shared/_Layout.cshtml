@@ -21,14 +21,17 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-0">
-                        <!-- Đảm bảo menu sát trái -->
 @*                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Car" asp-action="Index">Danh sách xe</a>
-                        </li> *@
+                            <a asp-area="" class="nav-link" asp-controller="Car" asp-action="Index">Danh sách xe</a>
+                        </li>
+                        <a asp-area="" asp-controller="Brand" asp-action="Index">
+                            <i class="fas fa-car"></i> Hãng xe
+                        </a> *@
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Car" asp-action="CarList">List xe</a>
+                            <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">List xe</a>
                         </li>
                     </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>

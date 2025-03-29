@@ -1,0 +1,41 @@
+﻿@model List<_12_Weboto.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "Quản lý Người dùng";
+}
+
+<h2>Quản lý Người dùng</h2>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Họ và tên</th>
+            <th>Địa chỉ</th>
+            <th>Số điện thoại</th>
+            <th>Vai trò</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Email</td>
+                <td>@user.FullName</td>
+                <td>@user.Address</td>
+                <td>@user.PhoneNumber</td>
+                <td>
+                    @if (ViewBag.UserRoles.ContainsKey(user.Id))
+                    {
+                        @string.Join(", ", ViewBag.UserRoles[user.Id])
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i> Chỉnh sửa vai trò
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

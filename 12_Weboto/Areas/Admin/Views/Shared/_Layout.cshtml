@@ -54,13 +54,14 @@
             <a asp-area="Admin" asp-controller="Brand" asp-action="Index">
                 <i class="fas fa-car"></i> Hãng xe
             </a>
-            <a asp-area="" asp-controller="User" asp-action="Index">
+            <a asp-area="Admin" asp-controller="User" asp-action="Index">
                 <i class="fas fa-user"></i> Người dùng
             </a>
             <a asp-area="" asp-controller="Report" asp-action="Index">
                 <i class="fas fa-chart-bar"></i> Báo cáo
             </a>
         </nav>
+        <partial name="_LoginPartial" />
 
         <!-- Nội dung chính -->
         <div class="content w-100">

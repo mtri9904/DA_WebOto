@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _12_Weboto.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _12_Weboto.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class BrandController : Controller
     {
         private readonly ApplicationDbContext _context;

@@ -27,7 +27,7 @@
                     <td>@car.NamSanXuat</td>
                     <td>
                         <a asp-action="Details" asp-route-id="@car.Id" class="btn btn-info btn-sm">Chi tiết</a>
-                        <a asp-route-id="@car.Id" class="btn btn-warning btn-sm">Sửa</a>
+                        <a asp-action="Edit" asp-route-id="@car.Id" class="btn btn-warning btn-sm">Sửa</a>
                         <a asp-action="Delete" asp-route-id="@car.Id" class="btn btn-danger btn-sm">Xóa</a>
                     </td>
                 </tr>

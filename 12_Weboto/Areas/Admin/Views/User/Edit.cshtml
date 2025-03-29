@@ -1,0 +1,41 @@
+﻿@model _12_Weboto.Models.ApplicationUser
+@{
+    ViewData["Title"] = "Chỉnh sửa Vai trò";
+}
+
+<h2>Chỉnh sửa Vai trò</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="id" value="@Model.Id" />
+
+    <div class="mb-3">
+        <label>Email:</label>
+        <input type="text" class="form-control" value="@Model.Email" readonly />
+    </div>
+
+    <div class="mb-3">
+        <label>Họ và tên:</label>
+        <input type="text" class="form-control" name="FullName" value="@Model.FullName" required />
+    </div>
+    <div class="mb-3">
+        <label>Địa chỉ:</label>
+        <input type="text" class="form-control" name="Address" value="@Model.Address" required />
+    </div>
+    <div class="mb-3">
+        <label>Số điện thoại:</label>
+        <input type="tel" class="form-control" name="PhoneNumber" value="@Model.PhoneNumber" required />
+    </div>
+        <label>Chọn Vai trò:</label>
+        <select name="selectedRoles" class="form-select" multiple>
+            @foreach (var role in ViewBag.Roles)
+            {
+                <option value="@role" selected="@(ViewBag.UserRoles.Contains(role) ? "selected" : null)">
+                    @role
+                </option>
+            }
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-success">Lưu</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>

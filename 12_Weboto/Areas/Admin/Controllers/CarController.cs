@@ -2,10 +2,12 @@
 using _12_Weboto.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 
 namespace _12_Weboto.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CarController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -206,6 +208,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
             return View(car);
 
         }
+
         [HttpGet]
         public async Task<IActionResult> Delete(int id)
         {
