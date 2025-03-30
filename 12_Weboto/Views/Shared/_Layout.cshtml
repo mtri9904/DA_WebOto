@@ -31,8 +31,18 @@
                             <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">List xe</a>
                         </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    
                 </div>
+                <form asp-controller="Language" asp-action="ChangeLanguage" method="get" class="d-inline">
+                    <select name="culture" onchange="this.form.submit()" class="form-select">
+                        <option value="vi" selected>🇻🇳 Tiếng Việt</option>
+                        <option value="en">🇺🇸 English</option>
+                    </select>
+                    <input type="hidden" name="returnUrl" value="@($"{Context.Request.Path}{Context.Request.QueryString}")" />
+                </form>
+
+
+                <partial name="_LoginPartial" />
             </div>
         </nav>
 

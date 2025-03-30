@@ -1,17 +1,18 @@
-﻿@model List<_12_Weboto.Models.Car>
+﻿@using Microsoft.Extensions.Localization
+@model List<_12_Weboto.Models.Car>
+@inject IStringLocalizer<SharedResource> Localizer
 
 @{
-    ViewData["Title"] = "Trang chủ";
+    ViewData["Title"] = Localizer["Trang chủ"];
 }
-
 
 @if (Model == null)
 {
-    <p class="text-center text-danger">⚠️ Model đang NULL, kiểm tra Controller!</p>
+    <p class="text-center text-danger">⚠️ @Localizer["Model đang NULL, kiểm tra Controller!"]</p>
 }
 else if (!Model.Any())
 {
-    <p class="text-center text-danger">🚗 Không có xe nào trong database!</p>
+    <p class="text-center text-danger">🚗 @Localizer["Không có xe nào trong database!"]</p>
 }
 else
 {
