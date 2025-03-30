@@ -1,16 +1,24 @@
 ﻿@model IEnumerable<_12_Weboto.Models.Brand>
-
 @{
-    ViewData["Title"] = "Danh sách thương hiệu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Danh sách thương hiệu</h2>
-<a asp-area="Admin" asp-controller="Brand" asp-action="Add" class="btn btn-primary">Thêm thương hiệu</a>
+@if (TempData["Success"] != null)
+{
+    <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (Model != null && Model.Any())
+{
 <table class="table">
     <thead>
         <tr>
             <th>ID</th>
             <th>Tên thương hiệu</th>
+            <th>Logo</th>
             <th>Thao tác</th>
         </tr>
     </thead>
@@ -21,11 +29,42 @@
                 <td>@brand.Id</td>
                 <td>@brand.TenHang</td>
                 <td>
-                    <a asp-action="Details" asp-route-id="@brand.Id" class="btn btn-info">Chi tiết</a>
-                    <a asp-action="Edit" asp-route-id="@brand.Id" class="btn btn-warning">Sửa</a>
-                    <a asp-action="Delete" asp-route-id="@brand.Id" class="btn btn-danger">Xóa</a>
-                </td>
+                    @if (!string.IsNullOrEmpty(brand.ImageUrl))
+                    {
+                        <img src="@brand.ImageUrl" alt="Logo" style="width: 80px; height: 50px; object-fit: cover;">
+                    }
+                    else
+                    {
+                        <span>Không có logo</span>
+                    }
+                <td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@brand.Id" class="btn btn-info btn-sm">Chi tiết</a>
+                    <a asp-action="Edit" asp-route-id="@brand.Id" class="btn btn-warning btn-sm">Sửa</a>
+                    <a asp-action="Delete" asp-route-id="@brand.Id" class="btn btn-danger btn-sm">Xóa</a>
+                <td>
             </tr>
         }
     </tbody>
 </table>
+}
+else
+    {
+        <p class="text-center text-danger">Không có xe nào trong danh sách.</p>
+    }
+<a asp-action="Add" class="btn btn-success">Thêm Brand mới</a>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.classList.remove("show");
+                successMessage.classList.add("fade");
+                setTimeout(function () {
+                    successMessage.remove();
+                }, 500); // Đợi hiệu ứng fade hoàn tất
+            }, 2000); // 2 giây
+        }
+    });
+</script>

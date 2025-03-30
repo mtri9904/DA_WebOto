@@ -87,7 +87,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 return View(user);
             }
 
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Index");
         }
 
     }

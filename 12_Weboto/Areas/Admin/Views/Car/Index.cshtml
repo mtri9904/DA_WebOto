@@ -1,5 +1,4 @@
-﻿
-@model IEnumerable<_12_Weboto.Models.Car>
+﻿@model IEnumerable<_12_Weboto.Models.Car>
 @{
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -10,6 +9,7 @@
     <table class="table table-bordered">
         <thead>
             <tr>
+             
                 <th>Tên xe</th>
                 <th>Hãng xe</th>
                 <th>Kiểu dáng</th>
@@ -39,6 +39,5 @@ else
 {
     <p class="text-center text-danger">Không có xe nào trong danh sách.</p>
 }
-
 <a asp-action="Add" class="btn btn-success">Thêm xe mới</a>
 

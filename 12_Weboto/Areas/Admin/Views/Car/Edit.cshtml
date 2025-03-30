@@ -4,218 +4,270 @@
     ViewData["Title"] = "Chỉnh sửa xe";
 }
 
-<h2 class="mb-4">🚗 Chỉnh sửa xe</h2>
+<div class="container mt-5">
+    <h2 class="mb-4 text-center fw-bold" style="color: #2C7A7B;">
+        <i class="fas fa-car me-2"></i>Chỉnh sửa thông tin xe
+    </h2>
 
-<form asp-action="Edit" method="post" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="@Model.Id" />
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+        <input type="hidden" name="id" value="@Model.Id" />
 
-    <!-- Tổng quan -->
-    <div class="card mb-4">
-        <div class="card-header bg-primary text-white">Tổng quan</div>
-        <div class="card-body row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="TenXe" class="form-label">Tên xe:</label>
-                    <input type="text" class="form-control" name="TenXe" id="TenXe" value="@Model.TenXe" required />
-                </div>
-
-                <div class="form-group">
-                    <label for="GiaTien" class="form-label">Giá tiền:</label>
-                    <input type="number" class="form-control" name="GiaTien" id="GiaTien" value="@Model.GiaTien" required />
-                </div>
-                <select asp-for="BrandId" class="form-control" asp-items="ViewBag.HangXeList" required>
-                    <option value="">-- Chọn hãng xe --</option>
-                </select>
-
-                <div class="form-group">
-                    <label for="PhienBan" class="form-label">Phiên bản:</label>
-                    <input type="text" class="form-control" name="PhienBan" id="PhienBan" value="@Model.PhienBan" required />
-                </div>
-                <div class="form-group">
-                    <label for="SoChoNgoi" class="form-label">Số chỗ ngồi:</label>
-                    <input type="number" class="form-control" name="SoChoNgoi" id="SoChoNgoi" value="@Model.SoChoNgoi" required />
-                </div>
-                <div class="form-group">
-                    <label for="KieuDang" class="form-label">Kiểu dáng:</label>
-                    <input type="text" class="form-control" name="KieuDang" id="KieuDang" value="@Model.KieuDang" required />
-                </div>
+        <!-- Card Tổng quan -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold text-white" style="background-color: #81E6D9;">
+                <i class="fas fa-info-circle me-2"></i>Tổng quan
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="XuatXu" class="form-label">Xuất xứ:</label>
-                    <input type="text" class="form-control" name="XuatXu" id="XuatXu" value="@Model.XuatXu" required />
-                </div>
-                <div class="form-group">
-                    <label for="DongXe" class="form-label">Dòng xe:</label>
-                    <input type="text" class="form-control" name="DongXe" id="DongXe" value="@Model.DongXe" required />
-                </div>
-                <div class="form-group">
-                    <label for="NamSanXuat" class="form-label">Năm sản xuất:</label>
-                    <input type="number" class="form-control" name="NamSanXuat" id="NamSanXuat" value="@Model.NamSanXuat" required />
-                </div>
-                <div class="form-group">
-                    <label for="SoKM" class="form-label">Số KM đã đi:</label>
-                    <input type="number" class="form-control" name="SoKM" id="SoKM" value="@Model.SoKM" required />
-                </div>
-                <div class="form-group">
-                    <label for="NhienLieu" class="form-label">Nhiên liệu:</label>
-                    <input type="text" class="form-control" name="NhienLieu" id="NhienLieu" value="@Model.NhienLieu" required />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Động cơ & Hiệu suất -->
-    <div class="card mb-4">
-        <div class="card-header bg-secondary text-white">Động cơ & Hiệu suất</div>
-        <div class="card-body row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="DongCo" class="form-label">Động cơ:</label>
-                    <input type="text" class="form-control" name="DongCo" id="DongCo" value="@Model.DongCo" required />
-                </div>
-                <div class="form-group">
-                    <label for="HopSo" class="form-label">Hộp số:</label>
-                    <input type="text" class="form-control" name="HopSo" id="HopSo" value="@Model.HopSo" required />
+            <div class="card-body bg-light">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="TenXe" class="form-label fw-medium" style="color: #2C7A7B;">Tên xe</label>
+                        <input type="text" class="form-control" name="TenXe" id="TenXe"
+                               value="@Model.TenXe" required placeholder="Nhập tên xe">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="GiaTien" class="form-label fw-medium" style="color: #2C7A7B;">Giá tiền (VNĐ)</label>
+                        <input type="number" class="form-control" name="GiaTien" id="GiaTien"
+                               value="@Model.GiaTien" required placeholder="Nhập giá tiền">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="BrandId" class="form-label fw-medium" style="color: #2C7A7B;">Hãng xe</label>
+                        <select asp-for="BrandId" class="form-select" asp-items="ViewBag.HangXeList" required>
+                            <option value="">-- Chọn hãng xe --</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="PhienBan" class="form-label fw-medium" style="color: #2C7A7B;">Phiên bản</label>
+                        <input type="text" class="form-control" name="PhienBan" id="PhienBan"
+                               value="@Model.PhienBan" required placeholder="Nhập phiên bản">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="SoChoNgoi" class="form-label fw-medium" style="color: #2C7A7B;">Số chỗ ngồi</label>
+                        <input type="number" class="form-control" name="SoChoNgoi" id="SoChoNgoi"
+                               value="@Model.SoChoNgoi" required placeholder="Nhập số chỗ ngồi">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="KieuDang" class="form-label fw-medium" style="color: #2C7A7B;">Kiểu dáng</label>
+                        <input type="text" class="form-control" name="KieuDang" id="KieuDang"
+                               value="@Model.KieuDang" required placeholder="Nhập kiểu dáng">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="XuatXu" class="form-label fw-medium" style="color: #2C7A7B;">Xuất xứ</label>
+                        <input type="text" class="form-control" name="XuatXu" id="XuatXu"
+                               value="@Model.XuatXu" required placeholder="Nhập xuất xứ">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="DongXe" class="form-label fw-medium" style="color: #2C7A7B;">Dòng xe</label>
+                        <input type="text" class="form-control" name="DongXe" id="DongXe"
+                               value="@Model.DongXe" required placeholder="Nhập dòng xe">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="NamSanXuat" class="form-label fw-medium" style="color: #2C7A7B;">Năm sản xuất</label>
+                        <input type="number" class="form-control" name="NamSanXuat" id="NamSanXuat"
+                               value="@Model.NamSanXuat" required placeholder="Nhập năm sản xuất">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="SoKM" class="form-label fw-medium" style="color: #2C7A7B;">Số KM đã đi</label>
+                        <input type="number" class="form-control" name="SoKM" id="SoKM"
+                               value="@Model.SoKM" required placeholder="Nhập số KM">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="NhienLieu" class="form-label fw-medium" style="color: #2C7A7B;">Nhiên liệu</label>
+                        <input type="text" class="form-control" name="NhienLieu" id="NhienLieu"
+                               value="@Model.NhienLieu" required placeholder="Nhập loại nhiên liệu">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Kích thước & Trọng lượng -->
-    <div class="card mb-4">
-        <div class="card-header bg-success text-white">Kích thước & Trọng lượng</div>
-        <div class="card-body row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="ChieuDai" class="form-label">Chiều dài (mm):</label>
-                    <input type="number" class="form-control" name="ChieuDai" id="ChieuDai" value="@Model.ChieuDai" required />
-                </div>
-                <div class="form-group">
-                    <label for="ChieuRong" class="form-label">Chiều rộng (mm):</label>
-                    <input type="number" class="form-control" name="ChieuRong" id="ChieuRong" value="@Model.ChieuRong" required />
-                </div>
+        <!-- Động cơ & Hiệu suất -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold text-white" style="background-color: #81E6D9;">
+                <i class="fas fa-cogs me-2"></i>Động cơ & Hiệu suất
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="ChieuCao" class="form-label">Chiều cao (mm):</label>
-                    <input type="number" class="form-control" name="ChieuCao" id="ChieuCao" value="@Model.ChieuCao" required />
-                </div>
-                <div class="form-group">
-                    <label for="CoSoBanhXe" class="form-label">Cơ sở bánh xe:</label>
-                    <input type="number" class="form-control" name="CoSoBanhXe" id="CoSoBanhXe" value="@Model.CoSoBanhXe" required />
-                </div>
-                <div class="form-group">
-                    <label for="TrongLuongKhongTai" class="form-label">Trọng lượng không tải:</label>
-                    <input type="number" class="form-control" name="TrongLuongKhongTai" id="TrongLuongKhongTai" value="@Model.TrongLuongKhongTai" required />
+            <div class="card-body bg-light">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="DongCo" class="form-label fw-medium" style="color: #2C7A7B;">Động cơ</label>
+                        <input type="text" class="form-control" name="DongCo" id="DongCo"
+                               value="@Model.DongCo" required placeholder="Nhập loại động cơ">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="HopSo" class="form-label fw-medium" style="color: #2C7A7B;">Hộp số</label>
+                        <input type="text" class="form-control" name="HopSo" id="HopSo"
+                               value="@Model.HopSo" required placeholder="Nhập loại hộp số">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Mâm & Lốp xe -->
-    <div class="card mb-4">
-        <div class="card-header bg-warning text-white">Mâm & Lốp xe</div>
-        <div class="card-body row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="LopTruoc" class="form-label">Lốp trước:</label>
-                    <input type="text" class="form-control" name="LopTruoc" id="LopTruoc" value="@Model.LopTruoc" required />
-                </div>
+        <!-- Kích thước & Trọng lượng -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold text-white" style="background-color: #81E6D9;">
+                <i class="fas fa-ruler-combined me-2"></i>Kích thước & Trọng lượng
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="LopSau" class="form-label">Lốp sau:</label>
-                    <input type="text" class="form-control" name="LopSau" id="LopSau" value="@Model.LopSau" required />
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Mức tiêu thụ nhiên liệu -->
-    <div class="card mb-4">
-        <div class="card-header bg-danger text-white">Mức tiêu thụ nhiên liệu</div>
-        <div class="card-body row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="MucTieuThuNgoaiDoThi" class="form-label">Mức tiêu thụ ngoài đô thị (L/100km):</label>
-                    <input type="number" step="0.1" class="form-control" name="MucTieuThuNgoaiDoThi" id="MucTieuThuNgoaiDoThi" value="@Model.MucTieuThuNgoaiDoThi" required />
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="MucTieuThuTrongDoThi" class="form-label">Mức tiêu thụ trong đô thị (L/100km):</label>
-                    <input type="number" step="0.1" class="form-control" name="MucTieuThuTrongDoThi" id="MucTieuThuTrongDoThi" value="@Model.MucTieuThuTrongDoThi" required />
+            <div class="card-body bg-light">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="ChieuDai" class="form-label fw-medium" style="color: #2C7A7B;">Chiều dài (mm)</label>
+                        <input type="number" class="form-control" name="ChieuDai" id="ChieuDai"
+                               value="@Model.ChieuDai" required placeholder="Nhập chiều dài">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="ChieuRong" class="form-label fw-medium" style="color: #2C7A7B;">Chiều rộng (mm)</label>
+                        <input type="number" class="form-control" name="ChieuRong" id="ChieuRong"
+                               value="@Model.ChieuRong" required placeholder="Nhập chiều rộng">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="ChieuCao" class="form-label fw-medium" style="color: #2C7A7B;">Chiều cao (mm)</label>
+                        <input type="number" class="form-control" name="ChieuCao" id="ChieuCao"
+                               value="@Model.ChieuCao" required placeholder="Nhập chiều cao">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="CoSoBanhXe" class="form-label fw-medium" style="color: #2C7A7B;">Cơ sở bánh xe</label>
+                        <input type="number" class="form-control" name="CoSoBanhXe" id="ChieuCao"
+                               value="@Model.CoSoBanhXe" required placeholder="Nhập cơ sở bánh xe">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="TrongLuongKhongTai" class="form-label fw-medium" style="color: #2C7A7B;">Trọng lượng không tải (kg)</label>
+                        <input type="number" class="form-control" name="TrongLuongKhongTai" id="TrongLuongKhongTai"
+                               value="@Model.TrongLuongKhongTai" required placeholder="Nhập trọng lượng">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="form-group">
-        <label for="MoTa" class="form-label">Mô tả:</label>
-        <textarea class="form-control" name="MoTa" id="MoTa" required>@Model.MoTa</textarea>
-    </div>
+        <!-- Mô tả -->
+        <div class="mb-4">
+            <label for="MoTa" class="form-label fw-medium" style="color: #2C7A7B;">Mô tả xe</label>
+            <textarea class="form-control" name="MoTa" id="MoTa" style="height: 100px"
+                      required placeholder="Nhập mô tả xe">@Model.MoTa</textarea>
+        </div>
 
-    <h4 class="mt-4">📷 Ảnh xe</h4>
-    <div class="row">
-        @if (Model.Images != null && Model.Images.Any())
-        {
-            @foreach (var image in Model.Images)
-            {
-                <div class="col-md-3 text-center mb-3">
-                    <img src="@image.ImageUrl" alt="Car Image" class="img-thumbnail rounded" style="width: 100%;" />
-                    <br />
-                    <input type="checkbox" name="DeletedImageIds" value="@image.Id" /> Xóa ảnh
+        <!-- Ảnh xe -->
+        <div class="card shadow-sm mb-4">
+            <div class="card-header fw-semibold text-white" style="background-color: #81E6D9;">
+                <i class="fas fa-camera me-2"></i>Ảnh xe
+            </div>
+            <div class="card-body bg-light">
+                <div class="row g-3">
+                    @if (Model.Images != null && Model.Images.Any())
+                    {
+                        @foreach (var image in Model.Images)
+                        {
+                            <div class="col-md-3 text-center">
+                                <div class="position-relative">
+                                    <img src="@image.ImageUrl" alt="Car Image"
+                                         class="img-thumbnail rounded w-100 transition-hover">
+                                    <div class="form-check mt-2">
+                                        <input type="checkbox" class="form-check-input"
+                                               name="DeletedImageIds" value="@image.Id" id="delete_@image.Id">
+                                        <label class="form-check-label" for="delete_@image.Id">Xóa ảnh</label>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12 text-muted">Chưa có ảnh nào được tải lên.</div>
+                    }
                 </div>
-            }
+                <div class="mt-4">
+                    <label class="form-label fw-medium" style="color: #2C7A7B;">Thêm ảnh mới</label>
+                    <input type="file" name="NewImages" multiple class="form-control" />
+                </div>
+                <div class="row mt-3" id="previewContainer"></div>
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="text-center mb-4">
+            <button type="submit" class="btn btn-lg me-2" style="background-color: #4FD1C5; border-color: #4FD1C5; color: white;">
+                <i class="fas fa-save me-2"></i>Lưu thay đổi
+            </button>
+            <a asp-action="Index" class="btn btn-outline-secondary btn-lg">
+                <i class="fas fa-times me-2"></i>Hủy bỏ
+            </a>
+        </div>
+    </form>
+</div>
+
+<style>
+    .card {
+        border: none;
+        border-radius: 12px;
+        background-color: #F7FAFC;
+    }
+
+    .card-header {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .form-control, .form-select {
+        border-radius: 8px;
+        border: 1px solid #B2F5EA;
+        background-color: #FFFFFF;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: #4FD1C5;
+            box-shadow: 0 0 0 0.2rem rgba(79, 209, 197, 0.25);
         }
-        else
-        {
-            <p>Không có ảnh nào.</p>
+
+    .transition-hover {
+        transition: transform 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: scale(1.05);
         }
-    </div>
 
-    <h4 class="mt-4">📷 Thêm ảnh mới</h4>
-    <input type="file" name="NewImages" multiple class="form-control" />
+    .btn-lg {
+        padding: 12px 30px;
+        border-radius: 8px;
+    }
 
-    <div class="row mt-3" id="previewContainer"></div>
+    .btn:hover {
+        background-color: #2C7A7B;
+        border-color: #2C7A7B;
+    }
+</style>
 
-    <br />
-    <button type="submit" class="btn btn-primary"><i class="fas fa-save"></i> Lưu</button>
-    <a asp-action="Index" class="btn btn-secondary"><i class="fas fa-times"></i> Hủy</a>
-</form>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const fileInput = document.querySelector("input[name='NewImages']");
         const previewContainer = document.getElementById("previewContainer");
 
         fileInput.addEventListener("change", function (event) {
-            previewContainer.innerHTML = ""; // Xóa ảnh cũ trước khi thêm mới
+            previewContainer.innerHTML = "";
             const files = event.target.files;
 
-            if (files.length > 0) {
-                for (let i = 0; i < files.length; i++) {
-                    const file = files[i];
-
-                    if (file && file.type.startsWith("image/")) {
-                        const reader = new FileReader();
-
-                        reader.onload = function (e) {
-                            const img = document.createElement("img");
-                            img.src = e.target.result;
-                            img.classList.add("img-thumbnail", "rounded", "m-2");
-                            img.style.width = "150px";
-                            previewContainer.appendChild(img);
-                        };
-
-                        reader.readAsDataURL(file);
-                    }
+            for (let file of files) {
+                if (file && file.type.startsWith("image/")) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        const col = document.createElement("div");
+                        col.className = "col-md-3 mb-3";
+                        const img = document.createElement("img");
+                        img.src = e.target.result;
+                        img.className = "img-thumbnail rounded transition-hover w-100";
+                        col.appendChild(img);
+                        previewContainer.appendChild(col);
+                    };
+                    reader.readAsDataURL(file);
                 }
             }
         });
+
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
     });
 </script>
-
-
-
-

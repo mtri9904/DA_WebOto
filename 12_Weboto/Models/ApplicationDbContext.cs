@@ -10,6 +10,6 @@ namespace _12_Weboto.Models
 
         public DbSet<Brand> Brands { get; set; }
         public DbSet<CarImage> CarImages { get; set; }
-
+        //public DbSet<BrandImage> BrandImages { get; set; }
     }
 }

@@ -4,16 +4,100 @@
     ViewData["Title"] = "Thêm thương hiệu";
 }
 
-<h2>Thêm hãng xe</h2>
+<h2 class="mb-4 text-primary">Thêm thương hiệu</h2>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
 
 <form asp-action="Add" method="post" enctype="multipart/form-data">
-
-    <div class="form-group">
-        <label asp-for="TenHang"></label>
-        <input asp-for="TenHang" class="form-control" />
+    <div class="mb-3">
+        <label asp-for="TenHang" class="form-label fw-medium">Tên hãng:</label>
+        <input asp-for="TenHang" class="form-control" required />
         <span asp-validation-for="TenHang" class="text-danger"></span>
     </div>
 
-    <button type="submit" class="btn btn-success">Lưu</button>
-    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+    <div class="mb-3">
+        <label class="form-label fw-medium">Ảnh thương hiệu:</label>
+        <input type="file" name="Image" class="form-control" accept="image/*" onchange="previewFile(this)" />
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+
+    <!-- Ảnh mới sẽ hiển thị ở đây -->
+    <div id="newImagePreview" class="mb-3" style="display: none;">
+        <label class="form-label fw-medium">Ảnh xem trước:</label>
+        <br>
+        <img id="previewNewImage" src="#" style="width: 150px; height: 100px; object-fit: cover; border-radius: 8px;">
+    </div>
+
+    <button type="submit" class="btn btn-success me-2">
+        <i class="fas fa-save me-2"></i>Lưu
+    </button>
+    <a asp-action="Index" class="btn btn-secondary">
+        <i class="fas fa-times me-2"></i>Hủy
+    </a>
 </form>
+
+<style>
+    .alert {
+        border-radius: 8px;
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .alert-success {
+        background-color: #D4EFDF;
+        border-color: #C3E6CB;
+        color: #155724;
+    }
+
+    .alert-danger {
+        background-color: #F8D7DA;
+        border-color: #F5C6CB;
+        color: #721C24;
+    }
+
+    .btn-close {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+
+    .form-control {
+        border-radius: 8px;
+    }
+
+    .btn {
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+</style>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+
+    <script>
+        // Xem trước ảnh
+        function previewFile(input) {
+            let file = input.files[0];
+            if (file) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    let previewDiv = document.getElementById("newImagePreview");
+                    let previewImg = document.getElementById("previewNewImage");
+
+                    previewImg.src = e.target.result;
+                    previewDiv.style.display = "block";
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+}

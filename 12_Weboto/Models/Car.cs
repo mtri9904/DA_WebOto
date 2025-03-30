@@ -51,13 +51,12 @@ namespace _12_Weboto.Models
 
     }
 
-        public class CarImage
-        {
-            public int Id { get; set; }
-            public string ImageUrl { get; set; }
+    public class CarImage
+    {
+        public int Id { get; set; }
+        public string ImageUrl { get; set; }
 
-            public int CarId { get; set; }
-            public Car Car { get; set; }
-        }
-    
+        public int CarId { get; set; }
+        public Car Car { get; set; }
+    }
 }

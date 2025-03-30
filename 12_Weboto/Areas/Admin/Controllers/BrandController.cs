@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using _12_Weboto.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 
 namespace _12_Weboto.Areas.Admin.Controllers
@@ -9,11 +9,65 @@ namespace _12_Weboto.Areas.Admin.Controllers
     [Authorize(Roles = SD.Role_Admin)]
     public class BrandController : Controller
     {
+        private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly ApplicationDbContext _context;
-
-        public BrandController(ApplicationDbContext context)
+        public BrandController(IWebHostEnvironment webHostEnvironment, ApplicationDbContext context)
         {
+            _webHostEnvironment = webHostEnvironment;
             _context = context;
+        }
+        public IActionResult Add()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken] // Thêm để bảo vệ chống tấn công CSRF
+        public async Task<IActionResult> Add(Brand brand, IFormFile Image)
+        {
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                foreach (var error in errors)
+                {
+                    Console.WriteLine(error); // Ghi log ra console
+                    TempData["Error"] = error; // Lưu lỗi vào TempData để hiển thị trên view
+                }
+                return View(brand);
+            }
+
+            try
+            {
+                if (Image != null && Image.Length > 0)
+                {
+                    string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(Image.FileName);
+                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await Image.CopyToAsync(stream);
+                    }
+
+                    brand.ImageUrl = "/uploads/" + uniqueFileName;
+                }
+
+                _context.Brands.Add(brand);
+                await _context.SaveChangesAsync();
+                TempData["Success"] = "Thêm thương hiệu thành công!";
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = $"Lỗi khi lưu: {ex.Message}";
+                return View(brand);
+            }
+
+            return RedirectToAction("Index");
         }
 
         // Hiển thị danh sách thương hiệu
@@ -22,79 +76,72 @@ namespace _12_Weboto.Areas.Admin.Controllers
             var brands = await _context.Brands.ToListAsync();
             return View(brands);
         }
-
-        // Hiển thị chi tiết thương hiệu
         public async Task<IActionResult> Details(int id)
         {
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)
-                return NotFound();
+            {
+                return NotFound(); // Trả về 404 nếu không tìm thấy
+            }
             return View(brand);
         }
 
-        // Hiển thị form thêm thương hiệu
-        public IActionResult Add()
-        {
-            return View();
-        }
-
-        // Xử lý thêm thương hiệu
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(Brand brand)
-        {
-            try
-            {
-                _context.Brands.Add(brand);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return View(brand);
-            }
-
-        }
-
-
-        // Hiển thị form chỉnh sửa thương hiệu
         public async Task<IActionResult> Edit(int id)
         {
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)
+            {
                 return NotFound();
+            }
             return View(brand);
         }
 
-        // Xử lý chỉnh sửa thương hiệu
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, string TenHang)
+        public async Task<IActionResult> Edit(int id, Brand brand, IFormFile? Image)
         {
-            if (id <= 0 || string.IsNullOrEmpty(TenHang))
-            {
-                return BadRequest("Dữ liệu không hợp lệ.");
-            }
-
-            var brand = await _context.Brands.FindAsync(id);
-            if (brand == null)
+            if (id != brand.Id)
             {
                 return NotFound();
             }
 
-            try
+            if (!ModelState.IsValid)
             {
-                brand.TenHang = TenHang;
-                _context.Update(brand);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return View(brand);
             }
-            catch (DbUpdateException)
-            {
-                return StatusCode(500, "Lỗi khi cập nhật dữ liệu.");
-            }
-        }
 
+            var existingBrand = await _context.Brands.FindAsync(id);
+            if (existingBrand == null)
+            {
+                return NotFound();
+            }
+
+            existingBrand.TenHang = brand.TenHang;
+
+            if (Image != null && Image.Length > 0)
+            {
+                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                if (!Directory.Exists(uploadsFolder))
+                {
+                    Directory.CreateDirectory(uploadsFolder);
+                }
+
+                string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(Image.FileName);
+                string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
+                using (var stream = new FileStream(filePath, FileMode.Create))
+                {
+                    await Image.CopyToAsync(stream);
+                }
+
+                existingBrand.ImageUrl = "/uploads/" + uniqueFileName;
+            }
+
+            _context.Brands.Update(existingBrand);
+            await _context.SaveChangesAsync();
+            TempData["Success"] = "Cập nhật thương hiệu thành công!";
+
+            return RedirectToAction("Index");
+        }
 
         // Xóa thương hiệu
         public async Task<IActionResult> Delete(int id)
@@ -105,7 +152,8 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
             _context.Brands.Remove(brand);
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            TempData["Success"] = "Xóa thương hiệu thành công!";
+            return RedirectToAction("Index");
         }
     }
 }

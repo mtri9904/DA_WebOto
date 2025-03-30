@@ -7,6 +7,23 @@
         <label for="TenHang">Tên hãng</label>
         <input asp-for="TenHang" class="form-control" required />
     </div>
+    <div class="mb-3">
+        <label>Logo hiện tại:</label>
+        <br>
+        @if (!string.IsNullOrEmpty(Model.ImageUrl))
+        {
+            <img src="@Model.ImageUrl" alt="Logo" style="width: 150px; height: 100px; object-fit: cover;">
+        }
+        else
+        {
+            <span>Chưa có logo</span>
+        }
+    </div>
+    <div class="mb-3">
+        <label>Chọn logo mới:</label>
+        <input type="file" class="form-control" name="Image" accept="image/*" />
+    </div>
+
     <button type="submit" class="btn btn-success">Lưu</button>
     <a asp-action="Index" class="btn btn-secondary">Hủy</a>
 </form>

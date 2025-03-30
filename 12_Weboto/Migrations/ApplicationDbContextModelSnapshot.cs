@@ -235,6 +235,9 @@ namespace _12_Weboto.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TenHang")
                         .IsRequired()
                         .HasMaxLength(100)
