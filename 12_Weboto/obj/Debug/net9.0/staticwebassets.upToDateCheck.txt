@@ -127,6 +127,7 @@ wwwroot\uploads\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif
 wwwroot\uploads\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png
 wwwroot\uploads\27bd153f-6ebd-4473-b0a3-9457f157fc16.png
 wwwroot\uploads\290f9889-e946-422e-8293-39a9e3829da3_3.png
+wwwroot\uploads\3345864e-7ea6-4aff-9c36-a6f59eddb03a_BMW 320i Sedan.jpeg
 wwwroot\uploads\3393b289-0732-4e9d-b068-aefac796d7ef_xe2.png
 wwwroot\uploads\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg
 wwwroot\uploads\3e8cf354-8e37-4f85-8351-4194164b87d9.png
@@ -135,6 +136,7 @@ wwwroot\uploads\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg
 wwwroot\uploads\4eace5d4-836e-43ba-9ade-d4b25909a70e_tddv6.jpeg
 wwwroot\uploads\54daa7a9-3c63-4e48-8185-be8cb1b0cb63.jpeg
 wwwroot\uploads\56e1e60c-d3a0-457d-80bd-179fa0628f66.png
+wwwroot\uploads\56e1ebd7-9aab-4f4b-8684-6363551979ec_2014 BMW 320d GT M Sport Automatic.jpeg
 wwwroot\uploads\59ab637f-646f-4363-80cd-f0013c3951dd_3.png
 wwwroot\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg
 wwwroot\uploads\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png
@@ -154,12 +156,15 @@ wwwroot\uploads\8b0e41bd-1e88-4ecb-b07a-62ad23ab7f27.png
 wwwroot\uploads\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg
 wwwroot\uploads\939b4b0b-a880-4be3-abe2-3f6e37c50980.jpeg
 wwwroot\uploads\9965c9b1-7bf2-403e-b343-e86cbb151a5b.jpeg
+wwwroot\uploads\9981d5fe-f0cb-4973-86d9-619494b38508_vinfast VF8.jpeg
 wwwroot\uploads\a900b7b4-c596-44f9-a774-a519aa21c98c.png
 wwwroot\uploads\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png
+wwwroot\uploads\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg
 wwwroot\uploads\c089bff8-4a62-48f7-858f-ff36fdf2f788_tddv4.jpeg
 wwwroot\uploads\c4947086-d68c-4385-9340-54ec53b76d9a_1.png
 wwwroot\uploads\c5051f22-77f2-44c8-be61-0834f6ddf095_2.png
 wwwroot\uploads\c604a5aa-a5d4-45c3-958b-2dace610c460_3.png
+wwwroot\uploads\c8cdbb7d-7113-48a9-9efa-4048762f43ad_vinfast Lux A2.0.jpeg
 wwwroot\uploads\d1b6b020-8026-4bc1-a2d1-34fabe847ad8.png
 wwwroot\uploads\d33c82d3-bd8e-4704-99ee-1bd9c62ce9ac.jpg
 wwwroot\uploads\d3ba5622-1509-41f0-a06b-c982a83cfe75_3.png

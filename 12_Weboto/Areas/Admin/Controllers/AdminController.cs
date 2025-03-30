@@ -1,5 +1,6 @@
 ﻿using _12_Weboto.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _12_Weboto.Areas.Admin.Controllers
@@ -9,8 +10,10 @@ namespace _12_Weboto.Areas.Admin.Controllers
     public class AdminController : Controller
     {
         private readonly ApplicationDbContext _context;
-        public AdminController(ApplicationDbContext context)
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public AdminController(SignInManager<ApplicationUser> signInManager,ApplicationDbContext context)
         {
+            _signInManager = signInManager;
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
         public IActionResult Index()
@@ -23,6 +26,17 @@ namespace _12_Weboto.Areas.Admin.Controllers
             ViewBag.TotalBrands = totalBrands;
             ViewBag.TotalUsers = totalUsers;
 
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Login", "Admin", new { area = "Admin" });
+
+        }
+        public IActionResult Login()
+        {
             return View();
         }
     }

@@ -1,88 +1,169 @@
 ﻿@page
 @model RegisterModel
+
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Đăng ký";
 }
 
-<h1>@ViewData["Title"]</h1>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <h2 class="text-center mb-4 fw-bold text-primary">@ViewData["Title"]</h2>
+                    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
 
-<div class="row">
-    <div class="col-md-4">
-        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h2>Create a new account.</h2>
-            <hr />
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.FullName" class="form-control" autocomplete="FullName" aria-required="true" />
-                <label asp-for="Input.FullName">FullName</label>
-                <span asp-validation-for="Input.FullName" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Address" class="form-control" autocomplete="Address" aria-required="true" />
-                <label asp-for="Input.Address">Address</label>
-                <span asp-validation-for="Input.Address" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="PhoneNumber" aria-required="true" />
-                <label asp-for="Input.PhoneNumber">PhoneNumber</label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
-                <label asp-for="Input.Email">Email</label>
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.Password">Password</label>
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-floating mb-3">
-                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
-                <label asp-for="Input.ConfirmPassword">Confirm Password</label>
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                            <label asp-for="Input.FullName" class="form-label text-muted">Họ và tên</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                                <input asp-for="Input.FullName" class="form-control" autocomplete="name" aria-required="true" placeholder="Nhập họ và tên" />
+                            </div>
+                            <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                        </div>
 
-            <div class="form-floating mb-3">
-                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
-                    <option disabled selected>- Chọn quyền -</option>
-                </select>
-                <label>Vai trò</label>
+                        <!-- Address -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Address" class="form-label text-muted">Địa chỉ</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-map-marker-alt"></i></span>
+                                <input asp-for="Input.Address" class="form-control" autocomplete="address" aria-required="true" placeholder="Nhập địa chỉ" />
+                            </div>
+                            <span asp-validation-for="Input.Address" class="text-danger"></span>
+                        </div>
+
+                        <!-- Phone Number -->
+                        <div class="mb-3">
+                            <label asp-for="Input.PhoneNumber" class="form-label text-muted">Số điện thoại</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-phone"></i></span>
+                                <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="tel" aria-required="true" placeholder="Nhập số điện thoại" />
+                            </div>
+                            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Email" class="form-label text-muted">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
+                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                            </div>
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Password" class="form-label text-muted">Mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Nhập mật khẩu" />
+                            </div>
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="mb-3">
+                            <label asp-for="Input.ConfirmPassword" class="form-label text-muted">Xác nhận mật khẩu</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="Xác nhận mật khẩu" />
+                            </div>
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+
+                        <!-- Role -->
+                        <div class="mb-3">
+                            <label asp-for="Input.Role" class="form-label text-muted">Vai trò</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-user-tag"></i></span>
+                                <select asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-control">
+                                    <option disabled selected>- Chọn vai trò -</option>
+                                </select>
+                            </div>
+                            <span asp-validation-for="Input.Role" class="text-danger"></span>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button id="registerSubmit" type="submit" class="w-100 btn btn-primary btn-lg mb-3">Đăng ký</button>
+                    </form>
+                </div>
             </div>
-            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
-        </form>
-    </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h3>Use another service to register.</h3>
-            <hr />
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See this <a href="https://go.microsoft.com/fwlink/?LinkID=532715">article
-                            about setting up this ASP.NET application to support logging in via external services</a>.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins!)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
+        </div>
+
+        <!-- External Logins -->
+        <div class="col-md-6 col-lg-4 mt-4 mt-md-0">
+            <div class="card shadow-lg border-0 p-4">
+                <div class="card-body">
+                    <h3 class="text-center mb-4 text-muted">Đăng ký bằng dịch vụ khác</h3>
+                    <hr />
+                    @if ((Model.ExternalLogins?.Count ?? 0) == 0)
+                    {
+                        <div class="text-center">
+                            <p class="text-muted">
+                                Chưa có dịch vụ xác thực bên ngoài nào được cấu hình. Xem <a href="https://go.microsoft.com/fwlink/?LinkID=532715" class="text-primary">bài viết này</a> để biết thêm chi tiết.
                             </p>
                         </div>
-                    </form>
-                }
-            }
-        </section>
+                    }
+                    else
+                    {
+                        <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="text-center">
+                            <div>
+                                @foreach (var provider in Model.ExternalLogins!)
+                                {
+                                    <button type="submit" class="btn btn-outline-primary mb-2 w-100" name="provider" value="@provider.Name" title="Đăng ký bằng tài khoản @provider.DisplayName">@provider.DisplayName</button>
+                                }
+                            </div>
+                        </form>
+                    }
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+
+<style>
+    .card {
+        border-radius: 15px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+        }
+
+    .form-control, .input-group-text, select {
+        border-radius: 10px;
+    }
+
+    .btn-primary {
+        border-radius: 10px;
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-outline-primary {
+        border-radius: 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+    .input-group-text {
+        background-color: #f8f9fa;
+    }
+</style>
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />

@@ -4,6 +4,13 @@
 }
 <h2 class="text-center text-primary">Danh sách xe</h2>
 
+@if (TempData["Success"] != null)
+{
+    <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
 @if (Model != null && Model.Any())
 {
     <table class="table table-bordered">
@@ -40,4 +47,17 @@ else
     <p class="text-center text-danger">Không có xe nào trong danh sách.</p>
 }
 <a asp-action="Add" class="btn btn-success">Thêm xe mới</a>
-
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.classList.remove("show");
+                successMessage.classList.add("fade");
+                setTimeout(function () {
+                    successMessage.remove();
+                }, 500); // Đợi hiệu ứng fade hoàn tất
+            }, 2000); // 2 giây
+        }
+    });
+</script>

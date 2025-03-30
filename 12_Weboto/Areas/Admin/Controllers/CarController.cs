@@ -70,6 +70,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 }
 
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "Thêm xe mới thành công!";
                 if (_context.Entry(car).State == EntityState.Detached)
                 {
                     Console.WriteLine("Lỗi: Xe không được lưu vào database.");
@@ -210,6 +211,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 }
                 _context.Update(car);
                 await _context.SaveChangesAsync();
+                TempData["Success"] = "Cập nhật xe thành công!";
                 return RedirectToAction("Index");
             }
             catch (DbUpdateException ex)
@@ -246,7 +248,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
             _context.Cars.Remove(car);
             await _context.SaveChangesAsync();
-
+            TempData["Success"] = "Xóa xe thành công!";
             return RedirectToAction("Index");
         }
     }

@@ -143,8 +143,18 @@ namespace _12_Weboto.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
-        // Xóa thương hiệu
         public async Task<IActionResult> Delete(int id)
+        {
+            var brand = await _context.Brands.FindAsync(id);
+            if (brand == null)
+            {
+                return NotFound();
+            }
+            return View(brand);
+        }
+        [HttpPost]
+        // Xóa thương hiệu
+        public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)

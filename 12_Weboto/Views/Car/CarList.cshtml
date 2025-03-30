@@ -83,6 +83,9 @@
             }
         </div>
     }
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Lên đầu trang">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </div>
 
 <style>
@@ -159,6 +162,29 @@
         .top-search-item:hover {
             background-color: #d6d8db;
         }
+
+    #scrollToTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 120px;
+        right: 20px;
+        z-index: 1000;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: #007bff;
+        color: white;
+        cursor: pointer;
+        padding: 12px;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, opacity 0.3s;
+    }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
 </style>
 
 <script>
@@ -268,4 +294,18 @@
             }
         }
     });
+        // Hiển thị nút khi cuộn xuống 200px
+    window.onscroll = function () {
+        var btn = document.getElementById("scrollToTopBtn");
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            btn.style.display = "block";
+        } else {
+            btn.style.display = "none";
+        }
+    };
+
+    // Hàm cuộn lên đầu trang
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 </script>
