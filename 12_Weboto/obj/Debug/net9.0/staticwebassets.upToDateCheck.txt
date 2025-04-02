@@ -117,6 +117,8 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg
+wwwroot\uploads\012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg
 wwwroot\uploads\01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg
 wwwroot\uploads\062aad99-4424-4189-be12-df2d210ed220_BMW X7.jpeg
 wwwroot\uploads\06751b4d-42eb-4e06-a9b6-d442d868cac1_3.png
@@ -139,6 +141,7 @@ wwwroot\uploads\56e1e60c-d3a0-457d-80bd-179fa0628f66.png
 wwwroot\uploads\56e1ebd7-9aab-4f4b-8684-6363551979ec_2014 BMW 320d GT M Sport Automatic.jpeg
 wwwroot\uploads\59ab637f-646f-4363-80cd-f0013c3951dd_3.png
 wwwroot\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg
+wwwroot\uploads\5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg
 wwwroot\uploads\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png
 wwwroot\uploads\63282c3e-9ea8-4777-a592-e24251f80858.png
 wwwroot\uploads\643b418e-fb95-4bc5-94f1-b19db1c75f95.jpg
@@ -160,6 +163,7 @@ wwwroot\uploads\9981d5fe-f0cb-4973-86d9-619494b38508_vinfast VF8.jpeg
 wwwroot\uploads\a900b7b4-c596-44f9-a774-a519aa21c98c.png
 wwwroot\uploads\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png
 wwwroot\uploads\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg
+wwwroot\uploads\c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg
 wwwroot\uploads\c089bff8-4a62-48f7-858f-ff36fdf2f788_tddv4.jpeg
 wwwroot\uploads\c4947086-d68c-4385-9340-54ec53b76d9a_1.png
 wwwroot\uploads\c5051f22-77f2-44c8-be61-0834f6ddf095_2.png

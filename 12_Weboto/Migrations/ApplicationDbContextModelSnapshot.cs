@@ -198,8 +198,8 @@ namespace _12_Weboto.Migrations
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("PhoneNumber")
-                        .HasColumnType("int");
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
@@ -365,6 +365,101 @@ namespace _12_Weboto.Migrations
                     b.ToTable("CarImages");
                 });
 
+            modelBuilder.Entity("_12_Weboto.Models.News", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("News");
+                });
+
+            modelBuilder.Entity("_12_Weboto.Models.NewsCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NewsCategories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Tin Trong Nước"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Tin Nước Ngoài"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Tin Xe Mới"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Tin Khuyến Mãi"
+                        });
+                });
+
+            modelBuilder.Entity("_12_Weboto.Models.NewsImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NewsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NewsId");
+
+                    b.ToTable("NewsImages");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -438,6 +533,28 @@ namespace _12_Weboto.Migrations
                     b.Navigation("Car");
                 });
 
+            modelBuilder.Entity("_12_Weboto.Models.News", b =>
+                {
+                    b.HasOne("_12_Weboto.Models.NewsCategory", "Category")
+                        .WithMany("News")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("_12_Weboto.Models.NewsImage", b =>
+                {
+                    b.HasOne("_12_Weboto.Models.News", "News")
+                        .WithMany("Images")
+                        .HasForeignKey("NewsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("News");
+                });
+
             modelBuilder.Entity("_12_Weboto.Models.Brand", b =>
                 {
                     b.Navigation("Cars");
@@ -446,6 +563,16 @@ namespace _12_Weboto.Migrations
             modelBuilder.Entity("_12_Weboto.Models.Car", b =>
                 {
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("_12_Weboto.Models.News", b =>
+                {
+                    b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("_12_Weboto.Models.NewsCategory", b =>
+                {
+                    b.Navigation("News");
                 });
 #pragma warning restore 612, 618
         }

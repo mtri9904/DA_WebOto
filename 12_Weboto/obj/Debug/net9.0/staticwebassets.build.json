@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y/Sr4FFd7wFUPLrFvkokH4xelStLEd3RpAyCvTfjSXE=",
+  "Hash": "WPdmQ809UGqFXtHMqQ5f8wK9OiCj6zpbW9zr+Sv2z4I=",
   "Source": "12_Weboto",
   "BasePath": "_content/12_Weboto",
   "Mode": "Default",
@@ -5225,6 +5225,48 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/00737f4c-9c42-41c6-9772-f3892282e226_BMW X7#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2o0edsac3v",
+      "Integrity": "4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eo7xql93z2",
+      "Integrity": "HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -5687,6 +5729,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/5f717838-d309-4c98-b8f2-e659216ba5cc#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eo7xql93z2",
+      "Integrity": "HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -6128,6 +6191,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eo7xql93z2",
+      "Integrity": "HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c089bff8-4a62-48f7-858f-ff36fdf2f788_tddv4.jpeg",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -6511,7 +6595,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6564,7 +6648,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6601,7 +6685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6648,7 +6732,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6709,7 +6793,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6754,7 +6838,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6809,7 +6893,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6870,7 +6954,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6915,7 +6999,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6970,7 +7054,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7023,7 +7107,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -7060,7 +7144,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 06:54:30 GMT"
+          "Value": "Tue, 01 Apr 2025 02:41:27 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -35609,6 +35693,170 @@
       ]
     },
     {
+      "Route": "uploads/00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.2o0edsac3v.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 13:57:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2o0edsac3v"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10519"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 13:57:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.eo7xql93z2.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 11:02:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eo7xql93z2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\012409c0-3e06-4157-aeab-45ba77d31cb9_Mercedes SLK 350.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 11:02:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
       "Route": "uploads/01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg",
       "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg",
       "Selectors": [],
@@ -37413,6 +37661,88 @@
       ]
     },
     {
+      "Route": "uploads/5f717838-d309-4c98-b8f2-e659216ba5cc.eo7xql93z2.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 14:06:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eo7xql93z2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\5f717838-d309-4c98-b8f2-e659216ba5cc.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 14:06:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
       "Route": "uploads/61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.cw892z76ee.png",
       "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png",
       "Selectors": [],
@@ -39131,6 +39461,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-4reBuEuq/Ksi9I8sgKezIjnU2NGptPLhCukrROzJQyU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.eo7xql93z2.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 12:30:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eo7xql93z2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\wwwroot\\uploads\\c0271568-b206-4ea9-ba7a-de5678070db8_Mercedes SLK 350 - Copy.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 01 Apr 2025 12:30:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
         }
       ]
     },

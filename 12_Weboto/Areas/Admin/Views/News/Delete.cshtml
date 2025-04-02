@@ -1,0 +1,118 @@
+﻿@model _12_Weboto.Models.News
+
+@{
+    ViewData["Title"] = "Xác nhận xóa tin tức";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+                <div class="card-header bg-danger text-white text-center py-3" style="border-radius: 15px 15px 0 0;">
+                    <h4 class="mb-0 fw-bold">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Xác nhận xóa tin tức
+                    </h4>
+                </div>
+                <div class="card-body p-4 bg-light">
+                    <p class="text-center text-muted mb-4">
+                        Bạn có chắc chắn muốn xóa tin tức này không? Hành động này không thể hoàn tác.
+                    </p>
+                    <div class="info-box p-3 mb-4" style="background-color: #FFF5F5; border-left: 4px solid #F56565; border-radius: 8px;">
+                        <p class="mb-2"><strong class="text-black fw-bold">Tiêu đề:</strong> <span class="text-dark">@Model.Title</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Danh mục:</strong> <span class="text-dark">@(Model.Category?.Name ?? "Không xác định")</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Tác giả:</strong> <span class="text-dark">@Model.CreatedBy</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Ngày tạo:</strong> <span class="text-dark">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</span></p>
+                        <p class="mb-0"><strong class="text-black fw-bold">Hình ảnh:</strong></p>
+                        <div class="d-flex flex-wrap mt-2">
+                            @if (Model.Images != null && Model.Images.Any())
+                            {
+                                @foreach (var image in Model.Images)
+                                {
+                                    <img src="@image.ImageUrl" class="img-thumbnail me-2 mb-2" style="width: 100px; height: 100px; object-fit: cover;" alt="Hình ảnh tin tức" />
+                                }
+                            }
+                            else
+                            {
+                                <span class="text-muted">Không có hình ảnh</span>
+                            }
+                        </div>
+                    </div>
+
+                    <form asp-action="Delete" method="post" class="text-center">
+                        <input type="hidden" asp-for="Id" />
+                        <button type="submit" class="btn btn-danger btn-lg me-3 transition-hover">
+                            <i class="fas fa-trash-alt me-2"></i>Xóa ngay
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-lg transition-hover">
+                            <i class="fas fa-times me-2"></i>Hủy bỏ
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .info-box {
+        transition: all 0.3s ease;
+    }
+
+        .info-box:hover {
+            background-color: #FFECEC;
+        }
+
+    .btn-lg {
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .btn-danger {
+        background-color: #F56565;
+        border-color: #F56565;
+    }
+
+        .btn-danger:hover {
+            background-color: #E53E3E;
+            border-color: #E53E3E;
+        }
+
+    .btn-outline-secondary {
+        color: #718096;
+        border-color: #CBD5E0;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #EDF2F7;
+            border-color: #A0AEC0;
+            color: #4A5568;
+        }
+
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: scale(1.05);
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteBtn = document.querySelector("button[type='submit']");
+        deleteBtn.addEventListener("click", function (e) {
+            if (!confirm("Bạn chắc chắn muốn xóa tin tức này chứ?")) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>

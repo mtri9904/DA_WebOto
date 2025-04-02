@@ -53,7 +53,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, string FullName, string Address, int PhoneNumber, List<string> selectedRoles)
+        public async Task<IActionResult> Edit(string id, string FullName, string Address, string PhoneNumber, List<string> selectedRoles)
         {
             var user = await _userManager.FindByIdAsync(id);
             if (user == null)

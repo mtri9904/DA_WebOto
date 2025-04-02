@@ -1,0 +1,97 @@
+﻿@model _12_Weboto.Models.News
+
+@{
+    ViewData["Title"] = "Chi tiết tin tức";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Cột chính (bài tin tức) -->
+        <div class="col-md-8">
+            <!-- Tiêu đề bài viết -->
+            <h1 class="mb-3" style="font-size: 2.5rem; font-weight: bold;">
+                @Model.Title
+            </h1>
+
+            <!-- Thông tin tác giả và ngày tạo -->
+            <div class="d-flex align-items-center mb-3 pb-2 border-bottom">
+                <span class="text-muted" style="font-size: 0.9rem;">
+                    <strong>@Model.CreatedBy</strong> - @Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")
+                </span>
+            </div>
+
+            <!-- Danh mục -->
+            <p class="mb-3">
+                <strong>Danh mục:</strong> <span class="badge bg-secondary">@Model.Category?.Name</span>
+            </p>
+
+            <!-- Nội dung bài viết -->
+            <div class="content mb-4">
+                @Html.Raw(Model.Content)
+            </div>
+
+            <!-- Hình ảnh bài viết -->
+            @if (Model.Images != null && Model.Images.Any())
+            {
+                <h4 class="mb-3">Hình ảnh</h4>
+                <div class="d-flex flex-wrap">
+                    @foreach (var image in Model.Images)
+                    {
+                        <img src="@image.ImageUrl" class="img-thumbnail" style="max-width: 200px; margin: 5px;" alt="Hình ảnh bài viết" />
+                    }
+                </div>
+            }
+
+            <!-- Nút quay lại -->
+            <div class="mt-4">
+                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+            </div>
+        </div>
+
+        <!-- Cột bên phải (tin tức liên quan) -->
+        <div class="col-md-4">
+            <!-- Tiêu đề "Cùng chuyên mục" với đường viền cam -->
+            <h5 class="mb-4" style="font-weight: bold; border-left: 4px solid #f5a623; padding-left: 10px;">
+                Cùng chuyên mục
+            </h5>
+
+            @if (ViewBag.RelatedNews != null && ViewBag.RelatedNews.Count > 0)
+            {
+                @foreach (var news in ViewBag.RelatedNews)
+                {
+                    <div class="mb-4">
+                        <!-- Hình ảnh bài viết -->
+                        @if (!string.IsNullOrEmpty(news.ImageUrl))
+                        {
+                            <img src="@news.ImageUrl" class="img-fluid mb-2" style="width: 100%; height: 150px; object-fit: cover;" alt="@news.Title" />
+                        }
+                        else
+                        {
+                            <div class="bg-secondary mb-2" style="width: 100%; height: 150px; display: flex; align-items: center; justify-content: center;">
+                                <span class="text-white">NO IMAGE</span>
+                            </div>
+                        }
+
+                        <!-- Tiêu đề bài viết (giới hạn 2 dòng) -->
+                        <a asp-action="Details" asp-route-id="@news.Id" class="text-decoration-none text-dark">
+                            <h6 class="mb-1" style="font-size: 1rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                @news.Title
+                            </h6>
+                        </a>
+
+                        <!-- Số lượt đánh giá (giả lập) -->
+                        <small class="text-muted">5 đánh trước</small>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>Không có tin tức liên quan.</p>
+            }
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -357,7 +357,9 @@ C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\a3ygkwa
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
+C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\820orimvqk-onv0f1gfs9.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\fvff5a0ucj-61n19gt1b8.gz
+C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\w50h544ybq-q4zdbwn29d.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\hc2np2gijs-nakmwdwsxp.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\m6wpbgo022-st1cbwfwo5.gz
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\sl7mheghq8-5p029spbuu.gz
@@ -432,5 +434,3 @@ C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\refint\12_Weboto.d
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\12_Weboto.pdb
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\12_Weboto.genruntimeconfig.cache
 C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\ref\12_Weboto.dll
-C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\w50h544ybq-q4zdbwn29d.gz
-C:\Users\Minh Tri\source\12_Weboto\12_Weboto\obj\Debug\net9.0\compressed\820orimvqk-onv0f1gfs9.gz

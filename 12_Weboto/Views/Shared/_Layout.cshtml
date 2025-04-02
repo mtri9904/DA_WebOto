@@ -29,6 +29,16 @@
                         </a> *@
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tin Tức
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="newsDropdown">
+                                <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="1">Tin Trong Nước</a></li>
+                                <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="2">Tin Nước Ngoài</a></li>
+                                <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="3">Tin Xe Mới</a></li>
+                                <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="4">Tin Khuyến Mãi</a></li>
+                            </ul>
                         </li>
                     </ul>
                     <partial name="_LoginPartial" />

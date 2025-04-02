@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace _12_Weboto.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class Intitial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -32,7 +34,6 @@ namespace _12_Weboto.Migrations
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PhoneNumber = table.Column<int>(type: "int", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -41,6 +42,7 @@ namespace _12_Weboto.Migrations
                     PasswordHash = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SecurityStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ConcurrencyStamp = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     PhoneNumberConfirmed = table.Column<bool>(type: "bit", nullable: false),
                     TwoFactorEnabled = table.Column<bool>(type: "bit", nullable: false),
                     LockoutEnd = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: true),
@@ -58,11 +60,25 @@ namespace _12_Weboto.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    TenHang = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
+                    TenHang = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Brands", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NewsCategories",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewsCategories", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -172,26 +188,6 @@ namespace _12_Weboto.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BrandImages",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    BrandId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BrandImages", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_BrandImages_Brands_BrandId",
-                        column: x => x.BrandId,
-                        principalTable: "Brands",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Cars",
                 columns: table => new
                 {
@@ -233,6 +229,29 @@ namespace _12_Weboto.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "News",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_News", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_News_NewsCategories_CategoryId",
+                        column: x => x.CategoryId,
+                        principalTable: "NewsCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "CarImages",
                 columns: table => new
                 {
@@ -250,6 +269,37 @@ namespace _12_Weboto.Migrations
                         principalTable: "Cars",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "NewsImages",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NewsId = table.Column<int>(type: "int", nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_NewsImages", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_NewsImages_News_NewsId",
+                        column: x => x.NewsId,
+                        principalTable: "News",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "NewsCategories",
+                columns: new[] { "Id", "Name" },
+                values: new object[,]
+                {
+                    { 1, "Tin Trong Nước" },
+                    { 2, "Tin Nước Ngoài" },
+                    { 3, "Tin Xe Mới" },
+                    { 4, "Tin Khuyến Mãi" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -292,11 +342,6 @@ namespace _12_Weboto.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BrandImages_BrandId",
-                table: "BrandImages",
-                column: "BrandId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_CarImages_CarId",
                 table: "CarImages",
                 column: "CarId");
@@ -305,6 +350,16 @@ namespace _12_Weboto.Migrations
                 name: "IX_Cars_BrandId",
                 table: "Cars",
                 column: "BrandId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_News_CategoryId",
+                table: "News",
+                column: "CategoryId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_NewsImages_NewsId",
+                table: "NewsImages",
+                column: "NewsId");
         }
 
         /// <inheritdoc />
@@ -326,10 +381,10 @@ namespace _12_Weboto.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "BrandImages");
+                name: "CarImages");
 
             migrationBuilder.DropTable(
-                name: "CarImages");
+                name: "NewsImages");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
@@ -341,7 +396,13 @@ namespace _12_Weboto.Migrations
                 name: "Cars");
 
             migrationBuilder.DropTable(
+                name: "News");
+
+            migrationBuilder.DropTable(
                 name: "Brands");
+
+            migrationBuilder.DropTable(
+                name: "NewsCategories");
         }
     }
 }

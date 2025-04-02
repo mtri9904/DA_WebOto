@@ -1,0 +1,305 @@
+﻿@model _12_Weboto.Models.News
+
+@{
+    ViewData["Title"] = "Chỉnh sửa tin tức";
+}
+
+<h2>Chỉnh sửa tin tức</h2>
+
+<form asp-action="Edit" method="post" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Tiêu đề:</label>
+        <input type="text" class="form-control" name="Title" value="@Model.Title" required />
+        <span class="text-danger" asp-validation-for="Title"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Nội dung:</label>
+        <div id="toolbar">
+            <span class="ql-formats">
+                <select class="ql-font">
+                    <option value="sans-serif" selected>Sans Serif</option>
+                    <option value="serif">Serif</option>
+                    <option value="monospace">Monospace</option>
+                    <option value="times-new-roman">Times New Roman</option>
+                    <option value="arial">Arial</option>
+                    <option value="comic-sans-ms">Comic Sans MS</option>
+                </select>
+                <select class="ql-size">
+                    <option value="small">Nhỏ</option>
+                    <option selected>Vừa</option>
+                    <option value="large">Lớn</option>
+                    <option value="huge">Rất lớn</option>
+                </select>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-bold"></button>
+                <button class="ql-italic"></button>
+                <button class="ql-underline"></button>
+                <button class="ql-clean"></button>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-list" value="ordered"></button>
+                <button class="ql-list" value="bullet"></button>
+            </span>
+            <span class="ql-formats">
+                <button class="ql-link"></button>
+                <button class="ql-image"></button>
+            </span>
+        </div>
+        <div id="editor-container">@Html.Raw(Model.Content)</div>
+        <textarea asp-for="Content" id="Content" name="Content" class="form-control" hidden></textarea>
+        <span class="text-danger" asp-validation-for="Content"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Danh mục:</label>
+        <select name="CategoryId" class="form-control" asp-items="ViewBag.Categories" required>
+            <option value="">Chọn danh mục</option>
+        </select>
+        <span class="text-danger" asp-validation-for="CategoryId"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Tác giả:</label>
+        <input type="text" class="form-control" name="CreatedBy" value="@Model.CreatedBy" required />
+        <span class="text-danger" asp-validation-for="CreatedBy"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Ảnh hiện tại:</label>
+        <div class="d-flex flex-wrap">
+            @if (Model.Images != null && Model.Images.Any())
+            {
+                foreach (var image in Model.Images)
+                {
+                    <div class="position-relative me-3 mb-3">
+                        <img src="@image.ImageUrl" class="img-thumbnail" style="width: 150px; height: 100px; object-fit: cover;" alt="Ảnh tin tức" />
+                        <input type="checkbox" name="DeletedImageIds" value="@image.Id" class="position-absolute" style="top: 5px; right: 5px;" />
+                        <label class="position-absolute" style="top: 5px; right: 5px; cursor: pointer;">Xóa</label>
+                    </div>
+                }
+            }
+            else
+            {
+                <p class="text-muted">Không có ảnh.</p>
+            }
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label fw-medium">Thêm ảnh mới:</label>
+        <input type="file" id="imageInput" class="form-control" name="NewImages" accept="image/*" multiple onchange="previewFiles(this)" />
+    </div>
+
+    <!-- Ảnh xem trước sẽ hiển thị ở đây -->
+    <div id="newImagePreview" class="mb-3" style="display: none;">
+        <label class="form-label fw-medium">Ảnh mới:</label>
+        <div id="previewImages" class="d-flex flex-wrap"></div>
+    </div>
+
+    <button type="button" id="formatContent" class="btn btn-primary me-2">Định dạng nội dung</button>
+    <button type="submit" class="btn btn-success">Lưu thay đổi</button>
+    <a asp-action="Index" class="btn btn-secondary">Hủy</a>
+</form>
+
+<!-- Quill JS -->
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+
+<style>
+    .ql-editor img {
+        max-width: 100%;
+        height: auto;
+        cursor: grab;
+        display: inline-block;
+        resize: both;
+        overflow: auto;
+    }
+
+    .ql-font-times-new-roman {
+        font-family: "Times New Roman", serif;
+    }
+
+    .ql-font-arial {
+        font-family: Arial, sans-serif;
+    }
+
+    .ql-font-comic-sans-ms {
+        font-family: "Comic Sans MS", cursive, sans-serif;
+    }
+
+    #editor-container {
+        height: 400px;
+    }
+
+    .delete-btn {
+        display: none;
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .img-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+</style>
+
+<script>
+    var quill = new Quill('#editor-container', {
+        theme: 'snow',
+        placeholder: 'Nhập nội dung...',
+        modules: {
+            toolbar: "#toolbar"
+        }
+    });
+
+    // Load nội dung hiện tại vào Quill Editor
+    quill.root.innerHTML = '@Html.Raw(Model.Content)';
+
+    document.querySelector('form').onsubmit = function () {
+        document.getElementById("Content").value = quill.root.innerHTML;
+    };
+
+    // Chèn ảnh vào Quill Editor
+    document.getElementById('imageInput').addEventListener('change', function (event) {
+        let files = event.target.files;
+        if (files.length > 0) {
+            for (let i = 0; i < files.length; i++) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    let range = quill.getSelection() || { index: 0 };
+                    let img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('resize-img');
+                    let wrapper = document.createElement('span');
+                    wrapper.classList.add('img-wrapper');
+                    let deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'X';
+                    deleteButton.classList.add('delete-btn');
+                    deleteButton.onclick = function () {
+                        wrapper.remove();
+                    };
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(deleteButton);
+                    quill.insertEmbed(range.index, 'image', e.target.result);
+                };
+                reader.readAsDataURL(files[i]);
+            }
+        }
+    });
+
+    // Xem trước ảnh mới
+    function previewFiles(input) {
+        let files = input.files;
+        let previewDiv = document.getElementById("newImagePreview");
+        let previewContainer = document.getElementById("previewImages");
+        previewContainer.innerHTML = ""; // Xóa ảnh cũ
+
+        if (files && files.length > 0) {
+            for (let i = 0; i < files.length; i++) {
+                let reader = new FileReader();
+                reader.onload = function (e) {
+                    let img = document.createElement("img");
+                    img.src = e.target.result;
+                    img.style.width = "150px";
+                    img.style.height = "100px";
+                    img.style.objectFit = "cover";
+                    img.style.borderRadius = "8px";
+                    img.style.marginRight = "10px";
+                    img.style.marginBottom = "10px";
+                    previewContainer.appendChild(img);
+                };
+                reader.readAsDataURL(files[i]);
+            }
+            previewDiv.style.display = "block";
+        } else {
+            previewDiv.style.display = "none";
+        }
+    }
+
+    // Quản lý ảnh trong Quill Editor
+    document.addEventListener("DOMContentLoaded", function () {
+        let selectedImage = null;
+
+        document.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                selectedImage = e.target;
+                let existingDeleteButton = e.target.parentElement.querySelector('.delete-btn');
+                if (!existingDeleteButton) {
+                    let deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'X';
+                    deleteButton.classList.add('delete-btn');
+                    deleteButton.style.display = 'block';
+                    deleteButton.onclick = function () {
+                        e.target.parentElement.remove();
+                    };
+                    e.target.parentElement.appendChild(deleteButton);
+                }
+            } else {
+                let deleteButtons = document.querySelectorAll('.delete-btn');
+                deleteButtons.forEach(btn => btn.style.display = 'none');
+            }
+        });
+
+        document.addEventListener("click", function (e) {
+            if (e.target.tagName === "IMG") {
+                let newSize = prompt("Nhập kích thước mới (px, %):", "300px");
+                if (newSize) {
+                    e.target.style.width = newSize;
+                }
+            }
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (selectedImage) {
+                let step = 5; // Số pixel di chuyển mỗi lần nhấn phím
+                let currentMarginTop = parseInt(selectedImage.style.marginTop || 0);
+                let currentMarginLeft = parseInt(selectedImage.style.marginLeft || 0);
+
+                if (e.key === "ArrowUp") {
+                    selectedImage.style.marginTop = (currentMarginTop - step) + "px";
+                } else if (e.key === "ArrowDown") {
+                    selectedImage.style.marginTop = (currentMarginTop + step) + "px";
+                } else if (e.key === "ArrowLeft") {
+                    selectedImage.style.marginLeft = (currentMarginLeft - step) + "px";
+                } else if (e.key === "ArrowRight") {
+                    selectedImage.style.marginLeft = (currentMarginLeft + step) + "px";
+                }
+            }
+        });
+    });
+
+    // Định dạng nội dung
+    document.getElementById("formatContent").addEventListener("click", function () {
+        let content = quill.root.innerHTML;
+
+        // Xóa khoảng trắng thừa và căn chỉnh đoạn văn
+        content = content.replace(/\s+/g, ' ').trim();
+
+        // Định dạng tiêu đề
+        content = content.replace(/<h1>(.*?)<\/h1>/g, '<h1 style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">$1</h1>');
+        content = content.replace(/<h2>(.*?)<\/h2>/g, '<h2 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">$1</h2>');
+
+        // Định dạng đoạn văn (căn chỉnh justify)
+        content = content.replace(/<p>(.*?)<\/p>/g, '<p style="text-align: justify; margin-bottom: 10px;">$1</p>');
+
+        // Định dạng danh sách
+        content = content.replace(/<ul>/g, '<ul style="padding-left: 20px; margin-bottom: 10px;">');
+        content = content.replace(/<ol>/g, '<ol style="padding-left: 20px; margin-bottom: 10px;">');
+
+        // Cập nhật lại nội dung vào Quill Editor
+        quill.root.innerHTML = content;
+    });
+</script>
