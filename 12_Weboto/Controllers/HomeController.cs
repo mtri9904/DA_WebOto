@@ -1,4 +1,4 @@
-using System.Diagnostics;
+Ôªøusing System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using _12_Weboto.Models;
 using Microsoft.EntityFrameworkCore;
@@ -16,8 +16,8 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        var cars = _context.Cars.Include(c => c.Images).ToList(); // Load danh s·ch xe v‡ hÏnh ?nh
-        return View(cars); // ??m b?o Model khÙng null
+        var cars = _context.Cars.Include(c => c.Images).ToList(); // Load danh s√°ch xe v√† h√¨nh ?nh
+        return View(cars); // ??m b?o Model kh√¥ng null
     }
 
     public IActionResult Privacy()
@@ -29,5 +29,9 @@ public class HomeController : Controller
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+    }
+    public IActionResult About()
+    {
+        return View();
     }
 }

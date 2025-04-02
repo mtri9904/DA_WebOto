@@ -2,9 +2,26 @@
 
 @{
     ViewData["Title"] = "Chi tiết tin tức";
+
+    // Rút ngắn tiêu đề bài viết cho breadcrumb
+    string shortTitle = Model.Title;
+    var words = Model.Title.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+    if (words.Length > 5)
+    {
+        shortTitle = string.Join(" ", words.Take(5)) + "...";
+    }
 }
 
 <div class="container mt-4">
+    <!-- Thanh breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-controller="News" asp-action="Index">Tin Tức</a></li>
+            <li class="breadcrumb-item"><a asp-controller="News" asp-action="Index" asp-route-category="@Model.CategoryId">@Model.Category?.Name</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@shortTitle</li>
+        </ol>
+    </nav>
     <div class="row">
         <!-- Cột chính (bài tin tức) -->
         <div class="col-md-8">

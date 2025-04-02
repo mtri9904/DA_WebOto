@@ -15,13 +15,6 @@ namespace _12_Weboto.Controllers
             _context = context;
         }
 
-        // GET: News
-        //public async Task<IActionResult> Index()
-        //{
-        //    var news = await _context.News.Include(n => n.Category).Include(n => n.Images).ToListAsync();
-        //    return View(news);
-        //}
-        // Hiển thị danh sách tin tức theo danh mục
         // Hiển thị danh sách tin tức theo danh mục
         public async Task<IActionResult> Index(int? category)
         {
@@ -137,6 +130,20 @@ namespace _12_Weboto.Controllers
             }
             ViewBag.Categories = _context.NewsCategories.ToList();
             return View(news);
+        }
+        public IActionResult GetRandomNews()
+        {
+            var randomNews = _context.News
+                .OrderBy(n => Guid.NewGuid()) // Sắp xếp ngẫu nhiên
+                .Take(3) // Lấy 3 tin tức
+                .Select(n => new
+                {
+                    n.Title,
+                    n.Id,
+                    ImageUrl = n.Images.Any() ? n.Images.FirstOrDefault().ImageUrl : "https://giaxemoto.com.vn/wp-content/uploads/2023/11/hinh-anh-o-to-lamborghini-dep-1709.jpg"
+                }) // Lấy ảnh đầu tiên của bài viết, nếu không có thì dùng ảnh mặc định
+                .ToList();
+            return Json(randomNews);
         }
     }
 }

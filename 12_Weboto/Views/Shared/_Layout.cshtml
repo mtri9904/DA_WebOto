@@ -8,27 +8,506 @@
     <link rel="stylesheet" href="~/css/site.css" /> @* Gọi CSS riêng *@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* CSS cho phần header */
+        .hero-section {
+        position: relative;
+        min-height: 80vh; /* Chiều cao tối thiểu 100% của viewport */
+        background: url('https://toyotahadong.com.vn/uploads/files/2021-03/275303657_3232917753610851_2734836892278179138_n.jpg') no-repeat center center;
+        background-size: cover; /* Lấp đầy khung, có thể cắt bớt */
+        background-position: center; /* Đảm bảo hình ảnh căn giữa */
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px; /* Thêm padding để tạo không gian */
+        }
+
+        .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2); /* Lớp phủ nhẹ để chữ dễ đọc */
+        }
+
+        .hero-content {
+        position: relative;
+        z-index: 1;
+        }
+
+        .hero-content h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm bóng cho chữ */
+        }
+
+        .hero-content p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Thêm bóng cho chữ */
+        }
+
+        .btn-view-all {
+        background-color: #ff6200; /* Màu cam giống trong hình */
+        color: white;
+        padding: 0.75rem 2rem;
+        font-size: 1.1rem;
+        border: none;
+        border-radius: 5px;
+        text-transform: uppercase;
+        transition: background-color 0.3s ease;
+        }
+
+        .btn-view-all:hover {
+        background-color: #e55a00; /* Màu cam đậm hơn khi hover */
+        }
+
+        /* CSS cho phần CarList */
+        .car-section {
+        padding: 50px 0;
+        background-color: #f8f9fa; /* Màu nền nhạt */
+        margin-top: 0;
+        }
+
+        .car-card {
+        text-align: center;
+        }
+
+        .car-image {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+        margin: 0 auto;
+        }
+
+        .car-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 20px;
+        }
+
+        .car-price {
+        font-size: 1.2rem;
+        color: #ff6200;
+        margin: 10px 0;
+        }
+
+        .car-brand {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 10px;
+        }
+
+        .car-description {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 20px;
+        }
+
+        .btn-details {
+        background-color: #007bff;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        }
+
+        .btn-details:hover {
+        background-color: #0056b3;
+        }
+
+
+        /* Nút điều hướng trái/phải */
+        .carousel-control-prev,
+        .carousel-control-next {
+        width: 5%;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 50%;
+        }
+
+        /* Đảm bảo nội dung không bị che bởi navbar */
+        body {
+        padding-top: 56px; /* Chiều cao của navbar */
+        }
+        /* CSS cho phần Tin Tức */
+        .car-category-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+            .car-category-title h2 {
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 0;
+                white-space: nowrap;
+            }
+
+            .car-category-title hr {
+                flex-grow: 1;
+                border: none;
+                height: 2px;
+                background-color: #ccc;
+                margin: 0;
+            }
+
+        .news-intro {
+            font-size: 1.1rem;
+            color: #555;
+            margin-top: 10px;
+            font-style: normal;
+            text-align: justify;
+        }
+
+        .news-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .news-video {
+            position: relative;
+            padding-bottom: 56.25%; /* Tỷ lệ 16:9 */
+            height: 0;
+            overflow: hidden;
+        }
+
+            .news-video iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-item {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+        }
+
+            .news-item:hover {
+                transform: translateY(-3px);
+            }
+
+            .news-item .news-image {
+                width: 80px;
+                height: 80px;
+                object-fit: cover;
+                border-radius: 5px;
+            }
+
+            .news-item .news-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+
+            .news-item h6 {
+                font-size: 1rem;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #333;
+                line-height: 1.4;
+            }
+
+            .news-item a {
+                color: #007bff;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 500;
+            }
+
+                .news-item a:hover {
+                    text-decoration: underline;
+                }
+
+            .news-item hr {
+                border: none;
+                height: 1px;
+                background-color: #ddd;
+                margin: 10px 0;
+            }
+
+        /* CSS cho phần Khuyến Mãi & Ưu Đãi */
+        .promotion-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+        }
+
+        .promotion-item {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+            .promotion-item::before {
+                content: '★';
+                color: #ff6200; /* Màu cam giống trong hình */
+                position: absolute;
+                left: 0;
+                top: 2px;
+            }
+
+            .promotion-item h5 {
+                font-size: 1.1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            .promotion-item p {
+                font-size: 1rem;
+                color: #555;
+                margin: 0;
+                text-align: justify;
+            }
+
+        .promotion-note {
+            font-size: 0.9rem;
+            color: #555;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        .hotline-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+            .hotline-btn:hover {
+                background-color: #0056b3;
+                color: white;
+            }
+        /* CSS cho footer */
+        footer {
+        background-color: #1A2526;
+        color: #A0AEC0;
+        padding: 40px 0;
+        font-size: 0.9rem;
+        }
+
+        footer a {
+        color: #A0AEC0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+        color: #ffffff;
+        }
+
+        footer h5 {
+        color: #ffffff;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+        }
+
+        footer ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        footer ul li {
+        margin-bottom: 10px;
+        }
+
+        .footer-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ffffff;
+        margin-bottom: 10px;
+        }
+
+        .footer-slogan {
+        font-size: 0.9rem;
+        color: #A0AEC0;
+        margin-bottom: 15px;
+        }
+
+        .social-icons a {
+        font-size: 1.2rem;
+        margin-right: 15px;
+        color: #A0AEC0;
+        transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+        color: #ffffff;
+        }
+
+        .email-subscribe {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 15px;
+        }
+
+        .email-subscribe input {
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        }
+
+        .email-subscribe button {
+        background-color: #007bff;
+        color: #ffffff;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+        }
+
+        .email-subscribe button:hover {
+        background-color: #0056b3;
+        }
+
+        .footer-bottom {
+        border-top: 1px solid #2D3A3B;
+        padding-top: 20px;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #A0AEC0;
+        }
+
+        .support-buttons {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        }
+
+        .support-buttons button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        color: #ffffff;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        }
+
+        .support-buttons .chat-btn {
+        background-color: #28a745;
+        }
+
+        .support-buttons .top-btn {
+        background-color: #007bff;
+        }
+
+        .support-buttons button:hover {
+        transform: scale(1.1);
+        }
+        /* CSS cho thanh breadcrumb */
+        .breadcrumb {
+            background-color: transparent;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: ">";
+            color: #007bff;
+        }
+
+        .breadcrumb-item a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+            .breadcrumb-item a:hover {
+                text-decoration: underline;
+            }
+
+        .breadcrumb-item.active {
+            color: #6c757d;
+        }
+        /* Đưa Tài Khoản về bên phải */
+        .navbar .ms-auto .nav-link {
+            color: #fff; /* Màu chữ trắng để phù hợp với navbar-dark */
+            padding: 0.5rem 1rem; /* Khoảng cách cho các liên kết */
+        }
+
+            .navbar .ms-auto .nav-link:hover {
+                color: #ccc; /* Màu khi hover */
+            }
+        /* Nút xem thêm phần Tin Tức & sự Kiện */
+        .btn-view-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            border: 1px solid blue;
+            color: blue;
+            background-color: #eef3ff; /* Màu nền nhạt */
+            padding: 6px 12px; /* Giảm padding để thu gọn nút */
+            font-size: 14px; /* Giảm kích thước chữ */
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+            .btn-view-more:hover {
+                background-color: blue;
+                color: white;
+            }
+    </style>
 </head>
 <body>
     <div class="d-flex flex-column min-vh-100">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <!-- Đổi `container` thành `container-fluid` -->
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">Web Ô Tô</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-0">
-@*                         <li class="nav-item">
-                            <a asp-area="" class="nav-link" asp-controller="Car" asp-action="Index">Danh sách xe</a>
-                        </li>
-                        <a asp-area="" asp-controller="Brand" asp-action="Index">
-                            <i class="fas fa-car"></i> Hãng xe
-                        </a> *@
+                    <ul class="navbar-nav me-auto">
+                        <!-- Thay ms-0 thành me-auto để đẩy menu sang trái -->
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe</a>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="newsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Tin Tức
@@ -40,24 +519,192 @@
                                 <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="4">Tin Khuyến Mãi</a></li>
                             </ul>
                         </li>
+                        <!-- Thêm mục Giới Thiệu -->
+                        <li class="nav-item">
+                            <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">Giới Thiệu</a>
+                        </li>
                     </ul>
-                    <partial name="_LoginPartial" />
+                    <!-- Đưa _LoginPartial sang bên phải -->
+                    <div class="ms-auto">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
 
+        <!-- Phần header mới - Chỉ hiển thị trên trang chủ -->
+        @if (ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" &&
+        ViewContext.RouteData.Values["Action"]?.ToString() == "Index")
+        {
+            <section class="hero-section">
+                <div class="hero-content">
+                    <h1>ĐỊA CHỈ MUA Ô TÔ TỐT NHẤT!</h1>
+                    <p>Khám phá bộ sưu tập xe hơi đa dạng, chất lượng hàng đầu với giá cả hợp lý.</p>
+                    <a asp-controller="Car" asp-action="CarList" class="btn btn-view-all">VIEW ALL CAR</a>
+                </div>
+            </section>
+        }
 
-        <div class="container mt-3 flex-grow-1">
+        <div class="container mt-5">
             @RenderBody() @* Nội dung của từng trang *@
         </div>
+        @if (ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" &&
+        ViewContext.RouteData.Values["Action"]?.ToString() == "Index")
+        {
+            <div class="container mt-4">
+                <div class="car-category-title">
+                    <h2>Tin Tức & Sự Kiện</h2>
+                    <hr>
+                </div>
+                <p class="news-intro">
+                    Cập nhật nhanh nhất tin tức thị trường ô tô trong nước và quốc tế, từ những mẫu xe mới ra mắt đến các công nghệ tiên tiến trong ngành.
+                    Khám phá xu hướng, đánh giá xe, và bảng giá mới nhất để luôn dẫn đầu trong thế giới ô tô!
+                </p>
+                <!-- Nút Xem Thêm -->
+                <div class="text-end mt-2">
+                    <a asp-controller="News" asp-action="Index" class="btn btn-primary btn-view-more">Xem Thêm</a>
+                </div>
+                <div class="row mt-4">
+                    <!-- Video YouTube bên trái -->
+                    <div class="col-md-8">
+                        <div class="news-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/ldS3FakIUno?si=wktQ6DSqIRxwBYca"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <!-- Danh sách tin tức bên phải -->
+                    <div class="col-md-4">
+                        <div class="news-list">
+                            <!-- Tin tức sẽ được thêm bằng JavaScript -->
 
-        <footer class="text-center p-3 mt-4 bg-light">
-            <p>&copy; 2025 Web Bán Ô Tô - All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Phần Khuyến Mãi & Ưu Đãi -->
+                <div class="promotion-section mt-5">
+                    <div class="car-category-title">
+                        <h2>Khuyến Mãi & Ưu Đãi</h2>
+                        <hr>
+                    </div>
+                    <div class="promotion-item">
+                        <h5>Giảm Giá Đặc Biệt</h5>
+                        <p>Nhận ngay ưu đãi giảm giá lên đến 20% cho khách hàng đặt cọc sớm hoặc mua xe trong tháng này.</p>
+                    </div>
+                    <div class="promotion-item">
+                        <h5>Quà Tặng Hấp Dẫn</h5>
+                        <p>Khách hàng khi mua xe sẽ nhận ngay bộ quà tặng phụ kiện cao cấp, bao gồm thảm lót sàn, camera hành trình và gói bảo dưỡng miễn phí.</p>
+                    </div>
+                    <div class="promotion-item">
+                        <h5>Hỗ Trợ Đăng Ký Xe</h5>
+                        <p>Chúng tôi hỗ trợ khách hàng hoàn tất thủ tục đăng ký xe, biển số nhanh chóng và tiện lợi.</p>
+                    </div>
+                    <div class="promotion-item">
+                        <h5>Trả Góp 0% Lãi Suất</h5>
+                        <p>Chương trình hỗ trợ trả góp với lãi suất ưu đãi 0% trong 6 tháng đầu, giúp khách hàng dễ dàng sở hữu xe mơ ước.</p>
+                    </div>
+                    <p>Đừng bỏ lỡ những chương trình khuyến mãi hấp dẫn dành riêng cho bạn!</p>
+                    <p class="promotion-note">*Liên hệ ngay để nhận thông tin chi tiết và tư vấn tốt nhất.</p>
+                    <a href="tel:0999999999" class="hotline-btn">Hotline: 0999999999</a>
+                </div>
+            </div>
+        }
+@*         @if (ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" &&
+          ViewContext.RouteData.Values["Action"]?.ToString() == "Index")
+        { *@
+            <footer class="mt-auto">
+                <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-logo">Web Ô Tô</div>
+                        <p class="footer-slogan">
+                            Nhóm 12 – nền tảng hàng đầu trong lĩnh vực xe cũ tại Việt Nam. Cam kết mang đến cho bạn trải nghiệm hoàn toàn minh bạch, nhanh chóng và đáng tin cậy.
+                        </p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Dịch vụ</h5>
+                        <ul>
+                            <li><a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe ô tô</a></li>                          
+                            <li><a href="#">Trở thành cộng tác viên</a></li>
+                            <li><a href="#">Bảo giá cả hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Hỗ trợ</h5>
+                        <ul>
+                            <li><a href="#">Mua xe ô tô</a></li>
+                            <li><a href="#">Trở thành cộng tác viên</a></li>
+                            <li><a href="#">Câu hỏi thường gặp</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                            <li><a href="#">Cơ hội việc làm</a></li>
+                            <li><a href="#">Chương trình Web Ô Tô</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Về Nhóm 12</h5>
+                        <ul>
+                            <li><a asp-area="" class="nav-link" asp-controller="News" asp-action="Index">Tin Tức</a></li>
+                            <li><a href="#">Chính sách quyền riêng tư</a></li>
+                        </ul>
+                        <h5 class="mt-4">Công ty thành viên</h5>
+                        <ul>
+                            <li><a href="#">Ôtô - Trang đăng tin bán xe uy tín tại Việt Nam</a></li>
+                        </ul>
+                        <div class="email-subscribe">
+                            <input type="email" placeholder="Nhập email của bạn">
+                            <button type="submit">Gửi</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>
+                        CÔNG TY TNHH XE CLASSIFIEDS. Hotline: 098914439 (quốc tế) 56 DKKD: 0316248170. Địa chỉ: Tầng 6, Tòa nhà Me Linh Point, Ngõ 2 Đường Ngô Đức Kế, Phường Bến Nghé, Quận 1, Thành Phố Hồ Chí Minh, Việt Nam. © 2025 by Car Classifieds LIMITED LIABILITY COMPANY.
+                    </p>
+                </div>
+            </div>
         </footer>
+@*         } *@
     </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('/News/GetRandomNews')
+            .then(response => response.json())
+            .then(data => {
+                let newsContainer = document.querySelector('.news-list');
+                newsContainer.innerHTML = ''; // Xóa nội dung cũ
 
+                data.forEach(news => {
+                    let newsItem = document.createElement('div');
+                    newsItem.classList.add('news-item');
+                    newsItem.innerHTML = `
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <img src="${news.imageUrl || 'https://via.placeholder.com/80'}" alt="${news.title}" class="news-image">
+                            </div>
+                            <div class="col-8 news-content">
+                                <h6>${news.title}</h6>
+                                <a href="/News/Details/${news.id}" class="float-end">Xem thêm</a>
+                            </div>
+                        </div>
+                        <hr>
+                    `;
+                    newsContainer.appendChild(newsItem);
+                });
+            })
+            .catch(error => console.error('Error loading news:', error));
+    });
+</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @RenderSection("Scripts", required: false)
-
 </body>
 </html>
+

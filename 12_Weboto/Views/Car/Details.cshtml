@@ -8,13 +8,23 @@
 {
     <div class="container mt-4">
         <div class="row">
-            <!-- Cột hình ảnh -->
-            <div class="col-md-6">
+            <!-- Thanh breadcrumb -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                    <li class="breadcrumb-item"><a asp-controller="Car" asp-action="CarList">Mua xe</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">@Model.TenXe</li>
+                </ol>
+            </nav>
+            <!-- Cột hình ảnh và thông số kỹ thuật -->
+            <div class="col-md-8">
+                <!-- Hình ảnh chính -->
                 <div class="text-center">
                     <img id="mainImage" src="@((Model.Images != null && Model.Images.Any()) ? Model.Images.First().ImageUrl : "/images/default-car.jpg")"
                          class="img-fluid rounded shadow" style="max-height: 400px; width: 100%; object-fit: cover;" />
                 </div>
 
+                <!-- Hình ảnh phụ -->
                 <div class="d-flex justify-content-center mt-3">
                     @if (Model.Images != null && Model.Images.Any())
                     {
@@ -31,73 +41,81 @@
                     }
                 </div>
 
-                <div class="mt-3">
-                    <h5 class="text-primary"><i class="bi bi-info-circle"></i> Mô tả</h5>
+                <!-- Thông số kỹ thuật -->
+                <div class="mt-4 border p-3 shadow-sm rounded">
+                    <h5 class="text-primary"><i class="bi bi-gear"></i> Thông số kỹ thuật</h5>
                     <hr />
-                    <p>@Model.MoTa</p>
-                </div>
-            </div>
-
-            <!-- Cột thông tin xe -->
-            <div class="col-md-6">
-                <div class="border p-3 shadow-sm rounded">
-                    <h4 class="text-primary"><i ></i> @Model.TenXe</h4>
-                    <h4 class="text-danger"><i class="bi bi-cash"></i> Giá: @Model.GiaTien.ToString("N0") VND</h4>
-                    <hr />
-
                     <div class="row">
                         <div class="col-md-6">
-                            <h5 class="text-dark"><i class="bi bi-info-circle"></i> Tổng quan</h5>
-                            <hr />
                             <p><i class="bi bi-buildings"></i> <strong>Hãng xe:</strong> @Model.Brand?.TenHang</p>
                             <p><i class="bi bi-car-front"></i> <strong>Phiên bản:</strong> @Model.PhienBan</p>
                             <p><i class="bi bi-grid"></i> <strong>Kiểu dáng:</strong> @Model.KieuDang</p>
                             <p><i class="bi bi-globe"></i> <strong>Xuất xứ:</strong> @Model.XuatXu</p>
                             <p><i class="bi bi-menu-button-wide"></i> <strong>Dòng xe:</strong> @Model.DongXe</p>
                             <p><i class="bi bi-calendar"></i> <strong>Năm sản xuất:</strong> @Model.NamSanXuat</p>
-                        </div>
-
-                        <div class="col-md-6">
-                            <h5 class="text-dark"><i class="bi bi-gear"></i> Động cơ & Hiệu suất</h5>
-                            <hr />
                             <p><i class="bi bi-fuel-pump"></i> <strong>Loại nhiên liệu:</strong> @Model.NhienLieu</p>
                             <p><i class="bi bi-speedometer"></i> <strong>Động cơ:</strong> @Model.DongCo</p>
+                        </div>
+                        <div class="col-md-6">
                             <p><i class="bi bi-arrow-left-right"></i> <strong>Hộp số:</strong> @Model.HopSo</p>
                             <p><i class="bi bi-signpost-split"></i> <strong>Số km đã đi:</strong> @Model.SoKM km</p>
                             <p><i class="bi bi-people"></i> <strong>Số chỗ ngồi:</strong> @Model.SoChoNgoi</p>
-                        </div>
-
-                        <div class="col-md-6">
-                            <h5 class="text-dark"><i class="bi bi-rulers"></i> Kích thước & Trọng lượng</h5>
-                            <hr />
                             <p><i class="bi bi-arrows-angle-expand"></i> <strong>Chiều dài:</strong> @Model.ChieuDai mm</p>
                             <p><i class="bi bi-arrows-angle-expand"></i> <strong>Chiều rộng:</strong> @Model.ChieuRong mm</p>
                             <p><i class="bi bi-arrows-expand-vertical"></i> <strong>Chiều cao:</strong> @Model.ChieuCao mm</p>
                             <p><i class="bi bi-rulers"></i> <strong>Cơ sở bánh xe:</strong> @Model.CoSoBanhXe mm</p>
                             <p><i class="bi bi-weight"></i> <strong>Trọng lượng không tải:</strong> @Model.TrongLuongKhongTai kg</p>
                         </div>
-
                         <div class="col-md-6">
-                            <h5 class="text-dark"><i class="bi bi-circle-half"></i> Mâm & Vành xe</h5>
+                            <h6 class="mt-3"><i class="bi bi-circle-half"></i> Mâm & Vành xe</h6>
                             <hr />
                             <p><i class="bi bi-circle"></i> <strong>Lốp trước:</strong> @Model.LopTruoc</p>
                             <p><i class="bi bi-circle"></i> <strong>Lốp sau:</strong> @Model.LopSau</p>
                         </div>
-
-                        <div class="col-md-12">
-                            <h5 class="text-dark"><i class="bi bi-fuel-pump"></i> Mức tiêu thụ nhiên liệu</h5>
+                        <div class="col-md-6">
+                            <h6 class="mt-3"><i class="bi bi-fuel-pump"></i> Mức tiêu thụ nhiên liệu</h6>
                             <hr />
                             <p><i class="bi bi-signpost"></i> <strong>Ngoài đô thị:</strong> @Model.MucTieuThuNgoaiDoThi L/100km</p>
                             <p><i class="bi bi-building"></i> <strong>Trong đô thị:</strong> @Model.MucTieuThuTrongDoThi L/100km</p>
                         </div>
                     </div>
+                </div>
 
-                    <a asp-action="CarList" class="btn btn-secondary mt-3"><i class="bi bi-arrow-left"></i> Quay lại</a>
+                <!-- Mô tả -->
+                <div class="mt-4 border p-3 shadow-sm rounded">
+                    <h5 class="text-primary"><i class="bi bi-info-circle"></i> Mô tả</h5>
+                    <hr />
+                    <p>@Model.MoTa</p>
+                </div>
+            </div>
+
+            <!-- Cột thông tin tổng quan -->
+            <div class="col-md-4">
+                <div class="border p-3 shadow-sm rounded">
+                    <h4 class="text-primary">@Model.TenXe</h4>
+                    <h4 class="text-danger"><i class="bi bi-cash"></i> @Model.GiaTien.ToString("N0") triệu</h4>
+                    <hr />
+                    <h5 class="text-dark"><i class="bi bi-info-circle"></i> Tổng quan</h5>
+                    <hr />
+                    <p><i class="bi bi-calendar"></i> <strong>Năm sản xuất:</strong> @Model.NamSanXuat</p>
+                    <p><i class="bi bi-fuel-pump"></i> <strong>Nhiên liệu:</strong> @Model.NhienLieu</p>
+                    <p><i class="bi bi-signpost-split"></i> <strong>Số km:</strong> @Model.SoKM km</p>
+                    <p><i class="bi bi-people"></i> <strong>Số chỗ ngồi:</strong> @Model.SoChoNgoi</p>
+                    <p><i class="bi bi-arrow-left-right"></i> <strong>Hộp số:</strong> @Model.HopSo</p>
+                    <p><i class="bi bi-globe"></i> <strong>Xuất xứ:</strong> @Model.XuatXu</p>
+                    <hr />
+                    <div class="d-flex justify-content-between">
+                        <a href="tel:0123456789" class="btn btn-primary"><i class="bi bi-telephone"></i> Gọi người bán</a>
+                        <a href="#" class="btn btn-outline-primary"><i class="bi bi-chat"></i> Nhắn người bán</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        <div class="mt-4">
+            <a asp-action="CarList" class="btn btn-secondary"><i class="bi bi-arrow-left"></i> Quay lại</a>
+        </div>
+    </div>
 
     <!-- Script thay đổi hình lớn -->
     <script>
@@ -105,11 +123,62 @@
             document.getElementById("mainImage").src = imageUrl;
         }
     </script>
-
-    <!-- Link Font Awesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 }
 else
 {
     <p class="text-center text-danger">Không tìm thấy thông tin xe.</p>
 }
+
+<style>
+    /* Tùy chỉnh giao diện */
+    .border {
+        border: 1px solid #ddd;
+    }
+
+    .shadow-sm {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .rounded {
+        border-radius: 8px;
+    }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-danger {
+        color: #dc3545 !important;
+    }
+
+    .text-dark {
+        color: #333 !important;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+
+    .btn-outline-primary {
+        color: #007bff;
+        border-color: #007bff;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+    p {
+        margin-bottom: 0.5rem;
+    }
+
+    h5, h6 {
+        margin-bottom: 0.5rem;
+    }
+
+    hr {
+        margin: 0.5rem 0;
+    }
+</style>

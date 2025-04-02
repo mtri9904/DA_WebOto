@@ -202,7 +202,11 @@ namespace _12_Weboto.Areas.Admin.Controllers
         // GET: News/Delete
         public async Task<IActionResult> Delete(int id)
         {
-            var news = await _context.News.Include(n => n.Images).FirstOrDefaultAsync(n => n.Id == id);
+            var news = await _context.News
+                .Include(n => n.Category) // Thêm dòng này
+                .Include(n => n.Images)
+                .FirstOrDefaultAsync(n => n.Id == id);
+
             if (news == null)
             {
                 return NotFound();

@@ -207,18 +207,6 @@
 
         // Xóa khoảng trắng thừa và căn chỉnh đoạn văn
         content = content.replace(/\s+/g, ' ').trim();
-
-        // Định dạng tiêu đề (nếu có thẻ <h1> hoặc <h2>)
-        content = content.replace(/<h1>(.*?)<\/h1>/g, '<h1 style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">$1</h1>');
-        content = content.replace(/<h2>(.*?)<\/h2>/g, '<h2 style="font-size: 20px; font-weight: bold; margin-bottom: 8px;">$1</h2>');
-
-        // Định dạng đoạn văn (căn chỉnh justify)
-        content = content.replace(/<p>(.*?)<\/p>/g, '<p style="text-align: justify; margin-bottom: 10px;">$1</p>');
-
-        // Định dạng danh sách (nếu có)
-        content = content.replace(/<ul>/g, '<ul style="padding-left: 20px; margin-bottom: 10px;">');
-        content = content.replace(/<ol>/g, '<ol style="padding-left: 20px; margin-bottom: 10px;">');
-
         // Cập nhật lại nội dung đã chỉnh sửa vào Quill Editor
         quill.root.innerHTML = content;
     });

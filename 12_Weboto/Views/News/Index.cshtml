@@ -5,9 +5,29 @@
 }
 
 <div class="container mt-4">
+    <!-- Thanh breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item"><a asp-controller="News" asp-action="Index">Tin Tức</a></li>
+            @if (ViewBag.SelectedCategory != null && ViewData["CategoryName"] != null)
+            {
+                <li class="breadcrumb-item active" aria-current="page">@ViewData["CategoryName"]</li>
+            }
+        </ol>
+    </nav>
     <!-- Hiển thị danh sách danh mục -->
     <div class="mb-4">
         <ul class="nav nav-tabs">
+            <!-- Mục "Tin tức" hiển thị tất cả bài báo -->
+            <li class="nav-item">
+                <a class="nav-link @(ViewBag.SelectedCategory == null ? "active" : "")"
+                   asp-controller="News"
+                   asp-action="Index"
+                   style="font-size: 1.5rem; font-weight: bold;">
+                    Tin tức
+                </a>
+            </li>
             @foreach (var category in ViewBag.Categories)
             {
                 <li class="nav-item">

@@ -19,7 +19,7 @@
                     </p>
                     <div class="info-box p-3 mb-4" style="background-color: #FFF5F5; border-left: 4px solid #F56565; border-radius: 8px;">
                         <p class="mb-2"><strong class="text-black fw-bold">Tiêu đề:</strong> <span class="text-dark">@Model.Title</span></p>
-                        <p class="mb-2"><strong class="text-black fw-bold">Danh mục:</strong> <span class="text-dark">@(Model.Category?.Name ?? "Không xác định")</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Danh mục:</strong> <span class="text-dark">@(Model.Category?.Name)</span></p>
                         <p class="mb-2"><strong class="text-black fw-bold">Tác giả:</strong> <span class="text-dark">@Model.CreatedBy</span></p>
                         <p class="mb-2"><strong class="text-black fw-bold">Ngày tạo:</strong> <span class="text-dark">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")</span></p>
                         <p class="mb-0"><strong class="text-black fw-bold">Hình ảnh:</strong></p>

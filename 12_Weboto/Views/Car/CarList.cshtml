@@ -1,94 +1,292 @@
 ﻿@model List<_12_Weboto.Models.Car>
+<div class="car-section">
+    <!-- Thanh breadcrumb -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Mua xe</li>
+        </ol>
+    </nav>
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Bộ lọc bên trái -->
+            <div class="col-md-3 filter-column">
+                <div class="filter-section shadow-sm p-3 rounded sticky-top">
+                    <h5 class="fw-bold text-primary">BỘ LỌC</h5>
 
-<div class="container mt-4">
-    <!-- Thanh tìm kiếm -->
-    <div class="mb-3 position-relative">
-        <div class="input-group shadow-sm">
-            <span class="input-group-text bg-white border-end-0">
-                <i class="fas fa-search"></i>
-            </span>
-            <input type="text" id="searchInput" class="form-control border-start-0"
-                   placeholder="Tìm kiếm theo Tên xe, Hãng xe hoặc Từ Khóa"
-                   onkeyup="filterCars()" onfocus="showSearchHistory()" onfocusout="hideSearchHistory()">
-
-        </div>
-
-        <!-- Dropdown lịch sử tìm kiếm và tìm kiếm hàng đầu -->
-        <div id="searchDropdown" class="search-dropdown shadow-sm">
-            <!-- Lịch sử tìm kiếm -->
-            <div class="search-section">
-                <div class="d-flex justify-content-between align-items-center mb-2">
-                    <h6 class="fw-bold text-dark mb-0">Lịch sử tìm kiếm</h6>
-                    <button id="clearHistory" class="btn btn-link text-danger p-0" style="font-size: 14px;" onclick="clearSearchHistory()">
-                        <i class="fas fa-trash-alt me-1"></i>Xóa lịch sử
-                    </button>
-                </div>
-                <ul id="searchHistory" class="list-unstyled mb-0"></ul>
-            </div>
-
-            <!-- Tìm kiếm hàng đầu -->
-            <div class="search-section mt-3">
-                <h6 class="fw-bold text-dark mb-2">Tìm kiếm hàng đầu</h6>
-                <div id="topSearches" class="d-flex flex-wrap gap-2">
-                    <!-- Các từ khóa tìm kiếm hàng đầu sẽ được thêm bằng JavaScript -->
-                </div>
-            </div>
-        </div>
-    </div>
-
-    @if (Model == null || !Model.Any())
-    {
-        <p class="text-center text-danger">🚗 Không có xe nào để hiển thị.</p>
-    }
-    else
-    {
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="carList">
-            @foreach (var car in Model)
-            {
-                <div class="col car-item"
-                     data-name="@car.TenXe.ToLower()"
-                     data-brand="@car.Brand?.TenHang?.ToLower()">
-                    <div class="card shadow-sm h-100" onclick="window.location.href='@Url.Action("Details", "Car", new { id = car.Id })'" style="cursor: pointer;">
-                        <!-- Hình Ảnh -->
-                        <div class="card-img-top">
-                            <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "~/uploads/default-car.jpg")"
-                                 class="d-block w-100"
-                                 alt="@car.TenXe">
+                    <!-- Hãng xe, Đóng xe -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">HÃNG XE, ĐÓNG XE</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
                         </div>
+                        <div class="filter-content">
+                            <div class="dropdown">
+                                <button class="btn btn-outline-secondary dropdown-toggle w-100 text-start" type="button" id="brandDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Chọn hãng xe
+                                </button>
+                                <ul class="dropdown-menu w-100" aria-labelledby="brandDropdown" id="brandFilter">
+                                    <li><a class="dropdown-item" href="#" data-value="">Tất cả</a></li>
+                                    @foreach (var brand in Model.Select(c => c.Brand?.TenHang).Distinct())
+                                    {
+                                        <li><a class="dropdown-item" href="#" data-value="@brand?.ToLower()">@brand</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
-                        <div class="card-body d-flex flex-column">
-                            <!-- Tên Xe -->
-                            <h5 class="card-title text-center fw-bold text-uppercase">@car.TenXe</h5>
-
-                            <!-- Thông Tin Chi Tiết -->
-                            <div class="row text-muted">
-                                <div class="col-6">
-                                    <p class="mb-1"><i class="fas fa-building"></i> @car.Brand?.TenHang</p>
-                                    <p class="mb-1"><i class="fas fa-calendar-alt"></i> @car.NamSanXuat</p>
-                                    <p class="mb-1"><i class="fas fa-gas-pump"></i> @car.NhienLieu</p>
-                                </div>
-                                <div class="col-6 text-end">
-                                    <p class="mb-1"><i class="fas fa-road"></i> @car.SoKM Km</p>
-                                    <p class="mb-1"><i class="fas fa-cogs"></i> @car.HopSo</p>
+                    <!-- Giá -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">GIÁ</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="price-range">
+                                <input type="range" class="form-range" min="0" max="5000" step="50" id="priceMin" value="0">
+                                <input type="range" class="form-range" min="0" max="5000" step="50" id="priceMax" value="5000">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Tối thiểu: <span id="priceMinValue">0 Tỷ</span></span>
+                                    <span>Tối đa: <span id="priceMaxValue">5 Tỷ</span></span>
                                 </div>
                             </div>
-
-                            <!-- Giá Tiền -->
-                            <div class="mt-auto text-end">
-                                <h4 class="fw-bold text-danger">@String.Format("{0:N0} VND", car.GiaTien)</h4>
+                        </div>
+                    </div>
+                    <!-- Năm sản xuất -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">NĂM SẢN XUẤT</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="year-range">
+                                <input type="range" class="form-range" min="2000" max="2025" step="1" id="yearMin" value="2000">
+                                <input type="range" class="form-range" min="2000" max="2025" step="1" id="yearMax" value="2025">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Tối thiểu: <span id="yearMinValue">2000</span></span>
+                                    <span>Tối đa: <span id="yearMaxValue">2025</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Số KM -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">SỐ KM</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="km-range">
+                                <input type="range" class="form-range" min="0" max="500000" step="1000" id="kmMin" value="0">
+                                <input type="range" class="form-range" min="0" max="500000" step="1000" id="kmMax" value="500000">
+                                <div class="d-flex justify-content-between mt-2">
+                                    <span>Tối thiểu: <span id="kmMinValue">0 Km</span></span>
+                                    <span>Tối đa: <span id="kmMaxValue">500,000 Km</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nhiên Liệu -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">NHIÊN LIỆU</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="fuel-options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fuelXang" value="Xăng" onchange="updateFuelFilter()">
+                                    <label class="form-check-label" for="fuelXang">Xăng</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fuelDau" value="Dầu" onchange="updateFuelFilter()">
+                                    <label class="form-check-label" for="fuelDau">Dầu</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fuelDien" value="Điện" onchange="updateFuelFilter()">
+                                    <label class="form-check-label" for="fuelDien">Điện</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fuelHybrid" value="Hybrid" onchange="updateFuelFilter()">
+                                    <label class="form-check-label" for="fuelHybrid">Hybrid</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="fuelPlugInHybrid" value="Plug-in Hybrid" onchange="updateFuelFilter()">
+                                    <label class="form-check-label" for="fuelPlugInHybrid">Plug-in Hybrid</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hợp Số -->
+                    <div class="filter-group mb-3">
+                        <div class="filter-header" onclick="toggleFilter(this)">
+                            <label class="fw-bold mb-2">HỢP SỐ</label>
+                            <span class="arrow-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+                        <div class="filter-content">
+                            <div class="gearbox-options">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gearboxSoSan" value="Số sàn" onchange="updateGearboxFilter()">
+                                    <label class="form-check-label" for="gearboxSoSan">Số sàn</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gearboxSoTuDong" value="Số tự động" onchange="updateGearboxFilter()">
+                                    <label class="form-check-label" for="gearboxSoTuDong">Số tự động</label>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            }
+            </div>
+
+            <!-- Nội dung bên phải -->
+            <div class="col-md-9 content-column">
+                <!-- Thanh tìm kiếm -->
+                <div class="mb-3 position-relative">
+                    <div class="input-group shadow-sm">
+                        <span class="input-group-text bg-white border-end-0">
+                            <i class="fas fa-search"></i>
+                        </span>
+                        <input type="text" id="searchInput" class="form-control border-start-0"
+                               placeholder="Tìm kiếm theo Tên xe, Hãng xe hoặc Từ Khóa"
+                               onkeyup="filterCars()" onfocus="showSearchHistory()" onfocusout="hideSearchHistory()">
+                    </div>
+
+                    <!-- Dropdown lịch sử tìm kiếm và tìm kiếm hàng đầu -->
+                    <div id="searchDropdown" class="search-dropdown shadow-sm">
+                        <div class="search-section">
+                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                <h6 class="fw-bold text-dark mb-0">Lịch sử tìm kiếm</h6>
+                                <button id="clearHistory" class="btn btn-link text-danger p-0" style="font-size: 14px;" onclick="clearSearchHistory()">
+                                    <i class="fas fa-trash-alt me-1"></i>Xóa lịch sử
+                                </button>
+                            </div>
+                            <ul id="searchHistory" class="list-unstyled mb-0"></ul>
+                        </div>
+                        <div class="search-section mt-3">
+                            <h6 class="fw-bold text-dark mb-2">Tìm kiếm hàng đầu</h6>
+                            <div id="topSearches" class="d-flex flex-wrap gap-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hiển thị bộ lọc đã chọn -->
+                <div class="filter-tags mb-3" id="filterTags">
+                    <strong>BỘ LỌC: </strong>
+                </div>
+
+                <!-- Thông báo khi không tìm thấy xe -->
+                <div id="noResultsMessage" class="text-center mt-5" style="display: none;">
+                    <img src="https://www.carmudi.vn/_next/image/?url=%2Fimages%2Fcar-no-result.png&w=640&q=75"
+                         alt="Không tìm thấy xe" style="max-width: 300px; height: auto;" />
+                    <p class="mt-3" style="font-size: 1.2rem; color: #333;">
+                        Có vẻ chúng tôi không có chiếc xe bạn đang tìm kiếm.
+                    </p>
+                </div>
+
+                @if (Model == null || !Model.Any())
+                {
+                    <div class="text-center mt-5">
+                        <img src="/images/no-results.png" alt="Không tìm thấy xe" style="max-width: 300px; height: auto;" />
+                        <p class="mt-3 text-danger" style="font-size: 1.2rem;">
+                            🚗 Không có xe nào để hiển thị.
+                        </p>
+                    </div>
+                }
+                else
+                {
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="carList">
+                        @foreach (var car in Model)
+                        {
+                            <div class="col car-item"
+                                 data-name="@car.TenXe.ToLower()"
+                                 data-brand="@car.Brand?.TenHang?.ToLower()"
+                                 data-price="@car.GiaTien"
+                                 data-year="@car.NamSanXuat"
+                                 data-km="@car.SoKM"
+                                 data-fuel="@car.NhienLieu"
+                                 data-gearbox="@car.HopSo">
+                                <div class="card shadow-sm h-100" onclick="window.location.href='@Url.Action("Details", "Car", new { id = car.Id })'" style="cursor: pointer;">
+                                    <div class="card-img-top">
+                                        <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "~/uploads/default-car.jpg")"
+                                             class="d-block w-100"
+                                             alt="@car.TenXe">
+                                    </div>
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title text-center fw-bold text-uppercase">@car.TenXe</h5>
+                                        <div class="row text-muted">
+                                            <div class="col-6">
+                                                <p class="mb-1"><i class="fas fa-building"></i> @car.Brand?.TenHang</p>
+                                                <p class="mb-1"><i class="fas fa-calendar-alt"></i> @car.NamSanXuat</p>
+                                                <p class="mb-1"><i class="fas fa-gas-pump"></i> @car.NhienLieu</p>
+                                            </div>
+                                            <div class="col-6 text-end">
+                                                <p class="mb-1"><i class="fas fa-road"></i> @car.SoKM Km</p>
+                                                <p class="mb-1"><i class="fas fa-cogs"></i> @car.HopSo</p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-auto text-end">
+                                            <h4 class="fw-bold text-danger">@String.Format("{0:N0} VND", car.GiaTien)</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
         </div>
-    }
-    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Lên đầu trang">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Lên đầu trang">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
 </div>
 
 <style>
+    .filter-column {
+        height: 100%; /* Đảm bảo cột bộ lọc chiếm toàn bộ chiều cao */
+    }
+
+    .filter-section {
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        top: 0; /* Đặt bộ lọc cố định ở trên cùng */
+    }
+
+    .content-column {
+        padding-left: 15px; /* Khoảng cách giữa bộ lọc và nội dung */
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        padding: 5px 0;
+    }
+
+        .filter-header label {
+            margin-bottom: 0; /* Xóa margin-bottom mặc định của label */
+        }
+
+    .arrow-icon {
+        transition: transform 0.3s ease;
+    }
+
+        .arrow-icon.active {
+            transform: rotate(180deg); /* Xoay mũi tên khi mở */
+        }
+
+    .filter-content {
+        display: none; /* Ẩn nội dung ban đầu */
+        padding-top: 10px;
+    }
+
+        .filter-content.active {
+            display: block; /* Hiển thị nội dung khi được mở */
+        }
+
     .input-group {
         border-radius: 50px;
         overflow: hidden;
@@ -185,9 +383,85 @@
             background-color: #0056b3;
         }
 
+    .dropdown-toggle::after {
+        float: right;
+        margin-top: 8px;
+    }
+
+    .dropdown-menu {
+        max-height: 200px;
+        overflow-y: auto;
+    }
+
+    .price-range {
+        position: relative;
+    }
+
+    .form-range {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .filter-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .filter-tag {
+        background-color: #007bff;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .filter-tag .remove-filter {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    .year-range {
+        position: relative;
+    }
+
+    .form-range {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .km-range {
+        position: relative;
+    }
+
+    .form-range {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .fuel-options .form-check {
+        margin-bottom: 10px;
+    }
+
+    .gearbox-options .form-check {
+        margin-bottom: 10px;
+    }
 </style>
 
 <script>
+    // Hàm toggle hiển thị/ẩn nội dung của bộ lọc
+    function toggleFilter(header) {
+        const content = header.nextElementSibling; // Lấy phần nội dung ngay sau header
+        const arrow = header.querySelector('.arrow-icon');
+
+        // Toggle class active để hiển thị/ẩn nội dung
+        content.classList.toggle('active');
+        arrow.classList.toggle('active');
+    }
+
     // Danh sách tìm kiếm hàng đầu (cứng để minh họa, có thể thay bằng dữ liệu từ server)
     const topSearches = [
         "Ford Everest", "Suzuki XL7", "Toyota", "Honda",
@@ -250,7 +524,6 @@
         }, 200);
     }
 
-
     // Lưu từ khóa tìm kiếm vào sessionStorage
     function saveSearchHistory(searchTerm) {
         if (!searchTerm.trim()) return;
@@ -268,22 +541,280 @@
         historyList.innerHTML = "<li class='text-muted'>Không có lịch sử tìm kiếm</li>";
     }
 
-    // Lọc xe dựa trên từ khóa tìm kiếm
+    // Biến lưu trữ bộ lọc
+    let filters = {
+        brand: "",
+        priceMin: 0,
+        priceMax: 5000,
+        yearMin: 2000,
+        yearMax: 2025,
+        kmMin: 0,
+        kmMax: 500000,
+        fuels: [],
+        gearboxes: []
+    };
+
+    // Cập nhật giá trị bộ lọc giá
+    function updatePriceRange() {
+        const priceMin = document.getElementById("priceMin");
+        const priceMax = document.getElementById("priceMax");
+        const priceMinValue = document.getElementById("priceMinValue");
+        const priceMaxValue = document.getElementById("priceMaxValue");
+
+        // Đảm bảo giá trị min không vượt qua max
+        if (parseInt(priceMin.value) > parseInt(priceMax.value)) {
+            priceMin.value = priceMax.value;
+        }
+
+        // Đảm bảo giá trị max không nhỏ hơn min
+        if (parseInt(priceMax.value) < parseInt(priceMin.value)) {
+            priceMax.value = priceMin.value;
+        }
+
+        filters.priceMin = parseInt(priceMin.value);
+        filters.priceMax = parseInt(priceMax.value);
+
+        // Hiển thị giá trị
+        priceMinValue.textContent = `${(filters.priceMin / 1000).toFixed(1)} Tỷ`;
+        priceMaxValue.textContent = `${(filters.priceMax / 1000).toFixed(1)} Tỷ`;
+
+        updateFilterTags();
+        filterCars();
+    }
+    function updateYearRange() {
+        const yearMin = document.getElementById("yearMin");
+        const yearMax = document.getElementById("yearMax");
+        const yearMinValue = document.getElementById("yearMinValue");
+        const yearMaxValue = document.getElementById("yearMaxValue");
+
+        // Đảm bảo giá trị min không vượt qua max
+        if (parseInt(yearMin.value) > parseInt(yearMax.value)) {
+            yearMin.value = yearMax.value;
+        }
+
+        // Đảm bảo giá trị max không nhỏ hơn min
+        if (parseInt(yearMax.value) < parseInt(yearMin.value)) {
+            yearMax.value = yearMin.value;
+        }
+
+        filters.yearMin = parseInt(yearMin.value);
+        filters.yearMax = parseInt(yearMax.value);
+
+        // Hiển thị giá trị
+        yearMinValue.textContent = filters.yearMin;
+        yearMaxValue.textContent = filters.yearMax;
+
+        updateFilterTags();
+        filterCars();
+    }
+    function updateKmRange() {
+        const kmMin = document.getElementById("kmMin");
+        const kmMax = document.getElementById("kmMax");
+        const kmMinValue = document.getElementById("kmMinValue");
+        const kmMaxValue = document.getElementById("kmMaxValue");
+
+        // Đảm bảo giá trị min không vượt qua max
+        if (parseInt(kmMin.value) > parseInt(kmMax.value)) {
+            kmMin.value = kmMax.value;
+        }
+
+        // Đảm bảo giá trị max không nhỏ hơn min
+        if (parseInt(kmMax.value) < parseInt(kmMin.value)) {
+            kmMax.value = kmMin.value;
+        }
+
+        filters.kmMin = parseInt(kmMin.value);
+        filters.kmMax = parseInt(kmMax.value);
+
+        // Hiển thị giá trị với định dạng số có dấu phẩy
+        kmMinValue.textContent = filters.kmMin.toLocaleString('vi-VN') + " Km";
+        kmMaxValue.textContent = filters.kmMax.toLocaleString('vi-VN') + " Km";
+
+        updateFilterTags();
+        filterCars();
+    }
+    function updateFuelFilter() {
+        const fuelCheckboxes = document.querySelectorAll('.fuel-options .form-check-input');
+        filters.fuels = Array.from(fuelCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        updateFilterTags();
+        filterCars();
+    }
+    function updateGearboxFilter() {
+        const gearboxCheckboxes = document.querySelectorAll('.gearbox-options .form-check-input');
+        filters.gearboxes = Array.from(gearboxCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+
+        updateFilterTags();
+        filterCars();
+    }
+    // Hiển thị bộ lọc đã chọn
+    function updateFilterTags() {
+        const filterTags = document.getElementById("filterTags");
+        filterTags.innerHTML = "<strong>BỘ LỌC: </strong>";
+
+        // Thêm tag cho hãng xe
+        if (filters.brand) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Hãng xe: ${filters.brand} <span class="remove-filter" data-filter="brand">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+
+        // Thêm tag cho giá
+        if (filters.priceMin > 0 || filters.priceMax < 5000) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Giá từ ${(filters.priceMin / 1000).toFixed(1)} Tỷ đến ${(filters.priceMax / 1000).toFixed(1)} Tỷ <span class="remove-filter" data-filter="price">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+        // Thêm tag cho năm sản xuất
+        if (filters.yearMin > 2000 || filters.yearMax < 2025) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Năm từ ${filters.yearMin} đến ${filters.yearMax} <span class="remove-filter" data-filter="year">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+        // Thêm tag cho số KM
+        if (filters.kmMin > 0 || filters.kmMax < 500000) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Số KM từ ${filters.kmMin.toLocaleString('vi-VN')} đến ${filters.kmMax.toLocaleString('vi-VN')} <span class="remove-filter" data-filter="km">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+        // Thêm tag cho nhiên liệu
+        if (filters.fuels.length > 0) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Nhiên liệu: ${filters.fuels.join(', ')} <span class="remove-filter" data-filter="fuel">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+        // Thêm tag cho hợp số
+        if (filters.gearboxes.length > 0) {
+            const tag = document.createElement("span");
+            tag.className = "filter-tag";
+            tag.innerHTML = `Hợp số: ${filters.gearboxes.join(', ')} <span class="remove-filter" data-filter="gearbox">✖</span>`;
+            filterTags.appendChild(tag);
+        }
+    }
+
+    // Xóa bộ lọc khi nhấn vào dấu X
+    document.addEventListener("click", function(e) {
+        if (e.target.classList.contains("remove-filter")) {
+            const filterType = e.target.getAttribute("data-filter");
+            if (filterType === "brand") {
+                filters.brand = "";
+                document.getElementById("brandDropdown").textContent = "Chọn hãng xe";
+            } else if (filterType === "price") {
+                filters.priceMin = 0;
+                filters.priceMax = 5000;
+                document.getElementById("priceMin").value = 0;
+                document.getElementById("priceMax").value = 5000;
+                document.getElementById("priceMinValue").textContent = "0 Tỷ";
+                document.getElementById("priceMaxValue").textContent = "5 Tỷ";
+            }
+            else if (filterType === "year") {
+                filters.yearMin = 2000;
+                filters.yearMax = 2025;
+                document.getElementById("yearMin").value = 2000;
+                document.getElementById("yearMax").value = 2025;
+                document.getElementById("yearMinValue").textContent = "2000";
+                document.getElementById("yearMaxValue").textContent = "2025";
+            }
+            else if (filterType === "km") {
+                filters.kmMin = 0;
+                filters.kmMax = 500000;
+                document.getElementById("kmMin").value = 0;
+                document.getElementById("kmMax").value = 500000;
+                document.getElementById("kmMinValue").textContent = "0 Km";
+                document.getElementById("kmMaxValue").textContent = "500,000 Km";
+            }
+            else if (filterType === "fuel") {
+                filters.fuels = [];
+                document.querySelectorAll('.fuel-options .form-check-input').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+            }
+            else if (filterType === "gearbox") {
+                filters.gearboxes = [];
+                document.querySelectorAll('.gearbox-options .form-check-input').forEach(checkbox => {
+                    checkbox.checked = false;
+                });
+            }
+            updateFilterTags();
+            filterCars();
+        }
+    });
+
+    // Lọc xe dựa trên từ khóa tìm kiếm và bộ lọc
     function filterCars() {
         let input = document.getElementById("searchInput").value.toLowerCase();
         let cars = document.querySelectorAll(".car-item");
+        let noResultsMessage = document.getElementById("noResultsMessage");
+        let carList = document.getElementById("carList");
+
+        let visibleCars = 0;
 
         cars.forEach(car => {
             let carName = car.getAttribute("data-name");
             let brandName = car.getAttribute("data-brand");
+            let price = parseInt(car.getAttribute("data-price")) / 1000000; // Chuyển đổi giá sang triệu
 
-            if (carName.includes(input) || (brandName && brandName.includes(input))) {
+            // Kiểm tra từ khóa tìm kiếm
+            let matchesSearch = carName.includes(input) || (brandName && brandName.includes(input));
+
+            // Kiểm tra bộ lọc
+            let matchesBrand = !filters.brand || (brandName && brandName === filters.brand);
+            let matchesPrice = price >= filters.priceMin && price <= filters.priceMax;
+            let year = parseInt(car.getAttribute("data-year")); // Lấy năm sản xuất từ thuộc tính data-year
+            let matchesYear = year >= filters.yearMin && year <= filters.yearMax;
+            let km = parseInt(car.getAttribute("data-km")); // Lấy số KM từ thuộc tính data-km
+            let matchesKm = km >= filters.kmMin && km <= filters.kmMax;
+            let fuel = car.getAttribute("data-fuel"); // Lấy nhiên liệu từ thuộc tính data-fuel
+            let matchesFuel = filters.fuels.length === 0 || filters.fuels.includes(fuel);
+            let gearbox = car.getAttribute("data-gearbox"); // Lấy hợp số từ thuộc tính data-gearbox
+            let matchesGearbox = filters.gearboxes.length === 0 || filters.gearboxes.includes(gearbox);
+
+
+            if (matchesSearch && matchesBrand && matchesPrice && matchesYear && matchesKm && matchesFuel && matchesGearbox) {
                 car.style.display = "block";
+                visibleCars++;
             } else {
                 car.style.display = "none";
             }
         });
+
+        // Hiển thị hoặc ẩn thông báo dựa trên số lượng xe hiển thị
+        if (visibleCars === 0) {
+            noResultsMessage.style.display = "block";
+            carList.style.display = "none";
+        } else {
+            noResultsMessage.style.display = "none";
+            carList.style.display = "flex";
+        }
     }
+
+    // Xử lý sự kiện chọn hãng xe
+    document.querySelectorAll("#brandFilter .dropdown-item").forEach(item => {
+        item.addEventListener("click", function(e) {
+            e.preventDefault();
+            filters.brand = this.getAttribute("data-value");
+            document.getElementById("brandDropdown").textContent = this.textContent;
+            updateFilterTags();
+            filterCars();
+        });
+    });
+
+    // Xử lý sự kiện thay đổi giá
+    document.getElementById("priceMin").addEventListener("input", updatePriceRange);
+    document.getElementById("priceMax").addEventListener("input", updatePriceRange);
+    document.getElementById("yearMin").addEventListener("input", updateYearRange);
+    document.getElementById("yearMax").addEventListener("input", updateYearRange);
+    document.getElementById("kmMin").addEventListener("input", updateKmRange);
+    document.getElementById("kmMax").addEventListener("input", updateKmRange);
 
     // Lưu từ khóa khi nhấn Enter
     document.getElementById("searchInput").addEventListener("keypress", function (e) {
@@ -294,7 +825,8 @@
             }
         }
     });
-        // Hiển thị nút khi cuộn xuống 200px
+
+    // Hiển thị nút khi cuộn xuống 200px
     window.onscroll = function () {
         var btn = document.getElementById("scrollToTopBtn");
         if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
