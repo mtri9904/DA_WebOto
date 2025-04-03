@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Đặt hàng thành công";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (TempData["OrderSuccess"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["OrderSuccess"]
+    </div>
+}
+
+<a href="@Url.Action("Index", "Order")" class="btn btn-primary">Xem đơn hàng của tôi</a>
+<a href="@Url.Action("Index", "Home")" class="btn btn-secondary">Về trang chủ</a>

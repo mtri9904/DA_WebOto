@@ -1,0 +1,96 @@
+﻿@model IEnumerable<_12_Weboto.Models.Order>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>Danh sách đơn hàng</h2>
+
+
+@if (TempData["Success"] != null)
+{
+    <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Mã đơn hàng</th>
+            <th>Tên xe</th>
+            <th>Ngày đặt</th>
+            <th>Trạng thái</th>
+            <th>Chỉnh sửa trạng thái</th>
+            <th>Hành động</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var order in Model)
+        {
+            var statusClass = order.Status switch
+            {
+                OrderStatus.Processing => "status-processing",
+                OrderStatus.Completed => "status-completed",
+                OrderStatus.Failed => "status-failed",
+                _ => "status-pending"
+            };
+            <tr>
+                <td>@order.OrderId</td>
+                <td>@order.Car.TenXe</td>
+                <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                <td class="@statusClass">@order.Status.ToString()</td>
+                <td>
+                    <form method="post" asp-action="UpdateStatus">
+                        <input type="hidden" name="orderId" value="@order.OrderId" />
+                        <select name="status">
+                            <option value="0" selected="@(order.Status == OrderStatus.Processing ? "selected" : null)">Đang xử lý</option>
+                            <option value="1" selected="@(order.Status == OrderStatus.Completed ? "selected" : null)">Hoàn thành</option>
+                            <option value="2" selected="@(order.Status == OrderStatus.Failed ? "selected" : null)">Thất bại</option>
+                            <option value="3" selected="@(order.Status == OrderStatus.Pending ? "selected" : null)">Chờ xử lý</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Cập nhật</button>
+                    </form>
+                <td>
+                        <!-- Nút Xem Chi Tiết -->
+                    <a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-info mt-2">Xem chi tiết</a>
+                    <a asp-action="Delete" asp-route-id="@order.OrderId" class="btn btn-danger">Xóa</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Styles {
+    <style>
+        .table .status-processing {
+            color: orange !important;
+        }
+
+        .table .status-completed {
+            color: green !important;
+        }
+
+        .table .status-failed {
+            color: red !important;
+        }
+
+        .table .status-pending {
+            color: gray !important;
+            font-style: italic;
+        }
+    </style>
+}
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const successMessage = document.getElementById("successMessage");
+        if (successMessage) {
+            setTimeout(function () {
+                successMessage.classList.remove("show");
+                successMessage.classList.add("fade");
+                setTimeout(function () {
+                    successMessage.remove();
+                }, 500); // Đợi hiệu ứng fade hoàn tất
+            }, 2000); // 2 giây
+        }
+    });
+</script>

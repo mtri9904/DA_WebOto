@@ -141,6 +141,7 @@
                 background-color: #20c997;
             }
     </style>
+    @RenderSection("Styles", required: false)
 </head>
 <body>
     <!-- Top Navigation -->
@@ -227,6 +228,9 @@
         </a>
         <a asp-area="Admin" asp-controller="News" asp-action="Index">
             <i class="fas fa-newspaper"></i> Tin tức
+        </a>
+        <a asp-area="Admin" asp-controller="Order" asp-action="Index">
+            <i class="fas fa-receipt"></i> Đơn hàng
         </a>
         <a asp-area="" asp-controller="Report" asp-action="Index">
             <i class="fas fa-chart-bar"></i> Báo cáo

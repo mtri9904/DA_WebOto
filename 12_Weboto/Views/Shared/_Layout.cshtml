@@ -10,6 +10,30 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
+        /* CSS cho navbar */
+        .navbar {
+            background-color: #ffffff !important; /* Thanh navbar màu trắng */
+        }
+
+            .navbar .nav-link {
+                color: #000000 !important; /* Chữ chức năng màu đen */
+            }
+
+                .navbar .nav-link:hover {
+                    color: #555555 !important; /* Màu khi hover */
+                }
+
+            .navbar .navbar-brand {
+                color: #000000 !important; /* Màu logo hoặc tên thương hiệu */
+            }
+
+            .navbar .ms-auto .nav-link {
+                color: #000000 !important; /* Đảm bảo chữ Tài Khoản cũng màu đen */
+            }
+
+                .navbar .ms-auto .nav-link:hover {
+                    color: #555555 !important; /* Màu khi hover cho Tài Khoản */
+                }
         /* CSS cho phần header */
         .hero-section {
         position: relative;
@@ -491,20 +515,35 @@
                 background-color: blue;
                 color: white;
             }
+        /* Icon giỏ hàng */
+        .cart-btn {
+            font-size: 1.2rem; /* Kích thước biểu tượng */
+            padding: 0.5rem; /* Khoảng cách xung quanh biểu tượng */
+            transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+        }
+
+            .cart-btn:hover {
+                color: #ccc; /* Màu khi hover, giống với các liên kết khác trong navbar */
+            }
     </style>
+    @RenderSection("Styles", required: false)
+
 </head>
 <body>
     <div class="d-flex flex-column min-vh-100">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <!-- Xóa navbar-dark bg-dark -->
             <div class="container-fluid">
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index">Web Ô Tô</a>
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/uploads/Logo_12.png" alt="Logo" style="height: 60px; width: auto;">
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <!-- Thay ms-0 thành me-auto để đẩy menu sang trái -->
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe</a>
                         </li>
@@ -519,12 +558,10 @@
                                 <li><a class="dropdown-item" asp-controller="News" asp-action="Index" asp-route-category="4">Tin Khuyến Mãi</a></li>
                             </ul>
                         </li>
-                        <!-- Thêm mục Giới Thiệu -->
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">Giới Thiệu</a>
                         </li>
                     </ul>
-                    <!-- Đưa _LoginPartial sang bên phải -->
                     <div class="ms-auto">
                         <partial name="_LoginPartial" />
                     </div>

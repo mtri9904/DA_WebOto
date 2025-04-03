@@ -1,0 +1,106 @@
+﻿@model _12_Weboto.Models.Order
+
+@{
+    ViewData["Title"] = "Xóa đơn hàng";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+                <div class="card-header bg-danger text-white text-center py-3" style="border-radius: 15px 15px 0 0;">
+                    <h4 class="mb-0 fw-bold">
+                        <i class="fas fa-exclamation-triangle me-2"></i>Xác nhận xóa đơn hàng
+                    </h4>
+                </div>
+                <div class="card-body p-4 bg-light">
+                    <p class="text-center text-muted mb-4">
+                        Bạn có chắc chắn muốn xóa đơn hàng này không? Hành động này không thể hoàn tác.
+                    </p>
+                    <div class="info-box p-3 mb-4" style="background-color: #FFF5F5; border-left: 4px solid #F56565; border-radius: 8px;">
+                        <p class="mb-2"><strong class="text-black fw-bold">Mã đơn hàng:</strong> <span class="text-dark">@Model.OrderId</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Tên xe:</strong> <span class="text-dark">@Model.Car.TenXe</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Người đặt:</strong> <span class="text-dark">@Model.User.FullName</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Ngày đặt:</strong> <span class="text-dark">@Model.OrderDate.ToString("dd/MM/yyyy")</span></p>
+                        <p class="mb-2"><strong class="text-black fw-bold">Giờ đặt:</strong> <span class="text-dark">@Model.OrderDate.ToString("HH:mm:ss")</span></p>
+                        <p class="mb-0"><strong class="text-black fw-bold">Trạng thái:</strong> <span class="text-dark">@Model.Status</span></p>
+                    </div>
+
+                    <form asp-action="DeleteConfirmed" method="post" class="text-center">
+                        <input type="hidden" asp-for="OrderId" />
+                        <button type="submit" class="btn btn-danger btn-lg me-3 transition-hover">
+                            <i class="fas fa-trash-alt me-2"></i>Xóa ngay
+                        </button>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-lg transition-hover">
+                            <i class="fas fa-times me-2"></i>Hủy bỏ
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .info-box {
+        transition: all 0.3s ease;
+    }
+
+        .info-box:hover {
+            background-color: #FFECEC;
+        }
+
+    .btn-lg {
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .btn-danger {
+        background-color: #F56565;
+        border-color: #F56565;
+    }
+
+        .btn-danger:hover {
+            background-color: #E53E3E;
+            border-color: #E53E3E;
+        }
+
+    .btn-outline-secondary {
+        color: #718096;
+        border-color: #CBD5E0;
+    }
+
+        .btn-outline-secondary:hover {
+            background-color: #EDF2F7;
+            border-color: #A0AEC0;
+            color: #4A5568;
+        }
+
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: scale(1.05);
+        }
+</style>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const deleteBtn = document.querySelector("button[type='submit']");
+        deleteBtn.addEventListener("click", function (e) {
+            if (!confirm("Bạn chắc chắn muốn xóa đơn hàng này chứ?")) {
+                e.preventDefault();
+            }
+        });
+    });
+</script>

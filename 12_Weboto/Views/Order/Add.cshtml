@@ -1,0 +1,249 @@
+﻿
+@{
+    ViewData["Title"] = "Tạo Đơn Hàng";
+}
+
+<!-- Thêm CSS tùy chỉnh -->
+<style>
+    body {
+        background-color: #f8f9fa;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .order-container {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .order-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+        .order-header h2 {
+            color: #343a40;
+            font-weight: 700;
+        }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-weight: 600;
+            color: #495057;
+        }
+
+    .form-control[readonly] {
+        background-color: #e9ecef;
+        border: 1px solid #ced4da;
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+        border-color: #007bff;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        transition: background-color 0.3s;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+    .btn-success {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 30px;
+        font-size: 16px;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+
+        .btn-success:hover {
+            background-color: #218838;
+        }
+
+    #map {
+        border-radius: 8px;
+        border: 1px solid #dee2e6;
+        margin-top: 10px;
+    }
+
+    .address-group {
+        position: relative;
+    }
+
+        .address-group .input-group {
+            margin-bottom: 10px;
+        }
+
+    .notes-textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .submit-section {
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+
+<!-- Nội dung chính -->
+<div class="order-container">
+    <div class="order-header">
+        <h2>@ViewData["Title"]</h2>
+        <p class="text-muted">Vui lòng kiểm tra thông tin và điền đầy đủ để đặt hàng</p>
+    </div>
+
+    <form method="post" asp-action="Add">
+        <input type="hidden" name="carId" value="@ViewBag.CarId" />
+
+        <!-- Thông tin xe và đơn hàng -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="CarId">Tên xe</label>
+                    <input type="text" class="form-control" id="CarId" value="@ViewBag.TenXe" readonly />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="OrderId">Mã đơn hàng</label>
+                    <input type="text" class="form-control" id="OrderId" value="@ViewBag.OrderId" readonly />
+                </div>
+            </div>
+        </div>
+
+        <!-- Thông tin khách hàng -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="FullName">Họ và tên</label>
+                    <input type="text" class="form-control" id="FullName" value="@ViewBag.FullName" readonly />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="TotalPrice">Tổng giá tiền</label>
+                    <input type="text" class="form-control" id="TotalPrice" value="@ViewBag.TotalPrice" readonly />
+                </div>
+            </div>
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="form-group address-group">
+            <label for="Address">Địa chỉ <span class="text-danger">*</span></label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="Address" name="Address" required placeholder="Nhập địa chỉ giao hàng" />
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-primary" onclick="getUserLocation()" data-toggle="tooltip" title="Lấy vị trí hiện tại của bạn">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <small class="form-text text-muted">Nhấn nút để tự động lấy vị trí hoặc nhập thủ công.</small>
+        </div>
+
+        <!-- Bản đồ -->
+        <div id="map" style="height: 300px; width: 100%; display: none;"></div>
+
+        <!-- Ghi chú -->
+        <div class="form-group">
+            <label for="Notes">Ghi chú</label>
+            <textarea class="form-control notes-textarea" id="Notes" name="Notes" placeholder="Thêm ghi chú nếu cần (ví dụ: thời gian giao hàng, yêu cầu đặc biệt)"></textarea>
+        </div>
+
+        <!-- Nút đặt hàng -->
+        <div class="submit-section">
+            <button type="submit" class="btn btn-success">Đặt hàng ngay</button>
+        </div>
+    </form>
+</div>
+
+<!-- Thêm Font Awesome để dùng icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+<!-- Thêm jQuery và Bootstrap JS để hỗ trợ tooltip -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Load Google Maps API với callback -->
+<script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap" async defer></script>
+
+<script>
+    let map, marker;
+
+    // Khởi tạo Google Maps và Autocomplete
+    function initMap() {
+        const addressInput = document.getElementById("Address");
+        const autocomplete = new google.maps.places.Autocomplete(addressInput, {
+            types: ['geocode']
+        });
+
+        autocomplete.addListener('place_changed', () => {
+            const place = autocomplete.getPlace();
+            if (place.geometry) {
+                addressInput.value = place.formatted_address;
+            }
+        });
+
+        // Khởi tạo tooltip của Bootstrap
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    }
+
+    function getUserLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    const latlng = { lat, lng };
+
+                    console.log("Tọa độ:", lat, lng);
+
+                    // Khởi tạo bản đồ
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 15,
+                        center: latlng
+                    });
+
+                    // Thêm marker
+                    marker = new google.maps.Marker({
+                        position: latlng,
+                        map: map
+                    });
+
+                    // Hiển thị bản đồ
+                    document.getElementById('map').style.display = 'block';
+
+                    // Gọi Geocoding
+                    const geocoder = new google.maps.Geocoder();
+                    geocoder.geocode({ location: latlng }, (results, status) => {
+                        console.log("Geocoding status:", status);
+                        console.log("Geocoding results:", results);
+                        if (status === 'OK' && results[0]) {
+                            document.getElementById("Address").value = results[0].formatted_address;
+                        } else {
+                            alert("Không thể lấy địa chỉ từ vị trí hiện tại. Status: " + status);
+                        }
+                    });
+                },
+                (error) => {
+                    alert("Không thể lấy vị trí của bạn: " + error.message);
+                }
+            );
+        } else {
+            alert("Trình duyệt của bạn không hỗ trợ định vị.");
+        }
+    }
+</script>

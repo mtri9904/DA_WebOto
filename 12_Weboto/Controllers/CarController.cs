@@ -21,66 +21,66 @@ namespace _12_Weboto.Controllers
             _context = context;
         }
 
-        public IActionResult Add()
-        {
-            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
-            return View();
-        }
+        //public IActionResult Add()
+        //{
+        //    ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
+        //    return View();
+        //}
 
-        [HttpPost]
-        public async Task<IActionResult> Add(Car car, List<IFormFile> Images)
-        {
-            Console.WriteLine($"TenXe: {car.TenXe}, GiaTien: {car.GiaTien}, BrandId: {car.BrandId}");
-            if (!ModelState.IsValid)
-            {
-                var errors = ModelState.Values.SelectMany(v => v.Errors);
-                foreach (var error in errors)
-                {
-                    Console.WriteLine(error.ErrorMessage);
-                }
-                return View(car);
-            }
+        //[HttpPost]
+        //public async Task<IActionResult> Add(Car car, List<IFormFile> Images)
+        //{
+        //    Console.WriteLine($"TenXe: {car.TenXe}, GiaTien: {car.GiaTien}, BrandId: {car.BrandId}");
+        //    if (!ModelState.IsValid)
+        //    {
+        //        var errors = ModelState.Values.SelectMany(v => v.Errors);
+        //        foreach (var error in errors)
+        //        {
+        //            Console.WriteLine(error.ErrorMessage);
+        //        }
+        //        return View(car);
+        //    }
 
-            _context.Cars.Add(car);
-            await _context.SaveChangesAsync();
+        //    _context.Cars.Add(car);
+        //    await _context.SaveChangesAsync();
 
-            if (Images != null && Images.Count > 0)
-            {
-                string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                if (!Directory.Exists(uploadsFolder))
-                {
-                    Directory.CreateDirectory(uploadsFolder);
-                }
+        //    if (Images != null && Images.Count > 0)
+        //    {
+        //        string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+        //        if (!Directory.Exists(uploadsFolder))
+        //        {
+        //            Directory.CreateDirectory(uploadsFolder);
+        //        }
 
-                foreach (var image in Images)
-                {
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
-                    string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+        //        foreach (var image in Images)
+        //        {
+        //            string uniqueFileName = Guid.NewGuid().ToString() + "_" + image.FileName;
+        //            string filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await image.CopyToAsync(stream);
-                    }
+        //            using (var stream = new FileStream(filePath, FileMode.Create))
+        //            {
+        //                await image.CopyToAsync(stream);
+        //            }
 
-                    var carImage = new CarImage
-                    {
-                        CarId = car.Id,
-                        ImageUrl = "/uploads/" + uniqueFileName
-                    };
+        //            var carImage = new CarImage
+        //            {
+        //                CarId = car.Id,
+        //                ImageUrl = "/uploads/" + uniqueFileName
+        //            };
 
-                    _context.CarImages.Add(carImage);
-                }
+        //            _context.CarImages.Add(carImage);
+        //        }
 
-                await _context.SaveChangesAsync();
-                if (_context.Entry(car).State == EntityState.Detached)
-                {
-                    Console.WriteLine("Lỗi: Xe không được lưu vào database.");
-                }
+        //        await _context.SaveChangesAsync();
+        //        if (_context.Entry(car).State == EntityState.Detached)
+        //        {
+        //            Console.WriteLine("Lỗi: Xe không được lưu vào database.");
+        //        }
 
-            }
-            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
-            return RedirectToAction("Index");
-        }
+        //    }
+        //    ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
+        //    return RedirectToAction("Index");
+        //}
 
         public async Task<IActionResult> Details(int id)
         {
@@ -104,152 +104,152 @@ namespace _12_Weboto.Controllers
             return View(cars);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Edit(int id)
-        {
-            var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
-            if (car == null)
-            {
-                return NotFound();
-            }
-            ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
-            return View(car);
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> Edit(int id)
+        //{
+        //    var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
+        //    if (car == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
+        //    return View(car);
+        //}
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(
-            int id, string TenXe, decimal GiaTien, int NamSanXuat, string NhienLieu, int SoKM, int SoChoNgoi,
-            int BrandId, string PhienBan, string KieuDang, string XuatXu, string DongXe,
-            string DongCo, string HopSo,
-            int ChieuDai, int ChieuRong, int ChieuCao, int CoSoBanhXe, int TrongLuongKhongTai,
-            string LopTruoc, string LopSau, float MucTieuThuNgoaiDoThi, float MucTieuThuTrongDoThi,
-            string MoTa, List<IFormFile> NewImages, List<int>? DeletedImageIds)
-        {
-            if (id <= 0 || string.IsNullOrEmpty(TenXe))
-            {
-                return BadRequest("Dữ liệu không hợp lệ.");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Edit(
+        //    int id, string TenXe, decimal GiaTien, int NamSanXuat, string NhienLieu, int SoKM, int SoChoNgoi,
+        //    int BrandId, string PhienBan, string KieuDang, string XuatXu, string DongXe,
+        //    string DongCo, string HopSo,
+        //    int ChieuDai, int ChieuRong, int ChieuCao, int CoSoBanhXe, int TrongLuongKhongTai,
+        //    string LopTruoc, string LopSau, float MucTieuThuNgoaiDoThi, float MucTieuThuTrongDoThi,
+        //    string MoTa, List<IFormFile> NewImages, List<int>? DeletedImageIds)
+        //{
+        //    if (id <= 0 || string.IsNullOrEmpty(TenXe))
+        //    {
+        //        return BadRequest("Dữ liệu không hợp lệ.");
+        //    }
 
-            var car = await _context.Cars.FindAsync(id);
-            if (car == null)
-            {
-                return NotFound();
-            }
+        //    var car = await _context.Cars.FindAsync(id);
+        //    if (car == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            try
-            {
-                car.TenXe = TenXe;
-                car.GiaTien = GiaTien;
-                car.NamSanXuat = NamSanXuat;
-                car.NhienLieu = NhienLieu;
-                car.SoKM = SoKM;
-                car.SoChoNgoi = SoChoNgoi;
-                car.BrandId = BrandId;
-                car.PhienBan = PhienBan;
-                car.KieuDang = KieuDang;
-                car.XuatXu = XuatXu;
-                car.DongXe = DongXe;
-                car.DongCo = DongCo;
-                car.HopSo = HopSo;
-                car.ChieuDai = ChieuDai;
-                car.ChieuRong = ChieuRong;
-                car.ChieuCao = ChieuCao;
-                car.CoSoBanhXe = CoSoBanhXe;
-                car.TrongLuongKhongTai = TrongLuongKhongTai;
-                car.LopTruoc = LopTruoc;
-                car.LopSau = LopSau;
-                car.MucTieuThuNgoaiDoThi = MucTieuThuNgoaiDoThi;
-                car.MucTieuThuTrongDoThi = MucTieuThuTrongDoThi;
-                car.MoTa = MoTa;
+        //    try
+        //    {
+        //        car.TenXe = TenXe;
+        //        car.GiaTien = GiaTien;
+        //        car.NamSanXuat = NamSanXuat;
+        //        car.NhienLieu = NhienLieu;
+        //        car.SoKM = SoKM;
+        //        car.SoChoNgoi = SoChoNgoi;
+        //        car.BrandId = BrandId;
+        //        car.PhienBan = PhienBan;
+        //        car.KieuDang = KieuDang;
+        //        car.XuatXu = XuatXu;
+        //        car.DongXe = DongXe;
+        //        car.DongCo = DongCo;
+        //        car.HopSo = HopSo;
+        //        car.ChieuDai = ChieuDai;
+        //        car.ChieuRong = ChieuRong;
+        //        car.ChieuCao = ChieuCao;
+        //        car.CoSoBanhXe = CoSoBanhXe;
+        //        car.TrongLuongKhongTai = TrongLuongKhongTai;
+        //        car.LopTruoc = LopTruoc;
+        //        car.LopSau = LopSau;
+        //        car.MucTieuThuNgoaiDoThi = MucTieuThuNgoaiDoThi;
+        //        car.MucTieuThuTrongDoThi = MucTieuThuTrongDoThi;
+        //        car.MoTa = MoTa;
 
-                if (DeletedImageIds != null && DeletedImageIds.Count > 0)
-                {
-                    var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
-                    foreach (var img in imagesToDelete)
-                    {
-                        string filePath = Path.Combine(_webHostEnvironment.WebRootPath, img.ImageUrl.TrimStart('/'));
-                        if (System.IO.File.Exists(filePath))
-                        {
-                            System.IO.File.Delete(filePath);
-                        }
-                        _context.CarImages.Remove(img);
-                    }
-                }
+        //        if (DeletedImageIds != null && DeletedImageIds.Count > 0)
+        //        {
+        //            var imagesToDelete = _context.CarImages.Where(img => DeletedImageIds.Contains(img.Id)).ToList();
+        //            foreach (var img in imagesToDelete)
+        //            {
+        //                string filePath = Path.Combine(_webHostEnvironment.WebRootPath, img.ImageUrl.TrimStart('/'));
+        //                if (System.IO.File.Exists(filePath))
+        //                {
+        //                    System.IO.File.Delete(filePath);
+        //                }
+        //                _context.CarImages.Remove(img);
+        //            }
+        //        }
 
-                // **2. THÊM ẢNH MỚI**
-                if (NewImages != null && NewImages.Count > 0)
-                {
-                    var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+        //        // **2. THÊM ẢNH MỚI**
+        //        if (NewImages != null && NewImages.Count > 0)
+        //        {
+        //            var uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
 
-                    if (!Directory.Exists(uploadPath))
-                    {
-                        Directory.CreateDirectory(uploadPath);
-                    }
+        //            if (!Directory.Exists(uploadPath))
+        //            {
+        //                Directory.CreateDirectory(uploadPath);
+        //            }
 
-                    foreach (var file in NewImages)
-                    {
-                        if (file.Length > 0)
-                        {
-                            var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
-                            var filePath = Path.Combine(uploadPath, fileName);
+        //            foreach (var file in NewImages)
+        //            {
+        //                if (file.Length > 0)
+        //                {
+        //                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+        //                    var filePath = Path.Combine(uploadPath, fileName);
 
-                            using (var stream = new FileStream(filePath, FileMode.Create))
-                            {
-                                await file.CopyToAsync(stream);
-                            }
+        //                    using (var stream = new FileStream(filePath, FileMode.Create))
+        //                    {
+        //                        await file.CopyToAsync(stream);
+        //                    }
 
-                            // Lưu đường dẫn ảnh vào database
-                            var newImage = new CarImage
-                            {
-                                CarId = car.Id,
-                                ImageUrl = "/uploads/" + fileName
-                            };
+        //                    // Lưu đường dẫn ảnh vào database
+        //                    var newImage = new CarImage
+        //                    {
+        //                        CarId = car.Id,
+        //                        ImageUrl = "/uploads/" + fileName
+        //                    };
 
-                            _context.CarImages.Add(newImage);
-                        }
-                    }
-                }
-                _context.Update(car);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index");
-            }
-            catch (DbUpdateException ex)
-            {
-                ModelState.AddModelError("", "Lỗi khi cập nhật dữ liệu: " + ex.Message);
-                return View(car);
-            }
-        }
-
-
-        [HttpGet]
-        public async Task<IActionResult> Delete(int id)
-        {
-            var car = await _context.Cars.Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
-
-            if (car == null)
-            {
-                return NotFound();
-            }
-
-            return View(car);
-        }
+        //                    _context.CarImages.Add(newImage);
+        //                }
+        //            }
+        //        }
+        //        _context.Update(car);
+        //        await _context.SaveChangesAsync();
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch (DbUpdateException ex)
+        //    {
+        //        ModelState.AddModelError("", "Lỗi khi cập nhật dữ liệu: " + ex.Message);
+        //        return View(car);
+        //    }
+        //}
 
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var car = await _context.Cars.FindAsync(id);
+        //[HttpGet]
+        //public async Task<IActionResult> Delete(int id)
+        //{
+        //    var car = await _context.Cars.Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
 
-            if (car == null)
-            {
-                return NotFound();
-            }
+        //    if (car == null)
+        //    {
+        //        return NotFound();
+        //    }
 
-            _context.Cars.Remove(car);
-            await _context.SaveChangesAsync();
+        //    return View(car);
+        //}
 
-            return RedirectToAction("Index");
-        }
+
+        //[HttpPost]
+        //public async Task<IActionResult> DeleteConfirmed(int id)
+        //{
+        //    var car = await _context.Cars.FindAsync(id);
+
+        //    if (car == null)
+        //    {
+        //        return NotFound();
+        //    }
+
+        //    _context.Cars.Remove(car);
+        //    await _context.SaveChangesAsync();
+
+        //    return RedirectToAction("Index");
+        //}
     }
 }

@@ -1,0 +1,15 @@
+﻿@model _12_Weboto.Models.Order
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<h2>Chi tiết đơn hàng</h2>
+
+<p><strong>Mã đơn hàng:</strong> @Model.OrderId</p>
+<p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
+<p><strong>Giờ đặt:</strong> @Model.OrderDate.ToString("HH:mm:ss")</p> <!-- Hiển thị giờ đặt -->
+<p><strong>Tên xe:</strong> @Model.Car.TenXe</p>
+<p><strong>Giá:</strong> @Model.Car.GiaTien.ToString("C")</p>
+<p><strong>Trạng thái:</strong> @Model.Status</p>
+<p><strong>Địa chỉ giao hàng:</strong> @Model.Address</p>
+<p><strong>Ghi chú:</strong> @Model.Notes</p>

@@ -15,6 +15,7 @@ namespace _12_Weboto.Models
         public DbSet<News> News { get; set; }
         public DbSet<NewsImage> NewsImages { get; set; }
 
+        public DbSet<Order> Orders { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

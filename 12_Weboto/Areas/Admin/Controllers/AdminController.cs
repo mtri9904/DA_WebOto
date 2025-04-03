@@ -22,11 +22,13 @@ namespace _12_Weboto.Areas.Admin.Controllers
             var totalBrands = _context.Brands.Count();
             var totalUsers = _context.Users.Count();
             var totalNews = _context.News.Count();
+            var totalOrders = _context.Orders.Count();
 
             ViewBag.TotalCars = totalCars;
             ViewBag.TotalBrands = totalBrands;
             ViewBag.TotalUsers = totalUsers;
             ViewBag.TotalNews = totalNews;
+            ViewBag.TotalOrders = totalOrders;
 
             return View();
         }

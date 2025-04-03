@@ -1,0 +1,105 @@
+﻿@model _12_Weboto.Models.Order
+
+@{
+    ViewData["Title"] = "Chi tiết đơn hàng";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0" style="border-radius: 15px; overflow: hidden;">
+                <!-- Card Header -->
+                <div class="card-header bg-primary text-white text-center py-3" style="border-radius: 15px 15px 0 0;">
+                    <h4 class="mb-0 fw-bold">
+                        <i class="fas fa-file-invoice me-2"></i>Chi tiết đơn hàng
+                    </h4>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body p-4 bg-light">
+                    <div class="row">
+                        <!-- Thông tin đơn hàng -->
+                        <div class="col-md-6 mb-3">
+                            <div class="info-box p-3" style="background-color: #F8FAFC; border-left: 4px solid #3182CE; border-radius: 8px;">
+                                <h5 class="text-primary mb-3"><i class="fas fa-info-circle me-2"></i>Thông tin đơn hàng</h5>
+                                <p class="mb-2"><strong class="text-black fw-bold">Mã đơn hàng:</strong> <span class="text-dark">@Model.OrderId</span></p>
+                                <p class="mb-2"><strong class="text-black fw-bold">Ngày đặt:</strong> <span class="text-dark">@Model.OrderDate.ToString("dd/MM/yyyy")</span></p>
+                                <p class="mb-2"><strong class="text-black fw-bold">Giờ đặt:</strong> <span class="text-dark">@Model.OrderDate.ToString("HH:mm:ss")</span></p>
+                                <p class="mb-2">
+                                    <strong class="text-black fw-bold">Trạng thái:</strong>
+                                    <span class="badge" style="background-color: @(Model.Status == OrderStatus.Completed ? "#48BB78" : Model.Status == OrderStatus.Processing ? "#ED8936" : Model.Status == OrderStatus.Failed ? "#F56565" : "#A0AEC0"); color: white;">
+                                        @Model.Status
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Thông tin xe và giao hàng -->
+                        <div class="col-md-6 mb-3">
+                            <div class="info-box p-3" style="background-color: #F8FAFC; border-left: 4px solid #3182CE; border-radius: 8px;">
+                                <h5 class="text-primary mb-3"><i class="fas fa-car me-2"></i>Thông tin xe & giao hàng</h5>
+                                <p class="mb-2"><strong class="text-black fw-bold">Tên xe:</strong> <span class="text-dark">@Model.Car.TenXe</span></p>
+                                <p class="mb-2"><strong class="text-black fw-bold">Giá:</strong> <span class="text-dark">@Model.Car.GiaTien.ToString("C")</span></p>
+                                <p class="mb-2"><strong class="text-black fw-bold">Địa chỉ giao hàng:</strong> <span class="text-dark">@Model.Address</span></p>
+                                <p class="mb-0"><strong class="text-black fw-bold">Ghi chú:</strong> <span class="text-dark">@(string.IsNullOrEmpty(Model.Notes) ? "Không có" : Model.Notes)</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nút quay lại -->
+                    <div class="text-center mt-4">
+                        <a asp-action="Index" class="btn btn-outline-primary btn-lg transition-hover">
+                            <i class="fas fa-arrow-left me-2"></i>Quay lại danh sách
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .info-box {
+        transition: all 0.3s ease;
+    }
+
+        .info-box:hover {
+            background-color: #EBF8FF;
+        }
+
+    .btn-lg {
+        padding: 10px 25px;
+        border-radius: 8px;
+        font-weight: 500;
+    }
+
+    .btn-outline-primary {
+        color: #3182CE;
+        border-color: #3182CE;
+    }
+
+        .btn-outline-primary:hover {
+            background-color: #EBF8FF;
+            border-color: #2B6CB0;
+            color: #2B6CB0;
+        }
+
+    .transition-hover {
+        transition: all 0.3s ease;
+    }
+
+        .transition-hover:hover {
+            transform: scale(1.05);
+        }
+
+    .badge {
+        padding: 5px 10px;
+        border-radius: 12px;
+        font-size: 0.9rem;
+    }
+</style>

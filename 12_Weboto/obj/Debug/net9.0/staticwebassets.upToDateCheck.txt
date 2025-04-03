@@ -185,3 +185,5 @@ wwwroot\uploads\e711154f-9056-4531-b02c-a6dfdfb401be_BMW X7.jpeg
 wwwroot\uploads\eb18b14e-54ca-4d40-8aa3-be2b13f12604_xe4.jpeg
 wwwroot\uploads\ed0d4272-1d92-4ffc-accb-dcd9cd057540_3.png
 wwwroot\uploads\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png
+wwwroot\uploads\Logo_12.png
+wwwroot\uploads\Logo_12_transparent.png
