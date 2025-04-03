@@ -251,5 +251,31 @@ namespace _12_Weboto.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> Search(string query)
+        {
+            if (string.IsNullOrEmpty(query))
+            {
+                return Json(new { success = false, error = "Vui lòng nhập từ khóa!" });
+            }
+
+            // Làm cho việc tìm kiếm không phân biệt chữ hoa và chữ thường
+            var lowerQuery = query.ToLower(); // Chuyển từ khóa tìm kiếm thành chữ thường
+
+            var cars = await _context.Cars
+                                      .Where(c => c.TenXe.ToLower().Contains(lowerQuery) || c.MoTa.ToLower().Contains(lowerQuery))
+                                      .Select(c => new { c.Id, c.TenXe, c.GiaTien, ImageUrl = c.Images.FirstOrDefault().ImageUrl })
+                                      .ToListAsync();
+
+            if (cars.Count == 0)
+            {
+                return Json(new { success = false, error = "Không tìm thấy xe nào phù hợp với từ khóa của bạn." });
+            }
+
+            return Json(new { success = true, cars });
+        }
+
     }
+
 }
+

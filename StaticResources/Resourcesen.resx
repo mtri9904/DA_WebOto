@@ -117,16 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CarList" xml:space="preserve">
-    <value>Car List</value>
+  <data name="English" xml:space="preserve">
+    <value>English</value>
   </data>
-  <data name="Không có xe nào trong database!" xml:space="preserve">
-    <value>No cars available in the database!</value>
-  </data>
-  <data name="Model đang NULL, kiểm tra Controller!" xml:space="preserve">
-    <value>Model is NULL, check Controller!</value>
-  </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome to Car Selling Website</value>
+  <data name="Vietnamese" xml:space="preserve">
+    <value>Vietnamese</value>
   </data>
 </root>

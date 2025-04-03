@@ -122,6 +122,7 @@ wwwroot\uploads\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg
 wwwroot\uploads\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif
 wwwroot\uploads\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png
 wwwroot\uploads\290f9889-e946-422e-8293-39a9e3829da3_3.png
+wwwroot\uploads\299c60f3-8319-4bbe-b2ee-1e39a674014c_black-car.jpg
 wwwroot\uploads\3393b289-0732-4e9d-b068-aefac796d7ef_xe2.png
 wwwroot\uploads\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg
 wwwroot\uploads\3e8cf354-8e37-4f85-8351-4194164b87d9.png
@@ -131,6 +132,7 @@ wwwroot\uploads\4eace5d4-836e-43ba-9ade-d4b25909a70e_tddv6.jpeg
 wwwroot\uploads\54daa7a9-3c63-4e48-8185-be8cb1b0cb63.jpeg
 wwwroot\uploads\59ab637f-646f-4363-80cd-f0013c3951dd_3.png
 wwwroot\uploads\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg
+wwwroot\uploads\5deb8651-0a72-4787-bda1-e3ec2a550590_red-car.jpg
 wwwroot\uploads\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png
 wwwroot\uploads\643b418e-fb95-4bc5-94f1-b19db1c75f95.jpg
 wwwroot\uploads\64c83966-7e67-4b64-b178-b36911bf0224_xe 1.jpeg

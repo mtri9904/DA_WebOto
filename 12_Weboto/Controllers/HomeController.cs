@@ -22,8 +22,7 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        ViewData["WelcomeMessage"] = _localizer["WelcomeMessage"];
-        ViewData["ExploreNow"] = _localizer["ExploreNow"];
+        
         var cars = _context.Cars.Include(c => c.Images).ToList(); // Load danh sách xe và hình ?nh
         return View(cars); // ??m b?o Model không null
     }

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<data name="Trang chủ" xml:space="preserve">
+        <value>Trang chủ</value>
+    </data>
+	<data name="Model đang NULL, kiểm tra Controller!" xml:space="preserve">
+        <value>Model đang NULL, kiểm tra Controller!</value>
+    </data>
+	<data name="Không có xe nào trong database!" xml:space="preserve">
+        <value>Không có xe nào trong database!</value>
+    </data>
+</root>

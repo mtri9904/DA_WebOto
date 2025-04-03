@@ -873,8 +873,10 @@ C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\Newtonsoft.Json.Bson.dll
 C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\820orimvqk-ceb8vx6ufn.gz
-C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\en\12_Weboto.resources.dll
-C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\_12_Weboto.Resources.SharedResource.resources
-C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\_12_Weboto.Resources.SharedResource.en.resources
 C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.csproj.GenerateResource.cache
+C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\en\12_Weboto.resources.dll
+C:\DA_WebOto\12_Weboto\bin\Debug\net9.0\vi\12_Weboto.resources.dll
+C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\_12_Weboto.Resources.Resources.en.resources
+C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\_12_Weboto.Resources.Resources.vi.resources
 C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\en\12_Weboto.resources.dll
+C:\DA_WebOto\12_Weboto\obj\Debug\net9.0\vi\12_Weboto.resources.dll

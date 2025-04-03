@@ -1,0 +1,15 @@
+C:\DA_WebOto\StaticResources\bin\Debug\net9.0\StaticResources.deps.json
+C:\DA_WebOto\StaticResources\bin\Debug\net9.0\StaticResources.dll
+C:\DA_WebOto\StaticResources\bin\Debug\net9.0\StaticResources.pdb
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.Resources.resources
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.Resourcesen.resources
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.csproj.GenerateResource.cache
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.GeneratedMSBuildEditorConfig.editorconfig
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.AssemblyInfoInputs.cache
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.AssemblyInfo.cs
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.csproj.CoreCompileInputs.cache
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.sourcelink.json
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.dll
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\refint\StaticResources.dll
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\StaticResources.pdb
+C:\DA_WebOto\StaticResources\obj\Debug\net9.0\ref\StaticResources.dll

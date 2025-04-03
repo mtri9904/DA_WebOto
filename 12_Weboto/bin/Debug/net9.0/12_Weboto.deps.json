@@ -24,6 +24,9 @@
         "resources": {
           "en/12_Weboto.resources.dll": {
             "locale": "en"
+          },
+          "vi/12_Weboto.resources.dll": {
+            "locale": "vi"
           }
         }
       },
