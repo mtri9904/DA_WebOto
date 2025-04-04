@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj": {}
+    "C:\\Users\\DELL\\Source\\Repos\\DA_WebOto\\12_Weboto\\12_Weboto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj": {
+    "C:\\Users\\DELL\\Source\\Repos\\DA_WebOto\\12_Weboto\\12_Weboto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Source\\Repos\\DA_WebOto\\12_Weboto\\12_Weboto.csproj",
         "projectName": "12_Weboto",
-        "projectPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
-        "packagesPath": "C:\\Users\\Minh Tri\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Source\\Repos\\DA_WebOto\\12_Weboto\\12_Weboto.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Source\\Repos\\DA_WebOto\\12_Weboto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Minh Tri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -106,7 +106,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

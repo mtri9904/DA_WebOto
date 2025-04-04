@@ -12,8 +12,8 @@ using _12_Weboto.Models;
 namespace _12_Weboto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250401024140_Intitial")]
-    partial class Intitial
+    [Migration("20250402073851_identity")]
+    partial class identity
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

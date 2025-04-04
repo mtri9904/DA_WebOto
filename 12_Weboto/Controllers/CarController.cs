@@ -8,8 +8,11 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.AspNetCore.Authorization;
 namespace _12_Weboto.Controllers
 {
+    [Area("Admin")]
+    [Authorize(Roles = SD.Role_Admin)]
     public class CarController : Controller
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -20,7 +23,7 @@ namespace _12_Weboto.Controllers
             _webHostEnvironment = webHostEnvironment;
             _context = context;
         }
-
+        [Authorize(Roles = SD.Role_Admin)]
         public IActionResult Add()
         {
             ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
@@ -28,6 +31,7 @@ namespace _12_Weboto.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = SD.Role_Admin)]
         public async Task<IActionResult> Add(Car car, List<IFormFile> Images)
         {
             Console.WriteLine($"TenXe: {car.TenXe}, GiaTien: {car.GiaTien}, BrandId: {car.BrandId}");
@@ -81,7 +85,7 @@ namespace _12_Weboto.Controllers
             ViewBag.HangXeList = new SelectList(_context.Brands, "Id", "TenHang");
             return RedirectToAction("Index");
         }
-
+        [AllowAnonymous]
         public async Task<IActionResult> Details(int id)
         {
             var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
@@ -91,13 +95,13 @@ namespace _12_Weboto.Controllers
             }
             return View(car);
         }
-
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
             return View(cars);
         }
-
+        [Authorize(Roles = SD.Role_Admin)]
         public IActionResult CarList()
         {
             var cars = _context.Cars.Include(c => c.Images).Include(c => c.Brand).ToList();
@@ -105,6 +109,7 @@ namespace _12_Weboto.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = SD.Role_Admin)]
         public async Task<IActionResult> Edit(int id)
         {
             var car = await _context.Cars.Include(c => c.Images).Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
@@ -118,6 +123,7 @@ namespace _12_Weboto.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = SD.Role_Admin)]
         public async Task<IActionResult> Edit(
             int id, string TenXe, decimal GiaTien, int NamSanXuat, string NhienLieu, int SoKM, int SoChoNgoi,
             int BrandId, string PhienBan, string KieuDang, string XuatXu, string DongXe,
@@ -223,6 +229,7 @@ namespace _12_Weboto.Controllers
 
 
         [HttpGet]
+        [Authorize(Roles = SD.Role_Admin)]
         public async Task<IActionResult> Delete(int id)
         {
             var car = await _context.Cars.Include(c => c.Brand).FirstOrDefaultAsync(c => c.Id == id);
