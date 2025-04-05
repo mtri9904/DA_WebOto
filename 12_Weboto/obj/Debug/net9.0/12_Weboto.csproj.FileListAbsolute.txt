@@ -868,3 +868,4 @@ C:\Users\DELL\Source\Repos\DA_WebOto\12_Weboto\obj\Debug\net9.0\refint\12_Weboto
 C:\Users\DELL\Source\Repos\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.pdb
 C:\Users\DELL\Source\Repos\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.genruntimeconfig.cache
 C:\Users\DELL\Source\Repos\DA_WebOto\12_Weboto\obj\Debug\net9.0\ref\12_Weboto.dll
+C:\Users\DELL\Source\Repos\DA_WebOto\12_Weboto\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.Google.dll

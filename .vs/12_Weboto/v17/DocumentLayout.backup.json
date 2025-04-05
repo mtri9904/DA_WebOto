@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\identity\\pages\\account\\externallogin.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\properties\\servicedependencies.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\migrations\\20250402073851_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\migrations\\20250402073851_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -55,10 +91,6 @@
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\identity\\pages\\account\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -77,10 +109,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\areas\\identity\\pages\\account\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -109,10 +137,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\areas\\admin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\migrations\\20250402073851_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\migrations\\20250402073851_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\dell\\source\\repos\\da_weboto\\12_weboto\\areas\\admin\\views\\news\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -146,7 +170,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -162,59 +186,137 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "12_Weboto\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T02:50:23.297Z",
+              "WhenOpened": "2025-04-05T02:56:55.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExternalLogin.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ExternalLogin.cshtml.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAUwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T02:29:12.781Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Program.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Program.cs",
+              "RelativeToolTip": "12_Weboto\\Program.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACoAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T13:54:23.067Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "serviceDependencies.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Properties\\serviceDependencies.json",
+              "RelativeDocumentMoniker": "12_Weboto\\Properties\\serviceDependencies.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Properties\\serviceDependencies.json",
+              "RelativeToolTip": "12_Weboto\\Properties\\serviceDependencies.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-04T17:04:18.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "12_Weboto\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Properties\\launchSettings.json",
+              "RelativeToolTip": "12_Weboto\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAsAAAAAAAAAAABRwBgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-04T17:04:20.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "12_Weboto\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T17:03:48.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "12_Weboto\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "12_Weboto\\ScaffoldingReadMe.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-04-03T13:52:39.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "12_Weboto\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\appsettings.Development.json",
+              "RelativeToolTip": "12_Weboto\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-04T17:04:02.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Controllers\\HomeController.cs*",
-              "RelativeToolTip": "12_Weboto\\Controllers\\HomeController.cs*",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "12_Weboto\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T13:48:32.133Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
-              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
+              "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:09:57.033Z",
+              "WhenOpened": "2025-04-03T13:57:15.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:09:14.652Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Controllers\\CarController.cs",
@@ -228,45 +330,71 @@
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "EmailSender.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
-              "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\EmailSender.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCYAAAAMAAAAAAAAAA==",
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T13:57:15.908Z",
+              "WhenOpened": "2025-04-02T12:09:14.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20250402073851_identity.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\20250402073851_identity.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Migrations\\20250402073851_identity.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\20250402073851_identity.cs",
+              "RelativeToolTip": "12_Weboto\\Migrations\\20250402073851_identity.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T07:38:52.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T14:09:57.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "12_Weboto\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAIBJwB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-01T02:50:23.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Program.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Program.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Program.cs",
-              "RelativeToolTip": "12_Weboto\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T13:54:23.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Car\\Edit.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Car\\Edit.cshtml",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Car\\Edit.cshtml",
               "RelativeToolTip": "12_Weboto\\Views\\Car\\Edit.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-03T16:07:00.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 17,
               "Title": "Logout.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
@@ -279,33 +407,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "Logout.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
               "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\Logout.cshtml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-03T15:57:49.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "12_Weboto\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-03T14:27:29.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 20,
               "Title": "ForgotPassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml.cs",
@@ -318,7 +446,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 19,
               "Title": "AdminController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\AdminController.cs",
@@ -331,7 +459,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 18,
               "Title": "BrandController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Controllers\\BrandController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Controllers\\BrandController.cs",
@@ -344,20 +472,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 23,
               "Title": "ForgotPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
               "RelativeToolTip": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-03T13:52:38.707Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\appsettings.json",
               "RelativeDocumentMoniker": "12_Weboto\\appsettings.json",
@@ -370,7 +498,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "ResetPassword.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml",
@@ -383,46 +511,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 25,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACEAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAIBJwCEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-03T14:24:15.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 24,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAAANcAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAN4AAAAAAAAAAIBJwNcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-01T14:07:42.021Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ScaffoldingReadMe.txt",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\ScaffoldingReadMe.txt",
-              "RelativeDocumentMoniker": "12_Weboto\\ScaffoldingReadMe.txt",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\ScaffoldingReadMe.txt",
-              "RelativeToolTip": "12_Weboto\\ScaffoldingReadMe.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-04-03T13:52:39.026Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 26,
               "Title": "Brand.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Models\\Brand.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\Brand.cs",
@@ -435,7 +550,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "ResetPassword.cshtml.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Identity\\Pages\\Account\\ResetPassword.cshtml.cs",
@@ -448,7 +563,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "BrandController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\BrandController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\BrandController.cs",
@@ -461,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\CarController.cs",
@@ -474,7 +589,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "SD.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Models\\SD.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\SD.cs",
@@ -482,11 +597,12 @@
               "RelativeToolTip": "12_Weboto\\Models\\SD.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:38:53.423Z"
+              "WhenOpened": "2025-04-02T12:38:53.423Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Models\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\ApplicationUser.cs",
@@ -494,11 +610,12 @@
               "RelativeToolTip": "12_Weboto\\Models\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T12:39:06.403Z"
+              "WhenOpened": "2025-04-02T12:39:06.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 33,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
@@ -506,23 +623,12 @@
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T14:08:18.414Z"
+              "WhenOpened": "2025-04-01T14:08:18.414Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "20250402073851_identity.cs",
-              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\20250402073851_identity.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Migrations\\20250402073851_identity.cs",
-              "ToolTip": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Migrations\\20250402073851_identity.cs",
-              "RelativeToolTip": "12_Weboto\\Migrations\\20250402073851_identity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-02T07:38:52.173Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 34,
               "Title": "Add.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
@@ -530,11 +636,12 @@
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
               "ViewState": "AgIAAMEAAAAAAAAAAAAQwNEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T14:00:33.738Z"
+              "WhenOpened": "2025-04-01T14:00:33.738Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 35,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
@@ -542,11 +649,12 @@
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
               "ViewState": "AgIAAAcBAAAAAAAAAAAQwDABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T13:14:26.969Z"
+              "WhenOpened": "2025-04-01T13:14:26.969Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 39,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Views\\News\\Details.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Views\\News\\Details.cshtml",
@@ -554,11 +662,12 @@
               "RelativeToolTip": "12_Weboto\\Views\\News\\Details.cshtml",
               "ViewState": "AgIAADYAAAAAAAAAAAAuwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T12:31:42.134Z"
+              "WhenOpened": "2025-04-01T12:31:42.134Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 37,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
@@ -566,11 +675,12 @@
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T10:57:24.077Z"
+              "WhenOpened": "2025-04-01T10:57:24.077Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 36,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Details.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Details.cshtml",
@@ -578,11 +688,12 @@
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Details.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-01T10:51:55.388Z"
+              "WhenOpened": "2025-04-01T10:51:55.388Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 38,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\DA_WebOto\\12_Weboto\\Models\\Car.cs",
               "RelativeDocumentMoniker": "12_Weboto\\Models\\Car.cs",
@@ -590,7 +701,8 @@
               "RelativeToolTip": "12_Weboto\\Models\\Car.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:43:56.862Z"
+              "WhenOpened": "2025-04-01T10:43:56.862Z",
+              "EditorCaption": ""
             }
           ]
         }
