@@ -8,6 +8,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Models\**" />
+    <Compile Remove="Data\**" />
+    <Content Remove="Areas\Admin\Models\**" />
+    <Content Remove="Data\**" />
+    <EmbeddedResource Remove="Areas\Admin\Models\**" />
+    <EmbeddedResource Remove="Data\**" />
+    <None Remove="Areas\Admin\Models\**" />
+    <None Remove="Data\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="9.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.3" />
@@ -26,8 +37,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Data\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NzClcai9VKc=",
+  "dgSpecHash": "dB5KQNYktVw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
+  "projectFilePath": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\12_Weboto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Minh Tri\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

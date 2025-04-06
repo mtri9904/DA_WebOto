@@ -1,18 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\",
+  "WorkspaceRootPath": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\areas\\admin\\views\\news\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\views\\news\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\areas\\admin\\views\\news\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\areas\\admin\\views\\news\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\views\\news\\add.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\source\\12_weboto\\12_weboto\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\models\\newscategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\models\\newscategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|c:\\users\\minh tri\\onedrive\\m\u00E1y t\u00EDnh\\da_web\\da_weboto\\12_weboto\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B1793E3-E0F1-4F62-B3C0-B8EFCDB2873C}|12_Weboto\\12_Weboto.csproj|solutionrelative:12_weboto\\models\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "NewsCategory.cs",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Models\\NewsCategory.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Models\\NewsCategory.cs",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Models\\NewsCategory.cs",
+              "RelativeToolTip": "12_Weboto\\Models\\NewsCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T08:37:19.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "News.cs",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Models\\News.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Models\\News.cs",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Models\\News.cs",
+              "RelativeToolTip": "12_Weboto\\Models\\News.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA0AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T08:37:11.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
               "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAuwCsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-06T08:17:51.809Z",
+              "WhenOpened": "2025-04-06T08:36:55.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
+              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Edit.cshtml",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAuwDABAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-06T08:35:51.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAuwPgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-06T08:35:32.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Add.cshtml",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
+              "DocumentMoniker": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
               "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml*",
-              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml*",
-              "ViewState": "AgIAALAAAAAAAAAAAAAuwNUAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Minh Tri\\OneDrive\\M\u00E1y t\u00EDnh\\DA_WEB\\DA_WebOto\\12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
+              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Views\\News\\Add.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-04-06T08:17:34.879Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NewsController.cs",
-              "DocumentMoniker": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeDocumentMoniker": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ToolTip": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "RelativeToolTip": "12_Weboto\\Areas\\Admin\\Controllers\\NewsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-06T08:16:58.455Z",
               "EditorCaption": ""
             }
           ]

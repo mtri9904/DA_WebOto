@@ -8463,11 +8463,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
+      "projectUniqueName": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\12_Weboto.csproj",
       "projectName": "12_Weboto",
-      "projectPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
+      "projectPath": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\12_Weboto.csproj",
       "packagesPath": "C:\\Users\\Minh Tri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\obj\\",
+      "outputPath": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

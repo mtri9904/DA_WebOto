@@ -17,277 +17,277 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = _12_Weboto
 build_property.RootNamespace = _12_Weboto
-build_property.ProjectDir = C:\Users\Minh Tri\source\12_Weboto\12_Weboto\
+build_property.ProjectDir = C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Minh Tri\source\12_Weboto\12_Weboto
+build_property.MSBuildProjectDirectory = C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Admin/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Brand/Add.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Brand/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Brand/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Brand/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Brand/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Brand/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Brand/Edit.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Brand/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Brand/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Car/Add.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Car/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Car/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Car/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Car/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Car/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Car/Edit.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Car/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Car/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Car/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/News/Add.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/News/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xBZGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/News/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/News/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/News/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/News/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/News/Edit.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/News/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/News/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/News/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Order/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Order/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Order/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Order/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Shared/Error.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/User/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/User/Edit.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/User/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/ConfirmEmail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxDb25maXJtRW1haWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/ExternalLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxFeHRlcm5hbExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Login.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Logout.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Manage/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Manage/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX01hbmFnZU5hdi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxNYW5hZ2VcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/Register.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3RlckNvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/Account/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/_ViewImports.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Brand/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Brand/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Brand/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Brand/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Car/CarList.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/CarList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENhckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Car/Delete.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Car/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Car/Edit.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Car/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Home/About.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Home/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Home/Privacy.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/News/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/News/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/News/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/News/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3c1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Order/Add.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Order/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Order/Details.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Order/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Order/Index.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Order/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Order/OrderSuccess.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Order/OrderSuccess.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcT3JkZXJTdWNjZXNzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Shared/Error.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Shared/_CarList.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Shared/_CarList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXJMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/_ViewImports.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/_ViewStart.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-ks09n3i3au
 
-[C:/Users/Minh Tri/source/12_Weboto/12_Weboto/Views/Shared/_Layout.cshtml]
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-956m8m9ih1
