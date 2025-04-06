@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace _12_Weboto.Models
 {
@@ -13,6 +14,7 @@ namespace _12_Weboto.Models
         public string TenHang { get; set; }  // Tên hãng xe (VD: Toyota, Honda, BMW,...)
 
         // Danh sách các xe thuộc hãng này
+        [JsonIgnore]
         public List<Car> Cars { get; set; }
     }
 }

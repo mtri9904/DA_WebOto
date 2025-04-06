@@ -1,49 +1,72 @@
 ﻿@model List<_12_Weboto.Models.Car>
-
-@if (Model == null || !Model.Any())
-{
-    <p class="text-center text-danger">🚗 Không có xe nào để hiển thị.</p>
+@{
+    ViewData["Title"] = "Danh sách xe";
 }
-else
-{
-    <div class="container mt-4">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+<h3 class="text-center mb-4">🚘 Danh sách xe</h3>
+
+<!-- Form tìm kiếm -->
+<form method="get" action="@Url.Action("CarList", "Car")">
+    <div class="input-group mb-4 w-50 mx-auto">
+        <input type="text" name="searchQuery" class="form-control" placeholder="Tìm kiếm xe..."
+               value="@Context.Request.Query["searchQuery"].ToString()" />
+        <button class="btn btn-outline-secondary" type="submit">Tìm kiếm</button>
+    </div>
+</form>
+
+<!-- Danh sách xe -->
+<div id="carListContainer">
+    @if (Model == null || !Model.Any())
+    {
+        <p class="text-center text-danger">🚗 Không có xe nào để hiển thị.</p>
+    }
+    else
+    {
+        <div class="row">
             @foreach (var car in Model)
             {
-                <div class="col">
-                    <div class="card shadow-sm h-100" onclick="window.location.href='@Url.Action("Details", "Car", new { id = car.Id })'" style="cursor: pointer;">
-                        @* Hình Ảnh *@
-                        <div class="card-img-top">
-                            <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "~/uploads/default-car.jpg")"
-                                 class="d-block w-100"
-                                 alt="@car.TenXe">
-                        </div>
-
-                        <div class="card-body d-flex flex-column">
-                            @* Tên Xe *@
-                            <h5 class="card-title text-center fw-bold text-uppercase">@car.TenXe</h5>
-
-                            @* Thông Tin Chi Tiết *@
-                            <div class="row text-muted">
-                                <div class="col-6">
-                                    <p class="mb-1"><i class="fas fa-building"></i> @car.Brand?.TenHang</p> @* Hiển thị tên hãng *@
-                                    <p class="mb-1"><i class="fas fa-calendar-alt"></i> @car.NamSanXuat</p>
-                                    <p class="mb-1"><i class="fas fa-gas-pump"></i> @car.NhienLieu</p>
-                                </div>
-                                <div class="col-6 text-end">
-                                    <p class="mb-1"><i class="fas fa-road"></i> @car.SoKM Km</p>
-                                    <p class="mb-1"><i class="fas fa-cogs"></i> @car.HopSo</p>
-                                </div>
+                <div class="col-12 col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "/uploads/default-car.jpg")"
+                             class="card-img-top" alt="@car.TenXe" style="height: 200px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">@car.TenXe</h5>
+                            <p class="card-text text-muted">@car.MoTa</p>
+                            <p><strong>Giá:</strong> @car.GiaTien.ToString("N0") VND</p>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input car-checkbox" type="checkbox" name="selectedCars" value="@car.Id" />
+                                <label class="form-check-label">Chọn để so sánh</label>
                             </div>
-
-                            @* Giá Tiền *@
-                            <div class="mt-auto text-end">
-                                <h4 class="fw-bold text-danger">@String.Format("{0:N0} VND", car.GiaTien)</h4>
-                            </div>
+                            <a href="@Url.Action("Details", "Car", new { id = car.Id })" class="btn btn-primary w-100">Xem chi tiết</a>
                         </div>
                     </div>
                 </div>
             }
         </div>
-    </div>
+    }
+</div>
+
+<!-- Nút so sánh -->
+<div class="text-center mt-3">
+    <button class="btn btn-success" onclick="compareCars()">So sánh</button>
+</div>
+
+<!-- Scripts -->
+@section Scripts {
+    <script>
+        function compareCars() {
+            var selected = [];
+            document.querySelectorAll('input[name="selectedCars"]:checked').forEach(el => {
+                selected.push(el.value);
+            });
+
+            if (selected.length < 2) {
+                alert("Cần chọn ít nhất 2 xe để so sánh!");
+                return;
+            }
+
+            window.location.href = '/Car/CompareCars?carIds=' + selected.join(',');
+        }
+    </script>
+
 }

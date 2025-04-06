@@ -1,0 +1,115 @@
+﻿@model List<_12_Weboto.Models.Car>
+
+<h2 class="text-center mb-4">🚗 So sánh xe</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <div class="alert alert-warning text-center">Bạn cần chọn ít nhất 2 xe để so sánh!</div>
+}
+else
+{
+    <div class="row row-cols-1 row-cols-md-@Model.Count g-4 align-items-stretch">
+        @foreach (var car in Model)
+        {
+            <div class="col d-flex">
+                <div class="card shadow-sm flex-fill d-flex flex-column">
+                    <img src="@Url.Content(car.Images?.FirstOrDefault()?.ImageUrl ?? "~/uploads/default-car.jpg")" class="card-img-top img-fluid" style="object-fit: cover; height: 300px;" alt="@car.TenXe">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-primary">@car.TenXe</h5>
+                        <div class="accordion mt-auto" id="accordion@car.Id">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading1@car.Id">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1@car.Id" aria-expanded="true">
+                                        Thông tin cơ bản
+                                    </button>
+                                </h2>
+                                <div id="collapse1@car.Id" class="accordion-collapse collapse show">
+                                    <div class="accordion-body">
+                                        <p><strong>Hãng:</strong> @car.Brand?.TenHang</p>
+                                        <p><strong>Giá:</strong> @String.Format("{0:N0} VND", car.GiaTien)</p>
+                                        <p><strong>Nhiên liệu:</strong> @car.NhienLieu</p>
+                                        <p><strong>Km đã đi:</strong> @car.SoKM km</p>
+                                        <p><strong>Số chỗ ngồi:</strong> @car.SoChoNgoi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading2@car.Id">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2@car.Id">
+                                        Tổng quan
+                                    </button>
+                                </h2>
+                                <div id="collapse2@car.Id" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Phiên bản:</strong> @car.PhienBan</p>
+                                        <p><strong>Kiểu dáng:</strong> @car.KieuDang</p>
+                                        <p><strong>Xuất xứ:</strong> @car.XuatXu</p>
+                                        <p><strong>Dòng xe:</strong> @car.DongXe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading3@car.Id">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3@car.Id">
+                                        Động cơ & hộp số
+                                    </button>
+                                </h2>
+                                <div id="collapse3@car.Id" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Động cơ:</strong> @car.DongCo</p>
+                                        <p><strong>Hộp số:</strong> @car.HopSo</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading4@car.Id">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4@car.Id">
+                                        Kích thước & trọng lượng
+                                    </button>
+                                </h2>
+                                <div id="collapse4@car.Id" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Chiều dài:</strong> @car.ChieuDai mm</p>
+                                        <p><strong>Chiều rộng:</strong> @car.ChieuRong mm</p>
+                                        <p><strong>Chiều cao:</strong> @car.ChieuCao mm</p>
+                                        <p><strong>Cơ sở bánh xe:</strong> @car.CoSoBanhXe mm</p>
+                                        <p><strong>Trọng lượng không tải:</strong> @car.TrongLuongKhongTai kg</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading5@car.Id">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5@car.Id">
+                                        Lốp & tiêu thụ nhiên liệu
+                                    </button>
+                                </h2>
+                                <div id="collapse5@car.Id" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p><strong>Lốp trước:</strong> @car.LopTruoc</p>
+                                        <p><strong>Lốp sau:</strong> @car.LopSau</p>
+                                        <p><strong>Tiêu thụ ngoài đô thị:</strong> @car.MucTieuThuNgoaiDoThi lít/100km</p>
+                                        <p><strong>Tiêu thụ trong đô thị:</strong> @car.MucTieuThuTrongDoThi lít/100km</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="heading6@car.Id">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6@car.Id">
+                                        Mô tả thêm
+                                    </button>
+                                </h2>
+                                <div id="collapse6@car.Id" class="accordion-collapse collapse">
+                                    <div class="accordion-body">
+                                        <p>@car.MoTa</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<a href="@Url.Action("CarList", "Car")" class="btn btn-secondary mt-4">Quay lại danh sách</a>

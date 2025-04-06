@@ -33,8 +33,13 @@ builder.Services.Configure<RequestLocalizationOptions>(options =>
 
 // Add controllers and views với localization
 builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // 👈 giữ nguyên PascalCase khi trả JSON
+    })
     .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
     .AddDataAnnotationsLocalization();
+
 
 builder.Services.AddScoped<IGeminiService, GeminiService>();
 
@@ -57,7 +62,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 builder.Services.AddRazorPages();
 
 // Đảm bảo các dịch vụ controller đã được thêm
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 

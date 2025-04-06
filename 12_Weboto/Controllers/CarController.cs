@@ -8,6 +8,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Globalization;
 namespace _12_Weboto.Controllers
 {
     public class CarController : Controller
@@ -254,28 +255,131 @@ namespace _12_Weboto.Controllers
         [HttpGet]
         public async Task<IActionResult> Search(string query)
         {
-            if (string.IsNullOrEmpty(query))
+            if (string.IsNullOrWhiteSpace(query))
             {
-                return Json(new { success = false, error = "Vui lòng nhập từ khóa!" });
+                return Json(new
+                {
+                    success = false,
+                    message = "Từ khóa tìm kiếm trống",
+                    cars = new List<object>()
+                });
             }
 
-            // Làm cho việc tìm kiếm không phân biệt chữ hoa và chữ thường
-            var lowerQuery = query.ToLower(); // Chuyển từ khóa tìm kiếm thành chữ thường
+            var keyword = RemoveDiacritics(query.ToLower().Trim());
 
-            var cars = await _context.Cars
-                                      .Where(c => c.TenXe.ToLower().Contains(lowerQuery) || c.MoTa.ToLower().Contains(lowerQuery))
-                                      .Select(c => new { c.Id, c.TenXe, c.GiaTien, ImageUrl = c.Images.FirstOrDefault().ImageUrl })
-                                      .ToListAsync();
+            var matchedCars = await _context.Cars
+                .Include(c => c.Images)
+                .ToListAsync();
 
-            if (cars.Count == 0)
+            var filteredCars = matchedCars
+                .Where(c =>
+                    RemoveDiacritics(c.TenXe?.ToLower() ?? "").Contains(keyword) ||
+                    RemoveDiacritics(c.MoTa?.ToLower() ?? "").Contains(keyword) ||
+                    RemoveDiacritics(c.PhienBan?.ToLower() ?? "").Contains(keyword) ||
+                    RemoveDiacritics(c.NhienLieu?.ToLower() ?? "").Contains(keyword)
+                )
+                .Select(c => new
+                {
+                    c.Id,
+                    TenXe = c.TenXe ?? "Không rõ tên xe",
+                    GiaTien = c.GiaTien.ToString("N0") + " VND",
+                    ImageUrl = c.Images?.FirstOrDefault()?.ImageUrl ?? "/uploads/default-car.jpg"
+                })
+                .ToList();
+
+            if (!filteredCars.Any())
             {
-                return Json(new { success = false, error = "Không tìm thấy xe nào phù hợp với từ khóa của bạn." });
+                return Json(new
+                {
+                    success = false,
+                    message = "Không tìm thấy xe nào phù hợp với từ khoá của bạn.",
+                    cars = filteredCars
+                });
             }
 
-            return Json(new { success = true, cars });
+            return Json(new
+            {
+                success = true,
+                cars = filteredCars
+            });
+        }
+
+
+        // Hàm bỏ dấu tiếng Việt
+        public static string RemoveDiacritics(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return input;
+
+            var normalized = input.Normalize(System.Text.NormalizationForm.FormD);
+            var chars = normalized
+                .Where(c => System.Globalization.CharUnicodeInfo.GetUnicodeCategory(c) != System.Globalization.UnicodeCategory.NonSpacingMark)
+                .ToArray();
+
+            return new string(chars).Normalize(System.Text.NormalizationForm.FormC);
+        }
+        [HttpGet]
+        public async Task<IActionResult> CompareCarsAsync(string carIds)
+        {
+            if (string.IsNullOrEmpty(carIds))
+            {
+                TempData["Error"] = "Bạn cần chọn ít nhất 2 xe để so sánh!";
+                return RedirectToAction("CarList");
+            }
+
+            var selectedIds = carIds.Split(',')
+                .Select(id => int.TryParse(id, out var result) ? result : (int?)null)
+                .Where(id => id.HasValue)
+                .Select(id => id.Value)
+                .ToList();
+
+            // ✅ Include Brand và Images trước khi gọi AsEnumerable
+            var cars = _context.Cars
+                .Include(c => c.Brand)
+                .Include(c => c.Images)
+                .AsEnumerable() // chuyển sang LINQ in-memory để tránh lỗi SQL
+                .Where(c => selectedIds.Contains(c.Id))
+                .ToList();
+
+            if (cars.Count < 2)
+            {
+                TempData["Error"] = "Bạn cần chọn ít nhất 2 xe để so sánh!";
+                return RedirectToAction("CarList");
+            }
+
+            return View(cars);
+        }
+
+        // CarController.cs
+        [HttpGet]
+        public async Task<IActionResult> CarList(string searchQuery)
+        {
+            var cars = from c in _context.Cars.Include(c => c.Images).Include(c => c.Brand)
+                       select c;
+
+            if (!string.IsNullOrEmpty(searchQuery))
+            {
+                searchQuery = searchQuery.ToLower();
+                cars = cars.Where(c => c.TenXe.ToLower().Contains(searchQuery) ||
+                                       c.MoTa.ToLower().Contains(searchQuery) ||
+                                       c.Brand.TenHang.ToLower().Contains(searchQuery));
+            }
+
+            return View(await cars.ToListAsync());
+        }
+
+
+
+
+        public IActionResult TestDb()
+        {
+            var test = _context.Cars
+                .Take(1)
+                .Include(c => c.Brand)
+                .ToList();
+
+            return Json(test); // hoặc return View(test);
         }
 
     }
-
 }
 

@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" /> @* Gọi CSS riêng *@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Tải jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
     <div class="d-flex flex-column min-vh-100">
@@ -30,6 +33,7 @@
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">List xe</a>
                         </li>
+                        
                     </ul>
                     
                 </div>
@@ -184,113 +188,113 @@
                     font-size: 18px;
                 }
     </style>
-
     <script>
         function toggleChat() {
             const chatBox = document.getElementById('chatBox');
             chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
         }
 
-        // Lưu tin nhắn vào sessionStorage
         function addMessage(content, isUser) {
             const messages = document.getElementById('chatMessages');
             const messageDiv = document.createElement('div');
             messageDiv.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
-            messageDiv.innerHTML = content;  // Dùng innerHTML để cho phép hiển thị HTML (ảnh, link...)
+            messageDiv.innerHTML = content;
             messages.appendChild(messageDiv);
             messages.scrollTop = messages.scrollHeight;
-
-            // Lưu lại tin nhắn vào sessionStorage
             saveMessagesToStorage();
         }
 
-        // Lưu toàn bộ tin nhắn vào sessionStorage
         function saveMessagesToStorage() {
             const messages = document.getElementById('chatMessages');
             const allMessages = [];
             for (let i = 0; i < messages.children.length; i++) {
-                allMessages.push(messages.children[i].innerHTML); // Lấy nội dung tin nhắn (bao gồm HTML)
+                allMessages.push(messages.children[i].outerHTML);
             }
             sessionStorage.setItem('chatMessages', JSON.stringify(allMessages));
         }
 
-        // Tải tin nhắn từ sessionStorage khi trang được tải lại
-        function loadMessagesFromStorage() {
+                function loadMessagesFromStorage() {
             const savedMessages = JSON.parse(sessionStorage.getItem('chatMessages') || "[]");
-            savedMessages.forEach(message => {
-                addMessage(message, false);  // Mặc định là bot-message khi lấy từ sessionStorage
+            const messages = document.getElementById('chatMessages');
+
+            savedMessages.forEach(html => {
+                messages.insertAdjacentHTML('beforeend', html);
             });
+
+            if (savedMessages.length === 0) {
+                addMessage("💡 Bạn có thể thử:<br/>– tìm xe Toyota<br/>– có bán Accent không<br/>– hoặc hỏi tôi bất kỳ điều gì!", false);
+            }
         }
 
-        // Gửi tin nhắn
+
         async function sendMessage() {
             const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-
-            if (!message) {
+            const rawMessage = input.value.trim();
+            if (!rawMessage) {
                 addMessage("Vui lòng nhập tin nhắn!", false);
                 return;
             }
-            addMessage(message, true);
+
+            addMessage(rawMessage, true);
             input.value = '';
 
-            if (message.toLowerCase().includes("tìm xe")) {
-                try {
-                    const response = await fetch(`/Car/Search?query=${encodeURIComponent(message)}`, {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        }
-                    });
+            // Tách từ khóa tìm kiếm
+            let query = rawMessage.toLowerCase();
+            if (query.includes("tìm xe")) {
+                query = query.replace("tìm xe", "").trim();
+            } else if (query.includes("có bán")) {
+                query = query.replace("có bán", "").trim();
+            }
 
+            if (query.length > 0) {
+                // Gọi API tìm xe
+                try {
+                    const response = await fetch(`/Car/Search?query=${encodeURIComponent(query)}`);
                     const data = await response.json();
 
                     if (data.success && data.cars.length > 0) {
-                        let result = "Danh sách xe tìm được:\n";
+                        let result = "<b>🔍 Kết quả tìm kiếm:</b><br/>";
                         data.cars.forEach(car => {
-                            result += `${car.TenXe} - Giá: ${car.GiaTien} VND\n`;
-                            result += `<img src="${car.ImageUrl}" alt="${car.TenXe}" width="100" />\n`;
+                            result += `<div style="margin-bottom: 12px">
+                                <img src="${car.ImageUrl}" alt="${car.TenXe}" width="120"><br/>
+                                <b>${car.TenXe}</b><br/>
+                                Giá: ${car.GiaTien}
+                            </div>`;
                         });
-                        addMessage(result, false);  // Hiển thị kết quả tìm kiếm trong chatbot
+                        addMessage(result, false);
                     } else {
-                        addMessage("Không tìm thấy xe nào phù hợp với từ khóa của bạn.", false);
+                        addMessage("Không tìm thấy xe nào phù hợp với từ khoá của bạn.", false);
                     }
+                    return;
                 } catch (error) {
-                    addMessage('Lỗi: ' + error.message, false);
+                    addMessage('Lỗi khi tìm kiếm xe: ' + error.message, false);
+                    return;
                 }
-            } else {
-                // Nếu không phải yêu cầu tìm xe, gọi API chatbot bình thường
-                try {
-                    const response = await fetch('/Gemini/Chat', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({ message: message })
-                    });
+            }
 
-                    const data = await response.json();
-                    if (data.success) {
-                        addMessage(data.response, false);  // Hiển thị câu trả lời từ chatbot
-                    } else {
-                        addMessage('Lỗi: ' + data.error, false);  // Hiển thị lỗi nếu có
-                    }
-                } catch (error) {
-                    addMessage('Lỗi: ' + error.message, false);  // Hiển thị lỗi nếu không kết nối được với API
+            // Nếu không phải tìm xe, gọi AI
+            try {
+                const response = await fetch('/Gemini/Chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ message: rawMessage })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    addMessage(data.response, false);
+                } else {
+                    addMessage('Lỗi AI: ' + data.error, false);
                 }
+            } catch (error) {
+                addMessage('Lỗi kết nối: ' + error.message, false);
             }
         }
 
-        // Khi trang được tải lại, tải tin nhắn từ sessionStorage
-        window.onload = function() {
-            loadMessagesFromStorage();
-        };
-
-        // Khi người dùng đóng trang, sessionStorage sẽ tự động xóa dữ liệu.
-
-
+        window.onload = loadMessagesFromStorage;
     </script>
 
 </body>
