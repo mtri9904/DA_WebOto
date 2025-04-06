@@ -52,7 +52,6 @@ namespace _12_Weboto.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, string FullName, string Address, string PhoneNumber, List<string> selectedRoles)
         {
             var user = await _userManager.FindByIdAsync(id);
@@ -86,9 +85,41 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 ModelState.AddModelError("", "Lỗi khi cập nhật vai trò.");
                 return View(user);
             }
-
+            TempData["Success"] = "Cập nhật role người dùng thành công!";
             return RedirectToAction("Index");
         }
 
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return NotFound();
+
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteConfirmed(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return NotFound();
+
+            var result = await _userManager.DeleteAsync(user);
+            if (result.Succeeded)
+            {
+                TempData["Success"] = "Tài khoản đã được xóa thành công.";
+                return RedirectToAction("Index");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View("Delete", user);
+        }
     }
 }

@@ -1,0 +1,87 @@
+﻿@using _12_Weboto.Models
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
+}
+
+<div class="manage-sidebar">
+    <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.IndexNavClass(ViewContext)" id="profile" asp-page="./Index">
+                <i class="fas fa-user me-2"></i> Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.EmailNavClass(ViewContext)" id="email" asp-page="./Email">
+                <i class="fas fa-envelope me-2"></i> Email
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">
+                <i class="fas fa-lock me-2"></i> Password
+            </a>
+        </li>
+        @if (hasExternalLogins)
+        {
+            <li class="nav-item">
+                <a class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" id="external-login" asp-page="./ExternalLogins">
+                    <i class="fas fa-link me-2"></i> External Logins
+                </a>
+            </li>
+        }
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">
+                <i class="fas fa-shield-alt me-2"></i> Two-Factor Authentication
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">
+                <i class="fas fa-database me-2"></i> Personal Data
+            </a>
+        </li>
+    </ul>
+</div>
+
+<style>
+    .manage-sidebar {
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-width: 250px;
+    }
+
+    .nav-pills .nav-link {
+        color: #333;
+        padding: 12px 20px;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 500;
+    }
+
+        .nav-pills .nav-link:hover {
+            background-color: #e9ecef;
+            color: #007bff;
+        }
+
+        .nav-pills .nav-link.active {
+            background-color: #007bff;
+            color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+    .nav-pills .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .nav-link i {
+        width: 20px;
+        text-align: center;
+    }
+</style>
+
+@section Scripts {
+    <!-- Đảm bảo Font Awesome được thêm vào layout hoặc trực tiếp ở đây -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YfBDlwlpufM=",
+  "dgSpecHash": "NzClcai9VKc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Minh Tri\\source\\12_Weboto\\12_Weboto\\12_Weboto.csproj",
   "expectedPackageFiles": [
@@ -56,6 +56,7 @@
     "C:\\Users\\Minh Tri\\.nuget\\packages\\humanizer.core.zh-cn\\2.14.1\\humanizer.core.zh-cn.2.14.1.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\humanizer.core.zh-hans\\2.14.1\\humanizer.core.zh-hans.2.14.1.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\humanizer.core.zh-hant\\2.14.1\\humanizer.core.zh-hant.2.14.1.nupkg.sha512",
+    "C:\\Users\\Minh Tri\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\9.0.3\\microsoft.aspnetcore.authentication.google.9.0.3.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\9.0.3\\microsoft.aspnetcore.cryptography.internal.9.0.3.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\9.0.3\\microsoft.aspnetcore.cryptography.keyderivation.9.0.3.nupkg.sha512",
     "C:\\Users\\Minh Tri\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\9.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.9.0.3.nupkg.sha512",

@@ -140,21 +140,7 @@
             .card.teal {
                 background-color: #20c997;
             }
-    </style>
-    @RenderSection("Styles", required: false)
-</head>
-<body>
-    <!-- Top Navigation -->
-    <div class="top-nav">
-        <h4>Quản lý bán Ô tô</h4>
-        <div class="user-info">
-            <span class="greeting">Hello, admin@gmail.com</span>
-            <a href="#" class="logout-link">Logout</a>
-            <img src="https://via.placeholder.com/30" alt="User Avatar" />
-        </div>
-    </div>
 
-    <style>
         .top-nav {
             background-color: #17a2b8;
             color: white;
@@ -205,7 +191,57 @@
                         color: #ffffff;
                         text-decoration: underline;
                     }
+
+        .custom-btn {
+            background-color: #007bff; /* màu nền xanh */
+            color: white !important; /* chữ màu trắng */
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+            .custom-btn:hover {
+                background-color: #0056b3;
+            }
+
+        .logout-btn {
+            background: none;
+            border: none;
+            font-size: 0.85rem;
+            color: #e0f7fa;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 0;
+            transition: color 0.2s ease;
+        }
+
+            .logout-btn:hover {
+                color: #ffffff;
+                text-decoration: underline;
+            }
+
     </style>
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="text-decoration-none">
+            <img src="~/uploads/Logo_12.png" alt="Logo" style="height: 70px; width: 80px;" />
+        </a>
+        <div class="user-info">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="custom-btn">Trang Người Dùng</a>
+
+            <span class="greeting">Hello Admin, @ViewData["FullName"]</span>
+
+            <!-- Thay liên kết Logout bằng form -->
+            <form id="logoutForm" asp-area="Admin" asp-controller="Admin" asp-action="Logout" method="post" style="display: inline;">
+                <button type="submit" class="logout-btn">Logout</button>
+            </form> 
+            <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" alt="User Avatar" />
+        </div>
+    </div>
 
     <!-- Sidebar -->
     <nav class="sidebar">

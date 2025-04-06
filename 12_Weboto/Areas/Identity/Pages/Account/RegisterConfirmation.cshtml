@@ -1,0 +1,164 @@
+﻿@page
+@model _12_Weboto.Areas.Identity.Pages.Account.RegisterConfirmationModel
+
+<div class="confirmation-container">
+    <div class="confirmation-card">
+        <div class="success-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#28a745" stroke-width="2">
+                <path d="M20 6L9 17l-5-5"></path>
+            </svg>
+        </div>
+
+        <h1 class="confirmation-title">Đăng Ký Thành Công!</h1>
+
+        <div class="confirmation-message">
+            <p class="main-message">
+                Vui lòng kiểm tra email của bạn
+                <span class="email-highlight">@Model.Email</span>
+                và nhấp vào liên kết xác nhận để kích hoạt tài khoản.
+            </p>
+
+            <p class="sub-message">
+                Sau khi xác nhận, bạn sẽ được tự động đăng nhập vào hệ thống.
+            </p>
+            <div class="countdown-section">
+                <p>Thời gian hiệu lực của liên kết: <span id="countdown">05:00</span></p>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3>Mẹo hữu ích:</h3>
+            <ul>
+                <li>Kiểm tra thư mục Spam/Junk nếu không thấy email</li>
+                <li>Liên kết xác nhận có hiệu lực trong 24 giờ</li>
+                <li>Liên hệ hỗ trợ nếu cần trợ giúp</li>
+            </ul>
+        </div>
+
+        <a asp-area="" asp-controller="Home" asp-action="Index" class="back-button">Quay về trang chủ</a>
+
+    </div>
+</div>
+
+<style>
+    .confirmation-container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        padding: 20px;
+    }
+
+    .confirmation-card {
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 500px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .success-icon {
+        margin-bottom: 20px;
+    }
+
+    .confirmation-title {
+        color: #333;
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+
+    .confirmation-message {
+        margin-bottom: 30px;
+    }
+
+    .main-message {
+        color: #555;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .email-highlight {
+        color: #007bff;
+        font-weight: 500;
+    }
+
+    .sub-message {
+        color: #666;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    .countdown-section {
+        margin-top: 15px;
+        padding: 10px;
+        background: #fff3cd;
+        border-radius: 8px;
+        color: #856404;
+    }
+
+    #countdown {
+        font-weight: bold;
+        color: #dc3545;
+    }
+    .tips-section {
+        text-align: left;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+    }
+
+        .tips-section h3 {
+            color: #444;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .tips-section ul {
+            padding-left: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .tips-section li {
+            margin-bottom: 5px;
+        }
+
+    .back-button {
+        display: inline-block;
+        padding: 10px 25px;
+        background-color: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background-color 0.3s;
+    }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+@section Scripts {
+    <script>
+        // Đếm ngược 5 phút (300 giây)
+        let timeLeft = 300;
+        const countdownElement = document.getElementById("countdown");
+
+        const countdown = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                countdownElement.textContent = "Hết hạn";
+                countdownElement.style.color = "#dc3545";
+            } else {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                countdownElement.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                timeLeft--;
+            }
+        }, 1000);
+    </script>
+}

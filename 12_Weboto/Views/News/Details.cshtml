@@ -61,7 +61,7 @@
 
             <!-- Nút quay lại -->
             <div class="mt-4">
-                <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+                <a asp-action="Index" asp-route-category="@Model.CategoryId" class="btn btn-secondary">Quay lại</a>
             </div>
         </div>
 

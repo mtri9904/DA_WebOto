@@ -21,11 +21,13 @@ namespace _12_Weboto.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<ApplicationUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, ILogger<LoginModel> logger)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
             _logger = logger;
         }
 
@@ -110,8 +112,15 @@ namespace _12_Weboto.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                // This doesn't count login failures towards account lockout
-                // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+                // Kiểm tra xem tài khoản có tồn tại và email đã được xác nhận hay chưa
+                var user = await _userManager.FindByEmailAsync(Input.Email);
+                if (user != null && !user.EmailConfirmed)
+                {
+                    ModelState.AddModelError(string.Empty, "Tài khoản của bạn chưa được xác nhận email. Vui lòng kiểm tra email và xác nhận trước khi đăng nhập.");
+                    return Page();
+                }
+
+                // Tiếp tục kiểm tra đăng nhập nếu email đã được xác nhận
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
@@ -129,12 +138,12 @@ namespace _12_Weboto.Areas.Identity.Pages.Account
                 }
                 else
                 {
-                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                    ModelState.AddModelError(string.Empty, "Email hoặc mật khẩu không đúng.");
                     return Page();
                 }
             }
 
-            // If we got this far, something failed, redisplay form
+            // Nếu có lỗi, hiển thị lại form
             return Page();
         }
     }

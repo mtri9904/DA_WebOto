@@ -1,0 +1,75 @@
+﻿@page
+@model _12_Weboto.Areas.Identity.Pages.Account.Manage.IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+@if (TempData["Success"] != null)
+{
+    <div id="successMessage" class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fas fa-check-circle me-2"></i>@TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Main Content -->
+        <div class="col-md-9">
+            <div class="card shadow-sm p-4">
+                <h4 class="mb-4 text-primary">@ViewData["Title"]</h4>
+                <form id="profile-form" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3" role="alert"></div>
+                    @if (!string.IsNullOrEmpty(Model.StatusMessage))
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @Model.StatusMessage
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+                    <div class="form-floating mb-3">
+                        <input asp-for="Username" class="form-control" disabled />
+                        <label asp-for="Username">Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.FullName" class="form-control" placeholder="Full Name" />
+                        <label asp-for="Input.FullName">Full Name</label>
+                        <span asp-validation-for="Input.FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.Address" class="form-control" placeholder="Address" />
+                        <label asp-for="Input.Address">Address</label>
+                        <span asp-validation-for="Input.Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Phone Number" />
+                        <label asp-for="Input.PhoneNumber">Phone Number</label>
+                        <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+                    </div>
+                    <button id="update-profile-button" type="submit" class="btn btn-primary w-100">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const successMessage = document.getElementById("successMessage");
+            if (successMessage) {
+                setTimeout(function () {
+                    successMessage.classList.remove("show");
+                    successMessage.classList.add("fade");
+                    setTimeout(function () {
+                        successMessage.remove();
+                    }, 500); // Đợi hiệu ứng fade hoàn tất
+                }, 2000); // 2 giây
+            }
+        });
+    </script>
+}

@@ -525,6 +525,137 @@
             .cart-btn:hover {
                 color: #ccc; /* Màu khi hover, giống với các liên kết khác trong navbar */
             }
+        /* CSS cho phần Địa chỉ liên hệ trong footer */
+        .contact-section {
+            margin-top: 15px;
+        }
+
+            .contact-section p {
+                margin: 5px 0;
+                font-size: 0.9rem;
+                color: #A0AEC0;
+            }
+
+            .contact-section .map-iframe {
+                width: 100%;
+                height: 200px;
+                border-radius: 5px;
+                margin-top: 10px;
+            }
+
+        /* Chatbot Icon */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: background-color 0.3s;
+        }
+
+            .chat-icon:hover {
+                background-color: #218838;
+            }
+
+        /* Chat Box */
+        .chat-box {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 360px;
+            height: 450px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: none;
+            flex-direction: column;
+            z-index: 1000;
+        }
+
+        /* Chat Header */
+        .chat-header {
+            background-color: #28a745;
+            color: white;
+            padding: 12px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+
+        .message {
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            background-color: #28a745;
+            color: white;
+            margin-left: auto;
+        }
+
+        .bot-message {
+            background-color: #e9ecef;
+            color: #333;
+            margin-right: auto;
+        }
+
+        /* Chat Input */
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+
+            .chat-input input {
+                flex: 1;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                outline: none;
+                margin-right: 10px;
+            }
+
+            .chat-input button {
+                padding: 8px 16px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+
+                .chat-input button:hover {
+                    background-color: #218838;
+                }
+
+                /* Icon Button Inside Chat */
+                .chat-input button i {
+                    font-size: 18px;
+                }
     </style>
     @RenderSection("Styles", required: false)
 
@@ -561,6 +692,13 @@
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">Giới Thiệu</a>
                         </li>
+                        <!-- Thêm mục Trang Admin chỉ hiển thị khi là Admin -->
+                        @if (User.Identity.IsAuthenticated && User.IsInRole(SD.Role_Admin))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="Admin" asp-controller="Admin" asp-action="Index">Trang Admin</a>
+                            </li>
+                        }
                     </ul>
                     <div class="ms-auto">
                         <partial name="_LoginPartial" />
@@ -648,12 +786,24 @@
                 </div>
             </div>
         }
-@*         @if (ViewContext.RouteData.Values["Controller"]?.ToString() == "Home" &&
-          ViewContext.RouteData.Values["Action"]?.ToString() == "Index")
-        { *@
-            <footer class="mt-auto">
-                <div class="container">
+        <!-- Chatbot Icon and Dialog -->
+        <div class="chat-icon" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>  <!-- Font Awesome Chat Icon -->
+        </div>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">Gemini Chatbot</div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Nhập tin nhắn..." onkeypress="if(event.key === 'Enter') sendMessage();">
+                <button onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>  <!-- Font Awesome Paper Plane Icon -->
+                </button>
+            </div>
+        </div>
+        <footer class="mt-auto">
+            <div class="container">
                 <div class="row">
+                    <!-- Cột 1: Logo và thông tin công ty -->
                     <div class="col-md-3">
                         <div class="footer-logo">Web Ô Tô</div>
                         <p class="footer-slogan">
@@ -666,14 +816,26 @@
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
+
+                    <!-- Cột 2: Dịch vụ -->
                     <div class="col-md-3">
                         <h5>Dịch vụ</h5>
                         <ul>
-                            <li><a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe ô tô</a></li>                          
+                            <li><a asp-area="" class="nav-link" asp-controller="Car" asp-action="CarList">Mua xe ô tô</a></li>
                             <li><a href="#">Trở thành cộng tác viên</a></li>
                             <li><a href="#">Bảo giá cả hàng</a></li>
                         </ul>
+                        <!-- Thêm mục Địa chỉ liên hệ -->
+                        <h5 class="mt-4">Địa chỉ liên hệ</h5>
+                        <div class="contact-section">
+                            <p>Đại Học Hutech Khu E</p>
+                            <p>Địa chỉ: 475A Điện Biên Phủ, Phường 25, Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+                            <iframe class="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1326.6391425375234!2d106.78505992212023!3d10.85481851923819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527c3debb5aad%3A0x5fb58956eb4194d0!2zxJDhuqFpIEjhu41jIEh1dGVjaCBLaHUgRQ!5e0!3m2!1svi!2s!4v1743698325695!5m2!1svi!2s" 
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
+
+                    <!-- Cột 3: Hỗ trợ -->
                     <div class="col-md-3">
                         <h5>Hỗ trợ</h5>
                         <ul>
@@ -686,6 +848,8 @@
                             <li><a href="#">Chương trình Web Ô Tô</a></li>
                         </ul>
                     </div>
+
+                    <!-- Cột 4: Về Nhóm 12 và Địa chỉ liên hệ -->
                     <div class="col-md-3">
                         <h5>Về Nhóm 12</h5>
                         <ul>
@@ -702,6 +866,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Footer bottom -->
                 <div class="footer-bottom">
                     <p>
                         CÔNG TY TNHH XE CLASSIFIEDS. Hotline: 098914439 (quốc tế) 56 DKKD: 0316248170. Địa chỉ: Tầng 6, Tòa nhà Me Linh Point, Ngõ 2 Đường Ngô Đức Kế, Phường Bến Nghé, Quận 1, Thành Phố Hồ Chí Minh, Việt Nam. © 2025 by Car Classifieds LIMITED LIABILITY COMPANY.
@@ -709,7 +875,7 @@
                 </div>
             </div>
         </footer>
-@*         } *@
+
     </div>
     <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -739,6 +905,124 @@
             })
             .catch(error => console.error('Error loading news:', error));
     });
+
+
+            function toggleChat() {
+                const chatBox = document.getElementById('chatBox');
+                chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+            }
+
+            // Lưu tin nhắn vào sessionStorage
+            function addMessage(content, isUser) {
+                const messages = document.getElementById('chatMessages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
+                messageDiv.innerHTML = content;  // Dùng innerHTML để cho phép hiển thị HTML (ảnh, link...)
+                messages.appendChild(messageDiv);
+                messages.scrollTop = messages.scrollHeight;
+
+                // Lưu lại tin nhắn vào sessionStorage
+                saveMessagesToStorage();
+            }
+
+            // Lưu toàn bộ tin nhắn vào sessionStorage
+            function saveMessagesToStorage() {
+                const messages = document.getElementById('chatMessages');
+                const allMessages = [];
+                for (let i = 0; i < messages.children.length; i++) {
+                    allMessages.push(messages.children[i].innerHTML); // Lấy nội dung tin nhắn (bao gồm HTML)
+                }
+                sessionStorage.setItem('chatMessages', JSON.stringify(allMessages));
+            }
+
+            // Tải tin nhắn từ sessionStorage khi trang được tải lại
+            function loadMessagesFromStorage() {
+                const savedMessages = JSON.parse(sessionStorage.getItem('chatMessages') || "[]");
+                savedMessages.forEach(message => {
+                    addMessage(message, false);  // Mặc định là bot-message khi lấy từ sessionStorage
+                });
+            }
+
+        // Trong file HTML, sửa hàm sendMessage()
+        async function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+
+            if (!message) {
+                addMessage("Vui lòng nhập tin nhắn!", false);
+                return;
+            }
+            addMessage(message, true);
+            input.value = '';
+
+            // Kiểm tra nếu người dùng muốn tìm xe
+            if (message.toLowerCase().includes("tìm xe") || message.toLowerCase().includes("có bán")) {
+                try {
+                    const searchQuery = message.replace("tìm xe", "").replace("có bán", "").trim();
+                    console.log(`Search Query: '${searchQuery}'`); // Log để kiểm tra
+
+                    const response = await fetch(`/Car/Search?query=${encodeURIComponent(searchQuery)}`, {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Phản hồi từ server không thành công: ${response.status} - ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    console.log('Dữ liệu trả về:', data); // Log để kiểm tra dữ liệu
+
+                    if (data.success && data.cars && data.cars.length > 0) {
+                        let result = "Danh sách xe tìm được:<br>";
+                        data.cars.forEach(car => {
+                            result += `${car.tenXe} - Giá: ${car.giaTien} VND<br>`;
+                            if (car.imageUrl) {
+                                result += `<img src="${car.imageUrl}" alt="${car.tenXe}" width="100" /><br>`;
+                            }
+                        });
+                        addMessage(result, false);
+                    } else {
+                        addMessage("Không tìm thấy xe nào phù hợp với từ khóa của bạn.", false);
+                    }
+                } catch (error) {
+                    addMessage('Lỗi: ' + error.message, false);
+                }
+            } else {
+                // Gọi API chatbot Gemini
+                try {
+                    const response = await fetch('/Gemini/Chat', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({ message: message })
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Phản hồi từ server không thành công: ${response.status} - ${response.statusText}`);
+                    }
+
+                    const data = await response.json();
+                    if (data.success) {
+                        addMessage(data.response, false);
+                    } else {
+                        addMessage('Lỗi: ' + data.error, false);
+                    }
+                } catch (error) {
+                    addMessage('Lỗi: ' + error.message, false);
+                }
+            }
+        }
+
+            // Khi trang được tải lại, tải tin nhắn từ sessionStorage
+            window.onload = function() {
+                loadMessagesFromStorage();
+            };
 </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     @RenderSection("Scripts", required: false)

@@ -120,7 +120,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         // POST: News/Edit
         [HttpPost]
-        public async Task<IActionResult> Edit(int id, int CategoryId, string Title , string Content, string CreatedBy, List<IFormFile> NewImages, List<int>? DeletedImageIds)
+        public async Task<IActionResult> Edit(int id, int CategoryId, string Title, string Content, string CreatedBy, List<IFormFile> NewImages, List<int>? DeletedImageIds)
         {
             if (id <= 0 || string.IsNullOrEmpty(Title))
             {
