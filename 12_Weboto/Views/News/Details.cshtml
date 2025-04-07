@@ -95,9 +95,10 @@
                                 @news.Title
                             </h6>
                         </a>
-
-                        <!-- Số lượt đánh giá (giả lập) -->
-                        <small class="text-muted">5 đánh trước</small>
+                        <!-- Hiển thị CreatedAt -->
+                        <small class="text-muted">
+                            <strong>@(((DateTime)news.CreatedAt).ToString("dd/MM/yyyy"))</strong>
+                        </small>
                     </div>
                 }
             }

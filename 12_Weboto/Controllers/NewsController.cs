@@ -14,20 +14,46 @@ namespace _12_Weboto.Controllers
         {
             _context = context;
         }
+        // GET: News/Details/5
+        public async Task<IActionResult> Details(int id)
+        {
+            var news = await _context.News
+                .Include(n => n.Category)
+                .Include(n => n.Images)
+                .FirstOrDefaultAsync(n => n.Id == id);
 
+            if (news == null)
+            {
+                return NotFound();
+            }
+
+            // Lấy tin tức liên quan (ví dụ: cùng danh mục, trừ bài hiện tại)
+            var relatedNews = await _context.News
+                .Where(n => n.CategoryId == news.CategoryId && n.Id != news.Id)
+                .OrderByDescending(n => n.CreatedAt)
+                .Take(3)
+                .Select(n => new
+                {
+                    n.Id,
+                    n.Title,
+                    ImageUrl = n.Images.Any() ? n.Images.First().ImageUrl : null,
+                    CreatedAt = n.CreatedAt
+                })
+                .ToListAsync();
+
+            ViewBag.RelatedNews = relatedNews;
+
+            return View(news);
+        }
         // Hiển thị danh sách tin tức theo danh mục
         public async Task<IActionResult> Index(int? category)
         {
-            // Lấy danh sách tất cả danh mục để hiển thị ở trên cùng
             var categories = await _context.NewsCategories
                 .Select(c => new { c.Id, c.Name })
                 .ToListAsync();
             ViewBag.Categories = categories;
-
-            // Lưu danh mục hiện tại để đánh dấu
             ViewBag.SelectedCategory = category;
 
-            // Lấy danh sách bài viết theo danh mục
             IQueryable<News> newsQuery = _context.News
                 .Include(n => n.Category)
                 .Include(n => n.Images);
@@ -38,19 +64,19 @@ namespace _12_Weboto.Controllers
             }
 
             var newsList = await newsQuery
-                .OrderByDescending(n => n.CreatedAt) // Sắp xếp theo ngày tạo mới nhất
+                .OrderByDescending(n => n.CreatedAt)
                 .Select(n => new News
                 {
                     Id = n.Id,
                     Title = n.Title,
-                    Content = n.Content.Length > 100 ? n.Content.Substring(0, 100) + "..." : n.Content, // Tóm tắt nội dung
+                    Content = n.Content.Length > 100 ? n.Content.Substring(0, 100) + "..." : n.Content,
                     CreatedAt = n.CreatedAt,
                     Category = n.Category,
                     Images = n.Images
                 })
+                .Take(8) // Chỉ lấy 8 bài đầu tiên
                 .ToListAsync();
 
-            // Lưu tên danh mục hiện tại để hiển thị tiêu đề
             if (category.HasValue)
             {
                 var categoryName = await _context.NewsCategories
@@ -64,72 +90,45 @@ namespace _12_Weboto.Controllers
                 ViewData["CategoryName"] = "Danh sách tin tức";
             }
 
+            ViewBag.TotalNews = await newsQuery.CountAsync(); // Tổng số bài viết để kiểm tra "Xem thêm"
             return View(newsList);
         }
 
-        // Hiển thị chi tiết bài viết
-        public async Task<IActionResult> Details(int id)
+        [HttpGet]
+        public async Task<IActionResult> LoadMoreNews(int? category, int skip)
         {
-            // Lấy bài viết hiện tại cùng với danh mục và hình ảnh
-            var news = await _context.News
+            IQueryable<News> newsQuery = _context.News
                 .Include(n => n.Category)
-                .Include(n => n.Images)
-                .FirstOrDefaultAsync(n => n.Id == id);
+                .Include(n => n.Images);
 
-            if (news == null)
+            if (category.HasValue)
             {
-                return NotFound();
+                newsQuery = newsQuery.Where(n => n.CategoryId == category);
             }
 
-            // Lấy các bài viết liên quan (cùng danh mục, trừ bài hiện tại)
-            var relatedNews = await _context.News
-                .Where(n => n.CategoryId == news.CategoryId && n.Id != news.Id)
-                .Take(2) // Giới hạn 2 bài
+            // Kiểm tra tổng số bài báo
+            var totalNews = await newsQuery.CountAsync();
+            if (skip >= totalNews)
+            {
+                return Json(new List<object>());
+            }
+
+            var newsList = await newsQuery
+                .Where(n => n.Title != null && n.Content != null) // Lọc các bài báo không có tiêu đề hoặc nội dung
+                .OrderByDescending(n => n.CreatedAt)
+                .Skip(skip)
+                .Take(4)
                 .Select(n => new
                 {
-                    n.Id,
-                    n.Title,
-                    ImageUrl = n.Images != null && n.Images.Any() ? n.Images.First().ImageUrl : null
+                    Id = n.Id,
+                    Title = n.Title ?? "Không có tiêu đề",
+                    Content = n.Content != null && n.Content.Length > 100 ? n.Content.Substring(0, 100) + "..." : (n.Content ?? "Không có nội dung"),
+                    ImageUrl = n.Images != null && n.Images.Any() ? n.Images.First().ImageUrl : "https://via.placeholder.com/200x200?text=No+Image",
+                    CategoryName = n.Category != null ? n.Category.Name : "Không có danh mục"
                 })
                 .ToListAsync();
 
-            // Gán danh sách bài viết liên quan vào ViewBag
-            ViewBag.RelatedNews = relatedNews;
-
-            return View(news);
-        }
-
-
-        // GET: News/Create
-        public IActionResult Add()
-        {
-            ViewBag.Categories = _context.NewsCategories.ToList();
-            return View();
-        }
-
-        // POST: News/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Add(News news, List<string> imageUrls)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(news);
-                await _context.SaveChangesAsync();
-
-                if (imageUrls != null && imageUrls.Any())
-                {
-                    foreach (var imageUrl in imageUrls)
-                    {
-                        var newsImage = new NewsImage { NewsId = news.Id, ImageUrl = imageUrl };
-                        _context.NewsImages.Add(newsImage);
-                    }
-                    await _context.SaveChangesAsync();
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewBag.Categories = _context.NewsCategories.ToList();
-            return View(news);
+            return Json(newsList);
         }
         public IActionResult GetRandomNews()
         {

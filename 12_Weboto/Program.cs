@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using _12_Weboto.Service;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using _12_Weboto.Areas.Identity.Pages.Account;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpClient();
@@ -37,7 +38,15 @@ builder.Services.ConfigureApplicationCookie(options => {
 builder.Services.AddRazorPages();
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+// Add controllers and views với localization
+builder.Services.AddControllersWithViews()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.PropertyNamingPolicy = null; // 👈 giữ nguyên PascalCase khi trả JSON
+    })
+    .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+    .AddDataAnnotationsLocalization();
+
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 
 builder.Services.AddAuthentication()

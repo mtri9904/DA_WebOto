@@ -73,6 +73,6 @@ public class GeminiService : IGeminiService
             return "Xin lỗi, đã có lỗi xảy ra!";
         }
     }
-       
+
 
 }

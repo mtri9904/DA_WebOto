@@ -4,7 +4,14 @@ namespace _12_Weboto.Models
 {
     public class SearchResponse
     {
-        public bool Success { get; set; }
-        public List<Car> Cars { get; set; }
+        public List<CarDto> Cars { get; set; }
+    }
+
+    public class CarDto
+    {
+        public int Id { get; set; }
+        public string TenXe { get; set; }
+        public decimal GiaTien { get; set; }
+        public string Image { get; set; }
     }
 }

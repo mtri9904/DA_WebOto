@@ -692,13 +692,9 @@
                         <li class="nav-item">
                             <a asp-area="" class="nav-link" asp-controller="Home" asp-action="About">Giới Thiệu</a>
                         </li>
-                        <!-- Thêm mục Trang Admin chỉ hiển thị khi là Admin -->
-                        @if (User.Identity.IsAuthenticated && User.IsInRole(SD.Role_Admin))
-                        {
-                            <li class="nav-item">
-                                <a class="nav-link" asp-area="Admin" asp-controller="Admin" asp-action="Index">Trang Admin</a>
-                            </li>
-                        }
+                        <li class="nav-item">
+                            <a asp-area="" class="nav-link" asp-controller="Car" asp-action="CompareCarsSelection">So sánh xe</a>
+                        </li>
                     </ul>
                     <div class="ms-auto">
                         <partial name="_LoginPartial" />
@@ -907,92 +903,90 @@
     });
 
 
-            function toggleChat() {
+             function toggleChat() {
                 const chatBox = document.getElementById('chatBox');
                 chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
             }
 
-            // Lưu tin nhắn vào sessionStorage
             function addMessage(content, isUser) {
                 const messages = document.getElementById('chatMessages');
                 const messageDiv = document.createElement('div');
                 messageDiv.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
-                messageDiv.innerHTML = content;  // Dùng innerHTML để cho phép hiển thị HTML (ảnh, link...)
+                messageDiv.innerHTML = content;
                 messages.appendChild(messageDiv);
                 messages.scrollTop = messages.scrollHeight;
-
-                // Lưu lại tin nhắn vào sessionStorage
                 saveMessagesToStorage();
             }
 
-            // Lưu toàn bộ tin nhắn vào sessionStorage
             function saveMessagesToStorage() {
                 const messages = document.getElementById('chatMessages');
                 const allMessages = [];
                 for (let i = 0; i < messages.children.length; i++) {
-                    allMessages.push(messages.children[i].innerHTML); // Lấy nội dung tin nhắn (bao gồm HTML)
+                    allMessages.push(messages.children[i].outerHTML);
                 }
                 sessionStorage.setItem('chatMessages', JSON.stringify(allMessages));
             }
 
-            // Tải tin nhắn từ sessionStorage khi trang được tải lại
-            function loadMessagesFromStorage() {
+                    function loadMessagesFromStorage() {
                 const savedMessages = JSON.parse(sessionStorage.getItem('chatMessages') || "[]");
-                savedMessages.forEach(message => {
-                    addMessage(message, false);  // Mặc định là bot-message khi lấy từ sessionStorage
+                const messages = document.getElementById('chatMessages');
+
+                savedMessages.forEach(html => {
+                    messages.insertAdjacentHTML('beforeend', html);
                 });
-            }
 
-        // Trong file HTML, sửa hàm sendMessage()
-        async function sendMessage() {
-            const input = document.getElementById('chatInput');
-            const message = input.value.trim();
-
-            if (!message) {
-                addMessage("Vui lòng nhập tin nhắn!", false);
-                return;
-            }
-            addMessage(message, true);
-            input.value = '';
-
-            // Kiểm tra nếu người dùng muốn tìm xe
-            if (message.toLowerCase().includes("tìm xe") || message.toLowerCase().includes("có bán")) {
-                try {
-                    const searchQuery = message.replace("tìm xe", "").replace("có bán", "").trim();
-                    console.log(`Search Query: '${searchQuery}'`); // Log để kiểm tra
-
-                    const response = await fetch(`/Car/Search?query=${encodeURIComponent(searchQuery)}`, {
-                        method: 'GET',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/json'
-                        }
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`Phản hồi từ server không thành công: ${response.status} - ${response.statusText}`);
-                    }
-
-                    const data = await response.json();
-                    console.log('Dữ liệu trả về:', data); // Log để kiểm tra dữ liệu
-
-                    if (data.success && data.cars && data.cars.length > 0) {
-                        let result = "Danh sách xe tìm được:<br>";
-                        data.cars.forEach(car => {
-                            result += `${car.tenXe} - Giá: ${car.giaTien} VND<br>`;
-                            if (car.imageUrl) {
-                                result += `<img src="${car.imageUrl}" alt="${car.tenXe}" width="100" /><br>`;
-                            }
-                        });
-                        addMessage(result, false);
-                    } else {
-                        addMessage("Không tìm thấy xe nào phù hợp với từ khóa của bạn.", false);
-                    }
-                } catch (error) {
-                    addMessage('Lỗi: ' + error.message, false);
+                if (savedMessages.length === 0) {
+                    addMessage("💡 Bạn có thể thử:<br/>– tìm xe Toyota<br/>– có bán Accent không<br/>– hoặc hỏi tôi bất kỳ điều gì!", false);
                 }
-            } else {
-                // Gọi API chatbot Gemini
+            }
+
+
+            async function sendMessage() {
+                const input = document.getElementById('chatInput');
+                const rawMessage = input.value.trim();
+                if (!rawMessage) {
+                    addMessage("Vui lòng nhập tin nhắn!", false);
+                    return;
+                }
+
+                addMessage(rawMessage, true);
+                input.value = '';
+
+                // Tách từ khóa tìm kiếm
+                let query = rawMessage.toLowerCase();
+                if (query.includes("tìm xe")) {
+                    query = query.replace("tìm xe", "").trim();
+                } else if (query.includes("có bán")) {
+                    query = query.replace("có bán", "").trim();
+                }
+
+                if (query.length > 0) {
+                    // Gọi API tìm xe
+                    try {
+                        const response = await fetch(`/Car/Searchs?query=${encodeURIComponent(query)}`);
+                        const data = await response.json();
+
+                        if (data.success && data.cars.length > 0) {
+                            let result = "<b>🔍 Kết quả tìm kiếm:</b><br/>";
+                            data.cars.forEach(car => {
+                                result += `<div style="margin-bottom: 12px">
+                                    <img src="${car.ImageUrl}" alt="${car.TenXe}" width="120"><br/>
+                                    <b>${car.TenXe}</b><br/>
+                                    Giá: ${car.GiaTien}
+                                </div>`;
+                            });
+                            addMessage(result, false);
+                        } else {
+                            addMessage("Không tìm thấy xe nào phù hợp với từ khoá của bạn.", false);
+                        }
+                        return;
+                    } catch (error) {
+                        addMessage('Lỗi khi tìm kiếm xe: ' + error.message, false);
+                        return;
+                    }
+                }
+
+                // Nếu không phải tìm xe, gọi AI
                 try {
                     const response = await fetch('/Gemini/Chat', {
                         method: 'POST',
@@ -1000,31 +994,27 @@
                             'Content-Type': 'application/json',
                             'Accept': 'application/json'
                         },
-                        body: JSON.stringify({ message: message })
+                        body: JSON.stringify({ message: rawMessage })
                     });
-
-                    if (!response.ok) {
-                        throw new Error(`Phản hồi từ server không thành công: ${response.status} - ${response.statusText}`);
-                    }
 
                     const data = await response.json();
                     if (data.success) {
                         addMessage(data.response, false);
                     } else {
-                        addMessage('Lỗi: ' + data.error, false);
+                        addMessage('Lỗi AI: ' + data.error, false);
                     }
                 } catch (error) {
-                    addMessage('Lỗi: ' + error.message, false);
+                    addMessage('Lỗi kết nối: ' + error.message, false);
                 }
             }
-        }
 
-            // Khi trang được tải lại, tải tin nhắn từ sessionStorage
-            window.onload = function() {
-                loadMessagesFromStorage();
-            };
+            window.onload = loadMessagesFromStorage;
 </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+@*     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> *@
+    <!-- jQuery (phải được bao gồm trước Bootstrap JS) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

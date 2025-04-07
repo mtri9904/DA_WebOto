@@ -208,6 +208,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENhckxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/CompareCars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENvbXBhcmVDYXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/CompareCarsSelection.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXENvbXBhcmVDYXJzU2VsZWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -222,6 +230,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Car/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Gemini/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VtaW5pXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Minh Tri/OneDrive/Máy tính/DA_WEB/DA_WebOto/12_Weboto/Views/Home/About.cshtml]

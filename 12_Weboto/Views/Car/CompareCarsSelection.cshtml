@@ -1,0 +1,312 @@
+﻿@model List<_12_Weboto.Models.Car>
+
+@{
+    ViewBag.Title = "So sánh xe";
+}
+
+<!-- Thanh breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+        <li class="breadcrumb-item active" aria-current="page">So sánh xe</li>
+    </ol>
+</nav>
+
+<!-- Header giống trong hình -->
+<div class="text-center mb-4">
+    <h2>SO SÁNH CÁC DÒNG XE</h2>
+    <p class="text-muted">Chọn các mẫu xe khác nhau và xem so sánh.</p>
+    <div class="d-flex justify-content-center gap-4">
+        <div class="car-image-container">
+            <img id="carImage1" src="https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png" alt="Hình xe" class="car-image">
+            <p>Mẫu 1</p>
+        </div>
+        <div class="car-image-container">
+            <img id="carImage2" src="https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-suv.png" alt="Hình xe" class="car-image">
+            <p>Mẫu 2</p>
+        </div>
+    </div>
+    <button class="btn btn-secondary mt-2" onclick="compareSelectedCars()">SO SÁNH CÁC DÒNG XE</button>
+</div>
+
+<!-- Modal chọn xe -->
+<div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="compareModalLabel">CHỌN MỘT XE</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <!-- Cột trái: Dropdown chọn xe -->
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="brandSelect" class="form-label">Chọn hãng xe</label>
+                            <select class="form-select" id="brandSelect" onchange="updateCarModels()">
+                                <option value="">Chọn hãng xe</option>
+                                @foreach (var brand in Model.Select(c => c.Brand).DistinctBy(b => b.Id))
+                                {
+                                    <option value="@brand.Id">@brand.TenHang</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="carSelect" class="form-label">Chọn dòng xe</label>
+                            <select class="form-select" id="carSelect" onchange="updateCarImage()" disabled>
+                                <option value="">Dòng xe</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-secondary w-100" onclick="addCarToCompare()">CHỌN MẪU XE</button>
+                    </div>
+                    <!-- Cột phải: Hiển thị hình ảnh xe -->
+                    <div class="col-md-6 text-center">
+                        <div id="carImageContainer">
+                            <img id="carImage" src="https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png" alt="Hình xe" class="modal-car-image">
+                        </div>
+                        <p id="carModelLabel">Mẫu 1</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <style>
+        /* Style cho hình ảnh chính (Mẫu 1 và Mẫu 2) */
+        .car-image-container {
+            text-align: center;
+        }
+
+        .car-image {
+            width: 250px; /* Kích thước cố định */
+            height: 150px; /* Kích thước cố định */
+            object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+            cursor: pointer;
+            background-color: #f8f9fa; /* Màu nền để hình ảnh nổi bật */
+            border: 1px solid #dee2e6; /* Viền nhẹ */
+            border-radius: 5px; /* Bo góc */
+        }
+
+        /* Style cho hình ảnh trong modal */
+        .modal-car-image {
+            width: 250px; /* Kích thước cố định */
+            height: 150px; /* Kích thước cố định */
+            object-fit: contain; /* Đảm bảo hình ảnh không bị méo */
+            background-color: #f8f9fa; /* Màu nền để hình ảnh nổi bật */
+            border: 1px solid #dee2e6; /* Viền nhẹ */
+            border-radius: 5px; /* Bo góc */
+        }
+
+        .modal-content {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .modal-title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin: 0 auto;
+        }
+
+        .btn-close {
+            margin: 0;
+        }
+
+        .form-label {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .form-select {
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+        }
+
+        .btn-secondary {
+            background-color: #e0e0e0;
+            border: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+            .btn-secondary:hover {
+                background-color: #d0d0d0;
+            }
+
+        .modal-footer {
+            border-top: none;
+            justify-content: center;
+        }
+
+            .modal-footer .btn-secondary {
+                background-color: #6c757d;
+                color: white;
+            }
+
+                .modal-footer .btn-secondary:hover {
+                    background-color: #5a6268;
+                }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            // Gắn sự kiện click cho hình mẫu 1
+            $("#carImage1").click(function () {
+                showCompareModal(1);
+            });
+
+            // Gắn sự kiện click cho hình mẫu 2
+            $("#carImage2").click(function () {
+                showCompareModal(2);
+            });
+        });
+
+        let selectedCars = { 1: null, 2: null }; // Lưu trữ xe đã chọn cho Mẫu 1 và Mẫu 2
+        let currentSlot = 1; // Slot hiện tại (Mẫu 1 hoặc Mẫu 2)
+
+        // Hiển thị modal khi nhấn vào hình xe
+        function showCompareModal(slot) {
+            console.log("Opening modal for slot: " + slot); // Kiểm tra xem hàm có được gọi không
+            currentSlot = slot;
+            document.getElementById("carModelLabel").textContent = `Mẫu ${slot}`;
+            const carImage = document.getElementById("carImage");
+            carImage.src = slot === 1
+                ? "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png"
+                : "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-suv.png";
+            $('#compareModal').modal('show');
+        }
+
+        // Cập nhật danh sách xe dựa trên hãng xe được chọn
+        function updateCarModels() {
+            const brandId = document.getElementById("brandSelect").value;
+            const carSelect = document.getElementById("carSelect");
+            carSelect.innerHTML = '<option value="">Dòng xe</option>';
+            carSelect.disabled = !brandId; // Vô hiệu hóa dropdown xe nếu chưa chọn hãng
+
+            if (brandId) {
+                fetch(`/Car/GetCarsByBrand?brandId=${brandId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            data.cars.forEach(car => {
+                                const option = document.createElement("option");
+                                option.value = car.id;
+                                option.textContent = car.tenXe;
+                                carSelect.appendChild(option);
+                            });
+                        } else {
+                            console.error("Failed to fetch cars: ", data.message);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching cars:', error);
+                    });
+            }
+            updateCarImage(); // Reset hình ảnh khi thay đổi hãng xe
+        }
+
+        // Cập nhật hình ảnh xe trong modal khi chọn xe
+        function updateCarImage() {
+            const carId = document.getElementById("carSelect").value;
+            const carImage = document.getElementById("carImage");
+
+            if (carId) {
+                fetch(`/Car/GetCarDetails?id=${carId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.imageUrl) {
+                            carImage.src = data.imageUrl;
+                        } else {
+                            carImage.src = currentSlot === 1
+                                ? "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png"
+                                : "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-suv.png";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error fetching car details:', error);
+                    });
+            } else {
+                carImage.src = currentSlot === 1
+                    ? "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png"
+                    : "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-suv.png";
+            }
+        }
+
+        // Thêm xe vào slot tương ứng và cập nhật hình ảnh trên giao diện chính
+        function addCarToCompare() {
+            const carId = document.getElementById("carSelect").value;
+            const brandId = document.getElementById("brandSelect").value;
+
+            if (!brandId) {
+                alert("Vui lòng chọn hãng xe trước!");
+                return;
+            }
+            if (!carId) {
+                alert("Vui lòng chọn một xe!");
+                return;
+            }
+
+            // Lưu xe vào slot
+            selectedCars[currentSlot] = carId;
+
+            // Cập nhật hình ảnh trên giao diện chính
+            fetch(`/Car/GetCarDetails?id=${carId}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.imageUrl) {
+                        const carImageElement = document.getElementById(`carImage${currentSlot}`);
+                        carImageElement.src = data.imageUrl;
+                        // Đảm bảo kích thước hình ảnh đồng đều sau khi cập nhật
+                        carImageElement.style.width = '250px';
+                        carImageElement.style.height = '150px';
+                        carImageElement.style.objectFit = 'contain';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error updating car image:', error);
+                });
+
+            // Đóng modal
+            $('#compareModal').modal('hide');
+
+            // Reset modal
+            document.getElementById("brandSelect").value = "";
+            document.getElementById("carSelect").innerHTML = '<option value="">Dòng xe</option>';
+            document.getElementById("carSelect").disabled = true;
+            document.getElementById("carImage").src = currentSlot === 1
+                ? "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-sedan.png"
+                : "https://www.lexus.com.vn/content/dam/lexus-v3-blueprint/model-comparison/silhouette-suv.png";
+        }
+
+        // Chuyển hướng đến trang so sánh
+        function compareSelectedCars() {
+            const carIds = Object.values(selectedCars).filter(id => id !== null);
+            if (carIds.length < 2) {
+                alert("Cần chọn ít nhất 2 xe để so sánh!");
+                return;
+            }
+            // Thêm tham số source để chỉ ra trang nguồn là "compare"
+            window.location.href = '/Car/CompareCars?carIds=' + carIds.join(',') + '&source=compare';
+        }
+    </script>
+}

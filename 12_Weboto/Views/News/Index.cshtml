@@ -16,10 +16,10 @@
             }
         </ol>
     </nav>
-    <!-- Hiển thị danh sách danh mục -->
+
+    <!-- Hiển thị danh mục -->
     <div class="mb-4">
         <ul class="nav nav-tabs">
-            <!-- Mục "Tin tức" hiển thị tất cả bài báo -->
             <li class="nav-item">
                 <a class="nav-link @(ViewBag.SelectedCategory == null ? "active" : "")"
                    asp-controller="News"
@@ -48,65 +48,181 @@
     }
     else
     {
-        <div class="row">
-            <!-- Bài viết đầu tiên (lớn hơn) -->
+        <!-- Container cho các bài viết -->
+        <div id="news-container">
             @{
-                var firstNews = Model.First();
+                var firstNews = Model.First(); // Khai báo biến trong khối @{}
             }
-            <div class="col-md-6 mb-4">
-                <div class="card h-100 border-0">
-                    @if (firstNews.Images != null && firstNews.Images.Any())
-                    {
-                        <img src="@firstNews.Images.First().ImageUrl" class="card-img-top" style="height: 300px; object-fit: cover;" alt="@firstNews.Title" />
-                    }
-                    else
-                    {
-                        <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <span class="text-white">NO IMAGE</span>
+            <!-- Bài viết đầu tiên (chiếm toàn bộ chiều rộng) -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="card h-100 border-0">
+                        <div class="row g-0">
+                            <div class="col-md-6">
+                                @if (firstNews.Images != null && firstNews.Images.Any())
+                                {
+                                    <img src="@firstNews.Images.First().ImageUrl" class="card-img-top" style="height: 300px; object-fit: cover;" alt="@firstNews.Title" />
+                                }
+                                else
+                                {
+                                    <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 300px;">
+                                        <span class="text-white">NO IMAGE</span>
+                                    </div>
+                                }
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body p-3">
+                                    <h5 class="card-title" style="font-size: 1.5rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                        <a asp-action="Details" asp-route-id="@firstNews.Id" class="text-decoration-none text-dark">@firstNews.Title</a>
+                                    </h5>
+                                    <p class="card-text text-muted" style="font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                        @firstNews.Content
+                                    </p>
+                                    <small class="text-muted">@firstNews.Category?.Name</small>
+                                </div>
+                            </div>
                         </div>
-                    }
-                    <div class="card-body p-0 pt-3">
-                        <h5 class="card-title" style="font-size: 1.5rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
-                            <a asp-action="Details" asp-route-id="@firstNews.Id" class="text-decoration-none text-dark">@firstNews.Title</a>
-                        </h5>
-                        <p class="card-text text-muted" style="font-size: 0.9rem;">@firstNews.Content</p>
-                        <small class="text-muted">@firstNews.Category?.Name</small>
                     </div>
                 </div>
             </div>
 
-            <!-- Các bài viết khác (nhỏ hơn) -->
-            <div class="col-md-6">
-                <div class="row">
-                    @foreach (var news in Model.Skip(1).Take(3)) // Lấy 3 bài tiếp theo
-                    {
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100 border-0">
-                                @if (news.Images != null && news.Images.Any())
-                                {
-                                    <img src="@news.Images.First().ImageUrl" class="card-img-top" style="height: 150px; object-fit: cover;" alt="@news.Title" />
-                                }
-                                else
-                                {
-                                    <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 150px;">
-                                        <span class="text-white">NO IMAGE</span>
+            <!-- Ba bài tiếp theo (chia đều 3 cột) -->
+            <div class="row mb-4">
+                @foreach (var news in Model.Skip(1).Take(3))
+                {
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0">
+                            @if (news.Images != null && news.Images.Any())
+                            {
+                                <img src="@news.Images.First().ImageUrl" class="card-img-top" style="height: 150px; object-fit: cover;" alt="@news.Title" />
+                            }
+                            else
+                            {
+                                <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 150px;">
+                                    <span class="text-white">NO IMAGE</span>
+                                </div>
+                            }
+                            <div class="card-body p-0 pt-2">
+                                <h6 class="card-title" style="font-size: 0.9rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                    <a asp-action="Details" asp-route-id="@news.Id" class="text-decoration-none text-dark">@news.Title</a>
+                                </h6>
+                                <p class="card-text text-muted" style="font-size: 0.8rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                    @news.Content
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- 4 bài tiếp theo (mỗi bài chiếm một hàng) -->
+            @foreach (var news in Model.Skip(4).Take(4))
+            {
+                <div class="row mb-4 news-item">
+                    <div class="col-12">
+                        <div class="card h-100 border-0">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    @if (news.Images != null && news.Images.Any())
+                                    {
+                                        <img src="@news.Images.First().ImageUrl" class="card-img-top" style="height: 200px; object-fit: cover;" alt="@news.Title" />
+                                    }
+                                    else
+                                    {
+                                        <div class="card-img-top bg-secondary d-flex align-items-center justify-content-center" style="height: 200px;">
+                                            <span class="text-white">NO IMAGE</span>
+                                        </div>
+                                    }
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body p-3">
+                                        <h5 class="card-title" style="font-size: 1.2rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                            <a asp-action="Details" asp-route-id="@news.Id" class="text-decoration-none text-dark">@news.Title</a>
+                                        </h5>
+                                        <p class="card-text text-muted" style="font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                            @news.Content
+                                        </p>
                                     </div>
-                                }
-                                <div class="card-body p-0 pt-2">
-                                    <h6 class="card-title" style="font-size: 0.9rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
-                                        <a asp-action="Details" asp-route-id="@news.Id" class="text-decoration-none text-dark">@news.Title</a>
-                                    </h6>
-                                    <p class="card-text text-muted" style="font-size: 0.8rem;">@news.Content</p>
                                 </div>
                             </div>
                         </div>
-                    }
+                    </div>
                 </div>
-            </div>
+            }
         </div>
+
+        <!-- Nút Xem thêm -->
+        @if (ViewBag.TotalNews > 8)
+        {
+            <div class="text-center mt-4">
+                <button id="load-more" class="btn btn-primary" data-skip="8" data-category="@ViewBag.SelectedCategory">Xem thêm</button>
+            </div>
+        }
     }
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function () {
+            $("#load-more").click(function () {
+                var skip = parseInt($(this).data("skip"));
+                var category = $(this).data("category");
+
+                $.ajax({
+                    url: '@Url.Action("LoadMoreNews", "News")',
+                    type: 'GET',
+                    data: { category: category, skip: skip },
+                    success: function (data) {
+                        console.log("Dữ liệu trả về:", data); // Gỡ lỗi
+                        if (data.length > 0) {
+                            var newsHtml = '';
+                            $.each(data, function (index, news) {
+                                // Truy cập đúng định dạng camelCase
+                                const title = news.Title || "Không có tiêu đề";
+                                const content = news.Content || "Không có nội dung";
+                                const imageUrl = news.ImageUrl || "https://via.placeholder.com/200x200?text=No+Image";
+                                const newsId = news.Id || 0;
+
+                                newsHtml += `
+                                    <div class="row mb-4 news-item">
+                                        <div class="col-12">
+                                            <div class="card h-100 border-0">
+                                                <div class="row g-0">
+                                                    <div class="col-md-4">
+                                                        <img src="${imageUrl}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="${title}" />
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <div class="card-body p-3">
+                                                            <h5 class="card-title" style="font-size: 1.2rem; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                                <a href="/News/Details/${newsId}" class="text-decoration-none text-dark">${title}</a>
+                                                            </h5>
+                                                            <p class="card-text text-muted" style="font-size: 0.9rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; text-overflow: ellipsis;">
+                                                                ${content}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`;
+                            });
+                            $("#news-container").append(newsHtml);
+                            $("#load-more").data("skip", skip + 4);
+
+                            if (skip + 4 >= @ViewBag.TotalNews) {
+                                $("#load-more").hide();
+                            }
+                        } else {
+                            $("#load-more").hide();
+                            $("#news-container").append('<p class="text-center">Đã hết bài viết để tải.</p>');
+                        }
+                    },
+                    error: function () {
+                        alert("Đã xảy ra lỗi khi tải thêm tin tức.");
+                    }
+                });
+            });
+        });
+    </script>
+}
 }

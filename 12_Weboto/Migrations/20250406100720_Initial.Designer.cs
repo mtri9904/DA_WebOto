@@ -12,8 +12,8 @@ using _12_Weboto.Models;
 namespace _12_Weboto.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250403025830_initialOrder4")]
-    partial class initialOrder4
+    [Migration("20250406100720_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
