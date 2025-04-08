@@ -30,14 +30,26 @@
                                         @Model.Status
                                     </span>
                                 </p>
+                                <p class="mb-2">
+                                    <strong class="text-black fw-bold">Đặt cọc:</strong>
+                                    <span class="badge" style="background-color: @(Model.PaymentStatus == PaymentStatusEnum.Completed ? "#28a745" : Model.PaymentStatus == PaymentStatusEnum.Pending ? "#FFC107" : Model.PaymentStatus == PaymentStatusEnum.Failed ? "#dc3545" : "#6c757d"); color: white;">
+                                        @Model.PaymentStatus
+                                    </span>
+                                </p>
+                                <p class="mb-2">
+                                    <strong class="text-black fw-bold">Đặt cọc:</strong>
+                                    <span class="badge" style="background-color: @(Model.PaymentStatus == PaymentStatusEnum.Completed ? "#28a745" : Model.PaymentStatus == PaymentStatusEnum.Pending ? "#FFC107" : Model.PaymentStatus == PaymentStatusEnum.Failed ? "#dc3545" : "#6c757d"); color: white;">
+                                        @Model.PaymentStatus
+                                    </span>
+                                </p>
                             </div>
                         </div>
                         <!-- Thông tin xe và giao hàng -->
                         <div class="col-md-6 mb-3">
-                            <div class="info-box p-3" style="background-color: #F8FAFC; border-left: 4px solid #3182CE; border-radius: 8px;">
+                            <div class="info-box p-3" style="background-color cycle: #F8FAFC; border-left: 4px solid #3182CE; border-radius: 8px;">
                                 <h5 class="text-primary mb-3"><i class="fas fa-car me-2"></i>Thông tin xe & giao hàng</h5>
                                 <p class="mb-2"><strong class="text-black fw-bold">Tên xe:</strong> <span class="text-dark">@Model.Car.TenXe</span></p>
-                                <p class="mb-2"><strong class="text-black fw-bold">Giá:</strong> <span class="text-dark">@Model.Car.GiaTien.ToString("C")</span></p>
+                                <p class="mb-2"><strong class="text-black fw-bold">Giá:</strong> <span class="text-dark">@Model.TotalPrice.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</span></p>
                                 <p class="mb-2"><strong class="text-black fw-bold">Địa chỉ giao hàng:</strong> <span class="text-dark">@Model.Address</span></p>
                                 <p class="mb-0"><strong class="text-black fw-bold">Ghi chú:</strong> <span class="text-dark">@(string.IsNullOrEmpty(Model.Notes) ? "Không có" : Model.Notes)</span></p>
                             </div>

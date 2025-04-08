@@ -435,3 +435,4 @@ C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.pdb
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.genruntimeconfig.cache
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\ref\12_Weboto.dll
+C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\PayPal.dll

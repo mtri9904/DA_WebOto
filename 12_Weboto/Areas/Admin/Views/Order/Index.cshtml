@@ -19,6 +19,7 @@
             <th>Mã đơn hàng</th>
             <th>Tên xe</th>
             <th>Ngày đặt</th>
+            <th>Đặt cọc</th>
             <th>Trạng thái</th>
             <th>Chỉnh sửa trạng thái</th>
             <th>Hành động</th>
@@ -34,10 +35,19 @@
                 OrderStatus.Failed => "status-failed",
                 _ => "status-pending"
             };
+            var paymentStatusClass = order.PaymentStatus switch
+            {
+                PaymentStatusEnum.Pending => "status-pending",
+                PaymentStatusEnum.Completed => "status-completed",
+                PaymentStatusEnum.Failed => "status-failed",
+                PaymentStatusEnum.Cancelled => "status-cancelled",
+                _ => "status-pending"
+            };
             <tr>
                 <td>@order.OrderId</td>
                 <td>@order.Car.TenXe</td>
                 <td>@order.OrderDate.ToString("dd/MM/yyyy")</td>
+                <td class="@paymentStatusClass">@order.PaymentStatus.ToString()</td>
                 <td class="@statusClass">@order.Status.ToString()</td>
                 <td>
                     <form method="post" asp-action="UpdateStatus">

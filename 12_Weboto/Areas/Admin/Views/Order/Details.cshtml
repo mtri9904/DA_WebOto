@@ -32,11 +32,19 @@
             </div>
             <div class="info-group">
                 <span class="info-label">Giá tiền:</span>
-                <span class="info-value price">@Model.Car.GiaTien.ToString("C")</span>
+                <span class="info-value price">@Model.TotalPrice.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</span>
             </div>
             <div class="info-group">
-                <span class="info-label">Trạng thái:</span>
+                <span class="info-label">Tiền đặt cọc:</span>
+                <span class="info-value price">@Model.DepositAmount.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Trạng thái đơn:</span>
                 <span class="status status-@Model.Status.ToString().ToLowerInvariant()">@Model.Status</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Trạng thái đặt cọc:</span>
+                <span class="status status-@Model.PaymentStatus.ToString().ToLowerInvariant()">@Model.PaymentStatus</span>
             </div>
         </div>
 
@@ -135,6 +143,11 @@
     .status-pending {
         background-color: #f39c12; /* Màu cam cho Chờ xử lý */
     }
+
+    .status-cancelled {
+        background-color: #6c757d; /* Màu xám cho Đã hủy */
+    }
+
     /* Style cho button Quay lại */
     .action-buttons {
         margin-top: 20px;

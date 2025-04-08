@@ -21,6 +21,8 @@ namespace _12_Weboto.Models
 
         public decimal TotalPrice { get; set; }
 
+        public decimal DepositAmount { get; set; } // Giá đặt cọc
+
         [Required]
         public string Address { get; set; }
 
@@ -31,6 +33,9 @@ namespace _12_Weboto.Models
 
         [Required]
         public OrderStatus Status { get; set; }
+
+        [Required]
+        public PaymentStatusEnum PaymentStatus { get; set; } // Trạng thái thanh toán riêng
     }
 
     public enum OrderStatus
@@ -38,7 +43,15 @@ namespace _12_Weboto.Models
         Processing = 0, // Đang xử lý
         Completed = 1,  // Hoàn thành
         Failed = 2,      // Thất bại
-        Pending = 3
+        Pending = 3,
+        Cancelled = 4
     }
-
+    // Trạng thái thanh toán (riêng cho quá trình thanh toán)
+    public enum PaymentStatusEnum
+    {
+        Pending = 0,    // Chưa thanh toán
+        Completed = 1,  // Đã thanh toán thành công
+        Failed = 2,     // Thanh toán thất bại
+        Cancelled = 3   // Thanh toán bị hủy
+    }
 }

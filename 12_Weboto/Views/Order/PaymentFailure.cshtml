@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán thất bại";
+}
+
+<div class="order-container">
+    <div class="order-header">
+        <h2>Thanh toán thất bại</h2>
+        <p class="text-danger">Đã có lỗi xảy ra trong quá trình thanh toán. Vui lòng thử lại.</p>
+    </div>
+    <div class="submit-section">
+        <a href="@Url.Action("Index", "Order")" class="btn btn-primary">Quay lại danh sách đơn hàng</a>
+    </div>
+</div>

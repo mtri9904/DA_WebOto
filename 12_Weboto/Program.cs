@@ -24,6 +24,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 .AddDefaultUI()
 .AddEntityFrameworkStores<ApplicationDbContext>();
 
+
+builder.Services.Configure<PayPalConfig>(
+    builder.Configuration.GetSection("PayPalConfig"));
+
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
 {
     options.TokenLifespan = TimeSpan.FromMinutes(5); // Token hết hạn sau 5 phút

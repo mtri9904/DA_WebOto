@@ -17,6 +17,7 @@
                             <th scope="col">Xe</th>
                             <th scope="col">Giá</th>
                             <th scope="col">Trạng thái</th>
+                            <th scope="col">Đặt cọc</th>
                             <th scope="col">Ngày đặt</th>
                             <th scope="col">Hành động</th>
                         </tr>
@@ -27,10 +28,15 @@
                             <tr>
                                 <td>#@order.OrderId</td>
                                 <td>@order.Car.TenXe</td>
-                                <td class="fw-bold text-success">@order.Car.GiaTien.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</td>
+                                <td class="fw-bold text-success">@order.TotalPrice.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</td>
                                 <td>
                                     <span class="badge @GetStatusClass(order.Status.ToString())">
                                         @order.Status.ToString()
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="badge @GetPaymentStatusClass(order.PaymentStatus.ToString())">
+                                        @order.PaymentStatus.ToString()
                                     </span>
                                 </td>
                                 <td>@order.OrderDate.ToString("dd/MM/yyyy HH:mm")</td>
@@ -68,22 +74,52 @@
             padding: 5px 10px;
         }
 
-        .badge-pending {
-            color: #856404 !important; 
+        /* CSS cho OrderStatus */
+        .badge-status-pending {
+            background-color: #FFC107; /* Vàng nhạt */
+            color: #212529 !important;
         }
 
-        .badge-success {
-            color: #28a745 !important; 
+        .badge-status-completed {
+            background-color: #28a745; /* Xanh lá */
+            color: #fff !important;
         }
 
-        .badge-cancelled {
-            color: #ff0000 !important; 
+        .badge-status-failed {
+            background-color: #dc3545; /* Đỏ */
+            color: #fff !important;
         }
 
-        .badge-other {
-            color: #ffffff !important; /* Màu chữ trắng */
+        .badge-status-cancelled {
+            background-color: #6c757d; /* Xám */
+            color: #fff !important;
         }
 
+        .badge-status-processing {
+            background-color: #17a2b8; /* Xanh lam */
+            color: #fff !important;
+        }
+
+        /* CSS cho PaymentStatus */
+        .badge-payment-pending {
+            background-color: #FFC107; /* Vàng nhạt */
+            color: #212529 !important;
+        }
+
+        .badge-payment-completed {
+            background-color: #28a745; /* Xanh lá */
+            color: #fff !important;
+        }
+
+        .badge-payment-failed {
+            background-color: #dc3545; /* Đỏ */
+            color: #fff !important;
+        }
+
+        .badge-payment-cancelled {
+            background-color: #6c757d; /* Xám */
+            color: #fff !important;
+        }
     </style>
 }
 
@@ -92,10 +128,24 @@
     {
         return status switch
         {
-            "Processing" => "badge-pending",
-            "Completed" => "badge-success",
-            "Failed" => "badge-cancelled",
-            _ => "badge-other" // Mặc định cho các trạng thái khác
+            "Pending" => "badge-status-pending",
+            "Completed" => "badge-status-completed",
+            "Failed" => "badge-status-failed",
+            "Cancelled" => "badge-status-cancelled",
+            "Processing" => "badge-status-processing",
+            _ => "badge-status-pending"
+        };
+    }
+
+    string GetPaymentStatusClass(string paymentStatus)
+    {
+        return paymentStatus switch
+        {
+            "Pending" => "badge-payment-pending",
+            "Completed" => "badge-payment-completed",
+            "Failed" => "badge-payment-failed",
+            "Cancelled" => "badge-payment-cancelled",
+            _ => "badge-payment-pending"
         };
     }
 }
