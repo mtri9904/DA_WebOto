@@ -103,9 +103,11 @@ namespace _12_Weboto.Areas.Identity.Pages.Account
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Admin)).GetAwaiter().GetResult();
                 _roleManager.CreateAsync(new IdentityRole(SD.Role_Company)).GetAwaiter().GetResult();
             }
+            // Chỉ lấy 2 vai trò Customer và Company
+            var allowedRoles = new List<string> { SD.Role_Customer, SD.Role_Company };
             Input = new()
             {
-                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                RoleList = allowedRoles.Select(i => new SelectListItem
                 {
                     Text = i,
                     Value = i

@@ -1,15 +1,157 @@
 ﻿@model _12_Weboto.Models.Order
+@using System
 @{
     ViewData["Title"] = "Chi tiết đơn hàng";
 }
 
-<h2>Chi tiết đơn hàng</h2>
+<div class="order-details-container">
+    <h2 class="order-title">Chi tiết đơn hàng #@Model.OrderId</h2>
 
-<p><strong>Mã đơn hàng:</strong> @Model.OrderId</p>
-<p><strong>Ngày đặt:</strong> @Model.OrderDate.ToString("dd/MM/yyyy")</p>
-<p><strong>Giờ đặt:</strong> @Model.OrderDate.ToString("HH:mm:ss")</p> <!-- Hiển thị giờ đặt -->
-<p><strong>Tên xe:</strong> @Model.Car.TenXe</p>
-<p><strong>Giá:</strong> @Model.Car.GiaTien.ToString("C")</p>
-<p><strong>Trạng thái:</strong> @Model.Status</p>
-<p><strong>Địa chỉ giao hàng:</strong> @Model.Address</p>
-<p><strong>Ghi chú:</strong> @Model.Notes</p>
+    <div class="order-card">
+        <div class="card-section">
+            <h3 class="section-title">Thông tin khách hàng</h3>
+            <div class="info-group">
+                <span class="info-label">Tên khách hàng:</span>
+                <span class="info-value">@Model.User.FullName</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Số điện thoại:</span>
+                <span class="info-value">@Model.User.PhoneNumber</span>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <h3 class="section-title">Thông tin đơn hàng</h3>
+            <div class="info-group">
+                <span class="info-label">Ngày đặt hàng:</span>
+                <span class="info-value">@Model.OrderDate.ToString("dd/MM/yyyy HH:mm:ss")</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Tên xe:</span>
+                <span class="info-value">@Model.Car.TenXe</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Giá tiền:</span>
+                <span class="info-value price">@Model.Car.GiaTien.ToString("C")</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Trạng thái:</span>
+                <span class="status status-@Model.Status.ToString().ToLowerInvariant()">@Model.Status</span>
+            </div>
+        </div>
+
+        <div class="card-section">
+            <h3 class="section-title">Thông tin giao hàng</h3>
+            <div class="info-group">
+                <span class="info-label">Địa chỉ:</span>
+                <span class="info-value">@Model.Address</span>
+            </div>
+            <div class="info-group">
+                <span class="info-label">Ghi chú:</span>
+                <span class="info-value">@(string.IsNullOrEmpty(Model.Notes) ? "Không có" : Model.Notes)</span>
+            </div>
+        </div>
+        <!-- Thêm button Quay lại -->
+        <div class="action-buttons">
+            <a href="@Url.Action("Index", "Order")" class="btn-back">Quay lại</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .order-details-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .order-title {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .order-card {
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px;
+    }
+
+    .card-section {
+        margin-bottom: 25px;
+    }
+
+    .section-title {
+        color: #2980b9;
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #ecf0f1;
+    }
+
+    .info-group {
+        display: flex;
+        margin: 10px 0;
+        align-items: center;
+    }
+
+    .info-label {
+        width: 150px;
+        color: #7f8c8d;
+        font-weight: 500;
+    }
+
+    .info-value {
+        flex: 1;
+        color: #2c3e50;
+    }
+
+    .price {
+        color: #e74c3c;
+        font-weight: bold;
+    }
+
+    .status {
+        padding: 4px 12px;
+        border-radius: 12px;
+        color: white;
+        font-size: 14px;
+    }
+
+    .status-processing {
+        background-color: #3498db; /* Màu xanh dương cho Đang xử lý */
+    }
+
+    .status-completed {
+        background-color: #2ecc71; /* Màu xanh lá cho Hoàn thành */
+    }
+
+    .status-failed {
+        background-color: #e74c3c; /* Màu đỏ cho Thất bại */
+    }
+
+    .status-pending {
+        background-color: #f39c12; /* Màu cam cho Chờ xử lý */
+    }
+    /* Style cho button Quay lại */
+    .action-buttons {
+        margin-top: 20px;
+        text-align: right;
+    }
+
+    .btn-back {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-back:hover {
+            background-color: #2980b9;
+        }
+</style>

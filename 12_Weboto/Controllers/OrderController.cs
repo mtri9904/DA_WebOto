@@ -63,13 +63,15 @@ namespace _12_Weboto.Controllers
             ViewBag.OrderId = orderId; // OrderId
             ViewBag.FullName = user.FullName; // FullName
             ViewBag.TotalPrice = car.GiaTien; // TotalPrice
-
+            ViewBag.PhoneNumber = user.PhoneNumber; // TotalPrice
+            
             return View();
+
         }
 
 
         [HttpPost]
-        public async Task<IActionResult> Add(int carId, string Address, string Notes)
+        public async Task<IActionResult> Add(int carId, string Address,int PhoneNumber, string Notes)
         {
             try
             {
@@ -102,6 +104,7 @@ namespace _12_Weboto.Controllers
                     UserId = user.Id,
                     CarId = carId,
                     TotalPrice = car.GiaTien,
+                    PhoneNumber = user.PhoneNumber,
                     Address = Address.Trim(),
                     Notes = Notes,
                     OrderDate = DateTime.Now,

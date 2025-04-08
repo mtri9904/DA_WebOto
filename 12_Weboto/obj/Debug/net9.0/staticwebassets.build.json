@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9qLiuo/5tSHLWHzFNJKycVjolYsjzQwimoLTldaGCo4=",
+  "Hash": "jZzJR/KKoFLDJLNyuV9L0bgRqVm4NEEwBmiYVywL7+M=",
   "Source": "12_Weboto",
   "BasePath": "_content/12_Weboto",
   "Mode": "Default",
@@ -5372,6 +5372,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\0eb804a7-dc87-4c4e-b5a1-fdd5ac3d3607_2015 AUDI A5 Black Edition Plus.jpeg"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/12f48b9a-8562-4a8f-93b6-6eea96e23bd1#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tyh8cti03w",
+      "Integrity": "9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -5435,6 +5456,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/1a6cfe93-5518-4010-9839-cf6a99e2596e_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a6xvxifo9s",
+      "Integrity": "Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -5454,6 +5496,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/1eb05649-1665-47c6-b907-158142a7ea11_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ri5p6f1vgp",
+      "Integrity": "Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\27bd153f-6ebd-4473-b0a3-9457f157fc16.png",
@@ -5496,6 +5559,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\290f9889-e946-422e-8293-39a9e3829da3_3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5nij5lmyx1",
+      "Integrity": "IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\32a9879f-3144-4c6d-9265-b51c5a29e10c_mceclip0.png",
@@ -5580,6 +5664,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/3cb70f82-b050-423a-b6ea-279a44146446_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rzaat9hwqk",
+      "Integrity": "J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3e8cf354-8e37-4f85-8351-4194164b87d9.png",
@@ -6086,6 +6191,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\69c299c8-1e35-42be-be10-af42049b151d_mceclip0.png"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6be87a24-02fa-4866-b15f-113e63374c3b_image.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/6be87a24-02fa-4866-b15f-113e63374c3b_image#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5zo8vpo2n2",
+      "Integrity": "j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\6be87a24-02fa-4866-b15f-113e63374c3b_image.png"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6f35bc59-556e-4f9e-b485-09542a040b4a_BMW 320i Sedan.jpeg",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -6149,6 +6275,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\762b298c-6f60-4bee-acdf-0027236faf7f.png"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g8x1uqybej",
+      "Integrity": "gDsSzcalLz6ZSMy3Evd+Ly1zdQ/2vYYLHHhJB7H1ASg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\782bcda2-8e6d-44c9-a2f2-61d816a24f5c.png",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -6189,6 +6336,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\7a4385c0-3eed-4d1e-ad5e-8fabd38adce6.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "a6xvxifo9s",
+      "Integrity": "Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ri5p6f1vgp",
+      "Integrity": "Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tyh8cti03w",
+      "Integrity": "9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\83270c11-8967-4a02-a557-ef24b72e8844_xe4.jpeg",
@@ -6294,6 +6504,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\8b0e41bd-1e88-4ecb-b07a-62ad23ab7f27.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/8da941b0-6521-43a3-9770-dbd3449b0ffe#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eo7xql93z2",
+      "Integrity": "HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg",
@@ -6462,6 +6693,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "sd3q0jyriw",
+      "Integrity": "oJ/fXySyV1hh8wlw22vrRAyIgs4YBM1caIQxZY5MebE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg",
@@ -6651,6 +6903,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\ca27bafa-7f30-42c2-98e7-c66f5ae71068_blobid0.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "rzaat9hwqk",
+      "Integrity": "J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "e3ap8iwr14",
+      "Integrity": "prDtLp1ek0OFxK+d2n9wny0j+ZV9Nz4BaMhMqdxntrI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "tyh8cti03w",
+      "Integrity": "9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ceebfc24-b01b-4b49-acd9-5c90bdac4169_Vinfast VF8.jpeg",
@@ -6863,6 +7178,27 @@
       "OriginalItemSpec": "wwwroot\\uploads\\e06c9e39-95d2-46ad-8bc2-1780f1aacc72_mceclip1.png"
     },
     {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5nij5lmyx1",
+      "Integrity": "IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e321b3a1-3f00-42e1-a96a-713f7aaafada_Vinfast Lux A2.0.jpeg",
       "SourceId": "12_Weboto",
       "SourceType": "Discovered",
@@ -7050,6 +7386,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png"
+    },
+    {
+      "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png",
+      "SourceId": "12_Weboto",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\",
+      "BasePath": "_content/12_Weboto",
+      "RelativePath": "uploads/f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "5zo8vpo2n2",
+      "Integrity": "j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png"
     },
     {
       "Identity": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\Logo_12.png",
@@ -36792,6 +37149,88 @@
       ]
     },
     {
+      "Route": "uploads/12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:42:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/12f48b9a-8562-4a8f-93b6-6eea96e23bd1.tyh8cti03w.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:42:28 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tyh8cti03w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
+        }
+      ]
+    },
+    {
       "Route": "uploads/133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg",
       "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg",
       "Selectors": [],
@@ -37038,6 +37477,88 @@
       ]
     },
     {
+      "Route": "uploads/1a6cfe93-5518-4010-9839-cf6a99e2596e_image.a6xvxifo9s.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a6xvxifo9s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE="
+        }
+      ]
+    },
+    {
       "Route": "uploads/1a7557d7-82d3-4020-83bb-542a3810f37e_2.par7o322ox.png",
       "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png",
       "Selectors": [],
@@ -37116,6 +37637,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-8Slz9Pnaqjsp8wSSKF33TndLOTTruUXOGNCNo5f06F0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1eb05649-1665-47c6-b907-158142a7ea11_image.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/1eb05649-1665-47c6-b907-158142a7ea11_image.ri5p6f1vgp.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ri5p6f1vgp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/1eb05649-1665-47c6-b907-158142a7ea11_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60="
         }
       ]
     },
@@ -37280,6 +37883,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-2/pGZIPmIV+tEvkoFhhCKtJ3KbF0i9cscCnqR3jeXkQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.5nij5lmyx1.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nij5lmyx1"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI="
         }
       ]
     },
@@ -37608,6 +38293,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-jb7C7bTK+ook4oCtC4x4RQ/SSgI6JpQacv8ckL54Yrc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3cb70f82-b050-423a-b6ea-279a44146446_image.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/3cb70f82-b050-423a-b6ea-279a44146446_image.rzaat9hwqk.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:44 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rzaat9hwqk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/3cb70f82-b050-423a-b6ea-279a44146446_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs="
         }
       ]
     },
@@ -39580,6 +40347,88 @@
       ]
     },
     {
+      "Route": "uploads/6be87a24-02fa-4866-b15f-113e63374c3b_image.5zo8vpo2n2.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6be87a24-02fa-4866-b15f-113e63374c3b_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "732510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5zo8vpo2n2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/6be87a24-02fa-4866-b15f-113e63374c3b_image.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/6be87a24-02fa-4866-b15f-113e63374c3b_image.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6be87a24-02fa-4866-b15f-113e63374c3b_image.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "732510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:56 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs="
+        }
+      ]
+    },
+    {
       "Route": "uploads/6f35bc59-556e-4f9e-b485-09542a040b4a_BMW 320i Sedan.jpeg",
       "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6f35bc59-556e-4f9e-b485-09542a040b4a_BMW 320i Sedan.jpeg",
       "Selectors": [],
@@ -39826,6 +40675,88 @@
       ]
     },
     {
+      "Route": "uploads/76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.g8x1uqybej.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "739476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gDsSzcalLz6ZSMy3Evd+Ly1zdQ/2vYYLHHhJB7H1ASg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g8x1uqybej"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-gDsSzcalLz6ZSMy3Evd+Ly1zdQ/2vYYLHHhJB7H1ASg="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "739476"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"gDsSzcalLz6ZSMy3Evd+Ly1zdQ/2vYYLHHhJB7H1ASg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:15 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-gDsSzcalLz6ZSMy3Evd+Ly1zdQ/2vYYLHHhJB7H1ASg="
+        }
+      ]
+    },
+    {
       "Route": "uploads/782bcda2-8e6d-44c9-a2f2-61d816a24f5c.9j9yfmvt2h.png",
       "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\782bcda2-8e6d-44c9-a2f2-61d816a24f5c.png",
       "Selectors": [],
@@ -39986,6 +40917,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-L7RZOKCLdrqboteeRciq9vUmqhr7q3EGzs54iY1ltNE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.a6xvxifo9s.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:26:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "a6xvxifo9s"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "526544"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:26:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Tg079egC/EnkhXRKUOxgDv2HUqdQPoAT9BL9z0LOrjE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.ri5p6f1vgp.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477933"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ri5p6f1vgp"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Mxpo2PC6Hz02yNoi0IBTLEdxA0KXHaEydNaLpPDTa60="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.tyh8cti03w.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:37 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tyh8cti03w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
         }
       ]
     },
@@ -40396,6 +41573,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-a8iUEF1nD/N7Ek7YOVrqbfWtSC2BrYLBOY9hgIqoRQI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/8da941b0-6521-43a3-9770-dbd3449b0ffe.eo7xql93z2.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:42:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eo7xql93z2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "179865"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:42:17 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HsOu+8H2TBVGKqzD1mtBmi3m5kULVseIZYLccjcFMmU="
         }
       ]
     },
@@ -41052,6 +42311,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-8Slz9Pnaqjsp8wSSKF33TndLOTTruUXOGNCNo5f06F0="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oJ/fXySyV1hh8wlw22vrRAyIgs4YBM1caIQxZY5MebE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-oJ/fXySyV1hh8wlw22vrRAyIgs4YBM1caIQxZY5MebE="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.sd3q0jyriw.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "679814"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"oJ/fXySyV1hh8wlw22vrRAyIgs4YBM1caIQxZY5MebE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:21:43 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "sd3q0jyriw"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-oJ/fXySyV1hh8wlw22vrRAyIgs4YBM1caIQxZY5MebE="
         }
       ]
     },
@@ -41790,6 +43131,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-x/9bTPWOh5vMu0OVntrC9HKEJlP9BGRbK1b2oY1N2UY="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.rzaat9hwqk.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "121337"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:27:39 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rzaat9hwqk"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-J2eAFZV1mTE2mloWtF6SRRcmUOma1SnmZwyWU7yOnEs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.e3ap8iwr14.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "311164"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"prDtLp1ek0OFxK+d2n9wny0j+ZV9Nz4BaMhMqdxntrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:33:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "e3ap8iwr14"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-prDtLp1ek0OFxK+d2n9wny0j+ZV9Nz4BaMhMqdxntrI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "311164"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"prDtLp1ek0OFxK+d2n9wny0j+ZV9Nz4BaMhMqdxntrI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:33:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-prDtLp1ek0OFxK+d2n9wny0j+ZV9Nz4BaMhMqdxntrI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.tyh8cti03w.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10385"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:37:16 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tyh8cti03w"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Uywh1TUdIJPYhlvH95N6Idb5NLIcOIo7NracXWzFrc="
         }
       ]
     },
@@ -42614,6 +44201,88 @@
       ]
     },
     {
+      "Route": "uploads/e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.5nij5lmyx1.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:38:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5nij5lmyx1"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "477078"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:38:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-IV7i/GK9QhtP6sQUZQNVYSSLEavNYG9AC9MFdKAs2CI="
+        }
+      ]
+    },
+    {
       "Route": "uploads/e321b3a1-3f00-42e1-a96a-713f7aaafada_Vinfast Lux A2.0.jpeg",
       "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e321b3a1-3f00-42e1-a96a-713f7aaafada_Vinfast Lux A2.0.jpeg",
       "Selectors": [],
@@ -43348,6 +45017,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-2/pGZIPmIV+tEvkoFhhCKtJ3KbF0i9cscCnqR3jeXkQ="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.5zo8vpo2n2.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "732510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:20:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "5zo8vpo2n2"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png",
+      "AssetFile": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "732510"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 07:20:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-j0wQhiO9bRiYAwhKe/+WuPE0p9UDhSbUmLh+Rw215xs="
         }
       ]
     },

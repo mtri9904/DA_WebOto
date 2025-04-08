@@ -51,35 +51,39 @@
                         <button type="submit" class="btn btn-primary">Cập nhật</button>
                     </form>
                 <td>
-                        <!-- Nút Xem Chi Tiết -->
-                    <a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-info mt-2">Xem chi tiết</a>
-                    <a asp-action="Delete" asp-route-id="@order.OrderId" class="btn btn-danger">Xóa</a>
+                    <!-- Nút Xem Chi Tiết -->
+                    <a asp-action="Details" asp-route-id="@order.OrderId" class="btn btn-info btn-sm me-2">Xem chi tiết</a>
+                    <!-- Nút Xóa -->
+                    <a asp-action="Delete" asp-route-id="@order.OrderId" class="btn btn-danger btn-sm">Xóa</a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
+<style>
+    .table .status-processing {
+        color: orange !important;
+    }
 
-@section Styles {
-    <style>
-        .table .status-processing {
-            color: orange !important;
-        }
+    .table .status-completed {
+        color: green !important;
+    }
 
-        .table .status-completed {
-            color: green !important;
-        }
+    .table .status-failed {
+        color: red !important;
+    }
 
-        .table .status-failed {
-            color: red !important;
-        }
+    .table .status-pending {
+        color: gray !important;
+        font-style: italic;
+    }
+    /* Định dạng tùy chỉnh cho các nút hành động */
+    .table .btn {
+        width: 120px; /* Đặt chiều rộng cố định để đồng nhất */
+        text-align: center;
+    }
+</style>
 
-        .table .status-pending {
-            color: gray !important;
-            font-style: italic;
-        }
-    </style>
-}
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const successMessage = document.getElementById("successMessage");
