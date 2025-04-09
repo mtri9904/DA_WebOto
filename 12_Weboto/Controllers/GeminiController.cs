@@ -19,8 +19,7 @@ public class GeminiController : Controller
         return View();
     }
     [HttpPost]
-    public async Task<IActionResult> Chat([FromBody] ChatRequest
-request)
+    public async Task<IActionResult> Chat([FromBody] ChatRequest request)
     {
         if (string.IsNullOrEmpty(request?.Message))
         {

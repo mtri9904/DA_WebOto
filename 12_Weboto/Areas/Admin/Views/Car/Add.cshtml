@@ -6,8 +6,10 @@
 
 <div class="container mt-4">
     <h2 class="text-center text-primary">Thêm xe mới</h2>
+    <!-- Form để thêm xe mới, hỗ trợ upload file -->
     <form asp-action="Add" method="post" class="p-4 bg-light rounded shadow" enctype="multipart/form-data">
         <div class="row">
+            <!-- Cột Tổng quan -->
             <div class="col-md-6">
                 <h4 class="text-primary text-start">Tổng quan</h4>
                 <hr>
@@ -30,37 +32,37 @@
                 <input type="number" asp-for="SoChoNgoi" class="form-control" required min="1">
             </div>
 
-                <div class="col-md-6">
-                    <h4 class="text-primary text-start">Kĩ thuật</h4>
-                    <hr>
+            <!-- Cột Kĩ thuật -->
+            <div class="col-md-6">
+                <h4 class="text-primary text-start">Kĩ thuật</h4>
+                <hr>
                 <label class="form-label"><i class="fas fa-industry"></i> Hãng xe:</label>
                 <select asp-for="BrandId" class="form-control" asp-items="@ViewBag.HangXeList" required>
                     <option value="">-- Chọn hãng xe --</option>
                 </select>
                 <span asp-validation-for="BrandId" class="text-danger"></span>
 
+                <label class="form-label"><i class="fas fa-list"></i> Phiên bản:</label>
+                <input type="text" asp-for="PhienBan" class="form-control" required>
 
-                    <label class="form-label"><i class="fas fa-list"></i> Phiên bản:</label>
-                    <input type="text" asp-for="PhienBan" class="form-control" required>
+                <label class="form-label"><i class="fas fa-car-side"></i> Kiểu dáng:</label>
+                <input type="text" asp-for="KieuDang" class="form-control" required>
 
-                    <label class="form-label"><i class="fas fa-car-side"></i> Kiểu dáng:</label>
-                    <input type="text" asp-for="KieuDang" class="form-control" required>
+                <label class="form-label"><i class="fas fa-globe"></i> Xuất xứ:</label>
+                <input type="text" asp-for="XuatXu" class="form-control" required>
 
-                    <label class="form-label"><i class="fas fa-globe"></i> Xuất xứ:</label>
-                    <input type="text" asp-for="XuatXu" class="form-control" required>
+                <label class="form-label"><i class="fas fa-stream"></i> Dòng xe:</label>
+                <input type="text" asp-for="DongXe" class="form-control" required>
 
-                    <label class="form-label"><i class="fas fa-stream"></i> Dòng xe:</label>
-                    <input type="text" asp-for="DongXe" class="form-control" required>
+                <label class="form-label"><i class="fas fa-cogs"></i> Động cơ:</label>
+                <input type="text" asp-for="DongCo" class="form-control" required>
 
-                    <label class="form-label"><i class="fas fa-cogs"></i> Động cơ:</label>
-                    <input type="text" asp-for="DongCo" class="form-control" required>
-
-                    <label class="form-label"><i class="fas fa-cogs"></i> Hộp số:</label>
-                    <input type="text" asp-for="HopSo" class="form-control" required>
-                </div>
-
+                <label class="form-label"><i class="fas fa-cogs"></i> Hộp số:</label>
+                <input type="text" asp-for="HopSo" class="form-control" required>
             </div>
+        </div>
 
+        <!-- Kích thước & Trọng lượng -->
         <h4 class="text-primary mt-4">Kích thước & Trọng lượng</h4>
         <div class="row">
             <div class="col-md-4">
@@ -87,6 +89,7 @@
             </div>
         </div>
 
+        <!-- Mâm & Vành xe -->
         <h4 class="text-primary mt-4">Mâm & Vành xe</h4>
         <div class="row">
             <div class="col-md-6">
@@ -99,6 +102,7 @@
             </div>
         </div>
 
+        <!-- Mức tiêu thụ nhiên liệu -->
         <h4 class="text-primary mt-4">Mức tiêu thụ nhiên liệu</h4>
         <div class="row">
             <div class="col-md-6">
@@ -110,24 +114,29 @@
                 <input type="number" asp-for="MucTieuThuTrongDoThi" class="form-control" required step="0.1" min="1">
             </div>
         </div>
+
+        <!-- Trường chọn ảnh -->
         <div>
             <label>Chọn ảnh</label>
             <input type="file" id="imageInput" name="Images" multiple class="form-control" required />
         </div>
 
-        <!-- Hiển thị ảnh đã chọn -->
+        <!-- Khu vực hiển thị ảnh xem trước -->
         <div id="imagePreview" class="mt-3 d-flex flex-wrap"></div>
 
-
+        <!-- Mô tả -->
         <h4 class="text-primary mt-4">Mô tả</h4>
         <textarea asp-for="MoTa" class="form-control" rows="3"></textarea>
         <div asp-validation-summary="All" class="text-danger"></div>
 
+        <!-- Nút gửi form -->
         <button type="submit" class="btn btn-primary mt-4 w-100">Thêm xe</button>
-
     </form>
+    <!-- Nút quay lại -->
     <a asp-action="Index" class="btn btn-secondary mt-3">Quay lại</a>
 </div>
+
+<!-- Script để xử lý xem trước ảnh -->
 <script>
     let selectedFiles = []; // Mảng chứa danh sách các file đã chọn
 
@@ -135,7 +144,7 @@
         let imagePreview = document.getElementById('imagePreview');
         let files = Array.from(event.target.files);
 
-        // Thêm ảnh mới vào danh sách
+        // Thêm ảnh mới vào danh sách, tránh trùng lặp
         files.forEach((file) => {
             if (!selectedFiles.some(f => f.name === file.name)) {
                 selectedFiles.push(file);
@@ -162,7 +171,7 @@
                 img.style.height = '100px';
 
                 let removeBtn = document.createElement('button');
-                removeBtn.innerHTML = '&times;';
+                removeBtn.innerHTML = '×';
                 removeBtn.className = 'btn btn-danger btn-sm position-absolute top-0 end-0';
                 removeBtn.style.borderRadius = '50%';
                 removeBtn.style.padding = '2px 6px';
@@ -188,6 +197,3 @@
         document.getElementById('imageInput').files = dt.files;
     }
 </script>
-
-
-

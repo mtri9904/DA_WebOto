@@ -31,10 +31,12 @@
                     </div>
                     <div class="col-md-6">
                         <label for="BrandId" class="form-label fw-medium" style="color: #2C7A7B;">Hãng xe</label>
-                        <select asp-for="BrandId" class="form-select" asp-items="ViewBag.HangXeList" required>
+                        <select asp-for="BrandId" class="form-select" asp-items="ViewBag.BrandId" required>
                             <option value="">-- Chọn hãng xe --</option>
                         </select>
+                        <span asp-validation-for="BrandId" class="text-danger"></span>
                     </div>
+
                     <div class="col-md-6">
                         <label for="PhienBan" class="form-label fw-medium" style="color: #2C7A7B;">Phiên bản</label>
                         <input type="text" class="form-control" name="PhienBan" id="PhienBan"
@@ -95,6 +97,16 @@
                         <label for="HopSo" class="form-label fw-medium" style="color: #2C7A7B;">Hộp số</label>
                         <input type="text" class="form-control" name="HopSo" id="HopSo"
                                value="@Model.HopSo" required placeholder="Nhập loại hộp số">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="LopTruoc" class="form-label fw-medium" style="color: #2C7A7B;">Lốp trước</label>
+                        <input type="text" class="form-control" name="LopTruoc" id="LopTruoc"
+                               value="@Model.LopTruoc" required placeholder="Nhập kích thước lốp trước">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="LopSau" class="form-label fw-medium" style="color: #2C7A7B;">Lốp sau</label>
+                        <input type="text" class="form-control" name="LopSau" id="LopSau"
+                               value="@Model.LopSau" required placeholder="Nhập kích thước lốp sau">
                     </div>
                 </div>
             </div>
@@ -234,38 +246,63 @@
 </style>
 
 <script>
+    // Ghi chú: Khi tài liệu HTML được tải hoàn toàn, thực thi hàm này
     document.addEventListener("DOMContentLoaded", function () {
+        // Ghi chú: Lấy phần tử input file có tên "NewImages" để xử lý ảnh mới
         const fileInput = document.querySelector("input[name='NewImages']");
+        // Ghi chú: Lấy phần tử container để hiển thị ảnh xem trước
         const previewContainer = document.getElementById("previewContainer");
 
+        // Ghi chú: Thêm sự kiện "change" cho input file để xử lý khi người dùng chọn file
         fileInput.addEventListener("change", function (event) {
+            // Ghi chú: Xóa nội dung cũ trong container để hiển thị ảnh mới
             previewContainer.innerHTML = "";
+            // Ghi chú: Lấy danh sách các file mà người dùng đã chọn
             const files = event.target.files;
 
+            // Ghi chú: Lặp qua từng file trong danh sách
             for (let file of files) {
+                // Ghi chú: Kiểm tra nếu file tồn tại và là ảnh (bắt đầu bằng "image/")
                 if (file && file.type.startsWith("image/")) {
+                    // Ghi chú: Tạo một đối tượng FileReader để đọc nội dung file
                     const reader = new FileReader();
+                    // Ghi chú: Khi file được đọc xong, thực thi hàm này
                     reader.onload = function (e) {
+                        // Ghi chú: Tạo một div để chứa ảnh xem trước
                         const col = document.createElement("div");
+                        // Ghi chú: Gán lớp CSS cho div để định dạng (Bootstrap grid)
                         col.className = "col-md-3 mb-3";
+                        // Ghi chú: Tạo thẻ img để hiển thị ảnh
                         const img = document.createElement("img");
+                        // Ghi chú: Gán nguồn ảnh từ dữ liệu đã đọc (base64)
                         img.src = e.target.result;
+                        // Ghi chú: Gán các lớp CSS cho img để định dạng
                         img.className = "img-thumbnail rounded transition-hover w-100";
+                        // Ghi chú: Thêm thẻ img vào div
                         col.appendChild(img);
+                        // Ghi chú: Thêm div vào container để hiển thị
                         previewContainer.appendChild(col);
                     };
+                    // Ghi chú: Đọc file dưới dạng URL dữ liệu (base64)
                     reader.readAsDataURL(file);
                 }
             }
         });
 
+        // Ghi chú: Lấy tất cả các biểu mẫu có lớp "needs-validation"
         const forms = document.querySelectorAll('.needs-validation');
+        // Ghi chú: Chuyển danh sách forms thành mảng và lặp qua từng biểu mẫu
         Array.from(forms).forEach(form => {
+            // Ghi chú: Thêm sự kiện "submit" để kiểm tra tính hợp lệ khi gửi form
             form.addEventListener('submit', event => {
+                // Ghi chú: Nếu form không hợp lệ (các trường bắt buộc chưa điền)
                 if (!form.checkValidity()) {
+                    // Ghi chú: Ngăn việc gửi form
                     event.preventDefault();
+                    // Ghi chú: Ngăn sự kiện lan truyền lên các phần tử cha
                     event.stopPropagation();
                 }
+                // Ghi chú: Thêm lớp "was-validated" để hiển thị thông báo lỗi CSS
                 form.classList.add('was-validated');
             }, false);
         });

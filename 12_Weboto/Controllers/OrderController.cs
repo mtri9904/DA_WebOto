@@ -53,6 +53,12 @@ namespace _12_Weboto.Controllers
             if (user == null)
                 return RedirectToAction("Login", "Account");
 
+            // Kiểm tra nếu người dùng là admin
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                return Forbid(); // Chuyển hướng đến AccessDenied
+            }
+
             var orderId = "DH" + DateTime.Now.Ticks.ToString();
             ViewBag.CarId = carId;
             ViewBag.TenXe = car.TenXe;
@@ -77,6 +83,12 @@ namespace _12_Weboto.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
                 return RedirectToAction("Login", "Account");
+
+            // Kiểm tra nếu người dùng là admin
+            if (await _userManager.IsInRoleAsync(user, "Admin"))
+            {
+                return Forbid(); // Chuyển hướng đến AccessDenied
+            }
 
             var orderId = "DH" + Guid.NewGuid().ToString("N");
             var order = new MyOrder

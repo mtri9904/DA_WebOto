@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\00049de1-b334-4499-a91b-60ae0f272c84_Toyota Camry.jpg",
+      "PackagePath": "staticwebassets\\uploads\\00049de1-b334-4499-a91b-60ae0f272c84_Toyota Camry.jpg"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg",
       "PackagePath": "staticwebassets\\uploads\\00737f4c-9c42-41c6-9772-f3892282e226_BMW X7.jpeg"
     },
@@ -255,6 +259,22 @@
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg",
       "PackagePath": "staticwebassets\\uploads\\01dec1f6-1e72-4d96-9775-f00f66bd57fa.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\023bc30c-f092-437a-b242-dad27a2cb269_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\023bc30c-f092-437a-b242-dad27a2cb269_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\026d3eaf-0bf4-48d7-b986-8ce476528e51_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\026d3eaf-0bf4-48d7-b986-8ce476528e51_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\027c94fa-1523-477f-a0ca-c1eed32a2457_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\027c94fa-1523-477f-a0ca-c1eed32a2457_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\057246e3-857f-4ca9-b195-738331ab4ec9_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\057246e3-857f-4ca9-b195-738331ab4ec9_mceclip3.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\062aad99-4424-4189-be12-df2d210ed220_BMW X7.jpeg",
@@ -269,24 +289,64 @@
       "PackagePath": "staticwebassets\\uploads\\0953b623-049a-4f0b-869f-cfc01477d63f_xe 1.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\0bd1aaf3-cb8c-4384-93d7-6926e87abe3f_7.png",
+      "PackagePath": "staticwebassets\\uploads\\0bd1aaf3-cb8c-4384-93d7-6926e87abe3f_7.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\0eb804a7-dc87-4c4e-b5a1-fdd5ac3d3607_2015 AUDI A5 Black Edition Plus.jpeg",
       "PackagePath": "staticwebassets\\uploads\\0eb804a7-dc87-4c4e-b5a1-fdd5ac3d3607_2015 AUDI A5 Black Edition Plus.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\105882bb-3406-47f6-b0b0-ea28a144a62b_41.png",
+      "PackagePath": "staticwebassets\\uploads\\105882bb-3406-47f6-b0b0-ea28a144a62b_41.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1133989d-052f-42f6-8935-8f818d6a2ad1_8.png",
+      "PackagePath": "staticwebassets\\uploads\\1133989d-052f-42f6-8935-8f818d6a2ad1_8.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\123ee0a8-3329-43cc-8a6c-1eb8e521631f.png",
+      "PackagePath": "staticwebassets\\uploads\\123ee0a8-3329-43cc-8a6c-1eb8e521631f.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg",
       "PackagePath": "staticwebassets\\uploads\\12f48b9a-8562-4a8f-93b6-6eea96e23bd1.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1300178c-7c96-4a79-abbe-958127c60bcd_42.png",
+      "PackagePath": "staticwebassets\\uploads\\1300178c-7c96-4a79-abbe-958127c60bcd_42.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg",
       "PackagePath": "staticwebassets\\uploads\\133c2b6d-7ad8-455c-880a-e1276c22d0a4_tddv5.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\144b5525-61dc-423d-ba44-bafffe064bde_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\144b5525-61dc-423d-ba44-bafffe064bde_mceclip0.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\153f52fb-5201-4d02-ae91-4ea5ae1c467e.png",
       "PackagePath": "staticwebassets\\uploads\\153f52fb-5201-4d02-ae91-4ea5ae1c467e.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\16632529-1444-4786-99c5-da0face60deb_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\16632529-1444-4786-99c5-da0face60deb_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\171e3f28-36a1-4ba6-bbf7-8a191a76a18c_53.png",
+      "PackagePath": "staticwebassets\\uploads\\171e3f28-36a1-4ba6-bbf7-8a191a76a18c_53.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif",
       "PackagePath": "staticwebassets\\uploads\\19b27d7c-3e74-40fc-b425-f3b78720973d_xe 3.avif"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\19d275be-79ae-4934-b2e7-9a331246a0b1_blobid1.png",
+      "PackagePath": "staticwebassets\\uploads\\19d275be-79ae-4934-b2e7-9a331246a0b1_blobid1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a20a946-5576-4e0c-b555-fcbc6723f24e_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\1a20a946-5576-4e0c-b555-fcbc6723f24e_mceclip2.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a6cfe93-5518-4010-9839-cf6a99e2596e_image.png",
@@ -297,20 +357,88 @@
       "PackagePath": "staticwebassets\\uploads\\1a7557d7-82d3-4020-83bb-542a3810f37e_2.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1a9a1df9-5553-4acb-a5a3-3e505d742f44_12.png",
+      "PackagePath": "staticwebassets\\uploads\\1a9a1df9-5553-4acb-a5a3-3e505d742f44_12.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1ad98f38-7e68-49d8-b3a9-513233641b1c_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\1ad98f38-7e68-49d8-b3a9-513233641b1c_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1ba95ad3-71d3-4831-9122-844b99c6ef68_48.png",
+      "PackagePath": "staticwebassets\\uploads\\1ba95ad3-71d3-4831-9122-844b99c6ef68_48.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1c227fc0-a523-4790-b003-a76ae29b7e9d_BMW X7.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\1c227fc0-a523-4790-b003-a76ae29b7e9d_BMW X7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1e2effcd-d807-4c61-b0a0-07fdabdbc844_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\1e2effcd-d807-4c61-b0a0-07fdabdbc844_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1e9cb068-7fd5-4c68-9b99-3ad718f9760d_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\1e9cb068-7fd5-4c68-9b99-3ad718f9760d_mceclip1.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png",
       "PackagePath": "staticwebassets\\uploads\\1eb05649-1665-47c6-b907-158142a7ea11_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\1ff3bebd-6a92-46cd-9abb-42e66fe4c011_15.png",
+      "PackagePath": "staticwebassets\\uploads\\1ff3bebd-6a92-46cd-9abb-42e66fe4c011_15.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\21d7f054-d990-4f62-ab1d-78ab0c68533b_Mercedes SLK 350.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\21d7f054-d990-4f62-ab1d-78ab0c68533b_Mercedes SLK 350.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\23cbb8c7-e6ad-4e5a-8a0a-36f2bbe8dd50_52.png",
+      "PackagePath": "staticwebassets\\uploads\\23cbb8c7-e6ad-4e5a-8a0a-36f2bbe8dd50_52.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\23e3eba7-00e9-41ee-b43e-8e9cc127f9a1_blobid3.png",
+      "PackagePath": "staticwebassets\\uploads\\23e3eba7-00e9-41ee-b43e-8e9cc127f9a1_blobid3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\25fdf5aa-efc5-4100-9ba8-11425ed8c621_26.png",
+      "PackagePath": "staticwebassets\\uploads\\25fdf5aa-efc5-4100-9ba8-11425ed8c621_26.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\27bd153f-6ebd-4473-b0a3-9457f157fc16.png",
       "PackagePath": "staticwebassets\\uploads\\27bd153f-6ebd-4473-b0a3-9457f157fc16.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2847aca4-4456-4b12-b83c-cdfa00e712e9_15.png",
+      "PackagePath": "staticwebassets\\uploads\\2847aca4-4456-4b12-b83c-cdfa00e712e9_15.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\290f9889-e946-422e-8293-39a9e3829da3_3.png",
       "PackagePath": "staticwebassets\\uploads\\290f9889-e946-422e-8293-39a9e3829da3_3.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\29e54cfa-92a8-4aea-ac2e-4e0eb4c72015_Toyota Corolla Hatchback SE MT 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\29e54cfa-92a8-4aea-ac2e-4e0eb4c72015_Toyota Corolla Hatchback SE MT 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2bba6aa9-bebb-4417-937c-e4c2b321995f_Vinfast VF8.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\2bba6aa9-bebb-4417-937c-e4c2b321995f_Vinfast VF8.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg",
       "PackagePath": "staticwebassets\\uploads\\2f5c5ffd-9d30-4709-8d13-1b7e92f9f289_2014 BMW 320d GT M Sport Automatic.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\30b74e65-6220-410f-bd06-411eae74715b_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\30b74e65-6220-410f-bd06-411eae74715b_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\30d1ee0a-be6a-4033-9e75-58cfaca01f41_Hyundai Santa Fe.jpg",
+      "PackagePath": "staticwebassets\\uploads\\30d1ee0a-be6a-4033-9e75-58cfaca01f41_Hyundai Santa Fe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3139b4a4-766b-4c19-96ee-29f89b8c21db_10.png",
+      "PackagePath": "staticwebassets\\uploads\\3139b4a4-766b-4c19-96ee-29f89b8c21db_10.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\32a9879f-3144-4c6d-9265-b51c5a29e10c_mceclip0.png",
@@ -325,12 +453,52 @@
       "PackagePath": "staticwebassets\\uploads\\3393b289-0732-4e9d-b068-aefac796d7ef_xe2.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\35f5a5b8-8ef4-470d-9cac-4b54d077d8b1.png",
+      "PackagePath": "staticwebassets\\uploads\\35f5a5b8-8ef4-470d-9cac-4b54d077d8b1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\36247a80-72d7-46f0-86dc-381ae444c8e2_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\36247a80-72d7-46f0-86dc-381ae444c8e2_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\36e9235c-c2e2-493a-a9bb-44a14bc428ad_9.png",
+      "PackagePath": "staticwebassets\\uploads\\36e9235c-c2e2-493a-a9bb-44a14bc428ad_9.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3706ea33-0f4f-4947-9746-47a845fb42a5_mceclip4.png",
+      "PackagePath": "staticwebassets\\uploads\\3706ea33-0f4f-4947-9746-47a845fb42a5_mceclip4.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3820b7f7-bbac-4208-9054-bc6e10245a44_9.png",
+      "PackagePath": "staticwebassets\\uploads\\3820b7f7-bbac-4208-9054-bc6e10245a44_9.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg",
       "PackagePath": "staticwebassets\\uploads\\394bb004-8274-4b92-a117-207ccbe35ea8.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\39a8a7c9-1294-4eb6-ba31-909a341cafb8_14.png",
+      "PackagePath": "staticwebassets\\uploads\\39a8a7c9-1294-4eb6-ba31-909a341cafb8_14.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3a5f019a-50c9-4024-8982-6a92262a8a6a_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\3a5f019a-50c9-4024-8982-6a92262a8a6a_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3b59517a-65d6-4c39-ba91-bc868582f5cf_16.png",
+      "PackagePath": "staticwebassets\\uploads\\3b59517a-65d6-4c39-ba91-bc868582f5cf_16.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3bbb67fa-082a-4a9f-8dcb-6d9324d001cd_32.png",
+      "PackagePath": "staticwebassets\\uploads\\3bbb67fa-082a-4a9f-8dcb-6d9324d001cd_32.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png",
       "PackagePath": "staticwebassets\\uploads\\3cb70f82-b050-423a-b6ea-279a44146446_image.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3cc01910-f7a0-4bf6-8c0b-c071f6571b89_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\3cc01910-f7a0-4bf6-8c0b-c071f6571b89_mceclip3.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\3e8cf354-8e37-4f85-8351-4194164b87d9.png",
@@ -341,16 +509,72 @@
       "PackagePath": "staticwebassets\\uploads\\40b0228b-db3c-429c-9d6b-03a5b5e61893.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4257bb01-1970-4428-b9fb-e918c7bc3744_43.png",
+      "PackagePath": "staticwebassets\\uploads\\4257bb01-1970-4428-b9fb-e918c7bc3744_43.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png",
       "PackagePath": "staticwebassets\\uploads\\426afe38-cc81-4b30-be62-4aa181ce5f10_gt.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\42f06edf-5d1f-4b15-aa96-900a5583c31d_22.png",
+      "PackagePath": "staticwebassets\\uploads\\42f06edf-5d1f-4b15-aa96-900a5583c31d_22.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\44398ab9-2841-4240-933b-1b424e24ccbe_49.png",
+      "PackagePath": "staticwebassets\\uploads\\44398ab9-2841-4240-933b-1b424e24ccbe_49.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\44db70df-1404-45d1-a7b6-e9f9025957d3_4.png",
+      "PackagePath": "staticwebassets\\uploads\\44db70df-1404-45d1-a7b6-e9f9025957d3_4.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\470995a2-451c-4561-b0c8-652ffb298395.jpg",
+      "PackagePath": "staticwebassets\\uploads\\470995a2-451c-4561-b0c8-652ffb298395.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\47d34940-5377-4847-bf82-042144f899e9_mceclip4.png",
+      "PackagePath": "staticwebassets\\uploads\\47d34940-5377-4847-bf82-042144f899e9_mceclip4.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg",
       "PackagePath": "staticwebassets\\uploads\\4c19eaa0-4ae7-4341-bf67-a310e5c72012_xe 1.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4d06f19d-181e-4d99-b107-88ba81286e96_Hyundai Tucson 4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\4d06f19d-181e-4d99-b107-88ba81286e96_Hyundai Tucson 4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4dedbb8c-d552-4e62-9144-cce0f57c2c70_Toyota Corolla Hatchback SE MT.png",
+      "PackagePath": "staticwebassets\\uploads\\4dedbb8c-d552-4e62-9144-cce0f57c2c70_Toyota Corolla Hatchback SE MT.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4eace5d4-836e-43ba-9ade-d4b25909a70e_tddv6.jpeg",
       "PackagePath": "staticwebassets\\uploads\\4eace5d4-836e-43ba-9ade-d4b25909a70e_tddv6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\4eb1caa8-da99-41b5-94bf-19dc5c3451a3_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\4eb1caa8-da99-41b5-94bf-19dc5c3451a3_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\50c7935e-19b0-47ea-9997-b93d014dfee2_21.png",
+      "PackagePath": "staticwebassets\\uploads\\50c7935e-19b0-47ea-9997-b93d014dfee2_21.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\51c98314-f56c-4d93-ae59-f7e4609f0d91_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\51c98314-f56c-4d93-ae59-f7e4609f0d91_mceclip3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\528a3972-58fc-4128-b557-9db2c004c9bb_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\528a3972-58fc-4128-b557-9db2c004c9bb_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\52995bdd-8f8e-4c14-b34e-b1d99f54dd01.png",
+      "PackagePath": "staticwebassets\\uploads\\52995bdd-8f8e-4c14-b34e-b1d99f54dd01.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\52a0ca3e-3033-4303-b481-3fa06a35f151_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\52a0ca3e-3033-4303-b481-3fa06a35f151_mceclip2.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\534947e0-2e72-4025-a2ce-6a469fe51fca_Vinfast VF8.jpeg",
@@ -365,8 +589,16 @@
       "PackagePath": "staticwebassets\\uploads\\54daa7a9-3c63-4e48-8185-be8cb1b0cb63.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\54ffd177-8acf-4298-a5d9-9129707cbadc_12.png",
+      "PackagePath": "staticwebassets\\uploads\\54ffd177-8acf-4298-a5d9-9129707cbadc_12.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5514aaf0-1b45-4bd6-b9ef-4d77739046a6_2015 AUDI A5 Black Edition Plus.jpeg",
       "PackagePath": "staticwebassets\\uploads\\5514aaf0-1b45-4bd6-b9ef-4d77739046a6_2015 AUDI A5 Black Edition Plus.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\55a61102-e8a4-4ead-a698-28b8d359b690_blobid0.png",
+      "PackagePath": "staticwebassets\\uploads\\55a61102-e8a4-4ead-a698-28b8d359b690_blobid0.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\56e1e60c-d3a0-457d-80bd-179fa0628f66.png",
@@ -377,8 +609,28 @@
       "PackagePath": "staticwebassets\\uploads\\56e1ebd7-9aab-4f4b-8684-6363551979ec_2014 BMW 320d GT M Sport Automatic.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\57a8a6c5-cb21-49a6-bfe9-536ddd5c8c36_mceclip4.png",
+      "PackagePath": "staticwebassets\\uploads\\57a8a6c5-cb21-49a6-bfe9-536ddd5c8c36_mceclip4.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\58885766-b30a-4b52-a9ff-210fa444f97e_51.png",
+      "PackagePath": "staticwebassets\\uploads\\58885766-b30a-4b52-a9ff-210fa444f97e_51.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\589d62dc-9ca9-4516-afd3-940cbfa25ecf_18.png",
+      "PackagePath": "staticwebassets\\uploads\\589d62dc-9ca9-4516-afd3-940cbfa25ecf_18.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\59ab637f-646f-4363-80cd-f0013c3951dd_3.png",
       "PackagePath": "staticwebassets\\uploads\\59ab637f-646f-4363-80cd-f0013c3951dd_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\59be626a-d355-4fd7-9506-ed78458b7390_47.png",
+      "PackagePath": "staticwebassets\\uploads\\59be626a-d355-4fd7-9506-ed78458b7390_47.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5a7155cd-6d45-4d14-b68b-c9709941244e_34.png",
+      "PackagePath": "staticwebassets\\uploads\\5a7155cd-6d45-4d14-b68b-c9709941244e_34.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5a829c5c-265c-4c88-bb96-dedb8590aec8.png",
@@ -389,8 +641,36 @@
       "PackagePath": "staticwebassets\\uploads\\5bc8c194-6005-40c4-9689-ca1df8252e84_blobid1.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5c776a9c-4e33-4e92-a9f1-da36ae4bc73f_27.png",
+      "PackagePath": "staticwebassets\\uploads\\5c776a9c-4e33-4e92-a9f1-da36ae4bc73f_27.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5ceed02d-c30c-4270-8422-eb9a8f26e3db_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\5ceed02d-c30c-4270-8422-eb9a8f26e3db_mceclip3.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg",
       "PackagePath": "staticwebassets\\uploads\\5dc5e0e4-295e-4d1b-84b3-48ff35232b68_tddv6.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5e3b08ff-27d2-429d-8e73-5e714fffac39_17.png",
+      "PackagePath": "staticwebassets\\uploads\\5e3b08ff-27d2-429d-8e73-5e714fffac39_17.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5e42a6a5-ef0f-4d40-a20b-890b14e53ec9_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\5e42a6a5-ef0f-4d40-a20b-890b14e53ec9_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\5f056785-5c20-42ea-a1a4-19da3f7dd28d_24.png",
+      "PackagePath": "staticwebassets\\uploads\\5f056785-5c20-42ea-a1a4-19da3f7dd28d_24.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\610ec9e4-8e0b-46d2-97f7-8eaab887e6b0_Toyota Camry 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\610ec9e4-8e0b-46d2-97f7-8eaab887e6b0_Toyota Camry 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\617fe132-aef1-4bc7-abdb-a3a4b42e2271_2014 BMW 320i GT M Sport Automatic.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\617fe132-aef1-4bc7-abdb-a3a4b42e2271_2014 BMW 320i GT M Sport Automatic.jpeg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\61aa15ba-ca3e-4d5b-8cef-2166e33fe13f.png",
@@ -403,6 +683,10 @@
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\620e9031-a2c3-42ca-8beb-6ff5bb885754_Vinfast VF8.jpeg",
       "PackagePath": "staticwebassets\\uploads\\620e9031-a2c3-42ca-8beb-6ff5bb885754_Vinfast VF8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\62dc92e3-01f8-4958-b86a-9791c06f0ff1_mceclip4.png",
+      "PackagePath": "staticwebassets\\uploads\\62dc92e3-01f8-4958-b86a-9791c06f0ff1_mceclip4.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\63282c3e-9ea8-4777-a592-e24251f80858.png",
@@ -425,6 +709,10 @@
       "PackagePath": "staticwebassets\\uploads\\65d87231-b9dc-402a-9087-912e02cbaee2_3.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6869645e-dc92-4582-b5ac-92ff43cdfe3a_20.png",
+      "PackagePath": "staticwebassets\\uploads\\6869645e-dc92-4582-b5ac-92ff43cdfe3a_20.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\69c299c8-1e35-42be-be10-af42049b151d_mceclip0.png",
       "PackagePath": "staticwebassets\\uploads\\69c299c8-1e35-42be-be10-af42049b151d_mceclip0.png"
     },
@@ -433,8 +721,40 @@
       "PackagePath": "staticwebassets\\uploads\\6be87a24-02fa-4866-b15f-113e63374c3b_image.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6bff0c46-7af0-4613-b10f-be6b545fe64f_Hyundai Santa Fe 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6bff0c46-7af0-4613-b10f-be6b545fe64f_Hyundai Santa Fe 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6c793b80-1d06-419f-b28d-9bd359b7b791_20.png",
+      "PackagePath": "staticwebassets\\uploads\\6c793b80-1d06-419f-b28d-9bd359b7b791_20.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6c8efc08-64ae-4b66-af12-77cc50a62733_11.png",
+      "PackagePath": "staticwebassets\\uploads\\6c8efc08-64ae-4b66-af12-77cc50a62733_11.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6d2de7c9-f8e2-489a-aed4-d3f32fb8d58c_19.png",
+      "PackagePath": "staticwebassets\\uploads\\6d2de7c9-f8e2-489a-aed4-d3f32fb8d58c_19.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6dc6fa5f-c648-4465-9b74-46b3475c088f_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\6dc6fa5f-c648-4465-9b74-46b3475c088f_mceclip1.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6f35bc59-556e-4f9e-b485-09542a040b4a_BMW 320i Sedan.jpeg",
       "PackagePath": "staticwebassets\\uploads\\6f35bc59-556e-4f9e-b485-09542a040b4a_BMW 320i Sedan.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6f44a587-d9e0-4d43-9415-bef502b257fc.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6f44a587-d9e0-4d43-9415-bef502b257fc.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\6f659e56-fe35-45ee-8d72-01edf5f81e94_Mitsubishi Triton 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\6f659e56-fe35-45ee-8d72-01edf5f81e94_Mitsubishi Triton 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7073354c-a8a8-4de7-9fc2-c652d2eb329a_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\7073354c-a8a8-4de7-9fc2-c652d2eb329a_mceclip0.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\70b306de-ad05-4959-838d-95f6ef124763.jpeg",
@@ -445,12 +765,24 @@
       "PackagePath": "staticwebassets\\uploads\\762b298c-6f60-4bee-acdf-0027236faf7f.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\769c90db-a10d-4e14-8353-6d1112199533_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\769c90db-a10d-4e14-8353-6d1112199533_mceclip0.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png",
       "PackagePath": "staticwebassets\\uploads\\76a5c763-5355-48d0-9a3c-76f9359e897b_mceclip1.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\77a7f9f1-fc0c-49e0-a859-f9a63ca4f500_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\77a7f9f1-fc0c-49e0-a859-f9a63ca4f500_mceclip0.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\782bcda2-8e6d-44c9-a2f2-61d816a24f5c.png",
       "PackagePath": "staticwebassets\\uploads\\782bcda2-8e6d-44c9-a2f2-61d816a24f5c.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\79e48150-e35d-49fb-9518-5fb5018f10c8_4.png",
+      "PackagePath": "staticwebassets\\uploads\\79e48150-e35d-49fb-9518-5fb5018f10c8_4.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7a4385c0-3eed-4d1e-ad5e-8fabd38adce6.png",
@@ -461,8 +793,20 @@
       "PackagePath": "staticwebassets\\uploads\\7b99a6cd-2802-45d6-a701-4b423c02d59a_mceclip0.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7bc745db-b57c-4d7d-a2be-b0f53d927e3d.png",
+      "PackagePath": "staticwebassets\\uploads\\7bc745db-b57c-4d7d-a2be-b0f53d927e3d.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png",
       "PackagePath": "staticwebassets\\uploads\\7d1ca167-0202-4add-892c-0cf4b5ca7edb_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7e29a9ac-8c2b-4a89-a223-441f069521f0_8.png",
+      "PackagePath": "staticwebassets\\uploads\\7e29a9ac-8c2b-4a89-a223-441f069521f0_8.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\7ecc7a30-b4dd-4284-b9c6-3a447f84eb77.png",
+      "PackagePath": "staticwebassets\\uploads\\7ecc7a30-b4dd-4284-b9c6-3a447f84eb77.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\800fcefa-23af-4782-98d3-92cecf531a06_BMW 320i Sedan.jpeg",
@@ -477,24 +821,64 @@
       "PackagePath": "staticwebassets\\uploads\\838322c4-8a23-4b3a-bf77-b8edd1a7a09f.jpg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8489c315-9321-423c-814e-c057a58e5214_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\8489c315-9321-423c-814e-c057a58e5214_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\84a70d9e-6f61-4c70-8dbf-c7a18dd47ab4_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\84a70d9e-6f61-4c70-8dbf-c7a18dd47ab4_mceclip1.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\84c00913-d753-4047-98ea-d5076e915371.png",
       "PackagePath": "staticwebassets\\uploads\\84c00913-d753-4047-98ea-d5076e915371.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\84fefcc8-65d2-4b4c-be2b-fc2b14bb2372_28.png",
+      "PackagePath": "staticwebassets\\uploads\\84fefcc8-65d2-4b4c-be2b-fc2b14bb2372_28.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\857507e8-cca3-4273-9d31-74403da0fd27_16.png",
+      "PackagePath": "staticwebassets\\uploads\\857507e8-cca3-4273-9d31-74403da0fd27_16.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\86ac55a9-aae1-4446-a7f0-be63b2474c5a_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\86ac55a9-aae1-4446-a7f0-be63b2474c5a_mceclip1.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\893a9387-dd27-45d3-8e7d-97cc4f641121_tddv5.jpeg",
       "PackagePath": "staticwebassets\\uploads\\893a9387-dd27-45d3-8e7d-97cc4f641121_tddv5.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\89721431-8b34-4a36-b7c6-9a6af3707a41_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\89721431-8b34-4a36-b7c6-9a6af3707a41_mceclip3.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8b0e41bd-1e88-4ecb-b07a-62ad23ab7f27.png",
       "PackagePath": "staticwebassets\\uploads\\8b0e41bd-1e88-4ecb-b07a-62ad23ab7f27.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8c6a7e42-abe1-4ccb-ba87-591aad98fd03_Mitsubishi Triton.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8c6a7e42-abe1-4ccb-ba87-591aad98fd03_Mitsubishi Triton.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8cf21555-fb5d-4c05-bea4-9e62924076c8_38.png",
+      "PackagePath": "staticwebassets\\uploads\\8cf21555-fb5d-4c05-bea4-9e62924076c8_38.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg",
       "PackagePath": "staticwebassets\\uploads\\8da941b0-6521-43a3-9770-dbd3449b0ffe.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\8f5ff372-b6a0-4236-8e2f-12833dfe700a_Hyundai Santa Fe 3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\8f5ff372-b6a0-4236-8e2f-12833dfe700a_Hyundai Santa Fe 3.jpg"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg",
       "PackagePath": "staticwebassets\\uploads\\90e74ea7-e904-49d1-ab7c-7e934ede3895_butbi.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\914a9e8e-a664-4460-9686-5256a4a05a4c_7.png",
+      "PackagePath": "staticwebassets\\uploads\\914a9e8e-a664-4460-9686-5256a4a05a4c_7.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\939b4b0b-a880-4be3-abe2-3f6e37c50980.jpeg",
@@ -505,12 +889,64 @@
       "PackagePath": "staticwebassets\\uploads\\9432299f-d3c6-4cc3-b076-94eedc19465f_2015 AUDI A5 Black Edition Plus.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\94910415-1faa-415d-8f0d-ac1b44ef2c08_1.png",
+      "PackagePath": "staticwebassets\\uploads\\94910415-1faa-415d-8f0d-ac1b44ef2c08_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\96b587e8-3385-4fc0-a49f-19cfd1a306b7.jpg",
+      "PackagePath": "staticwebassets\\uploads\\96b587e8-3385-4fc0-a49f-19cfd1a306b7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\973001ed-9c2c-4f21-a27b-00580f2879b9.jpg",
+      "PackagePath": "staticwebassets\\uploads\\973001ed-9c2c-4f21-a27b-00580f2879b9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\973a25ed-ce00-4a6f-b2b5-2f140b37590c.png",
+      "PackagePath": "staticwebassets\\uploads\\973a25ed-ce00-4a6f-b2b5-2f140b37590c.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\97715791-3787-4c43-b329-3cd4c5c3a7ea_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\97715791-3787-4c43-b329-3cd4c5c3a7ea_mceclip0.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9965c9b1-7bf2-403e-b343-e86cbb151a5b.jpeg",
       "PackagePath": "staticwebassets\\uploads\\9965c9b1-7bf2-403e-b343-e86cbb151a5b.jpeg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9981d5fe-f0cb-4973-86d9-619494b38508_vinfast VF8.jpeg",
       "PackagePath": "staticwebassets\\uploads\\9981d5fe-f0cb-4973-86d9-619494b38508_vinfast VF8.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9bf0e240-2fe6-4213-80b4-79ae85812f3f_33.png",
+      "PackagePath": "staticwebassets\\uploads\\9bf0e240-2fe6-4213-80b4-79ae85812f3f_33.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9c771936-14e9-49f9-ae61-13a8a718eedd_10.png",
+      "PackagePath": "staticwebassets\\uploads\\9c771936-14e9-49f9-ae61-13a8a718eedd_10.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9cc025c0-0265-4d79-bd8d-bc8820ffe2f8_25.png",
+      "PackagePath": "staticwebassets\\uploads\\9cc025c0-0265-4d79-bd8d-bc8820ffe2f8_25.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9d28d585-6fc6-44ea-826d-453d3c98a436_13.png",
+      "PackagePath": "staticwebassets\\uploads\\9d28d585-6fc6-44ea-826d-453d3c98a436_13.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9e818dac-c6d9-4680-9daa-c3c09d3b4414_mceclip4.png",
+      "PackagePath": "staticwebassets\\uploads\\9e818dac-c6d9-4680-9daa-c3c09d3b4414_mceclip4.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9ec660e3-f41a-4eb8-ad2d-67ddf696fed9_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\9ec660e3-f41a-4eb8-ad2d-67ddf696fed9_mceclip3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9f770df4-3436-4725-a392-8b3cfd6de742_29.png",
+      "PackagePath": "staticwebassets\\uploads\\9f770df4-3436-4725-a392-8b3cfd6de742_29.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\9fa3294b-2cba-4df4-a41d-25075f90823e_Mitsubishi Triton GLX 4x2 MT 3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\9fa3294b-2cba-4df4-a41d-25075f90823e_Mitsubishi Triton GLX 4x2 MT 3.jpg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\Logo_12.png",
@@ -525,24 +961,108 @@
       "PackagePath": "staticwebassets\\uploads\\a4c721bf-2cd5-4886-b36e-afce3f9fc6da_Mercedes SLK 350 - Copy.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\a55fb0a5-dc16-4334-b9ca-b7c77d67bdfa_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\a55fb0a5-dc16-4334-b9ca-b7c77d67bdfa_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\a7ac42be-c2a5-4d36-9285-42f4df7a8e82_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\a7ac42be-c2a5-4d36-9285-42f4df7a8e82_mceclip1.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\a900b7b4-c596-44f9-a774-a519aa21c98c.png",
       "PackagePath": "staticwebassets\\uploads\\a900b7b4-c596-44f9-a774-a519aa21c98c.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\a9fc69f4-653b-4cd3-9b63-adb5b741dfdf_13.png",
+      "PackagePath": "staticwebassets\\uploads\\a9fc69f4-653b-4cd3-9b63-adb5b741dfdf_13.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ab247c10-e243-4d0f-9cb8-3bfe341d1786.png",
+      "PackagePath": "staticwebassets\\uploads\\ab247c10-e243-4d0f-9cb8-3bfe341d1786.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ac44e9e8-e29f-43ca-b5e2-fd6e1beb48c3_Mitsubishi Triton GLX 4x2 MT 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ac44e9e8-e29f-43ca-b5e2-fd6e1beb48c3_Mitsubishi Triton GLX 4x2 MT 2.jpg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png",
       "PackagePath": "staticwebassets\\uploads\\ac8c2a4a-2613-42f2-8f17-c2f07a7dcc51_2.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\aca14cb2-9551-4177-b4c0-27b8dc88df36_Vinfast Lux A2.0.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\aca14cb2-9551-4177-b4c0-27b8dc88df36_Vinfast Lux A2.0.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png",
       "PackagePath": "staticwebassets\\uploads\\b1266fdf-aeac-4b9a-8d84-b172e2f3ec9d_mceclip2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b24b6743-d38e-4195-8745-01c5043226d3_Hyundai Tucson 2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b24b6743-d38e-4195-8745-01c5043226d3_Hyundai Tucson 2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b2afa94e-5d4b-4c2b-9d25-795170ffcb1e_30.png",
+      "PackagePath": "staticwebassets\\uploads\\b2afa94e-5d4b-4c2b-9d25-795170ffcb1e_30.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b3bf6f8c-8382-47d6-8eaf-0604623e991e_44.png",
+      "PackagePath": "staticwebassets\\uploads\\b3bf6f8c-8382-47d6-8eaf-0604623e991e_44.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg",
       "PackagePath": "staticwebassets\\uploads\\b3df8220-01fd-40b2-bedd-6c60a0f40048_BMW X7.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b4aedbb4-1b0e-41b8-9bbe-bf1c1ca92e43_36.png",
+      "PackagePath": "staticwebassets\\uploads\\b4aedbb4-1b0e-41b8-9bbe-bf1c1ca92e43_36.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b4bc7f7b-0858-493d-9f05-957a411d6aba_21.png",
+      "PackagePath": "staticwebassets\\uploads\\b4bc7f7b-0858-493d-9f05-957a411d6aba_21.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b4bc811e-96eb-4f26-b5ba-d440ba5b11e7_mceclip1.png",
       "PackagePath": "staticwebassets\\uploads\\b4bc811e-96eb-4f26-b5ba-d440ba5b11e7_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b4f3ba27-5038-4512-9161-94547ddff3fe_Mitsubishi Triton GLX 4x2 MT.jpg",
+      "PackagePath": "staticwebassets\\uploads\\b4f3ba27-5038-4512-9161-94547ddff3fe_Mitsubishi Triton GLX 4x2 MT.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b8f9384c-1627-4cca-99ac-3ae19934c905_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\b8f9384c-1627-4cca-99ac-3ae19934c905_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\b9e918ec-80d3-4c66-9ae0-7c4eda10e409_6.png",
+      "PackagePath": "staticwebassets\\uploads\\b9e918ec-80d3-4c66-9ae0-7c4eda10e409_6.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ba21241c-7ec4-4287-85a5-f80dee9d976d_28.png",
+      "PackagePath": "staticwebassets\\uploads\\ba21241c-7ec4-4287-85a5-f80dee9d976d_28.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ba386d53-40fa-4bfe-bc68-b7a9dbec0ff6_Hyundai Tucson 3.jpg",
+      "PackagePath": "staticwebassets\\uploads\\ba386d53-40fa-4bfe-bc68-b7a9dbec0ff6_Hyundai Tucson 3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\bc4a01fd-5cac-4bc2-99ed-41df2b89496a_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\bc4a01fd-5cac-4bc2-99ed-41df2b89496a_mceclip3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\bd73e219-2aee-477b-9e85-ecf885a28e8e_45.png",
+      "PackagePath": "staticwebassets\\uploads\\bd73e219-2aee-477b-9e85-ecf885a28e8e_45.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\bd9c7f6b-5980-4fb4-87c4-558031c7c4fa_2015 AUDI A5 Black Edition Plus.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\bd9c7f6b-5980-4fb4-87c4-558031c7c4fa_2015 AUDI A5 Black Edition Plus.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\bed47483-857f-430c-8c8d-daab81659a2f_3.png",
+      "PackagePath": "staticwebassets\\uploads\\bed47483-857f-430c-8c8d-daab81659a2f_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\bf5bb851-d437-45db-ad69-c9d62971a57a_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\bf5bb851-d437-45db-ad69-c9d62971a57a_mceclip0.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c089bff8-4a62-48f7-858f-ff36fdf2f788_tddv4.jpeg",
@@ -551,6 +1071,14 @@
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c4947086-d68c-4385-9340-54ec53b76d9a_1.png",
       "PackagePath": "staticwebassets\\uploads\\c4947086-d68c-4385-9340-54ec53b76d9a_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c4aec6e3-aee0-4d05-b0d7-fba92c7d0c21_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\c4aec6e3-aee0-4d05-b0d7-fba92c7d0c21_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c4cf276b-16e1-4a01-87a1-b1e4fcd95902_39.png",
+      "PackagePath": "staticwebassets\\uploads\\c4cf276b-16e1-4a01-87a1-b1e4fcd95902_39.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c5051f22-77f2-44c8-be61-0834f6ddf095_2.png",
@@ -565,8 +1093,16 @@
       "PackagePath": "staticwebassets\\uploads\\c77e5103-e6d0-4a9d-a918-b92494f352f3_Vinfast VF8.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c8b0e492-5536-4df9-94c0-67505a36514d_6.png",
+      "PackagePath": "staticwebassets\\uploads\\c8b0e492-5536-4df9-94c0-67505a36514d_6.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c8cdbb7d-7113-48a9-9efa-4048762f43ad_vinfast Lux A2.0.jpeg",
       "PackagePath": "staticwebassets\\uploads\\c8cdbb7d-7113-48a9-9efa-4048762f43ad_vinfast Lux A2.0.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\c97d6075-4f75-4862-8ce5-806eb702123d_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\c97d6075-4f75-4862-8ce5-806eb702123d_mceclip2.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca27bafa-7f30-42c2-98e7-c66f5ae71068_blobid0.png",
@@ -577,8 +1113,20 @@
       "PackagePath": "staticwebassets\\uploads\\ca8ba3b9-2da7-4cc4-8276-57b38e314dde_mceclip2.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca8d50af-d3ae-41bf-9020-20730536d556_37.png",
+      "PackagePath": "staticwebassets\\uploads\\ca8d50af-d3ae-41bf-9020-20730536d556_37.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png",
       "PackagePath": "staticwebassets\\uploads\\ca993156-dfb3-4369-8f12-6b39dea6aa80_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\cb38746c-3817-4e30-9671-bfdc8d3d5882_14.png",
+      "PackagePath": "staticwebassets\\uploads\\cb38746c-3817-4e30-9671-bfdc8d3d5882_14.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\cd22b9d7-6496-4908-a961-1db5effc06ba_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\cd22b9d7-6496-4908-a961-1db5effc06ba_mceclip3.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ce64c534-c2f7-4680-ba1a-a99303e59e77_BMW 320i Sedan.jpeg",
@@ -589,8 +1137,20 @@
       "PackagePath": "staticwebassets\\uploads\\ceebfc24-b01b-4b49-acd9-5c90bdac4169_Vinfast VF8.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\cfafb60f-03c1-4b8f-a0c7-0cbee78eea3f.png",
+      "PackagePath": "staticwebassets\\uploads\\cfafb60f-03c1-4b8f-a0c7-0cbee78eea3f.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d1b6b020-8026-4bc1-a2d1-34fabe847ad8.png",
       "PackagePath": "staticwebassets\\uploads\\d1b6b020-8026-4bc1-a2d1-34fabe847ad8.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d2a18427-37f7-4f28-affc-4cead6db9000_22.png",
+      "PackagePath": "staticwebassets\\uploads\\d2a18427-37f7-4f28-affc-4cead6db9000_22.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d2ee9c00-3abe-4af5-9a4e-b96c514651c3_blobid2.png",
+      "PackagePath": "staticwebassets\\uploads\\d2ee9c00-3abe-4af5-9a4e-b96c514651c3_blobid2.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d33c82d3-bd8e-4704-99ee-1bd9c62ce9ac.jpg",
@@ -605,24 +1165,60 @@
       "PackagePath": "staticwebassets\\uploads\\d40cec29-6124-4352-a6d0-44c686c7a267.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d4a885bb-827b-48f1-8ac3-8e2b651125eb_porsche taycan 2.png",
+      "PackagePath": "staticwebassets\\uploads\\d4a885bb-827b-48f1-8ac3-8e2b651125eb_porsche taycan 2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d4e66dbf-a507-4b74-931d-34414d72cf3c_1.png",
+      "PackagePath": "staticwebassets\\uploads\\d4e66dbf-a507-4b74-931d-34414d72cf3c_1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d512e4c5-d1a0-4ffc-a40a-8a5c716c50cf.png",
+      "PackagePath": "staticwebassets\\uploads\\d512e4c5-d1a0-4ffc-a40a-8a5c716c50cf.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\d618a146-eb10-4ca0-a6f7-95b5108cd105_xe2.png",
       "PackagePath": "staticwebassets\\uploads\\d618a146-eb10-4ca0-a6f7-95b5108cd105_xe2.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\da6ba957-4ae7-44be-af52-0cbd2320ca48_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\da6ba957-4ae7-44be-af52-0cbd2320ca48_mceclip2.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\db408204-bc0b-4f43-afa6-f85456807470_2.png",
       "PackagePath": "staticwebassets\\uploads\\db408204-bc0b-4f43-afa6-f85456807470_2.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\db78f549-e06e-4acd-9005-424cd760aaf6_46.png",
+      "PackagePath": "staticwebassets\\uploads\\db78f549-e06e-4acd-9005-424cd760aaf6_46.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\dca14f27-8960-4360-aa65-fe45c981ee05.png",
       "PackagePath": "staticwebassets\\uploads\\dca14f27-8960-4360-aa65-fe45c981ee05.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\def3bf37-6ff0-496e-9b25-c77a96068470_40.png",
+      "PackagePath": "staticwebassets\\uploads\\def3bf37-6ff0-496e-9b25-c77a96068470_40.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\df76bce0-0d3b-4230-8ea4-db55c97a7d6a.png",
       "PackagePath": "staticwebassets\\uploads\\df76bce0-0d3b-4230-8ea4-db55c97a7d6a.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\dfe27e8b-4aaa-475a-b966-9279beda5f7d_19.png",
+      "PackagePath": "staticwebassets\\uploads\\dfe27e8b-4aaa-475a-b966-9279beda5f7d_19.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e010c428-0bc7-474c-9bfd-f05df3bfcd0b_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\e010c428-0bc7-474c-9bfd-f05df3bfcd0b_mceclip1.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e06c9e39-95d2-46ad-8bc2-1780f1aacc72_mceclip1.png",
       "PackagePath": "staticwebassets\\uploads\\e06c9e39-95d2-46ad-8bc2-1780f1aacc72_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e202a9cf-4704-4533-8e5d-dc7e14d3f6cd_50.png",
+      "PackagePath": "staticwebassets\\uploads\\e202a9cf-4704-4533-8e5d-dc7e14d3f6cd_50.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e2d771f7-2734-4d31-b949-26814e98bf6c_2014 BMW 320d GT M Sport Automatic.jpeg",
@@ -637,12 +1233,28 @@
       "PackagePath": "staticwebassets\\uploads\\e430d9ad-c339-4846-b4f6-cc41de6a441f.jpeg"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e50a188b-b299-4a37-b2a9-99e25d8e7330_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\e50a188b-b299-4a37-b2a9-99e25d8e7330_mceclip3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e5cc447c-c39e-49b9-9f36-5fd9239e485a_mceclip1.png",
+      "PackagePath": "staticwebassets\\uploads\\e5cc447c-c39e-49b9-9f36-5fd9239e485a_mceclip1.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e645c784-c578-428f-b274-30f2122e15f7_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\e645c784-c578-428f-b274-30f2122e15f7_mceclip2.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e695fa7b-9410-4f88-aff0-fe11c32c04e9.jpeg",
       "PackagePath": "staticwebassets\\uploads\\e695fa7b-9410-4f88-aff0-fe11c32c04e9.jpeg"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e711154f-9056-4531-b02c-a6dfdfb401be_BMW X7.jpeg",
       "PackagePath": "staticwebassets\\uploads\\e711154f-9056-4531-b02c-a6dfdfb401be_BMW X7.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e8551d63-2a05-4ff1-9fbe-e1c7efe8ad6c_23.png",
+      "PackagePath": "staticwebassets\\uploads\\e8551d63-2a05-4ff1-9fbe-e1c7efe8ad6c_23.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\e9dbd7b2-ef1c-4c20-b310-e091421b9458_Mercedes SLK 350 - Copy.jpeg",
@@ -661,12 +1273,48 @@
       "PackagePath": "staticwebassets\\uploads\\ed0d4272-1d92-4ffc-accb-dcd9cd057540_3.png"
     },
     {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ee923bbb-4598-41ba-a9f3-a9bf0159a6b3_mceclip2.png",
+      "PackagePath": "staticwebassets\\uploads\\ee923bbb-4598-41ba-a9f3-a9bf0159a6b3_mceclip2.png"
+    },
+    {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png",
       "PackagePath": "staticwebassets\\uploads\\f11540a2-4b26-40dd-98e1-cfce1f8df99f_3.png"
     },
     {
       "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png",
       "PackagePath": "staticwebassets\\uploads\\f39e756b-0594-4389-8d4b-9c9869fe2313_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f50b724c-b403-4e9d-9d9e-dc2ac487c28f_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\f50b724c-b403-4e9d-9d9e-dc2ac487c28f_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f6e1ed04-9f15-493f-9054-44860af83371_BMW 320i Sedan.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\f6e1ed04-9f15-493f-9054-44860af83371_BMW 320i Sedan.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\f9fd8358-0d06-4597-8cfe-69c45a6f3b79_35.png",
+      "PackagePath": "staticwebassets\\uploads\\f9fd8358-0d06-4597-8cfe-69c45a6f3b79_35.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\fa0fb3db-b13f-4d00-9a30-c2320d300cca_11.png",
+      "PackagePath": "staticwebassets\\uploads\\fa0fb3db-b13f-4d00-9a30-c2320d300cca_11.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\fa8284fc-9aff-4941-9d06-a155c3cb41fc_Hyundai Tucson.jpg",
+      "PackagePath": "staticwebassets\\uploads\\fa8284fc-9aff-4941-9d06-a155c3cb41fc_Hyundai Tucson.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\faeca3b0-8022-4d0a-a713-d982f98c08e9_3.png",
+      "PackagePath": "staticwebassets\\uploads\\faeca3b0-8022-4d0a-a713-d982f98c08e9_3.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\fd0e5baa-bc98-4fb2-9b0b-90e7775425c2_mceclip0.png",
+      "PackagePath": "staticwebassets\\uploads\\fd0e5baa-bc98-4fb2-9b0b-90e7775425c2_mceclip0.png"
+    },
+    {
+      "Id": "C:\\Users\\Minh Tri\\OneDrive\\Máy tính\\DA_WEB\\DA_WebOto\\12_Weboto\\wwwroot\\uploads\\ff5b69f0-9c72-4e3c-831f-8439afddad8c_mceclip3.png",
+      "PackagePath": "staticwebassets\\uploads\\ff5b69f0-9c72-4e3c-831f-8439afddad8c_mceclip3.png"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.12_Weboto.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -84,6 +84,7 @@ C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\NuGet.ProjectModel.dll
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\NuGet.Protocol.dll
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\NuGet.Versioning.dll
+C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\PayPal.dll
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\SQLitePCLRaw.batteries_v2.dll
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\SQLitePCLRaw.core.dll
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\SQLitePCLRaw.provider.e_sqlite3.dll
@@ -358,7 +359,7 @@ C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\nezrqnk58p-muycvpuwrr.gz
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\v0zgfp0y55-87fc7y1x7t.gz
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\yfc7ypekbg-mlv21k5csn.gz
-C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\820orimvqk-ngst53vob6.gz
+C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\820orimvqk-x2z0a6873t.gz
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\fvff5a0ucj-61n19gt1b8.gz
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\w50h544ybq-q4zdbwn29d.gz
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\compressed\hc2np2gijs-nakmwdwsxp.gz
@@ -435,4 +436,3 @@ C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.pdb
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\12_Weboto.genruntimeconfig.cache
 C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\obj\Debug\net9.0\ref\12_Weboto.dll
-C:\Users\Minh Tri\OneDrive\Máy tính\DA_WEB\DA_WebOto\12_Weboto\bin\Debug\net9.0\PayPal.dll

@@ -25,6 +25,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
         [ValidateAntiForgeryToken] // Thêm để bảo vệ chống tấn công CSRF
         public async Task<IActionResult> Add(Brand brand, IFormFile Image)
         {
+            // Lấy tất cả lỗi validation
             if (!ModelState.IsValid)
             {
                 var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
@@ -41,16 +42,19 @@ namespace _12_Weboto.Areas.Admin.Controllers
                 if (Image != null && Image.Length > 0)
                 {
                     string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
+                    // Kiểm tra và tạo thư mục uploads
                     if (!Directory.Exists(uploadsFolder))
                     {
                         Directory.CreateDirectory(uploadsFolder);
                     }
-
+                    // Tạo tên file duy nhất
                     string uniqueFileName = Guid.NewGuid().ToString() + Path.GetExtension(Image.FileName);
+                    // Định nghĩa đường dẫn đầy đủ để lưu file
                     string filePath = Path.Combine(uploadsFolder, uniqueFileName);
-
+                    // Lưu file ảnh vào thư mục uploads
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
+                        // Sao chép nội dung file từ client lên server
                         await Image.CopyToAsync(stream);
                     }
 
@@ -145,6 +149,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
 
         public async Task<IActionResult> Delete(int id)
         {
+            // Tìm thương hiệu theo ID
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)
             {

@@ -1,282 +1,241 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+ <!-- Ghi chú: Xác định ngôn ngữ là tiếng Việt -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Quản lý bán Ô tô</title>
-    <link rel="stylesheet" href="~/css/site.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <style>
-        body {
-            background-color: #f0f4f8;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Top navigation bar */
-        .top-nav {
-            background-color: #17a2b8;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-            .top-nav h4 {
-                margin: 0;
-                font-size: 1.2rem;
-            }
-
-            .top-nav .user-info {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-                .top-nav .user-info img {
-                    width: 30px;
-                    height: 30px;
-                    border-radius: 50%;
-                }
-
-        /* Sidebar */
-        .sidebar {
-            width: 250px;
-            background-color: #212529;
-            min-height: 100vh;
-            color: white;
-            padding: 15px;
-            position: fixed;
-            top: 60px;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-
-            .sidebar a {
-                color: white;
-                text-decoration: none;
-                display: flex;
-                align-items: center;
-                padding: 12px;
-                margin: 5px 0;
-                border-radius: 5px;
-                transition: background-color 0.2s;
-            }
-
-                .sidebar a:hover {
-                    background-color: #444;
-                }
-
-                .sidebar a.active {
-                    background-color: #17a2b8;
-                    font-weight: bold;
-                }
-
-                .sidebar a i {
-                    margin-right: 10px;
-                    width: 20px;
-                    text-align: center;
-                }
-
-        /* Main content */
-        .main-content {
-            margin-left: 250px;
-            padding: 20px;
-            padding-top: 80px;
-            min-height: 100vh;
-            transition: margin-left 0.3s ease;
-        }
-
-        /* Dashboard cards */
-        .dashboard-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .card {
-            padding: 20px;
-            border-radius: 10px;
-            color: white;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.2s ease;
-        }
-
-            .card:hover {
-                transform: translateY(-3px);
-            }
-
-            .card i {
-                font-size: 2rem;
-                opacity: 0.9;
-            }
-
-            .card.blue {
-                background-color: #17a2b8;
-            }
-
-            .card.green {
-                background-color: #28a745;
-            }
-
-            .card.red {
-                background-color: #dc3545;
-            }
-
-            .card.teal {
-                background-color: #20c997;
-            }
-
-        .top-nav {
-            background-color: #17a2b8;
-            color: white;
-            padding: 8px 20px; /* Giảm padding để thanh top-nav mỏng hơn */
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            height: 50px; /* Đặt chiều cao cố định để đồng bộ */
-        }
-
-            .top-nav h4 {
-                margin: 0;
-                font-size: 1rem; /* Giữ kích thước chữ nhỏ */
-                font-weight: 500;
-                line-height: 1; /* Đảm bảo không có khoảng cách thừa */
-            }
-
-            .top-nav .user-info {
-                display: flex;
-                align-items: center;
-                gap: 8px; /* Giảm khoảng cách giữa các phần tử */
-            }
-
-                .top-nav .user-info img {
-                    width: 28px; /* Giảm kích thước avatar một chút */
-                    height: 28px;
-                    border-radius: 50%;
-                    order: 3; /* Đặt avatar ở cuối */
-                }
-
-                .top-nav .user-info .greeting {
-                    font-size: 0.85rem; /* Giảm kích thước chữ của greeting */
-                    color: #e0f7fa; /* Màu nhạt hơn để tạo độ tương phản */
-                }
-
-                .top-nav .user-info .logout-link {
-                    font-size: 0.85rem; /* Giảm kích thước chữ của logout */
-                    color: #e0f7fa;
-                    text-decoration: none;
-                    transition: color 0.2s ease;
-                }
-
-                    .top-nav .user-info .logout-link:hover {
-                        color: #ffffff;
-                        text-decoration: underline;
-                    }
-
-        .custom-btn {
-            background-color: #007bff; /* màu nền xanh */
-            color: white !important; /* chữ màu trắng */
-            padding: 6px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-            .custom-btn:hover {
-                background-color: #0056b3;
-            }
-
-        .logout-btn {
-            background: none;
-            border: none;
-            font-size: 0.85rem;
-            color: #e0f7fa;
-            text-decoration: none;
-            cursor: pointer;
-            padding: 0;
-            transition: color 0.2s ease;
-        }
-
-            .logout-btn:hover {
-                color: #ffffff;
-                text-decoration: underline;
-            }
-
-    </style>
-    @RenderSection("Styles", required: false)
+    <meta charset="utf-8" /> <!-- Ghi chú: Đặt mã hóa ký tự là UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Ghi chú: Đảm bảo responsive trên thiết bị di động -->
+    <title>@ViewData["Title"] - Quản lý bán Ô tô</title> <!-- Ghi chú: Tiêu đề trang, lấy từ ViewData -->
+    <link rel="stylesheet" href="~/css/site.css" /> <!-- Ghi chú: Liên kết tới file CSS tùy chỉnh -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" /> <!-- Ghi chú: Liên kết Bootstrap 5.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"> <!-- Ghi chú: Liên kết tới Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Ghi chú: Liên kết tới Font Awesome -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> <!-- Ghi chú: Liên kết tới Bootstrap từ thư mục local -->
+    @RenderSection("Styles", required: false) <!-- Ghi chú: Cho phép các view chèn thêm CSS tùy chỉnh (không bắt buộc) -->
 </head>
 <body>
     <!-- Top Navigation -->
     <div class="top-nav">
+        <!-- Ghi chú: Thanh điều hướng trên cùng -->
         <a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="text-decoration-none">
-            <img src="~/uploads/Logo_12.png" alt="Logo" style="height: 70px; width: 80px;" />
+            <!-- Ghi chú: Liên kết tới trang Admin Index -->
+            <img src="~/uploads/Logo_12.png" alt="Logo" style="height: 70px; width: 80px;" /> <!-- Ghi chú: Hiển thị logo -->
         </a>
         <div class="user-info">
-            <a asp-area="" asp-controller="Home" asp-action="Index" class="custom-btn">Trang Người Dùng</a>
-
-            <span class="greeting">Hello Admin, @ViewData["FullName"]</span>
-
-            <!-- Thay liên kết Logout bằng form -->
+            <!-- Ghi chú: Khu vực thông tin người dùng -->
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="custom-btn">Trang Người Dùng</a> <!-- Ghi chú: Nút chuyển tới trang người dùng -->
+            <span class="greeting">Hello Admin, @ViewData["FullName"]</span> <!-- Ghi chú: Hiển thị lời chào với tên Admin từ ViewData -->
             <form id="logoutForm" asp-area="Admin" asp-controller="Admin" asp-action="Logout" method="post" style="display: inline;">
-                <button type="submit" class="logout-btn">Logout</button>
-            </form> 
-            <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" alt="User Avatar" />
+                <!-- Ghi chú: Form để gửi yêu cầu logout -->
+                <button type="submit" class="logout-btn">Logout</button> <!-- Ghi chú: Nút logout -->
+            </form>
+            <img src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png" alt="User Avatar" /> <!-- Ghi chú: Hình avatar người dùng -->
         </div>
     </div>
 
     <!-- Sidebar -->
     <nav class="sidebar">
+        <!-- Ghi chú: Thanh điều hướng bên trái -->
         <h4>
-            <a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="text-light text-decoration-none">
-                Quản lý Car
-            </a>
+            <a asp-area="Admin" asp-controller="Admin" asp-action="Index" class="text-light text-decoration-none">Quản lý Car</a> 
         </h4>
-        <a asp-area="Admin" asp-controller="Car" asp-action="Index">
-            <i class="fas fa-home"></i> Bảng điều khiển
-        </a>
-        <a asp-area="Admin" asp-controller="Car" asp-action="Add">
-            <i class="fas fa-car"></i> Sản phẩm
-        </a>
-        <a asp-area="Admin" asp-controller="Brand" asp-action="Index">
-            <i class="fas fa-car-side"></i> Hãng xe
-        </a>
-        <a asp-area="Admin" asp-controller="User" asp-action="Index">
-            <i class="fas fa-users"></i> Người dùng
-        </a>
-        <a asp-area="Admin" asp-controller="News" asp-action="Index">
-            <i class="fas fa-newspaper"></i> Tin tức
-        </a>
-        <a asp-area="Admin" asp-controller="Order" asp-action="Index">
-            <i class="fas fa-receipt"></i> Đơn hàng
-        </a>
-        <a asp-area="" asp-controller="Report" asp-action="Index">
-            <i class="fas fa-chart-bar"></i> Báo cáo
-        </a>
+        <a asp-area="Admin" asp-controller="Car" asp-action="Index"><i class="fas fa-home"></i> Bảng điều khiển</a> 
+        <a asp-area="Admin" asp-controller="Car" asp-action="Add"><i class="fas fa-car"></i> Sản phẩm</a>
+        <a asp-area="Admin" asp-controller="Brand" asp-action="Index"><i class="fas fa-car-side"></i> Hãng xe</a> 
+        <a asp-area="Admin" asp-controller="User" asp-action="Index"><i class="fas fa-users"></i> Người dùng</a> 
+        <a asp-area="Admin" asp-controller="News" asp-action="Index"><i class="fas fa-newspaper"></i> Tin tức</a> 
+        <a asp-area="Admin" asp-controller="Order" asp-action="Index"><i class="fas fa-receipt"></i> Đơn hàng</a> 
     </nav>
 
     <!-- Main Content -->
     <main class="main-content">
-        @RenderBody()
-        @RenderSection("Scripts", required: false)
+        <!-- Ghi chú: Khu vực nội dung chính -->
+        @RenderBody() <!-- Ghi chú: Hiển thị nội dung từ các view con -->
+        @RenderSection("Scripts", required: false) <!-- Ghi chú: Cho phép các view chèn thêm script (không bắt buộc) -->
     </main>
 </body>
 </html>
+<style>
+    /* CSS cho layout Admin */
+
+    body {
+        background-color: #f0f4f8; /* Màu nền trang */
+        margin: 0; /* Xóa margin mặc định */
+        font-family: Arial, sans-serif; /* Font chữ toàn trang */
+        overflow-x: hidden; /* Ẩn thanh cuộn ngang */
+    }
+
+    /* Top navigation bar */
+    .top-nav {
+        BACKGROUND-COLOR: #17a2b8; /* Màu nền thanh trên cùng */
+        color: white; /* Màu chữ */
+        padding: 8px 20px; /* Padding trên dưới và trái phải */
+        display: flex; /* Sử dụng flexbox để căn chỉnh */
+        justify-content: space-between; /* Căn đều hai bên */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        position: fixed; /* Cố định ở trên cùng */
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        top: 0; /* Đặt ở đỉnh trang */
+        z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+        height: 50px; /* Chiều cao cố định */
+    }
+
+        .top-nav h4 {
+            margin: 0; /* Xóa margin mặc định */
+            font-size: 1rem; /* Kích thước chữ nhỏ */
+            font-weight: 500; /* Độ đậm chữ */
+            line-height: 1; /* Loại bỏ khoảng cách dòng thừa */
+        }
+
+        .top-nav .user-info {
+            display: flex; /* Sử dụng flexbox để căn chỉnh */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            gap: 8px; /* Khoảng cách giữa các phần tử */
+        }
+
+            .top-nav .user-info img {
+                width: 28px; /* Chiều rộng avatar */
+                height: 28px; /* Chiều cao avatar */
+                border-radius: 50%; /* Bo tròn avatar */
+                order: 3; /* Đặt avatar ở cuối trong flexbox */
+            }
+
+            .top-nav .user-info .greeting {
+                font-size: 0.85rem; /* Kích thước chữ nhỏ */
+                color: #e0f7fa; /* Màu chữ nhạt hơn */
+            }
+
+            .top-nav .user-info .logout-link {
+                font-size: 0.85rem; /* Kích thước chữ nhỏ */
+                color: #e0f7fa; /* Màu chữ */
+                text-decoration: none; /* Xóa gạch chân */
+                transition: color 0.2s ease; /* Hiệu ứng chuyển màu */
+            }
+
+                .top-nav .user-info .logout-link:hover {
+                    color: #ffffff; /* Màu chữ khi hover */
+                    text-decoration: underline; /* Thêm gạch chân khi hover */
+                }
+
+    /* Sidebar */
+    .sidebar {
+        width: 250px; /* Chiều rộng sidebar */
+        background-color: #212529; /* Màu nền tối */
+        min-height: 100vh; /* Chiều cao tối thiểu bằng chiều cao màn hình */
+        color: white; /* Màu chữ */
+        padding: 15px; /* Padding bên trong */
+        position: fixed; /* Cố định bên trái */
+        top: 60px; /* Đặt dưới top-nav */
+        left: 0; /* Căn sát trái */
+        transition: width 0.3s ease; /* Hiệu ứng thay đổi chiều rộng */
+    }
+
+        .sidebar a {
+            color: white; /* Màu chữ liên kết */
+            text-decoration: none; /* Xóa gạch chân */
+            display: flex; /* Sử dụng flexbox để căn chỉnh icon và chữ */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            padding: 12px; /* Padding bên trong liên kết */
+            margin: 5px 0; /* Khoảng cách trên dưới */
+            border-radius: 5px; /* Bo góc */
+            transition: background-color 0.2s; /* Hiệu ứng chuyển màu nền */
+        }
+
+            .sidebar a:hover {
+                background-color: #444; /* Màu nền khi hover */
+            }
+
+            .sidebar a.active {
+                background-color: #17a2b8; /* Màu nền khi liên kết được chọn */
+                font-weight: bold; /* Chữ đậm */
+            }
+
+            .sidebar a i {
+                margin-right: 10px; /* Khoảng cách giữa icon và chữ */
+                width: 20px; /* Chiều rộng cố định cho icon */
+                text-align: center; /* Căn giữa icon */
+            }
+
+    /* Main content */
+    .main-content {
+        margin-left: 250px; /* Khoảng cách trái bằng chiều rộng sidebar */
+        padding: 20px; /* Padding bên trong */
+        padding-top: 80px; /* Padding trên để tránh chồng lấn top-nav */
+        min-height: 100vh; /* Chiều cao tối thiểu bằng màn hình */
+        transition: margin-left 0.3s ease; /* Hiệu ứng thay đổi lề trái */
+    }
+
+    /* Dashboard cards */
+    .dashboard-cards {
+        display: grid; /* Sử dụng grid để sắp xếp các card */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Tự động điều chỉnh số cột */
+        gap: 20px; /* Khoảng cách giữa các card */
+        margin-top: 20px; /* Khoảng cách trên */
+    }
+
+    .card {
+        padding: 20px; /* Padding bên trong card */
+        border-radius: 10px; /* Bo góc */
+        color: white; /* Màu chữ */
+        font-size: 1.2rem; /* Kích thước chữ */
+        display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        justify-content: space-between; /* Căn đều hai bên */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng */
+        transition: transform 0.2s ease; /* Hiệu ứng nâng card khi hover */
+    }
+
+        .card:hover {
+            transform: translateY(-3px); /* Nâng card lên 3px khi hover */
+        }
+
+        .card i {
+            font-size: 2rem; /* Kích thước icon */
+            opacity: 0.9; /* Độ trong suốt nhẹ */
+        }
+
+        .card.blue {
+            background-color: #17a2b8;
+        }
+        /* Màu nền cho card xanh */
+        .card.green {
+            background-color: #28a745;
+        }
+        /* Màu nền cho card xanh lá */
+        .card.red {
+            background-color: #dc3545;
+        }
+        /* Màu nền cho card đỏ */
+        .card.teal {
+            background-color: #20c997;
+        }
+    /* Màu nền cho card xanh ngọc */
+
+    .custom-btn {
+        background-color: #007bff; /* Màu nền nút */
+        color: white !important; /* Màu chữ (ghi đè) */
+        padding: 6px 12px; /* Padding bên trong */
+        border-radius: 5px; /* Bo góc */
+        text-decoration: none; /* Xóa gạch chân */
+        transition: background-color 0.3s ease; /* Hiệu ứng chuyển màu */
+    }
+
+        .custom-btn:hover {
+            background-color: #0056b3; /* Màu nền khi hover */
+        }
+
+    .logout-btn {
+        background: none; /* Không màu nền */
+        border: none; /* Không viền */
+        font-size: 0.85rem; /* Kích thước chữ nhỏ */
+        color: #e0f7fa; /* Màu chữ */
+        text-decoration: none; /* Xóa gạch chân */
+        cursor: pointer; /* Con trỏ chuột thành tay */
+        padding: 0; /* Xóa padding mặc định */
+        transition: color 0.2s ease; /* Hiệu ứng chuyển màu */
+    }
+
+        .logout-btn:hover {
+            color: #ffffff; /* Màu chữ khi hover */
+            text-decoration: underline; /* Thêm gạch chân khi hover */
+        }
+</style>

@@ -56,8 +56,10 @@ else
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
+        // Lấy thẻ chứa thông báo thành công
         const successMessage = document.getElementById("successMessage");
         if (successMessage) {
+            // Ẩn thông báo sau 2 giây
             setTimeout(function () {
                 successMessage.classList.remove("show");
                 successMessage.classList.add("fade");

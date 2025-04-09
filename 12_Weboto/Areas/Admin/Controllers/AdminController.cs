@@ -46,7 +46,7 @@ namespace _12_Weboto.Areas.Admin.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return Redirect("/Identity/Account/Login"); // Chuyển hướng đến login mặc định của Identity
+            return Redirect("/Identity/Account/Login");
         }
     }
 }

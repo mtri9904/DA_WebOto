@@ -88,14 +88,19 @@
         function previewFile(input) {
             let file = input.files[0];
             if (file) {
+                // Tạo FileReader để đọc nội dung file
                 let reader = new FileReader();
                 reader.onload = function (e) {
+                    // Lấy thẻ div và img để hiển thị ảnh xem trước
                     let previewDiv = document.getElementById("newImagePreview");
                     let previewImg = document.getElementById("previewNewImage");
 
+                    // Gán dữ liệu ảnh vào thẻ img
                     previewImg.src = e.target.result;
+                    // Hiển thị div chứa ảnh xem trước
                     previewDiv.style.display = "block";
                 };
+                // Đọc file dưới dạng Data URL
                 reader.readAsDataURL(file);
             }
         }
